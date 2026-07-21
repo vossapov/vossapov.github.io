@@ -508,6 +508,48 @@ a { color: inherit; text-decoration: none; }
   justify-content: center;
 }
 
+/* Contact block — channel cards with real details */
+.contact-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  width: 100%;
+  max-width: 540px;
+  margin-top: 4px;
+}
+.contact-item {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 16px 20px;
+  border: 1px solid var(--border);
+  border-radius: 13px;
+  background: rgba(255,255,255,.02);
+  text-align: left;
+  transition: border-color .22s ease, background .22s ease, transform .22s ease;
+}
+.contact-item:hover {
+  border-color: color-mix(in srgb, var(--accent) 55%, var(--border));
+  background: color-mix(in srgb, var(--accent) 8%, transparent);
+  transform: translateY(-2px);
+}
+.contact-item b {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--accent-l);
+  opacity: .85;
+}
+.contact-item > span {
+  font-size: 15px;
+  color: var(--text);
+  word-break: break-word;
+}
+@media (max-width: 560px) {
+  .contact-list { grid-template-columns: 1fr; }
+}
+
 .cta-btn {
   font-size: 13px;
   font-weight: 600;
@@ -2070,14 +2112,31 @@ html[data-lang="ua"] .hero-display { font-size: clamp(36px, 8.6vw, 140px); }
   color: var(--text);
 }
 
-/* ── Player-card character (hero centrepiece) ── */
+/* ── Hero portrait (waving + dog) ── */
 .hero-char {
   position: absolute;
   left: 50%;
   bottom: 0;
   transform: translateX(-50%);
+  height: min(90%, 680px);
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
   z-index: 10;
   will-change: transform;
+  filter: drop-shadow(0 26px 34px rgba(0,0,0,.5));
+}
+.hero-char-glow {
+  position: absolute;
+  left: 50%;
+  bottom: 4%;
+  width: 66%;
+  aspect-ratio: 1 / 1;
+  transform: translateX(-50%);
+  background: radial-gradient(closest-side, rgba(99,102,241,.30), rgba(99,102,241,0) 70%);
+  filter: blur(22px);
+  z-index: 0;
+  pointer-events: none;
 }
 
 .pcard { width: clamp(230px, 22vw, 320px); }
@@ -2491,7 +2550,8 @@ html[data-lang="ua"] .hero-display { font-size: clamp(36px, 8.6vw, 140px); }
 /* ── responsive touches for the new blocks ── */
 @media (max-width: 1024px) {
   .hero-display { white-space: normal; line-height: 1.02; }
-  .hero-char { position: relative; left: auto; bottom: auto; transform: none; margin: 32px auto 0; }
+  .hero-char { position: relative; left: auto; bottom: auto; transform: none; height: auto; max-height: 46vh; width: auto; max-width: 74%; margin: 20px auto 0; }
+  .hero-char-glow { display: none; }
   .hero-v3-bottom { flex-direction: column; align-items: flex-start; gap: 18px; margin-top: 28px; }
   .about-decor { opacity: .35; width: clamp(64px, 10vw, 110px); }
 }

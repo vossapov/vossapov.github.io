@@ -1144,7 +1144,7 @@ const PROJECTS = [
     links: [{ label: 'Google Play', url: 'https://play.google.com/store/apps/details?id=com.BlocksmithLabs.MeegosMayhem' }],
   },
   {
-    id: 'sweep', co: 'whimsy', s: [2025, 12], e: NOW,
+    id: 'sweep', co: 'whimsy', s: [2025, 12], e: [2026, 6],
     name:    ['Sweepstake', 'Sweepstake'],
     genre:   ['Social Casino Platform', 'Соціальна казино-платформа'],
     platform: 'Web', engine: null,
@@ -2352,22 +2352,22 @@ function renderTimeline() {
 // Hand-picked landscape gameplay/UI shots only — the strip is a
 // showreel, not a dump of every asset.
 const MARQUEE_SHOTS_A = [
+  '/assets/screenshots/sweep/lobby.jpg',
+  '/assets/screenshots/figma/evio-1.jpg',
   '/assets/screenshots/web/undead-web-1.jpg',
-  '/assets/screenshots/jelly-valley-1.png',
-  '/assets/screenshots/web/racer-web-1.jpg',
-  '/assets/screenshots/web/meegos-web-3.jpg',
-  '/assets/screenshots/web/nftisls-web-1.png',
+  '/assets/screenshots/tadafish/tadafish-5.jpg',
+  '/assets/screenshots/thinks/thinks-1.jpg',
   '/assets/screenshots/web/gunbit-drive-1.jpg',
-  '/assets/screenshots/web/tantra-web-2.png',
+  '/assets/screenshots/figma/tantra-1.jpg',
 ];
 const MARQUEE_SHOTS_B = [
-  '/assets/screenshots/web/undead-web-3.jpg',
-  '/assets/screenshots/web/meegos-web-2.jpg',
-  '/assets/screenshots/web/racer-web-3.jpg',
-  '/assets/screenshots/web/gunbit-drive-2.jpg',
-  '/assets/screenshots/web/evio-web-3.png',
-  '/assets/screenshots/web/nftisls-web-3.png',
-  '/assets/screenshots/web/winday-web-3.png',
+  '/assets/screenshots/sweep/providers.jpg',
+  '/assets/screenshots/web/racer-web-1.jpg',
+  '/assets/screenshots/simgate/simgate-1.jpg',
+  '/assets/screenshots/figma/funrun-1.jpg',
+  '/assets/screenshots/web/meegos-web-3.jpg',
+  '/assets/screenshots/sweep/banner.jpg',
+  '/assets/screenshots/trademule/trademule-1.jpg',
 ];
 
 function renderMarquee() {

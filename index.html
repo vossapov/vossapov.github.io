@@ -14,7 +14,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=Kanit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/style.css?v=20260708c">
+  <link rel="stylesheet" href="/style.css?v=20260708d">
 </head>
 <body>
 
@@ -28,18 +28,9 @@
     <a href="/cv.pdf" class="btn-mini btn-mini--ghost" download>
       <span data-en="CV ↓" data-ua="CV ↓">CV ↓</span>
     </a>
-    <a href="mailto:vossapov@gmail.com" class="btn-mini btn-mini--solid">
+    <a href="#contact" class="btn-mini btn-mini--solid">
       <span data-en="Contact me" data-ua="Звʼязатися">Contact me</span>
     </a>
-  </div>
-
-  <!-- Theme dock (bottom-left, desktop only) -->
-  <div class="theme-dock theme-switcher" id="themeSwitcher">
-    <button class="theme-dot active" data-theme="" style="background:#6366f1" title="Indigo" aria-label="Theme: Indigo"></button>
-    <button class="theme-dot" data-theme="cyan" style="background:#38bdf8" title="Cyan" aria-label="Theme: Cyan"></button>
-    <button class="theme-dot" data-theme="violet" style="background:#a78bfa" title="Violet" aria-label="Theme: Violet"></button>
-    <button class="theme-dot" data-theme="emerald" style="background:#34d399" title="Emerald" aria-label="Theme: Emerald"></button>
-    <button class="theme-dot" data-theme="rose" style="background:#fb7185" title="Rose" aria-label="Theme: Rose"></button>
   </div>
 
   <main>
@@ -90,24 +81,11 @@
         </div>
         </div><!-- /.hero-textcol -->
 
-        <!-- Interactive hero: perspective deck of real project screens -->
+        <!-- Hero portrait -->
         <div class="hero-scene" id="heroScene">
-          <div class="deck-stage" id="deckStage">
-            <div class="deck" id="deck">
-              <a class="deck-card" href="/project.html?id=evio" data-depth="0.45" style="--i:0">
-                <img src="/assets/screenshots/figma/evio-1.jpg?v=20260708c" alt="ev.io — FPS HUD" draggable="false">
-                <span class="deck-tag">ev.io <em data-en="FPS HUD" data-ua="FPS HUD">FPS HUD</em></span>
-              </a>
-              <a class="deck-card" href="/project.html?id=sweep" data-depth="0.72" style="--i:1">
-                <img src="/assets/screenshots/sweep/lobby.jpg?v=20260708c" alt="Sweepstakes — social casino" draggable="false">
-                <span class="deck-tag">Sweepstakes <em data-en="Social Casino" data-ua="Соціальне казино">Social Casino</em></span>
-              </a>
-              <a class="deck-card" href="/project.html?id=undead" data-depth="1" style="--i:2">
-                <img src="/assets/screenshots/native/undead-1.jpg?v=20260708c" alt="Undeads — survival shooter UI" draggable="false">
-                <span class="deck-tag">Undeads <em data-en="Survival Shooter" data-ua="Survival-шутер">Survival Shooter</em></span>
-              </a>
-            </div>
-          </div>
+          <div class="hero-char-glow" aria-hidden="true"></div>
+          <img class="hero-char" id="heroChar" src="/assets/mockups/mascot-scene.png?v=20260708d"
+               alt="Valentyn Ihnatov — Game UI/UX designer, waving, with his dog" draggable="false">
         </div>
       </div>
       <div class="hero-scroll" aria-hidden="true">
@@ -163,12 +141,17 @@
            data-ua="Шукаєте Game UI/UX дизайнера? Відкритий до фрілансу, штатних позицій та дизайн-консалтингу.">
           Looking for a Game UI/UX designer? I'm available for freelance projects, full-time positions, and design consulting.
         </p>
-        <div class="cta-actions">
-          <a href="mailto:vossapov@gmail.com" class="btn-pill btn-pill--solid magnet-btn">
-            <span data-en="Send email" data-ua="Написати">Send email</span>
+        <div class="contact-list">
+          <a class="contact-item" href="https://t.me/vossapov" target="_blank" rel="noopener">
+            <b>Telegram</b><span>@vossapov</span>
           </a>
-          <a href="https://t.me/vossapov" target="_blank" rel="noopener" class="btn-pill btn-pill--ghost">Telegram</a>
-          <a href="https://www.linkedin.com/in/valentyn-ihnatov-a103a1153/" target="_blank" rel="noopener" class="btn-pill btn-pill--ghost">LinkedIn</a>
+          <a class="contact-item" href="mailto:vossapov@gmail.com">
+            <b data-en="Email" data-ua="Пошта">Email</b><span>vossapov@gmail.com</span>
+          </a>
+          <a class="contact-item" href="https://www.linkedin.com/in/valentyn-ihnatov-a103a1153/" target="_blank" rel="noopener">
+            <b>LinkedIn</b><span>valentyn-ihnatov</span>
+          </a>
+          <!-- PHONE_ROW -->
         </div>
       </div>
     </div>
@@ -195,7 +178,7 @@
 
   <button class="back-to-top" id="backToTop" aria-label="Back to top" title="Back to top">↑</button>
 
-  <script src="/timeline.js?v=20260708c"></script>
-  <script src="/script.js?v=20260708c"></script>
+  <script src="/timeline.js?v=20260708d"></script>
+  <script src="/script.js?v=20260708d"></script>
 </body>
 </html>

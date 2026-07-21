@@ -15,7 +15,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=Kanit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/style.css?v=20260708c">
+  <link rel="stylesheet" href="/style.css?v=20260708d">
   <style>
     /* ── PROJECT PAGE EXTRA STYLES ─────────────────────── */
     .proj-page {
@@ -823,15 +823,6 @@
     </a>
   </div>
 
-  <!-- Theme dock (bottom-left, desktop only) -->
-  <div class="theme-dock theme-switcher" id="themeSwitcher">
-    <button class="theme-dot active" data-theme="" style="background:#6366f1" title="Indigo" aria-label="Theme: Indigo"></button>
-    <button class="theme-dot" data-theme="cyan" style="background:#38bdf8" title="Cyan" aria-label="Theme: Cyan"></button>
-    <button class="theme-dot" data-theme="violet" style="background:#a78bfa" title="Violet" aria-label="Theme: Violet"></button>
-    <button class="theme-dot" data-theme="emerald" style="background:#34d399" title="Emerald" aria-label="Theme: Emerald"></button>
-    <button class="theme-dot" data-theme="rose" style="background:#fb7185" title="Rose" aria-label="Theme: Rose"></button>
-  </div>
-
   <main>
     <div class="proj-page" id="projPage">
       <div class="container">
@@ -868,9 +859,9 @@
   <button class="back-to-top" id="backToTop" aria-label="Back to top" title="Back to top">↑</button>
 
   <!-- Load data from timeline.js (renderTimeline returns early since #tlRoot doesn't exist) -->
-  <script src="/timeline.js?v=20260708c"></script>
-  <script src="/present.js?v=20260708c"></script>
-  <script src="/script.js?v=20260708c"></script>
+  <script src="/timeline.js?v=20260708d"></script>
+  <script src="/present.js?v=20260708d"></script>
+  <script src="/script.js?v=20260708d"></script>
   <script>
   // ── PX: per-project presentation renderer ────────────────
   // PROJECT_PRESENT[id] (present.js) composes a unique body from
@@ -1039,11 +1030,6 @@
     } else {
       heroImgHtml = `<div class="pp-hero-img-placeholder" style="color:${comp.color}">${name.charAt(0)}</div>`;
     }
-
-    // Primary CTA (always shown — recruiter / client contact)
-    const primaryBtn = `<a href="mailto:vossapov@gmail.com" class="pp-link-btn pp-link-btn--primary" style="--cc:${comp.color}">
-      ${lang === 'ua' ? '✉ Написати' : '✉ Get in touch'}
-    </a>`;
 
     // External project links (shown as ghost buttons)
     const extLinksHtml = p.links.map(l =>
@@ -1248,7 +1234,6 @@
                    <span class="pp-company-name" style="color:${comp.color}">${compName}</span>
                  </div>`}
             <div class="pp-links">
-              ${primaryBtn}
               ${extLinksHtml}
             </div>
           </div>

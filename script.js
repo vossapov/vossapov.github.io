@@ -236,11 +236,7 @@ onScroll();
     window.addEventListener('mousemove', move, { passive: true });
   }
 
-  const heroChar = document.getElementById('heroChar');
-  if (heroChar && window.matchMedia('(min-width: 1025px)').matches) {
-    heroChar.dataset.baseTf = 'translateX(-50%)';
-    attach(heroChar);
-  }
+  // hero portrait stays static — no mouse parallax
   document.querySelectorAll('.magnet-btn').forEach(b => attach(b));
 })();
 

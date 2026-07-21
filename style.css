@@ -2071,10 +2071,10 @@ body { background: var(--bg); }
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  max-width: 1500px;
+  max-width: var(--max-w);
   width: 100%;
   margin: 0 auto;
-  padding: 28px clamp(20px, 3vw, 44px) 44px;
+  padding: 28px 28px 44px;
 }
 
 .hero--v3 .hero-status {

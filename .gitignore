@@ -1,0 +1,10 @@
+# Local Claude Code tooling / machine-specific settings
+.claude/
+
+# OS junk
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Node (not used by the static site, but just in case)
+node_modules/

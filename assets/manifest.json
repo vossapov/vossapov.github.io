@@ -1,0 +1,268 @@
+{
+  "generated": "2026-05-23",
+  "portfolio": "Valentyn Ihnatov - Game UI/UX Designer",
+  "assets": {
+    "icons": {
+      "engines": [
+        {
+          "file": "assets/icons/engines/unity.svg",
+          "purpose": "Unity game engine icon",
+          "source": "https://cdn.simpleicons.org/unity/AAAAAA",
+          "format": "SVG"
+        },
+        {
+          "file": "assets/icons/engines/unreal-engine.svg",
+          "purpose": "Unreal Engine icon",
+          "source": "https://cdn.simpleicons.org/unrealengine/AAAAAA",
+          "format": "SVG"
+        }
+      ],
+      "platforms": [
+        {
+          "file": "assets/icons/platforms/steam.svg",
+          "purpose": "Steam platform icon",
+          "source": "https://cdn.simpleicons.org/steam/AAAAAA",
+          "format": "SVG"
+        },
+        {
+          "file": "assets/icons/platforms/android.svg",
+          "purpose": "Android platform icon",
+          "source": "https://cdn.simpleicons.org/android/AAAAAA",
+          "format": "SVG"
+        },
+        {
+          "file": "assets/icons/platforms/ios.svg",
+          "purpose": "iOS (Apple) platform icon",
+          "source": "https://cdn.simpleicons.org/apple/AAAAAA",
+          "format": "SVG"
+        },
+        {
+          "file": "assets/icons/platforms/windows.svg",
+          "purpose": "Windows / Desktop platform icon (handcrafted)",
+          "source": "inline SVG",
+          "format": "SVG"
+        },
+        {
+          "file": "assets/icons/platforms/desktop.svg",
+          "purpose": "Generic desktop monitor icon (handcrafted)",
+          "source": "inline SVG",
+          "format": "SVG"
+        },
+        {
+          "file": "assets/icons/platforms/web.svg",
+          "purpose": "Web / Globe icon (handcrafted)",
+          "source": "inline SVG",
+          "format": "SVG"
+        },
+        {
+          "file": "assets/icons/platforms/browser.svg",
+          "purpose": "Browser window icon (handcrafted)",
+          "source": "inline SVG",
+          "format": "SVG"
+        },
+        {
+          "file": "assets/icons/platforms/mobile.svg",
+          "purpose": "Mobile / smartphone icon (handcrafted)",
+          "source": "inline SVG",
+          "format": "SVG"
+        }
+      ],
+      "tools": [
+        {
+          "file": "assets/icons/tools/figma.svg",
+          "purpose": "Figma design tool icon",
+          "source": "https://cdn.simpleicons.org/figma/AAAAAA",
+          "format": "SVG"
+        }
+      ]
+    },
+    "companies": [
+      {
+        "file": "assets/companies/whimsy-games.svg",
+        "purpose": "Whimsy Games studio logo",
+        "source": "https://whimsygames.co/wp-content/themes/whimsy-redesign/assets/img/logo.svg"
+      },
+      {
+        "file": "assets/companies/argentics.svg",
+        "purpose": "Argentics game studio logo",
+        "source": "https://static.tildacdn.one/tild6530-6232-4937-a563-633764386637/Group_1347.svg"
+      },
+      {
+        "file": "assets/companies/fg-factory.png",
+        "purpose": "FG Factory studio logo (apple icon)",
+        "source": "https://fgfactory.com/wp-content/themes/fgfactory2019/assets/public/icons/apple-icon-144x144.png",
+        "notes": "FGFactory main site logo is a CSS background; this is their app icon. Their main logo appears inline as text/SVG on the site."
+      },
+      {
+        "file": "assets/companies/room8-studio.svg",
+        "purpose": "Room 8 Studio logo",
+        "source": "https://room8studio.com/wp-content/themes/r8s/assets/img/Footer-Logo-Room8Studio.svg"
+      },
+      {
+        "file": "assets/companies/room8-group.svg",
+        "purpose": "Room 8 Group logo (parent company)",
+        "source": "https://media.room8studio.com/wp-content/uploads/2025/04/23153622/R8G1.svg"
+      }
+    ],
+    "projects": [
+      {
+        "file": "assets/projects/winday.png",
+        "project": "Win Day",
+        "purpose": "Win Day app logo",
+        "source": "https://winday.co/wp-content/uploads/2023/07/cropped-winday-logo-142x80-1.png"
+      },
+      {
+        "file": "assets/projects/evio.png",
+        "project": "ev.io",
+        "purpose": "ev.io game favicon/icon",
+        "source": "https://ev.io/favicon/apple-touch-icon.png"
+      },
+      {
+        "file": "assets/projects/nft-islands.png",
+        "project": "NFT Islands",
+        "purpose": "NFT Islands hero image",
+        "source": "https://fgfactory.com/wp-content/uploads/2023/12/nftislands-image1.png"
+      },
+      {
+        "file": "assets/projects/racer-club.png",
+        "project": "Racer Club",
+        "purpose": "Racer Club hero image",
+        "source": "https://fgfactory.com/wp-content/uploads/2023/04/racer-club-image1.jpg"
+      },
+      {
+        "file": "assets/projects/meegos.png",
+        "project": "Meegos Mayhem",
+        "purpose": "Meegos Mayhem app icon (from Google Play Store)",
+        "source": "https://play-lh.googleusercontent.com/nuojbTDUMvm3DTtF8bealShOriO1GPAFxcCyK1PMUNwamBAAgPb8Y_zllzJ9L-mbXVQx=w600"
+      },
+      {
+        "file": "assets/projects/tantra.png",
+        "project": "Tantra Sadhana",
+        "purpose": "Tantra Sadhana app icon (from Google Play Store)",
+        "source": "https://play-lh.googleusercontent.com/bDt7hXNG1IG34R1EHAVYabyKCvAInQdGdX0SkVtGnMK2zL7ceA1usE7aI0IXFTsj62o=w240-h480"
+      },
+      {
+        "file": "assets/projects/undead.png",
+        "project": "Undead (Wild Rage)",
+        "purpose": "Undead / Wild Rage game cover art — the Whimsy Games undead/zombie game is branded as Wild Rage",
+        "source": "https://whimsygames.co/wp-content/uploads/2024/02/Website_Cover_Undeads_1280x1280-2.webp"
+      },
+      {
+        "file": "assets/projects/jelly-valley.png",
+        "project": "Jelly Valley (Jellyvale: A Match Tale)",
+        "purpose": "Jellyvale match-3 game cover — known internally at Whimsy Games as Squid Games case study",
+        "source": "https://whimsygames.co/wp-content/uploads/2024/02/Cover_Squid-Games.webp"
+      }
+    ],
+    "screenshots": [
+      {
+        "file": "assets/screenshots/evio-1.png",
+        "project": "ev.io",
+        "source": "https://ev.io/dist/1-7-0/public/img/logos/evio1.png"
+      },
+      {
+        "file": "assets/screenshots/nft-islands-1.png",
+        "project": "NFT Islands",
+        "source": "https://fgfactory.com/wp-content/uploads/2023/12/nftislands-image2.png"
+      },
+      {
+        "file": "assets/screenshots/nft-islands-preview.png",
+        "project": "NFT Islands",
+        "source": "https://fgfactory.com/wp-content/uploads/2023/12/nftislands-preview-image.png"
+      },
+      {
+        "file": "assets/screenshots/racer-club-1.jpg",
+        "project": "Racer Club",
+        "source": "https://fgfactory.com/wp-content/uploads/2023/04/racer-club-image2.jpg"
+      },
+      {
+        "file": "assets/screenshots/racer-club-preview.jpg",
+        "project": "Racer Club",
+        "source": "https://fgfactory.com/wp-content/uploads/2023/04/race-club-preview-image2-617x292.jpg"
+      },
+      {
+        "file": "assets/screenshots/meegos-1.png",
+        "project": "Meegos Mayhem",
+        "source": "https://whimsygames.co/wp-content/uploads/2025/04/Cover_Meegos-Mayhem_1280x1280.webp"
+      },
+      {
+        "file": "assets/screenshots/meegos-play-feature.png",
+        "project": "Meegos Mayhem",
+        "source": "https://play-lh.googleusercontent.com/nuojbTDUMvm3DTtF8bealShOriO1GPAFxcCyK1PMUNwamBAAgPb8Y_zllzJ9L-mbXVQx=w600",
+        "notes": "This is also the app icon/og:image from Play Store"
+      },
+      {
+        "file": "assets/screenshots/undead-1.png",
+        "project": "Undead (Wild Rage)",
+        "source": "https://whimsygames.co/wp-content/uploads/2024/02/Website_Cover_Undeads_1280x1280_UX_1280x1280.webp"
+      },
+      {
+        "file": "assets/screenshots/jelly-valley-1.png",
+        "project": "Jelly Valley",
+        "source": "https://whimsygames.co/wp-content/uploads/2024/02/Squid_scr_1.webp"
+      }
+    ]
+  },
+  "google_drive": {
+    "root": "C:\\Users\\vossa\\My Drive\\Design\\_Portfolio-Cases\\Portfolio-2025",
+    "note": "Most project subfolders are empty stubs (Google Drive not fully synced). Only 'Logical games UI' and 'other' have downloaded content.",
+    "folders_with_content": [
+      {
+        "name": "Logical games UI",
+        "path": "C:\\Users\\vossa\\My Drive\\Design\\_Portfolio-Cases\\Portfolio-2025\\Logical games UI",
+        "files": [
+          "Domino game - 1.jpg",
+          "Domino game - 2.jpg",
+          "Domino game - 3.jpg",
+          "Playdoku - 1.jpg",
+          "Playdoku - 2.jpg",
+          "Playdoku - 3.jpg",
+          "Sudoku  - 2.png",
+          "Sudoku - 1.png",
+          "Sudoku concepts - 1.png",
+          "Sudoku concepts - 2.png",
+          "Sudoku concepts - 3.png",
+          "Sudoku concepts - 4.png",
+          "Sudoku concepts - 5.png",
+          "Sudoku concepts - 6.png"
+        ]
+      },
+      {
+        "name": "other",
+        "path": "C:\\Users\\vossa\\My Drive\\Design\\_Portfolio-Cases\\Portfolio-2025\\other",
+        "files": [
+          "1.png",
+          "2.png",
+          "3.png",
+          "app-start-screen.png",
+          "Auto Fishing - 1.png",
+          "Battle_Lobby_0001.png",
+          "daily to do screen final.png",
+          "Daily_Bonus_0002.png",
+          "Fishing-ui---jackpot-paytable.png",
+          "image 1024x500.png",
+          "Lobby_0001.png",
+          "Mathc2_Reshuffle_0003.png",
+          "NPC_Main_Girl_Idle_0001.png",
+          "popup-info _ Features _ 1.png",
+          "Shop_0001-1.png",
+          "Shop_0001-2.png",
+          "Shop_0001.png",
+          "tunnels_screen.png"
+        ]
+      }
+    ],
+    "empty_stub_folders": [
+      "Desktop isomertic action game [Unity, 2024]",
+      "Desktop racing game [2023, Unity]",
+      "Match 3 mobile game [Unity, 2024]",
+      "Mobile action game [2023, Unity]",
+      "Mobile casino game [2024]",
+      "Mobile isomentric RPG [2023,Unity]",
+      "Mobile multiplayer shooter game [Unity, 2025]",
+      "Multiplatform casual runner [Unity, 2025]",
+      "Test task - Burny Games [2023]",
+      "Test task - Plarium [2023]"
+    ]
+  }
+}

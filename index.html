@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Valentyn Ihnatov — Game UI/UX Designer</title>
+  <meta name="description" content="Valentyn Ihnatov — Versatile Game UI/UX Designer with 5+ years in the gaming industry. Figma · Design Systems · Unity · iOS/Android/PC">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Valentyn Ihnatov — Game UI/UX Designer">
+  <meta property="og:description" content="Versatile Game UI/UX Designer specializing in modern game UI. Full pipeline from UX research and wireframing to art direction and design systems.">
+  <meta property="og:image" content="/assets/screenshots/undead-1.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%236366f1'/%3E%3Ctext x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' font-family='system-ui%2Csans-serif' font-weight='700' font-size='13' fill='white'%3EVI%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=Kanit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css?v=20260708c">
+</head>
+<body>
+
+  <!-- Pinned corner UI (top-right): language + always-available contact actions -->
+  <div class="corner-ui corner-ui--tr">
+    <div class="lang-toggle">
+      <button class="lang-btn active" data-lang="en">EN</button>
+      <span class="lang-sep">/</span>
+      <button class="lang-btn" data-lang="ua">UA</button>
+    </div>
+    <a href="/cv.pdf" class="btn-mini btn-mini--ghost" download>
+      <span data-en="CV ↓" data-ua="CV ↓">CV ↓</span>
+    </a>
+    <a href="mailto:vossapov@gmail.com" class="btn-mini btn-mini--solid">
+      <span data-en="Contact me" data-ua="Звʼязатися">Contact me</span>
+    </a>
+  </div>
+
+  <!-- Theme dock (bottom-left, desktop only) -->
+  <div class="theme-dock theme-switcher" id="themeSwitcher">
+    <button class="theme-dot active" data-theme="" style="background:#6366f1" title="Indigo" aria-label="Theme: Indigo"></button>
+    <button class="theme-dot" data-theme="cyan" style="background:#38bdf8" title="Cyan" aria-label="Theme: Cyan"></button>
+    <button class="theme-dot" data-theme="violet" style="background:#a78bfa" title="Violet" aria-label="Theme: Violet"></button>
+    <button class="theme-dot" data-theme="emerald" style="background:#34d399" title="Emerald" aria-label="Theme: Emerald"></button>
+    <button class="theme-dot" data-theme="rose" style="background:#fb7185" title="Rose" aria-label="Theme: Rose"></button>
+  </div>
+
+  <main>
+
+    <!-- HERO (v4 — display style, self-contained intro) -->
+    <section class="hero hero--v3 hero--v4">
+      <div class="hero-glow"></div>
+      <div class="hero-v3-inner hero-split">
+        <div class="hero-textcol">
+        <div class="hero-status anim-item visible">
+          <span class="hero-status-dot"></span>
+          <span data-en="Open to opportunities" data-ua="Відкритий до пропозицій">Open to opportunities</span>
+        </div>
+
+        <div class="hero-core">
+          <h1 class="hero-display display-grad">
+            <span data-en="Hi, I'm Valentyn" data-ua="Привіт, я Валентин">Hi, I'm Valentyn</span>
+          </h1>
+
+          <p class="hero-desc"
+             data-en="Game UI/UX designer with 10+ years in design and 5+ in gaming. Full pipeline — UX research, wireframes, art direction and design systems in Figma."
+             data-ua="Game UI/UX дизайнер: 10+ років у дизайні, 5+ у геймдеві. Повний цикл — UX-ресерч, вайрфрейми, арт-дірекшн і дизайн-системи у Figma.">
+            Game UI/UX designer with 10+ years in design and 5+ in gaming. Full pipeline — UX research, wireframes, art direction and design systems in Figma.
+          </p>
+
+          <div class="hero-stats">
+            <div class="stat">
+              <span class="stat-n">5+</span>
+              <span class="stat-l" data-en="Years in gaming" data-ua="Років у геймдеві">Years in gaming</span>
+            </div>
+            <div class="stat">
+              <span class="stat-n">10+</span>
+              <span class="stat-l" data-en="Years in design" data-ua="Років у дизайні">Years in design</span>
+            </div>
+            <div class="stat">
+              <span class="stat-n">15+</span>
+              <span class="stat-l" data-en="Projects shipped" data-ua="Проєктів здано">Projects shipped</span>
+            </div>
+          </div>
+
+          <div class="hero-actions">
+            <a href="#experience" class="btn-pill btn-pill--solid btn-pill--lg magnet-btn">
+              <span data-en="View my work" data-ua="Дивитись роботи">View my work</span>
+              <svg width="15" height="15" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7l5 5 5-5"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/valentyn-ihnatov-a103a1153/" target="_blank" rel="noopener" class="btn-pill btn-pill--ghost">LinkedIn</a>
+          </div>
+        </div>
+        </div><!-- /.hero-textcol -->
+
+        <!-- Interactive hero: perspective deck of real project screens -->
+        <div class="hero-scene" id="heroScene">
+          <div class="deck-stage" id="deckStage">
+            <div class="deck" id="deck">
+              <a class="deck-card" href="/project.html?id=evio" data-depth="0.45" style="--i:0">
+                <img src="/assets/screenshots/figma/evio-1.jpg?v=20260708c" alt="ev.io — FPS HUD" draggable="false">
+                <span class="deck-tag">ev.io <em data-en="FPS HUD" data-ua="FPS HUD">FPS HUD</em></span>
+              </a>
+              <a class="deck-card" href="/project.html?id=sweep" data-depth="0.72" style="--i:1">
+                <img src="/assets/screenshots/sweep/lobby.jpg?v=20260708c" alt="Sweepstakes — social casino" draggable="false">
+                <span class="deck-tag">Sweepstakes <em data-en="Social Casino" data-ua="Соціальне казино">Social Casino</em></span>
+              </a>
+              <a class="deck-card" href="/project.html?id=undead" data-depth="1" style="--i:2">
+                <img src="/assets/screenshots/native/undead-1.jpg?v=20260708c" alt="Undeads — survival shooter UI" draggable="false">
+                <span class="deck-tag">Undeads <em data-en="Survival Shooter" data-ua="Survival-шутер">Survival Shooter</em></span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-scroll" aria-hidden="true">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 7l5 5 5-5"/>
+        </svg>
+      </div>
+    </section>
+
+    <!-- MARQUEE — scroll-driven screenshot strips -->
+    <section class="marquee-section" aria-hidden="true">
+      <div class="mq-row" id="mqRow1"></div>
+      <div class="mq-row" id="mqRow2"></div>
+    </section>
+
+    <!-- TIMELINE / PROJECTS -->
+    <section class="tl-section" id="experience">
+      <div class="container">
+        <h2 class="section-display display-grad" data-en="Experience" data-ua="Досвід">Experience</h2>
+        <div class="tl-toolbar" id="tlToolbar"></div>
+      </div>
+      <div class="tl-root" id="tlRoot"></div>
+      <div class="container">
+        <div class="tl-list" id="tlList" hidden></div>
+        <div class="tl-tiles" id="tlTiles" hidden></div>
+      </div>
+
+      <!-- Experience outro: short narrative + external portfolios -->
+      <div class="container">
+        <div class="exp-outro">
+          <p class="exp-outro-text"
+             data-en="Five studios, a dozen shipped titles — from a Steam survival shooter to match-3 live-ops, casino multiplayer and a gamification SaaS. I picked up projects at every stage: starting UI from scratch, rescuing legacy Photoshop pipelines into Figma design systems, and supporting teams through release. More work is on my Dribbble and Behance."
+             data-ua="П'ять студій і десяток відвантажених проєктів — від survival-шутера в Steam до match-3 live-ops, казино-мультиплеєра та геймфікаційного SaaS. Заходив на проєкти на будь-якій стадії: UI з нуля, порятунок легасі Photoshop-пайплайнів у дизайн-системи Figma, супровід команд до релізу. Більше робіт — на Dribbble і Behance.">
+            Five studios, a dozen shipped titles — from a Steam survival shooter to match-3 live-ops, casino multiplayer and a gamification SaaS. I picked up projects at every stage: starting UI from scratch, rescuing legacy Photoshop pipelines into Figma design systems, and supporting teams through release. More work is on my Dribbble and Behance.
+          </p>
+          <div class="exp-outro-links">
+            <a href="https://dribbble.com/vossapov" target="_blank" rel="noopener" class="btn-pill btn-pill--ghost">Dribbble ↗</a>
+            <a href="https://www.behance.net/vossapov" target="_blank" rel="noopener" class="btn-pill btn-pill--ghost">Behance ↗</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT CTA -->
+    <section class="cta-section" id="contact">
+    <div class="container">
+      <div class="cta-inner anim-item">
+        <div class="cta-glow"></div>
+        <p class="cta-label" data-en="Let's work together" data-ua="Давайте співпрацювати">Let's work together</p>
+        <h2 class="cta-title" data-en="Open to new projects" data-ua="Відкритий до нових проєктів">Open to new projects</h2>
+        <p class="cta-desc"
+           data-en="Looking for a Game UI/UX designer? I'm available for freelance projects, full-time positions, and design consulting."
+           data-ua="Шукаєте Game UI/UX дизайнера? Відкритий до фрілансу, штатних позицій та дизайн-консалтингу.">
+          Looking for a Game UI/UX designer? I'm available for freelance projects, full-time positions, and design consulting.
+        </p>
+        <div class="cta-actions">
+          <a href="mailto:vossapov@gmail.com" class="btn-pill btn-pill--solid magnet-btn">
+            <span data-en="Send email" data-ua="Написати">Send email</span>
+          </a>
+          <a href="https://t.me/vossapov" target="_blank" rel="noopener" class="btn-pill btn-pill--ghost">Telegram</a>
+          <a href="https://www.linkedin.com/in/valentyn-ihnatov-a103a1153/" target="_blank" rel="noopener" class="btn-pill btn-pill--ghost">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <p class="footer-name">Valentyn Ihnatov</p>
+        <div class="footer-links">
+          <a href="mailto:vossapov@gmail.com">vossapov@gmail.com</a>
+          <a href="https://t.me/vossapov" target="_blank" rel="noopener">Telegram</a>
+          <a href="https://www.linkedin.com/in/valentyn-ihnatov-a103a1153/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://dribbble.com/vossapov" target="_blank" rel="noopener">Dribbble</a>
+          <a href="https://www.behance.net/vossapov" target="_blank" rel="noopener">Behance</a>
+        </div>
+        <p class="footer-copy">© 2026</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Back to top" title="Back to top">↑</button>
+
+  <script src="/timeline.js?v=20260708c"></script>
+  <script src="/script.js?v=20260708c"></script>
+</body>
+</html>

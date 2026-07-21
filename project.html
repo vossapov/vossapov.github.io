@@ -1,0 +1,1336 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project — Valentyn Ihnatov</title>
+  <meta name="description" content="Project case study — Valentyn Ihnatov, Game UI/UX Designer">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Valentyn Ihnatov — Game UI/UX Designer">
+  <meta property="og:title" content="Project — Valentyn Ihnatov">
+  <meta property="og:description" content="Game UI/UX design case study by Valentyn Ihnatov">
+  <meta property="og:image" content="/assets/screenshots/undead-1.png">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%236366f1'/%3E%3Ctext x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' font-family='system-ui%2Csans-serif' font-weight='700' font-size='13' fill='white'%3EVI%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=Kanit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css?v=20260708c">
+  <style>
+    /* ── PROJECT PAGE EXTRA STYLES ─────────────────────── */
+    .proj-page {
+      min-height: 100vh;
+      padding: 76px 0 100px;
+    }
+
+    .proj-page-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      font-family: 'Kanit', sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--text-2);
+      transition: color .2s, gap .2s;
+      margin-bottom: 34px;
+      padding-top: 24px;
+    }
+    .proj-page-back:hover { color: var(--text); gap: 11px; }
+    .proj-page-back svg { flex-shrink: 0; }
+
+    /* Hero band */
+    .pp-hero {
+      background: linear-gradient(160deg, rgba(255,255,255,.025) 0%, transparent 60%), #0d1020;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+      margin-bottom: 40px;
+    }
+    .pp-hero-img {
+      width: 100%;
+      height: 340px;
+      object-fit: cover;
+      object-position: top center;
+      display: block;
+      border-bottom: 1px solid var(--border);
+      filter: brightness(.9);
+    }
+    .pp-hero-img-placeholder {
+      width: 100%;
+      height: 240px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 64px;
+      font-weight: 700;
+      opacity: .15;
+      border-bottom: 1px solid var(--border);
+    }
+    .pp-hero-meta {
+      padding: 28px 32px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 24px;
+    }
+    .pp-meta-left { display: flex; flex-direction: column; gap: 10px; }
+
+    .pp-label {
+      font-family: 'Kanit', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+    }
+
+    .pp-title {
+      font-family: 'Kanit', 'Space Grotesk', sans-serif;
+      font-size: clamp(30px, 4.4vw, 56px);
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: -.01em;
+      line-height: .96;
+    }
+
+    .pp-period {
+      font-size: 14px;
+      color: var(--text-3);
+    }
+    .pp-period em { font-style: normal; color: var(--text-4); }
+
+    .pp-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      align-items: center;
+    }
+    .pp-tag {
+      font-size: 11px;
+      font-weight: 500;
+      color: var(--text-2);
+      background: rgba(255,255,255,.06);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 3px 9px;
+    }
+
+    .pp-meta-right {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 12px;
+    }
+    .pp-company-badge {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,.04);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 8px 14px;
+    }
+    .pp-company-logo {
+      height: 22px;
+      object-fit: contain;
+      opacity: .75;
+    }
+    .pp-company-name {
+      font-size: 13px;
+      font-weight: 600;
+    }
+    .pp-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: flex-end;
+    }
+    .pp-link-btn {
+      font-family: 'Kanit', sans-serif;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      border-radius: 999px;
+      padding: 10px 22px;
+      border: 1.5px solid;
+      transition: background .2s, color .2s, border-color .2s, transform .2s;
+    }
+    .pp-link-btn--primary {
+      color: #0C0C0C;
+      background: #D7E2EA;
+      border-color: #D7E2EA;
+    }
+    .pp-link-btn--primary:hover {
+      background: #fff; border-color: #fff;
+      transform: translateY(-2px);
+    }
+    .pp-link-btn--ghost {
+      color: var(--text);
+      background: transparent;
+      border-color: rgba(215,226,234,.32);
+    }
+    .pp-link-btn--ghost:hover { border-color: var(--text); background: rgba(215,226,234,.08); }
+
+    /* Content body */
+    .pp-body {
+      display: grid;
+      grid-template-columns: 1fr 280px;
+      gap: 32px;
+      align-items: start;
+    }
+    @media (max-width: 800px) {
+      .pp-body { grid-template-columns: 1fr; }
+      .pp-meta-right { align-items: flex-start; }
+      .pp-hero-img { height: 240px; }
+      .pp-hero-meta { padding: 20px; gap: 16px; }
+      .pp-screens { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 640px) {
+      .pp-hero-img { height: 180px; }
+      .pp-hero-meta { padding: 16px; }
+      .pp-title { font-size: 28px; }
+      .proj-page-back { margin-bottom: 24px; padding-top: 24px; }
+    }
+
+    .pp-desc-section { display: flex; flex-direction: column; gap: 32px; }
+
+    .pp-section-title {
+      font-family: 'Kanit', sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--text-2);
+      margin-bottom: 14px;
+    }
+
+    .pp-description {
+      font-size: 15px;
+      line-height: 1.8;
+      color: var(--text-2);
+    }
+
+    /* ── STORE-STATS STRIP ── */
+    .pp-stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 40px;
+    }
+    .pp-store {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      min-width: 190px;
+      flex: 1 1 190px;
+      max-width: 300px;
+      padding: 16px 18px;
+      border-radius: 14px;
+      background: linear-gradient(160deg, color-mix(in srgb, var(--cc,#818cf8) 10%, transparent), transparent 70%), var(--bg-card, #0d1020);
+      border: 1px solid color-mix(in srgb, var(--cc,#818cf8) 26%, transparent);
+      transition: transform .2s, border-color .2s;
+    }
+    .pp-store:hover { transform: translateY(-2px); border-color: color-mix(in srgb, var(--cc,#818cf8) 55%, transparent); }
+    .pp-store-plat {
+      font-family: 'Kanit', sans-serif;
+      font-size: 12px; font-weight: 600;
+      letter-spacing: .1em; text-transform: uppercase;
+      color: var(--cc, var(--accent-l));
+    }
+    .pp-store-metrics { display: flex; gap: 20px; }
+    .pp-store-metric { display: flex; flex-direction: column; }
+    .pp-store-metric b { font-size: 20px; font-weight: 700; color: var(--text); line-height: 1.1; }
+    .pp-store-metric i { font-style: normal; font-size: 10.5px; color: var(--text-3); text-transform: uppercase; letter-spacing: .05em; margin-top: 3px; }
+    .pp-highlights { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; flex: 1 1 100%; margin-top: 2px; }
+    .pp-highlight {
+      font-size: 12px; color: var(--text-2);
+      background: rgba(255,255,255,.05);
+      border: 1px solid var(--border);
+      border-radius: 999px; padding: 6px 13px;
+    }
+
+    /* ── "WHAT I DID" BULLETS ── */
+    .pp-bullets { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+    .pp-bullets li {
+      position: relative;
+      padding-left: 24px;
+      font-size: 14.5px; line-height: 1.65;
+      color: var(--text-2);
+    }
+    .pp-bullets li::before {
+      content: '';
+      position: absolute; left: 2px; top: 9px;
+      width: 7px; height: 7px; border-radius: 2px;
+      background: var(--accent-l);
+      transform: rotate(45deg);
+    }
+
+    /* ── SIDEBAR LINK LIST ── */
+    .pp-linklist { display: flex; flex-direction: column; gap: 9px; padding-top: 4px; }
+    .pp-linklist a { font-size: 13px; color: var(--cc, var(--accent-l)); opacity: .82; transition: opacity .2s; }
+    .pp-linklist a:hover { opacity: 1; }
+
+    /* ── FULL-SIZE SCREENS GALLERY (the main content) ── */
+    .pp-shots-section { margin-top: 56px; }
+    .pp-shots-head {
+      display: flex; align-items: baseline; justify-content: space-between;
+      flex-wrap: wrap; gap: 10px; margin-bottom: 20px;
+    }
+    .pp-shots-hint { font-size: 12px; color: var(--text-3); }
+    .pp-shots {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 22px;
+    }
+    .pp-shot {
+      display: block;
+      padding: 0; border: 0; cursor: zoom-in;
+      background: none;
+      line-height: 0;
+      max-width: 100%;
+    }
+    /* Each screen fits within a single viewport height so it's easy to
+       review — portrait shots no longer become giant scroll-canvases. */
+    .pp-shot img {
+      display: block;
+      width: auto; height: auto;
+      max-width: min(1100px, 92vw);
+      max-height: 900px;
+      border-radius: 16px;
+      box-shadow: 0 24px 60px rgba(0,0,0,.5), 0 0 0 1px var(--border) inset;
+      transition: transform .25s, box-shadow .25s;
+    }
+    .pp-shot:hover img {
+      transform: translateY(-3px);
+      box-shadow: 0 30px 70px rgba(0,0,0,.6), 0 0 0 1px var(--border-h) inset;
+    }
+    @media (min-width: 700px) {
+      .pp-shots { gap: 30px; }
+    }
+
+    /* ── LIGHTBOX ── */
+    .pp-lightbox {
+      position: fixed; inset: 0; z-index: 1000;
+      display: none;
+      align-items: center; justify-content: center;
+      background: rgba(5,6,12,.94);
+      backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
+    }
+    .pp-lightbox.open { display: flex; }
+    .lb-img { max-width: 92vw; max-height: 88vh; object-fit: contain; border-radius: 8px; cursor: zoom-out; box-shadow: 0 30px 90px rgba(0,0,0,.7); }
+    .lb-close {
+      position: absolute; top: 18px; right: 22px;
+      width: 42px; height: 42px; border-radius: 50%;
+      border: 1px solid rgba(255,255,255,.2); background: rgba(255,255,255,.08);
+      color: #fff; font-size: 18px; cursor: pointer; transition: background .2s;
+    }
+    .lb-close:hover { background: rgba(255,255,255,.18); }
+    .lb-nav {
+      position: absolute; top: 50%; transform: translateY(-50%);
+      width: 52px; height: 52px; border-radius: 50%;
+      border: 1px solid rgba(255,255,255,.2); background: rgba(255,255,255,.08);
+      color: #fff; font-size: 30px; line-height: 1; cursor: pointer; transition: background .2s;
+    }
+    .lb-nav:hover { background: rgba(255,255,255,.18); }
+    .lb-prev { left: 20px; } .lb-next { right: 20px; }
+    .lb-count {
+      position: absolute; bottom: 22px; left: 50%; transform: translateX(-50%);
+      font-size: 13px; color: rgba(255,255,255,.7); letter-spacing: .05em;
+    }
+    @media (max-width: 640px) {
+      .lb-nav { width: 40px; height: 40px; font-size: 24px; }
+      .lb-prev { left: 8px; } .lb-next { right: 8px; }
+    }
+
+    /* Right sidebar */
+    .pp-sidebar { display: flex; flex-direction: column; gap: 24px; }
+
+    .pp-info-card {
+      background: linear-gradient(160deg, rgba(255,255,255,.025) 0%, transparent 60%), #0d1020;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px;
+    }
+    .pp-info-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 9px 0;
+      border-bottom: 1px solid var(--border);
+      gap: 12px;
+    }
+    .pp-info-row:last-child { border-bottom: none; padding-bottom: 0; }
+    .pp-info-key {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: .05em;
+      text-transform: uppercase;
+      color: var(--text-3);
+      flex-shrink: 0;
+    }
+    .pp-info-val {
+      font-size: 12px;
+      color: var(--text-2);
+      text-align: right;
+    }
+
+    /* Icons in sidebar */
+    .pp-platform-icons {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      justify-content: flex-end;
+    }
+    .pp-platform-icons img {
+      width: 16px; height: 16px;
+      object-fit: contain;
+      opacity: .75;
+      /* icons are fill="currentColor" → render black via <img>; force white */
+      filter: brightness(0) invert(1);
+    }
+
+    /* Not found state */
+    .pp-not-found {
+      text-align: center;
+      padding: 120px 0;
+      color: var(--text-3);
+    }
+    .pp-not-found h2 {
+      font-family: 'Kanit', sans-serif;
+      font-size: 30px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: .01em;
+      margin-bottom: 12px;
+      color: var(--text);
+    }
+
+    /* Google Drive local screenshots notice */
+    .pp-drive-notice {
+      font-size: 11px;
+      color: var(--text-4);
+      font-style: italic;
+      margin-top: 8px;
+    }
+
+    @supports not (color: color-mix(in srgb, red, blue)) {
+      .pp-link-btn--primary {
+        background: rgba(129,140,248,.14);
+        border-color: rgba(129,140,248,.30);
+      }
+    }
+
+    /* ── DEVICE MOCKUP HERO ──
+       Real screenshots inside CSS device frames on a branded
+       backdrop — faithful to the actual UI (no AI redraws). */
+    .pp-mockup {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: clamp(36px, 6vw, 72px) 24px;
+      border-bottom: 1px solid var(--border);
+      background:
+        radial-gradient(ellipse 60% 75% at 50% 40%, color-mix(in srgb, var(--cc, #818cf8) 13%, transparent), transparent 70%),
+        radial-gradient(rgba(255,255,255,.05) 1px, transparent 1px) 0 0 / 26px 26px,
+        #0A0B10;
+      overflow: hidden;
+    }
+
+    .ppm-screen {
+      background: #000;
+      overflow: hidden;
+    }
+    .ppm-screen img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Laptop (desktop titles) */
+    .ppm-laptop { width: min(660px, 92%); }
+    .ppm-laptop .ppm-screen {
+      border: 11px solid #16181f;
+      border-bottom-width: 13px;
+      border-radius: 16px 16px 4px 4px;
+      aspect-ratio: 16 / 9.4;
+      box-shadow:
+        0 40px 90px rgba(0,0,0,.6),
+        0 0 70px color-mix(in srgb, var(--cc, #818cf8) 20%, transparent);
+    }
+    .ppm-base {
+      width: 116%;
+      margin-left: -8%;
+      height: 15px;
+      background: linear-gradient(180deg, #1d2027 0%, #101218 90%);
+      border-radius: 3px 3px 14px 14px;
+      box-shadow: 0 18px 40px rgba(0,0,0,.55);
+    }
+    .ppm-base::after {
+      content: '';
+      display: block;
+      width: 13%;
+      height: 5px;
+      margin: 0 auto;
+      background: #0a0b10;
+      border-radius: 0 0 8px 8px;
+    }
+
+    /* Browser window (web products) */
+    .ppm-browser {
+      width: min(700px, 94%);
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,.12);
+      box-shadow:
+        0 40px 90px rgba(0,0,0,.6),
+        0 0 70px color-mix(in srgb, var(--cc, #818cf8) 18%, transparent);
+    }
+    .ppm-bar {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      padding: 11px 14px;
+      background: #191b22;
+      border-bottom: 1px solid rgba(255,255,255,.07);
+    }
+    .ppm-bar i {
+      width: 10px; height: 10px;
+      border-radius: 50%;
+      background: rgba(255,255,255,.16);
+    }
+    .ppm-bar i:nth-child(1) { background: #f66; }
+    .ppm-bar i:nth-child(2) { background: #fc3; }
+    .ppm-bar i:nth-child(3) { background: #4c4; }
+    .ppm-url {
+      margin-left: 10px;
+      font-size: 11px;
+      color: var(--text-3);
+      background: rgba(255,255,255,.06);
+      border-radius: 6px;
+      padding: 3px 12px;
+    }
+    .ppm-browser .ppm-screen { aspect-ratio: 16 / 9.6; }
+
+    /* Phone (mobile titles) — landscape by default, portrait via class */
+    .ppm-phone {
+      width: min(600px, 92%);
+      border: 12px solid #16181f;
+      border-radius: 30px;
+      position: relative;
+      box-shadow:
+        0 40px 90px rgba(0,0,0,.6),
+        0 0 70px color-mix(in srgb, var(--cc, #818cf8) 20%, transparent);
+      background: #16181f;
+    }
+    .ppm-phone .ppm-screen {
+      border-radius: 18px;
+      aspect-ratio: 19.5 / 9;
+    }
+    .ppm-phone::after {           /* side speaker / camera pill */
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: -8px;
+      width: 4px;
+      height: 52px;
+      transform: translateY(-50%);
+      border-radius: 3px;
+      background: #2a2d36;
+    }
+    .ppm-phone--port {
+      width: min(250px, 62%);
+    }
+    .ppm-phone--port .ppm-screen { aspect-ratio: 9 / 19.5; }
+    .ppm-phone--port::after {
+      top: -8px;
+      right: auto;
+      left: 50%;
+      width: 52px;
+      height: 4px;
+      transform: translateX(-50%);
+    }
+
+    /* AI mockup hero — the image already carries its own dark backdrop
+       and glow, so show it WHOLE (contain) on a matching bg. Never crop. */
+    .pp-mockup--ai {
+      padding: 0;
+      background: #0A0B10;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .ppm-ai {
+      display: block;
+      width: 100%;
+      max-width: 100%;      /* fill the hero band exactly — no side gaps */
+      height: auto;
+      object-fit: contain;
+    }
+
+    @media (max-width: 640px) {
+      .pp-mockup { padding: 28px 14px; }
+      .pp-mockup--ai { padding: 0; }
+    }
+    /* ══════════════════════════════════════════════════════════
+       PX — per-project presentation modules
+       Unique page bodies composed from these; accent = var(--pxc)
+       ══════════════════════════════════════════════════════════ */
+    .px-lead {
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+      margin-top: 42px;
+      padding-bottom: 10px;
+    }
+    .px-tagline {
+      font-family: 'Kanit', sans-serif;
+      font-weight: 300;
+      font-size: clamp(19px, 2.1vw, 27px);
+      line-height: 1.45;
+      max-width: 860px;
+      color: var(--text);
+      opacity: .94;
+    }
+    .px-strip {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 34px;
+      padding: 16px 0;
+      border-top: 1px solid rgba(255,255,255,.07);
+      border-bottom: 1px solid rgba(255,255,255,.07);
+    }
+    .px-strip-item { display: flex; flex-direction: column; gap: 3px; }
+    .px-strip-item i {
+      font-style: normal;
+      font-family: 'Kanit', sans-serif;
+      font-size: 10px;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--text-3);
+    }
+    .px-strip-item b { font-size: 13.5px; font-weight: 600; color: var(--text-2); }
+
+    .px-sections {
+      display: flex;
+      flex-direction: column;
+      gap: clamp(58px, 9vh, 104px);
+      margin-top: clamp(48px, 7vh, 84px);
+    }
+    .px-kicker {
+      font-family: 'Kanit', sans-serif;
+      font-weight: 700;
+      font-size: 11px;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--pxc, var(--accent-l));
+      margin-bottom: 12px;
+    }
+    .px-title {
+      font-family: 'Kanit', sans-serif;
+      font-weight: 700;
+      font-size: clamp(21px, 2.4vw, 32px);
+      line-height: 1.12;
+      letter-spacing: .015em;
+      margin-bottom: 14px;
+    }
+    .px-body {
+      font-size: 15px;
+      line-height: 1.75;
+      color: var(--text-2);
+      max-width: 640px;
+    }
+    .px-body p + p { margin-top: 12px; }
+    .px-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+    .px-chip {
+      font-family: 'Kanit', sans-serif;
+      font-size: 12px;
+      letter-spacing: .04em;
+      color: var(--text-2);
+      padding: 6px 12px;
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 999px;
+    }
+
+    /* framed screenshot (shared) */
+    .px-img {
+      display: block;
+      padding: 0;
+      border: 1px solid rgba(255,255,255,.10);
+      border-radius: 14px;
+      overflow: hidden;
+      background: #0d0f18;
+      box-shadow: 0 24px 54px rgba(0,0,0,.5);
+      cursor: zoom-in;
+      transition: border-color .25s ease, transform .3s ease;
+    }
+    .px-img:hover { border-color: color-mix(in srgb, var(--pxc, var(--accent-l)) 55%, rgba(255,255,255,.2)); transform: translateY(-3px); }
+    .px-img img { display: block; width: 100%; height: auto; }
+
+    /* statement */
+    .px-statement { padding-left: 26px; border-left: 3px solid var(--pxc, var(--accent-l)); }
+    .px-statement-line {
+      font-family: 'Kanit', sans-serif;
+      font-weight: 800;
+      font-size: clamp(24px, 3.4vw, 46px);
+      line-height: 1.14;
+      text-transform: uppercase;
+      letter-spacing: .01em;
+    }
+
+    /* narrative */
+    .px-narrative { display: grid; grid-template-columns: minmax(220px, 340px) 1fr; gap: 28px 56px; align-items: start; }
+    .px-narrative .px-title { margin-bottom: 0; }
+
+    /* feature */
+    .px-feature { display: grid; grid-template-columns: 1fr 1.15fr; gap: clamp(28px, 4vw, 60px); align-items: center; }
+    .px-feature--flip .px-ftext { order: 2; }
+    .px-feature--flip .px-img  { order: 1; }
+
+    /* duo */
+    .px-duo-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-top: 26px; }
+
+    /* wide */
+    .px-wide .px-img { margin-top: 26px; }
+    .px-caption {
+      margin-top: 14px;
+      font-size: 13.5px;
+      line-height: 1.6;
+      color: var(--text-3);
+      max-width: 720px;
+    }
+
+    /* themes (variant pairs) */
+    .px-themes-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 26px; }
+
+    /* anatomy */
+    .px-anatomy { display: grid; grid-template-columns: 1.45fr 1fr; gap: clamp(28px, 4vw, 56px); align-items: center; }
+    .px-anat-list { list-style: none; display: flex; flex-direction: column; gap: 13px; }
+    .px-anat-list li { display: flex; gap: 14px; align-items: baseline; font-size: 14.5px; line-height: 1.5; color: var(--text-2); }
+    .px-anat-list b {
+      flex: none;
+      font-family: 'Kanit', sans-serif;
+      font-weight: 700;
+      font-size: 12px;
+      color: var(--pxc, var(--accent-l));
+      border: 1px solid color-mix(in srgb, var(--pxc, var(--accent-l)) 45%, transparent);
+      border-radius: 8px;
+      padding: 2px 8px;
+    }
+
+    /* rail */
+    .px-rail-track {
+      display: flex;
+      gap: 18px;
+      margin-top: 26px;
+      overflow-x: auto;
+      padding-bottom: 14px;
+      scroll-snap-type: x mandatory;
+      scrollbar-width: thin;
+      scrollbar-color: rgba(255,255,255,.18) transparent;
+    }
+    .px-rail-track .px-img { flex: none; scroll-snap-align: start; height: clamp(300px, 44vh, 460px); }
+    .px-rail-track .px-img img { width: auto; height: 100%; }
+    .px-rail-hint { margin-top: 10px; font-size: 11.5px; letter-spacing: .1em; text-transform: uppercase; color: var(--text-3); font-family: 'Kanit', sans-serif; }
+
+    /* process */
+    .px-process-track { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 22px 18px; margin-top: 30px; }
+    .px-step { position: relative; }
+    .px-step-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 30px; height: 30px;
+      border: 1px solid color-mix(in srgb, var(--pxc, var(--accent-l)) 55%, transparent);
+      border-radius: 50%;
+      font-family: 'Kanit', sans-serif;
+      font-weight: 700;
+      font-size: 12px;
+      color: var(--pxc, var(--accent-l));
+      margin-bottom: 12px;
+      background: rgba(255,255,255,.02);
+    }
+    .px-step::before {
+      content: "";
+      position: absolute;
+      left: 38px; right: 6px; top: 15px;
+      height: 1px;
+      background: rgba(255,255,255,.09);
+    }
+    .px-step:last-child::before { display: none; }
+    .px-step-label { font-size: 13.5px; line-height: 1.5; color: var(--text-2); padding-right: 8px; }
+
+    /* metrics */
+    .px-metrics-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 14px; margin-top: 26px; }
+    .px-metric {
+      border: 1px solid rgba(255,255,255,.09);
+      border-radius: 14px;
+      padding: 18px 18px 15px;
+      background: rgba(255,255,255,.015);
+    }
+    .px-metric b {
+      display: block;
+      font-family: 'Kanit', sans-serif;
+      font-weight: 800;
+      font-size: clamp(20px, 2vw, 26px);
+      color: var(--pxc, var(--accent-l));
+      line-height: 1.1;
+      margin-bottom: 6px;
+    }
+    .px-metric i {
+      font-style: normal;
+      font-family: 'Kanit', sans-serif;
+      font-size: 10.5px;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--text-2);
+    }
+
+    @media (max-width: 900px) {
+      .px-narrative, .px-feature, .px-anatomy { grid-template-columns: 1fr; }
+      .px-feature--flip .px-ftext { order: 0; }
+      .px-feature--flip .px-img  { order: 0; }
+      .px-themes-grid { grid-template-columns: 1fr; }
+      .px-rail-track .px-img { height: 300px; }
+      .px-statement { padding-left: 18px; }
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Pinned corner UI (top-right): language + always-available contact actions -->
+  <div class="corner-ui corner-ui--tr">
+    <a href="index.html#experience" class="btn-mini btn-mini--ghost pp-home-mini">
+      <span data-en="← Work" data-ua="← Роботи">← Work</span>
+    </a>
+    <div class="lang-toggle">
+      <button class="lang-btn active" data-lang="en">EN</button>
+      <span class="lang-sep">/</span>
+      <button class="lang-btn" data-lang="ua">UA</button>
+    </div>
+    <a href="/cv.pdf" class="btn-mini btn-mini--ghost pp-cv-mini" download>
+      <span data-en="CV ↓" data-ua="CV ↓">CV ↓</span>
+    </a>
+    <a href="mailto:vossapov@gmail.com" class="btn-mini btn-mini--solid">
+      <span data-en="Contact me" data-ua="Звʼязатися">Contact me</span>
+    </a>
+  </div>
+
+  <!-- Theme dock (bottom-left, desktop only) -->
+  <div class="theme-dock theme-switcher" id="themeSwitcher">
+    <button class="theme-dot active" data-theme="" style="background:#6366f1" title="Indigo" aria-label="Theme: Indigo"></button>
+    <button class="theme-dot" data-theme="cyan" style="background:#38bdf8" title="Cyan" aria-label="Theme: Cyan"></button>
+    <button class="theme-dot" data-theme="violet" style="background:#a78bfa" title="Violet" aria-label="Theme: Violet"></button>
+    <button class="theme-dot" data-theme="emerald" style="background:#34d399" title="Emerald" aria-label="Theme: Emerald"></button>
+    <button class="theme-dot" data-theme="rose" style="background:#fb7185" title="Rose" aria-label="Theme: Rose"></button>
+  </div>
+
+  <main>
+    <div class="proj-page" id="projPage">
+      <div class="container">
+        <a href="index.html#experience" class="proj-page-back">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M10.5 13.5 5 8l5.5-5.5"/>
+          </svg>
+          <span data-en="Back to timeline" data-ua="Назад до таймлайну">Back to timeline</span>
+        </a>
+        <div id="projContent">
+          <!-- JS renders here -->
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <p class="footer-name">Valentyn Ihnatov</p>
+        <div class="footer-links">
+          <a href="mailto:vossapov@gmail.com">vossapov@gmail.com</a>
+          <a href="https://t.me/vossapov" target="_blank" rel="noopener">Telegram</a>
+          <a href="https://www.linkedin.com/in/valentyn-ihnatov-a103a1153/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://dribbble.com/vossapov" target="_blank" rel="noopener">Dribbble</a>
+          <a href="https://www.behance.net/vossapov" target="_blank" rel="noopener">Behance</a>
+        </div>
+        <p class="footer-copy">© 2026</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Back to top" title="Back to top">↑</button>
+
+  <!-- Load data from timeline.js (renderTimeline returns early since #tlRoot doesn't exist) -->
+  <script src="/timeline.js?v=20260708c"></script>
+  <script src="/present.js?v=20260708c"></script>
+  <script src="/script.js?v=20260708c"></script>
+  <script>
+  // ── PX: per-project presentation renderer ────────────────
+  // PROJECT_PRESENT[id] (present.js) composes a unique body from
+  // section modules; pages without a config keep the legacy layout.
+  function renderPresent(cfg, lang) {
+    const L = lang === 'ua' ? 'ua' : 'en';
+    const tt = v => (v && typeof v === 'object') ? (v[L] || v.en || '') : (v || '');
+    const imgs = [];   // lightbox list, DOM order
+    const shot = (src, alt) => {
+      const n = imgs.push(src) - 1;
+      return `<button class="px-img" data-shot="${n}" aria-label="${escAttr(alt)}">
+                <img src="${escAttr(src)}" alt="${escAttr(alt)}" loading="lazy">
+              </button>`;
+    };
+    const kicker = s => s.kicker ? `<p class="px-kicker">${escHtml(tt(s.kicker))}</p>` : '';
+    const title  = s => s.title  ? `<h2 class="px-title display-grad">${escHtml(tt(s.title))}</h2>` : '';
+    const body   = s => s.body
+      ? `<div class="px-body">${tt(s.body).split(/\n\n+/).map(p => `<p>${escHtml(p)}</p>`).join('')}</div>`
+      : '';
+    const chips  = s => (s.items && s.items.length && !['anatomy','process'].includes(s.type))
+      ? `<div class="px-chips">${s.items.map(i => `<span class="px-chip">${escHtml(tt(i))}</span>`).join('')}</div>`
+      : '';
+
+    const sections = (cfg.sections || []).map(s => {
+      const im = s.imgs || [];
+      switch (s.type) {
+        case 'statement':
+          return `<section class="px-section px-statement">${kicker(s)}
+            <p class="px-statement-line display-grad">${escHtml(tt(s.title) || tt(s.body))}</p></section>`;
+        case 'narrative':
+          return `<section class="px-section px-narrative">
+            <div>${kicker(s)}${title(s)}</div>
+            <div>${body(s)}${chips(s)}</div></section>`;
+        case 'feature':
+          return `<section class="px-section px-feature${s.flip ? ' px-feature--flip' : ''}">
+            <div class="px-ftext">${kicker(s)}${title(s)}${body(s)}${chips(s)}</div>
+            ${im[0] ? shot(im[0], tt(s.title)) : ''}</section>`;
+        case 'duo':
+          return `<section class="px-section px-duo">${kicker(s)}${title(s)}${body(s)}
+            <div class="px-duo-grid">${im.map(src => shot(src, tt(s.title))).join('')}</div></section>`;
+        case 'wide':
+          return `<section class="px-section px-wide">${kicker(s)}${title(s)}
+            ${im[0] ? shot(im[0], tt(s.title)) : ''}
+            ${s.body ? `<p class="px-caption">${escHtml(tt(s.body))}</p>` : ''}</section>`;
+        case 'themes':
+          return `<section class="px-section px-themes">${kicker(s)}${title(s)}${body(s)}
+            <div class="px-themes-grid">${im.map(src => shot(src, tt(s.title))).join('')}</div></section>`;
+        case 'anatomy':
+          return `<section class="px-section px-anatomy">
+            ${im[0] ? shot(im[0], tt(s.title)) : ''}
+            <div>${kicker(s)}${title(s)}${body(s)}
+              <ol class="px-anat-list">${(s.items || []).map((i, n) =>
+                `<li><b>${String(n + 1).padStart(2, '0')}</b><span>${escHtml(tt(i))}</span></li>`).join('')}</ol>
+            </div></section>`;
+        case 'rail':
+          return `<section class="px-section px-rail">${kicker(s)}${title(s)}${body(s)}
+            <div class="px-rail-track">${im.map(src => shot(src, tt(s.title))).join('')}</div>
+            <p class="px-rail-hint">${lang === 'ua' ? 'гортайте вбік →' : 'scroll sideways →'}</p></section>`;
+        case 'process':
+          return `<section class="px-section px-process">${kicker(s)}${title(s)}${body(s)}
+            <div class="px-process-track">${(s.items || []).map((i, n) =>
+              `<div class="px-step"><span class="px-step-num">${n + 1}</span>
+                 <p class="px-step-label">${escHtml(tt(i))}</p></div>`).join('')}</div></section>`;
+        case 'metrics':
+          return `<section class="px-section px-metrics">${kicker(s)}${title(s)}${body(s)}
+            <div class="px-metrics-grid">${(s.facts || []).map(f =>
+              `<div class="px-metric"><b>${escHtml(tt(f.v))}</b><i>${escHtml(tt(f.k))}</i></div>`).join('')}</div></section>`;
+        case 'gallery':
+          return `<section class="px-section px-gallery">${kicker(s)}${title(s)}
+            <div class="pp-shots">${im.map(src => {
+              const n = imgs.push(src) - 1;
+              return `<button class="pp-shot" data-shot="${n}"><img src="${escAttr(src)}" alt="" loading="lazy"></button>`;
+            }).join('')}</div></section>`;
+        default: return '';
+      }
+    }).join('');
+
+    return { html: `<div class="px-sections">${sections}</div>`, imgs };
+  }
+
+  // ── PROJECT PAGE RENDERER ─────────────────────────────────
+  // Re-runnable: re-reads hash + language on every call so the
+  // EN/UA toggle re-renders the whole page, not just [data-en] nodes.
+  function renderProject() {
+    const id   = location.hash.slice(1) || new URLSearchParams(location.search).get('id');
+    const root = document.getElementById('projContent');
+    const lang = getLang();
+
+    const p    = PROJECTS.find(x => x.id === id);
+    const comp = p ? COMPANIES.find(c => c.id === p.co) : null;
+
+    if (!p || !comp) {
+      root.innerHTML = `
+        <div class="pp-not-found">
+          <h2 data-en="Project not found" data-ua="Проєкт не знайдено">Project not found</h2>
+          <p data-en="This project page doesn't exist or has been moved." data-ua="Ця сторінка проєкту не існує або була переміщена.">
+            This project page doesn't exist or has been moved.
+          </p>
+        </div>`;
+      return;
+    }
+
+    // Set page title + OG meta (for JS-aware social crawlers)
+    document.title = t(p.name) + ' — Valentyn Ihnatov';
+    const _m = (sel, val) => { const el = document.querySelector(sel); if (el) el.content = val; };
+    _m('meta[property="og:title"]',       t(p.name) + ' — Valentyn Ihnatov');
+    _m('meta[property="og:description"]', t(p.desc).slice(0, 155));
+    const heroScreen = (p.screens && p.screens[0]) || PROJECT_SCREENS[p.id]?.[0] || PROJECT_THUMBS[p.id];
+    if (heroScreen) _m('meta[property="og:image"]', heroScreen);
+
+    const name      = t(p.name);
+    const genre     = t(p.genre);
+    const desc      = t(p.desc);
+    const compName  = Array.isArray(comp.name) ? t(comp.name) : comp.name;
+    const compRole  = t(comp.role);
+    const startFmt  = fmtDate(p.s, lang);
+    const endFmt    = fmtDate(p.e, lang);
+    const dur       = fmtDuration(p.s, p.e);
+
+    const thumb   = PROJECT_THUMBS[p.id];
+    const screens = (p.screens && p.screens.length) ? p.screens : (PROJECT_SCREENS[p.id] || []);
+    const compLogo = COMPANY_LOGOS[comp.id];
+
+    // Build platform icons HTML
+    const platIcons = getPlatformIcons(p.platform, p.engine);
+    const platIconsHtml = platIcons
+      .map(([src, alt]) => `<img src="${src}" alt="${alt}" title="${alt}">`)
+      .join('');
+
+    // Hero: first screenshot presented as a device mockup
+    // (device picked by platform family: desktop → laptop, web → browser
+    //  window, mobile → phone; phone orientation set after image load)
+    const heroImgSrc = screens[0] || thumb;
+    let heroImgHtml = '';
+    const aiMockup = (typeof PROJECT_MOCKUPS !== 'undefined') ? PROJECT_MOCKUPS[p.id] : null;
+    if (aiMockup) {
+      heroImgHtml = `
+        <div class="pp-mockup pp-mockup--ai" style="--cc:${comp.color}">
+          <img class="ppm-ai" src="${escAttr(aiMockup)}" alt="${escAttr(name)}" loading="eager">
+        </div>`;
+    } else if (heroImgSrc) {
+      const fams   = platFamilies(p);
+      const device = fams.includes('desktop') ? 'laptop' : fams.includes('web') ? 'browser' : 'phone';
+      const shot   = `<img src="${escAttr(heroImgSrc)}" alt="${escAttr(name)}" loading="eager">`;
+      let deviceHtml = '';
+      if (device === 'laptop') {
+        deviceHtml = `
+          <div class="ppm-laptop">
+            <div class="ppm-screen">${shot}</div>
+            <div class="ppm-base"></div>
+          </div>`;
+      } else if (device === 'browser') {
+        const host = (p.links[0] && p.links[0].url) ? new URL(p.links[0].url).host : 'app';
+        deviceHtml = `
+          <div class="ppm-browser">
+            <div class="ppm-bar"><i></i><i></i><i></i><span class="ppm-url">${escHtml(host)}</span></div>
+            <div class="ppm-screen">${shot}</div>
+          </div>`;
+      } else {
+        deviceHtml = `
+          <div class="ppm-phone" id="ppmPhone">
+            <div class="ppm-screen">${shot}</div>
+          </div>`;
+      }
+      heroImgHtml = `<div class="pp-mockup" style="--cc:${comp.color}">${deviceHtml}</div>`;
+    } else {
+      heroImgHtml = `<div class="pp-hero-img-placeholder" style="color:${comp.color}">${name.charAt(0)}</div>`;
+    }
+
+    // Primary CTA (always shown — recruiter / client contact)
+    const primaryBtn = `<a href="mailto:vossapov@gmail.com" class="pp-link-btn pp-link-btn--primary" style="--cc:${comp.color}">
+      ${lang === 'ua' ? '✉ Написати' : '✉ Get in touch'}
+    </a>`;
+
+    // External project links (shown as ghost buttons)
+    const extLinksHtml = p.links.map(l =>
+      `<a href="${escAttr(l.url)}" class="pp-link-btn pp-link-btn--ghost" target="_blank" rel="noopener">${escHtml(l.label)} ↗</a>`
+    ).join('');
+
+    // Full-size screenshot gallery — the main content of a case.
+    // Stacked full-width, native resolution, click to open in a lightbox.
+    const shotsHtml = screens.map((src, i) =>
+      `<button class="pp-shot" data-shot="${i}" aria-label="${lang === 'ua' ? 'Відкрити скріншот' : 'Open screenshot'} ${i + 1}">
+         <img src="${escAttr(src)}" alt="${escAttr(name)} — ${i + 1}" loading="lazy">
+       </button>`
+    ).join('');
+
+    // "What I did" contribution bullets
+    const bullets = (typeof PROJECT_BULLETS !== 'undefined' && PROJECT_BULLETS[p.id]) || [];
+    const bulletsHtml = bullets.length
+      ? `<ul class="pp-bullets">${bullets.map(b => `<li>${escHtml(b[lang === 'ua' ? 1 : 0])}</li>`).join('')}</ul>`
+      : '';
+
+    // Store-stats strip (downloads / ratings) — only when verified data exists
+    const stats = (typeof PROJECT_STATS !== 'undefined' && PROJECT_STATS[p.id]) || null;
+    const dlLabel = lang === 'ua' ? 'завантажень' : 'downloads';
+    const rtLabel = lang === 'ua' ? 'рейтинг' : 'rating';
+    const rvLabel = lang === 'ua' ? 'відгуків' : 'reviews';
+    let statsHtml = '';
+    if (stats && ((stats.stores && stats.stores.length) || (stats.highlights && stats.highlights.length))) {
+      const storeCards = (stats.stores || []).map(s => `
+        <a class="pp-store" href="${escAttr(s.url)}" target="_blank" rel="noopener" style="--cc:${comp.color}">
+          <span class="pp-store-plat">${escHtml(s.platform)} ↗</span>
+          <span class="pp-store-metrics">
+            ${s.downloads ? `<span class="pp-store-metric"><b>${escHtml(s.downloads)}</b><i>${dlLabel}</i></span>` : ''}
+            ${s.rating ? `<span class="pp-store-metric"><b>★ ${escHtml(s.rating)}</b><i>${s.reviews ? escHtml(s.reviews) + ' ' + rvLabel : rtLabel}</i></span>` : ''}
+          </span>
+        </a>`).join('');
+      const highlightChips = (stats.highlights || []).map(h =>
+        `<span class="pp-highlight">${escHtml(t(h))}</span>`).join('');
+      statsHtml = `
+        <div class="pp-stats">
+          ${storeCards}
+          ${highlightChips ? `<div class="pp-highlights">${highlightChips}</div>` : ''}
+        </div>`;
+    }
+
+    // Tags
+    const tagsHtml = [
+      genre     ? `<span class="pp-tag" style="color:${comp.color};border-color:${comp.color}30;background:${comp.color}12">${genre}</span>` : '',
+      p.platform ? `<span class="pp-tag">${p.platform}</span>` : '',
+      p.engine   ? `<span class="pp-tag">${p.engine}</span>` : '',
+    ].join('');
+
+    // Sidebar info rows
+    const roleLabel    = lang === 'ua' ? 'Роль'       : 'Role';
+    const periodLabel  = lang === 'ua' ? 'Період'     : 'Period';
+    const durLabel     = lang === 'ua' ? 'Тривалість' : 'Duration';
+    const platLabel    = lang === 'ua' ? 'Платформа'  : 'Platform';
+    const engineLabel  = lang === 'ua' ? 'Рушій'      : 'Engine';
+
+    const sidebarRows = [
+      { k: roleLabel,   v: compRole },
+      { k: periodLabel, v: `${startFmt} – ${endFmt}` },
+      { k: durLabel,    v: dur },
+      p.platform ? { k: platLabel, v: p.platform } : null,
+      p.engine   ? { k: engineLabel, v: p.engine }  : null,
+    ].filter(Boolean).map(row =>
+      `<div class="pp-info-row">
+         <span class="pp-info-key">${row.k}</span>
+         <span class="pp-info-val">${row.v}</span>
+       </div>`
+    ).join('');
+
+    const screensTitle = lang === 'ua' ? 'Екрани' : 'Screens';
+    const descTitle    = lang === 'ua' ? 'Про проєкт' : 'About the project';
+    const roleTitle    = lang === 'ua' ? 'Що я робив' : 'What I did';
+    const detailsTitle = lang === 'ua' ? 'Деталі'     : 'Details';
+    const screensHint  = lang === 'ua' ? 'Клікніть, щоб відкрити на весь екран' : 'Click any screen to view full size';
+
+    // ── Next / Prev navigation ──────────────────────────────────
+    const projIdx  = PROJECTS.findIndex(x => x.id === id);
+    const prevProj = projIdx > 0                      ? PROJECTS[projIdx - 1] : null;
+    const nextProj = projIdx < PROJECTS.length - 1   ? PROJECTS[projIdx + 1] : null;
+
+    function navBtnHtml(proj, dir) {
+      if (!proj) return `<div class="pp-nav-placeholder"></div>`;
+      const nc = COMPANIES.find(c => c.id === proj.co);
+      const nm = t(proj.name);
+      const co = nc ? (Array.isArray(nc.name) ? t(nc.name) : nc.name) : '';
+      const arrow = dir === 'prev'
+        ? (lang === 'ua' ? '← Попередній' : '← Previous')
+        : (lang === 'ua' ? 'Наступний →'   : 'Next →');
+      return `<a href="project.html#${proj.id}" class="pp-nav-btn pp-nav-btn--${dir}">
+        <span class="pp-nav-dir">${arrow}</span>
+        <span class="pp-nav-name">${escHtml(nm)}</span>
+        <span class="pp-nav-company">${escHtml(co)}</span>
+      </a>`;
+    }
+
+    const navHtml = `
+      <nav class="pp-nav" aria-label="${lang === 'ua' ? 'Навігація по проєктах' : 'Project navigation'}">
+        ${navBtnHtml(prevProj, 'prev')}
+        ${navBtnHtml(nextProj, 'next')}
+      </nav>`;
+
+    // PX: unique presentation body when a config exists (present.js)
+    const present = (typeof PROJECT_PRESENT !== 'undefined') ? PROJECT_PRESENT[p.id] : null;
+    let lbImgs = screens, pxBody = '';
+    if (present) {
+      const accent = present.accent || comp.color;
+      const stripItems = [
+        { i: roleLabel,   b: compRole },
+        { i: periodLabel, b: `${startFmt} – ${endFmt}` },
+        { i: durLabel,    b: dur },
+        p.platform ? { i: platLabel,   b: p.platform } : null,
+        p.engine   ? { i: engineLabel, b: p.engine }   : null,
+      ].filter(Boolean).map(r => `<div class="px-strip-item"><i>${r.i}</i><b>${r.b}</b></div>`).join('');
+      const tgl = present.tagline ? (lang === 'ua' ? present.tagline.ua : present.tagline.en) : '';
+      const rp = renderPresent(present, lang);
+      lbImgs = rp.imgs;
+      pxBody = `
+        <div class="px-lead" style="--pxc:${accent}">
+          ${tgl ? `<p class="px-tagline">${escHtml(tgl)}</p>` : ''}
+          <div class="px-strip">${stripItems}</div>
+        </div>
+        <div style="--pxc:${accent}">${rp.html}</div>`;
+    }
+    const legacyBody = `
+      ${statsHtml}
+
+      <!-- BODY -->
+      <div class="pp-body">
+        <div class="pp-desc-section">
+
+          <div>
+            <p class="pp-section-title">${descTitle}</p>
+            <p class="pp-description"
+               data-en="${p.desc[0].replace(/"/g,'&quot;')}"
+               data-ua="${p.desc[1].replace(/"/g,'&quot;')}">${desc}</p>
+          </div>
+
+          ${bulletsHtml ? `
+            <div>
+              <p class="pp-section-title">${roleTitle}</p>
+              ${bulletsHtml}
+            </div>
+          ` : ''}
+
+        </div>
+
+        <!-- SIDEBAR -->
+        <aside class="pp-sidebar">
+          <div class="pp-info-card">
+            <p class="pp-section-title">${detailsTitle}</p>
+            ${sidebarRows}
+            ${platIcons.length > 0 ? `
+              <div class="pp-info-row">
+                <span class="pp-info-key">${lang === 'ua' ? 'Платформи' : 'Platforms'}</span>
+                <div class="pp-platform-icons">${platIconsHtml}</div>
+              </div>` : ''}
+          </div>
+
+          ${extLinksHtml ? `
+            <div class="pp-info-card">
+              <p class="pp-section-title">${lang === 'ua' ? 'Посилання' : 'Links'}</p>
+              <div class="pp-linklist">
+                ${p.links.map(l => `<a href="${escAttr(l.url)}" target="_blank" rel="noopener" style="--cc:${comp.color}">${escHtml(l.label)} ↗</a>`).join('')}
+              </div>
+            </div>` : ''}
+        </aside>
+      </div>
+
+      ${screens.length > 0 ? `
+        <!-- FULL-SIZE SCREENS -->
+        <section class="pp-shots-section">
+          <div class="pp-shots-head">
+            <p class="pp-section-title">${screensTitle}</p>
+            <span class="pp-shots-hint">${screensHint}</span>
+          </div>
+          <div class="pp-shots">${shotsHtml}</div>
+        </section>
+      ` : ''}
+
+      `;
+
+    root.innerHTML = `
+      <!-- HERO BAND -->
+      <div class="pp-hero" style="border-color:${comp.border}">
+        ${heroImgHtml}
+        <div class="pp-hero-meta">
+          <div class="pp-meta-left">
+            <span class="pp-label" style="color:${comp.color}">${genre}</span>
+            <h1 class="pp-title display-grad">${name}</h1>
+            <div class="pp-tags">${tagsHtml}</div>
+            <span class="pp-period">${startFmt} – ${endFmt} · <em>${dur}</em></span>
+          </div>
+          <div class="pp-meta-right">
+            ${compLogo
+              ? `<div class="pp-company-badge" style="border-color:${comp.border}">
+                   <img class="pp-company-logo" src="${compLogo}" alt="${compName}">
+                   <span class="pp-company-name" style="color:${comp.color}">${compName}</span>
+                 </div>`
+              : `<div class="pp-company-badge" style="border-color:${comp.border}">
+                   <span class="pp-company-name" style="color:${comp.color}">${compName}</span>
+                 </div>`}
+            <div class="pp-links">
+              ${primaryBtn}
+              ${extLinksHtml}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      ${present ? pxBody : legacyBody}
+
+      ${navHtml}
+    `;
+
+    // Phone mockup: match frame orientation to the shot
+    const phone = document.getElementById('ppmPhone');
+    if (phone) {
+      const im = phone.querySelector('img');
+      const setOri = () => phone.classList.toggle('ppm-phone--port', im.naturalHeight > im.naturalWidth);
+      if (im.complete && im.naturalWidth) setOri(); else im.addEventListener('load', setOri);
+    }
+
+    // Lightbox: click any screen → full-size overlay, arrows / swipe to move
+    setupLightbox(lbImgs);
+
+    // Apply language to newly created elements
+    setLang(lang);
+  }
+
+  // ── LIGHTBOX ─────────────────────────────────────────────
+  let lbEl = null, lbList = [], lbIdx = 0;
+  function ensureLightbox() {
+    if (lbEl) return lbEl;
+    lbEl = document.createElement('div');
+    lbEl.className = 'pp-lightbox';
+    lbEl.innerHTML = `
+      <button class="lb-close" aria-label="Close">✕</button>
+      <button class="lb-nav lb-prev" aria-label="Previous">‹</button>
+      <img class="lb-img" alt="">
+      <button class="lb-nav lb-next" aria-label="Next">›</button>
+      <span class="lb-count"></span>`;
+    document.body.appendChild(lbEl);
+    lbEl.querySelector('.lb-close').addEventListener('click', closeLightbox);
+    lbEl.querySelector('.lb-prev').addEventListener('click', e => { e.stopPropagation(); moveLightbox(-1); });
+    lbEl.querySelector('.lb-next').addEventListener('click', e => { e.stopPropagation(); moveLightbox(1); });
+    lbEl.addEventListener('click', e => { if (e.target === lbEl || e.target.classList.contains('lb-img')) closeLightbox(); });
+    document.addEventListener('keydown', e => {
+      if (!lbEl.classList.contains('open')) return;
+      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowLeft') moveLightbox(-1);
+      if (e.key === 'ArrowRight') moveLightbox(1);
+    });
+    return lbEl;
+  }
+  function openLightbox(i) {
+    ensureLightbox(); lbIdx = i; paintLightbox();
+    lbEl.classList.add('open'); document.body.style.overflow = 'hidden';
+  }
+  function closeLightbox() {
+    if (lbEl) lbEl.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  function moveLightbox(d) { lbIdx = (lbIdx + d + lbList.length) % lbList.length; paintLightbox(); }
+  function paintLightbox() {
+    const img = lbEl.querySelector('.lb-img');
+    img.src = lbList[lbIdx];
+    lbEl.querySelector('.lb-count').textContent = `${lbIdx + 1} / ${lbList.length}`;
+    lbEl.querySelectorAll('.lb-nav').forEach(n => n.style.display = lbList.length > 1 ? '' : 'none');
+  }
+  function setupLightbox(screens) {
+    lbList = screens.slice();
+    document.querySelectorAll('[data-shot]').forEach(btn =>
+      btn.addEventListener('click', () => openLightbox(parseInt(btn.dataset.shot, 10))));
+  }
+
+  renderProject();
+
+  // Full re-render on EN/UA toggle (script.js flips data-lang first;
+  // the 20ms defer mirrors the timeline.js pattern)
+  document.querySelectorAll('.lang-btn').forEach(btn =>
+    btn.addEventListener('click', () => setTimeout(renderProject, 20)));
+
+  // Re-render when next/prev changes the hash (same-page navigation)
+  window.addEventListener('hashchange', () => location.reload());
+  </script>
+
+</body>
+</html>

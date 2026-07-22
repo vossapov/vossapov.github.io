@@ -33,7 +33,7 @@ const AXIS_CLEAR = 40;   // axis center → first card edge (clears year pills)
 const OUTER_PAD  = 16;   // band outer edge → last column
 const CAPSULE_H  = 161;  // fixed content block height (see style.css)
 const NOW        = [2026, 9];   // sentinel for "Present" (ongoing) — chart top; Present shows only for e === NOW (by reference)
-const BOTTOM     = [2017, 8];
+const BOTTOM     = [2017, 1];
 
 // ─────────────────────────────────────────
 //  DATE HELPERS
@@ -947,6 +947,14 @@ const COMPANIES = [
     url: 'https://room8studio.com',
   },
   {
+    id: 'soundmagco',
+    name: 'Soundmag',
+    role: ['Brand & Graphic Designer', 'Бренд- і графічний дизайнер'],
+    color: '#F69707', bg: 'rgba(246,151,7,0.06)', border: 'rgba(246,151,7,0.20)',
+    side: 'right', s: [2017, 1], e: [2022, 2],
+    url: null,
+  },
+  {
     id: 'freelance',
     name: ['Freelance', 'Фріланс'],
     role: ['UI/UX & Graphic Designer', 'UI/UX та графічний дизайнер'],
@@ -963,7 +971,7 @@ const COMPANIES = [
 const PROJECTS = [
   /* BEHANCE:projects */
   {
-    id: 'audiostore', co: 'freelance', s: [2017, 9], e: [2017, 10],
+    id: 'audiostore', co: 'soundmagco', s: [2018, 1], e: [2018, 4],
     name:    ["Audiostore Banners", "Банери Audiostore"],
     genre:   ["Web banners / display advertising", "Веб-банери / медійна реклама"],
     platform: 'Web', engine: null,
@@ -974,7 +982,7 @@ const PROJECTS = [
     links: [{ label: 'behance.net', url: "https://www.behance.net/gallery/58228729/audiostore-banners-pack" }],
   },
   {
-    id: 'soundmag', co: 'freelance', s: [2017, 9], e: [2017, 10],
+    id: 'soundmag', co: 'soundmagco', s: [2017, 9], e: [2017, 12],
     name:    ["Soundmag", "Soundmag"],
     genre:   ["Brand identity — audio retail", "Фірмовий стиль — аудіоритейл"],
     platform: 'Branding', engine: null,

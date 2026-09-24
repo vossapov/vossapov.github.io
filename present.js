@@ -3213,8 +3213,8 @@ const PROJECT_PRESENT = {
           "ua": "UI лайв-гри"
         },
         "body": {
-          "en": "Blast Jam 3D is a casual 3D block-blast puzzle for portrait mobile, live with ads. At Tatem Games I worked on its interface as Game UI/UX Designer.\n\nThe screens cover the core surfaces: the home screen with a chest track, the level board with shooters and boosters, and the reward and booster popups. Every screen reserves a fixed banner slot at the bottom edge.",
-          "ua": "Blast Jam 3D — казуальна 3D-головоломка block-blast для мобільних у портретній орієнтації, лайв-гра з рекламою. У Tatem Games я працював над її інтерфейсом як Game UI/UX Designer.\n\nСкріни охоплюють основне: головний екран із треком скринь, ігрове поле з шутерами й бустерами та попапи нагород і бустерів. Унизу кожного екрана зарезервований фіксований слот під банер."
+          "en": "Tatem Blast: Color Pop is a casual 3D block-blast puzzle for portrait mobile, live with ads. At Tatem Games I worked on its interface as Game UI/UX Designer.\n\nThe screens cover the core surfaces: the home screen with a chest track, the level board with shooters and boosters, and the reward and booster popups. Every screen reserves a fixed banner slot at the bottom edge.",
+          "ua": "Tatem Blast: Color Pop - казуальна 3D-головоломка block-blast для мобільних у портретній орієнтації, лайв-гра з рекламою. У Tatem Games я працював над її інтерфейсом як Game UI/UX Designer.\n\nСкріни охоплюють основне: головний екран із треком скринь, ігрове поле з шутерами й бустерами та попапи нагород і бустерів. Унизу кожного екрана зарезервований фіксований слот під банер."
         },
         "items": [
           {
@@ -3344,8 +3344,8 @@ const PROJECT_PRESENT = {
           "ua": "Затишний пазл-сортування"
         },
         "body": {
-          "en": "Magic Tiles Sort is a portrait mobile puzzle: the player sorts colored tiles into complete stacks. The setting is a cozy cat room, with a witch girl and a winged cat on the key screens.\n\nThe UI covers the full loop — home screen, game board, win flow, shop with offers, and settings. Made at Tatem Games in May–June 2026.",
-          "ua": "Magic Tiles Sort — портретна мобільна головоломка: гравець розкладає кольорові плитки в повні стоси. Дія відбувається в затишній котячій кімнаті, а на ключових екранах з'являються дівчинка-відьмочка та крилатий кіт.\n\nUI покриває весь цикл — головний екран, ігрове поле, екран перемоги, магазин з оферами та налаштування. Зроблено в Tatem Games у травні–червні 2026."
+          "en": "Sort Dash: Enchanted is a portrait mobile puzzle: the player sorts colored tiles into complete stacks. The setting is a cozy cat room, with a witch girl and a winged cat on the key screens.\n\nThe UI covers the full loop — home screen, game board, win flow, shop with offers, and settings. Made at Tatem Games in May–June 2026.",
+          "ua": "Sort Dash: Enchanted - портретна мобільна головоломка: гравець розкладає кольорові плитки в повні стоси. Дія відбувається в затишній котячій кімнаті, а на ключових екранах з'являються дівчинка-відьмочка та крилатий кіт.\n\nUI покриває весь цикл — головний екран, ігрове поле, екран перемоги, магазин з оферами та налаштування. Зроблено в Tatem Games у травні–червні 2026."
         },
         "items": [
           {

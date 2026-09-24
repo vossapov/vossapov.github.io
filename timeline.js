@@ -1084,25 +1084,31 @@ const PROJECTS = [
   // ── Tatem Games ──────────────────────────────────────────────
   {
     id: 'blastjam', co: 'tatem', s: [2026, 7], e: [2026, 9],
-    name:    ['Blast Jam 3D', 'Blast Jam 3D'],
+    name:    ['Tatem Blast: Color Pop', 'Tatem Blast: Color Pop'],
     genre:   ['3D Block-Blast Puzzle', '3D block-blast головоломка'],
     platform: 'Mobile', engine: null,
     desc: [
       'Casual 3D block-blast puzzle for portrait mobile, live with ads at Tatem Games. UI for the home screen, gameplay HUD, boosters and reward popups.',
       'Казуальна 3D-головоломка block-blast для мобільних у портретній орієнтації, лайв-гра з рекламою у Tatem Games. UI головного екрана, ігрового HUD, бустерів і попапів нагород.',
     ],
-    links: [],
+    links: [
+      { label: 'App Store', url: 'https://apps.apple.com/us/app/tatem-blast-color-pop/id6766218772' },
+      { label: 'Google Play', url: 'https://play.google.com/store/apps/details?id=com.tatemgames.tatemblast' },
+    ],
   },
   {
     id: 'tilesort', co: 'tatem', s: [2026, 5], e: [2026, 7],
-    name:    ['Magic Tiles Sort', 'Magic Tiles Sort'],
+    name:    ['Sort Dash: Enchanted', 'Sort Dash: Enchanted'],
     genre:   ['Color-Sort Puzzle', 'Пазл-сортування кольорів'],
     platform: 'Mobile', engine: null,
     desc: [
       'A cozy mobile puzzle where the player sorts colored tiles into full stacks in a cat-room setting. I designed the UI across the whole loop — home, gameplay, win flow, shop, offers and settings.',
       'Затишна мобільна головоломка, де гравець розкладає кольорові плитки в повні стоси в котячій кімнаті. Я спроєктував UI для всього циклу — головний екран, геймплей, екран перемоги, магазин, офери та налаштування.',
     ],
-    links: [],
+    links: [
+      { label: 'App Store', url: 'https://apps.apple.com/us/app/sort-dash-enchanted/id6769772883' },
+      { label: 'Google Play', url: 'https://play.google.com/store/apps/details?id=com.tatemgames.magic.tiles&hl=en_US' },
+    ],
   },
 
   {

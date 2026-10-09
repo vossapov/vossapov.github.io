@@ -1,0 +1,91 @@
+[
+  {
+    "id": "1efa9542061e4058a109e33eb7cf4979",
+    "name": "Тиждень інструментів · демопоказ",
+    "description": "Реклама акумуляторного шурупокрута, артикул 00007, за ціною 2100 грн з 1 до 7 листопада 2026 року.",
+    "brief": {
+      "name": "Тиждень інструментів · демопоказ",
+      "description": "Реклама акумуляторного шурупокрута, артикул 00007, за ціною 2100 грн з 1 до 7 листопада 2026 року.",
+      "task": "Створити один допис Instagram, без друку.",
+      "startDate": "2026-11-01",
+      "endDate": "2026-11-07",
+      "categories": [
+        "Інструменти"
+      ],
+      "skus": [
+        "00007"
+      ],
+      "formats": [
+        "instagram"
+      ],
+      "wishes": "Жовтий фон, великий товар, заголовок «Тиждень інструментів».",
+      "attachments": [],
+      "uploadInfo": [],
+      "warnings": [],
+      "unknownSkus": [],
+      "ignoreUnknown": false,
+      "needsPrint": false
+    },
+    "fileIds": [
+      "b0a9ee069d164110b0dda2eaf6efb5e1"
+    ],
+    "generatedFiles": [
+      {
+        "id": "b0a9ee069d164110b0dda2eaf6efb5e1",
+        "title": "Шурупокрут акумуляторний",
+        "productId": "07",
+        "kind": "social",
+        "format": "instagram",
+        "width": 1080,
+        "height": 1350,
+        "url": "/review/examples/e78ea58f9e62466589d7e33e708a15d6/final.png",
+        "preview": "/review/examples/e78ea58f9e62466589d7e33e708a15d6/preview.jpg",
+        "version": 2
+      }
+    ],
+    "tasks": [
+      {
+        "id": "b0a9ee069d164110b0dda2eaf6efb5e1",
+        "sku": "00007",
+        "productId": "07",
+        "title": "Шурупокрут акумуляторний",
+        "format": "instagram",
+        "description": "Створити один допис Instagram, без друку. — Шурупокрут акумуляторний, instagram",
+        "status": "done",
+        "photoId": "",
+        "findPhoto": true,
+        "versions": [
+          {
+            "id": "b0a9ee069d164110b0dda2eaf6efb5e1",
+            "title": "Шурупокрут акумуляторний",
+            "productId": "07",
+            "kind": "social",
+            "format": "instagram",
+            "width": 1080,
+            "height": 1350,
+            "url": "/review/examples/d203fa69abe440e5aa9bf2523a484648/final.png",
+            "preview": "/review/examples/d203fa69abe440e5aa9bf2523a484648/preview.jpg",
+            "version": 1
+          },
+          {
+            "id": "b0a9ee069d164110b0dda2eaf6efb5e1",
+            "title": "Шурупокрут акумуляторний",
+            "productId": "07",
+            "kind": "social",
+            "format": "instagram",
+            "width": 1080,
+            "height": 1350,
+            "url": "/review/examples/e78ea58f9e62466589d7e33e708a15d6/final.png",
+            "preview": "/review/examples/e78ea58f9e62466589d7e33e708a15d6/preview.jpg",
+            "version": 2
+          }
+        ],
+        "feedback": "Зробити заголовок більшим, а фон — світлішим. Зберегти ціну та дати.",
+        "prompt": "{\n  \"campaign\": {\n    \"name\": \"Тиждень інструментів · демопоказ\",\n    \"description\": \"Реклама акумуляторного шурупокрута, артикул 00007, за ціною 2100 грн з 1 до 7 листопада 2026 року.\",\n    \"task\": \"Створити один допис Instagram, без друку.\",\n    \"startDate\": \"2026-11-01\",\n    \"endDate\": \"2026-11-07\",\n    \"categories\": [\n      \"Інструменти\"\n    ],\n    \"skus\": [\n      \"00007\"\n    ],\n    \"formats\": [\n      \"instagram\"\n    ],\n    \"wishes\": \"Жовтий фон, великий товар, заголовок «Тиждень інструментів».\",\n    \"attachments\": [],\n    \"uploadInfo\": [],\n    \"warnings\": [],\n    \"unknownSkus\": [],\n    \"ignoreUnknown\": false,\n    \"needsPrint\": false\n  },\n  \"task\": {\n    \"description\": \"Створити один допис Instagram, без друку. — Шурупокрут акумуляторний, instagram\",\n    \"format\": \"instagram\",\n    \"size\": [\n      1080,\n      1350\n    ]\n  },\n  \"product\": {\n    \"sku\": \"00007\",\n    \"name\": \"Шурупокрут акумуляторний\",\n    \"details\": \"20 В · 2 акумулятори · кейс\",\n    \"price\": 2100.0,\n    \"unit\": \"компл.\",\n    \"image\": \"/assets/products/07.png\"\n  },\n  \"brandContext\": {\n    \"brand\": {\n      \"name\": \"Будмаркет Люкс\",\n      \"status\": \"Робоча реконструкція за публічними матеріалами, не офіційний брендбук\",\n      \"observed_at\": \"2026-10-09\",\n      \"sources\": [\n        \"instagram\",\n        \"promin\"\n      ],\n      \"logo\": {\n        \"original\": \"research/brand/instagram/6b5e0067b4e2d3af.jpg\",\n        \"description\": \"Червоні силуети будинків, напис БУДМАРКЕТ ЛЮКС, біле поле, жовто-помаранчева кругла обводка.\",\n        \"limitations\": \"Збережений растр 150px; для великого друку потрібен оригінал у векторі або великій роздільності.\"\n      },\n      \"palette\": [\n        {\n          \"name\": \"Червоний\",\n          \"hex\": \"#E30613\"\n        },\n        {\n          \"name\": \"Жовтий\",\n          \"hex\": \"#FFD21C\"\n        },\n        {\n          \"name\": \"Помаранчевий\",\n          \"hex\": \"#F5A32D\"\n        },\n        {\n          \"name\": \"Графіт\",\n          \"hex\": \"#202124\"\n        },\n        {\n          \"name\": \"Білий\",\n          \"hex\": \"#FFFFFF\"\n        }\n      ],\n      \"palette_status\": \"Приблизні робочі значення, інтерпретація публічних зображень; не офіційні коди.\",\n      \"typography\": {\n        \"observed\": \"Контрастні жирні гротескні заголовки, часто великі літери; нейтральний sans-serif для дрібного тексту.\",\n        \"official_font\": null\n      },\n      \"layout\": [\n        \"Велике фото товару чи торгового залу\",\n        \"Контрастні білі заголовки на темних фото\",\n        \"Жовті плашки й акценти\",\n        \"Круглі врізки та круглий логотип\",\n        \"Контактний блок внизу\",\n        \"Акційна ціна і знижка — головний акцент\"\n      ]\n    },\n    \"contacts\": {\n      \"address\": \"Нова Одеса, вул. Вільна, 1\",\n      \"phone\": \"097 429 47 85\"\n    },\n    \"rules\": [\n      \"Не додавати службові написи, внутрішні залишки чи місце на складі. Адреса магазину тільки з contacts.\",\n      \"Українська мова. Точні дати, назви, артикули та ціни тільки з підтвердженого брифу й каталогу. Не вигадувати знижки.\",\n      \"Не перемальовувати логотип; зберігати його пропорції.\",\n      \"Не копіювати дати, знижки та сезонний декор зі старих прикладів, якщо цього немає в брифі.\",\n      \"Товар має відповідати артикулу. Використовувати фото користувача або локальний каталог.\",\n      \"Читабельний заголовок; ієрархія товар → пропозиція → дата → адреса. Без обрізаного тексту.\",\n      \"Для Stories тримати важливий текст поза верхніми й нижніми 250 px. Для друку 300 dpi; це макет для погодження, без заяви про готовий CMYK.\"\n    ],\n    \"references\": [\n      \"assets/reference-mixers.jpg\",\n      \"assets/reference-glassware.jpg\",\n      \"campaign/preview-05-instagram.png\",\n      \"campaign/preview-13-instagram.png\"\n    ]\n  },\n  \"photoPolicy\": \"User-supplied photo if chosen; otherwise find the exact SKU photo in supplied local catalog. Never substitute an unrelated product.\",\n  \"revision\": \"\"\n}",
+        "error": ""
+      }
+    ],
+    "createdAt": "2026-10-09T19:15:38.763356",
+    "creative": true
+  }
+]

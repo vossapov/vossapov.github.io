@@ -1,0 +1,22 @@
+const fs=require('node:fs'),vm=require('node:vm'),assert=require('node:assert/strict');
+const ctx=vm.createContext({});vm.runInContext(fs.readFileSync('demo/dist/campaign-wizard.js','utf8'),ctx);
+const full={name:'Акція',description:'Опис',task:'Банери',startDate:'2026-11-01',endDate:'2026-11-07',categories:[],skus:['00007'],formats:['instagram'],unknownSkus:[],warnings:[],ignoreUnknown:false,needsPrint:false};
+ctx.full=full;assert.equal(vm.runInContext('missingBrief(full).length',ctx),0,'Complete description skips detail questions');
+ctx.full={...full,startDate:''};assert.ok(vm.runInContext('missingBrief(full).includes("терміни")',ctx));
+ctx.full={...full,needsPrint:true};assert.ok(vm.runInContext('missingBrief(full).includes("формат друку")',ctx));
+ctx.full={...full,unknownSkus:['99999']};assert.ok(vm.runInContext('missingBrief(full).includes("нерозпізнані артикули")',ctx));
+ctx.full={...full,unknownSkus:['99999'],ignoreUnknown:true};assert.equal(vm.runInContext('missingBrief(full).length',ctx),0);
+console.log('Passed: complete brief, optional categories, missing dates, print format, explicit unknown-SKU handling.');
+// Polling must update progress while the user keeps a text field focused.
+const nodes={'.post-status':{},'[data-task-progress]':{},'.task-generate':{disabled:true}};
+const summary={},all={};
+const card={dataset:{task:'one'},querySelector:s=>nodes[s]};
+const root={querySelectorAll:()=>[card],querySelector:s=>s==='[data-creation-summary]'?summary:all};
+ctx.$=()=>root;ctx.campaign={tasks:[{id:'one',status:'done'}]};
+vm.runInContext('syncCreativeProgress(campaign)',ctx);
+assert.equal(nodes['.post-status'].textContent,'Готово');
+assert.equal(nodes['.task-generate'].disabled,false);
+assert.equal(summary.textContent,'1 з 1 готово');
+ctx.task={status:'queued',job:{createdAt:new Date(Date.now()-65000).toISOString()}};
+assert.match(vm.runInContext('creativeTaskProgress(task)',ctx),/Очікує завершення попередніх макетів · 1:05 від запиту/);
+console.log('Passed: status updates without replacing focused inputs; queue wait time is visible.');

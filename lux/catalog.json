@@ -10,10 +10,15 @@
     "price": 323.0,
     "stock": 84,
     "unit": "лист",
-    "location": "Ряд 1 · секція 1",
+    "location": "Ряд 1 · секція 1 · полиця 1",
     "keywords": "гіпсокартон гкл лист 12.5 12,5",
     "image": "/assets/products/01.png",
-    "demo": true
+    "demo": true,
+    "storeLocation": {
+      "row": 1,
+      "section": 1,
+      "shelf": 1
+    }
   },
   {
     "id": "02",
@@ -26,10 +31,15 @@
     "price": 396.0,
     "stock": 32,
     "unit": "лист",
-    "location": "Ряд 1 · секція 2",
+    "location": "Ряд 1 · секція 2 · полиця 1",
     "keywords": "гіпсокартон вологостійкий зелений гклв",
     "image": "/assets/products/02.png",
-    "demo": true
+    "demo": true,
+    "storeLocation": {
+      "row": 1,
+      "section": 2,
+      "shelf": 1
+    }
   },
   {
     "id": "03",
@@ -42,10 +52,15 @@
     "price": 190.0,
     "stock": 120,
     "unit": "мішок",
-    "location": "Ряд 1 · секція 3",
+    "location": "Ряд 1 · секція 3 · полиця 1",
     "keywords": "цемент м500 25 кг",
     "image": "/assets/products/03.png",
-    "demo": true
+    "demo": true,
+    "storeLocation": {
+      "row": 1,
+      "section": 3,
+      "shelf": 1
+    }
   },
   {
     "id": "04",
@@ -58,10 +73,15 @@
     "price": 270.0,
     "stock": 65,
     "unit": "мішок",
-    "location": "Ряд 1 · секція 4",
+    "location": "Ряд 1 · секція 4 · полиця 1",
     "keywords": "клей плитка суміш",
     "image": "/assets/products/04.png",
-    "demo": true
+    "demo": true,
+    "storeLocation": {
+      "row": 1,
+      "section": 4,
+      "shelf": 1
+    }
   },
   {
     "id": "05",
@@ -74,10 +94,15 @@
     "price": 900.0,
     "stock": 24,
     "unit": "шт.",
-    "location": "Ряд 1 · секція 5",
+    "location": "Ряд 1 · секція 5 · полиця 1",
     "keywords": "фарба біла матова інтерєрна 10 л",
     "image": "/assets/products/05.png",
-    "demo": true
+    "demo": true,
+    "storeLocation": {
+      "row": 1,
+      "section": 5,
+      "shelf": 1
+    }
   },
   {
     "id": "06",
@@ -90,10 +115,15 @@
     "price": 160.0,
     "stock": 48,
     "unit": "шт.",
-    "location": "Ряд 2 · секція 1",
+    "location": "Ряд 2 · секція 1 · полиця 1",
     "keywords": "валик малярний фарбування",
     "image": "/assets/products/06.png",
-    "demo": true
+    "demo": true,
+    "storeLocation": {
+      "row": 2,
+      "section": 1,
+      "shelf": 1
+    }
   },
   {
     "id": "07",
@@ -106,10 +136,15 @@
     "price": 2100.0,
     "stock": 12,
     "unit": "компл.",
-    "location": "Ряд 2 · секція 2",
+    "location": "Ряд 2 · секція 2 · полиця 1",
     "keywords": "шурупокрут шуруповерт дриль акумуляторний",
     "image": "/assets/products/07.png",
-    "demo": true
+    "demo": true,
+    "storeLocation": {
+      "row": 2,
+      "section": 2,
+      "shelf": 1
+    }
   },
   {
     "id": "08",
@@ -122,10 +157,15 @@
     "price": 1280.0,
     "stock": 9,
     "unit": "шт.",
-    "location": "Ряд 2 · секція 3",
+    "location": "Ряд 2 · секція 3 · полиця 1",
     "keywords": "болгарка кшм шліфмашина",
     "image": "/assets/products/08.png",
-    "demo": true
+    "demo": true,
+    "storeLocation": {
+      "row": 2,
+      "section": 3,
+      "shelf": 1
+    }
   },
   {
     "id": "09",
@@ -138,10 +178,15 @@
     "price": 2380.0,
     "stock": 6,
     "unit": "шт.",
-    "location": "Ряд 2 · секція 4",
+    "location": "Ряд 2 · секція 4 · полиця 1",
     "keywords": "перфоратор дриль ударний",
     "image": "/assets/products/09.png",
-    "demo": true
+    "demo": true,
+    "storeLocation": {
+      "row": 2,
+      "section": 4,
+      "shelf": 1
+    }
   },
   {
     "id": "10",
@@ -154,10 +199,15 @@
     "price": 120.0,
     "stock": 41,
     "unit": "шт.",
-    "location": "Ряд 2 · секція 5",
+    "location": "Ряд 2 · секція 5 · полиця 1",
     "keywords": "рулетка метр вимірювальна",
     "image": "/assets/products/10.png",
-    "demo": true
+    "demo": true,
+    "storeLocation": {
+      "row": 2,
+      "section": 5,
+      "shelf": 1
+    }
   },
   {
     "id": "11",
@@ -170,10 +220,15 @@
     "price": 270.0,
     "stock": 18,
     "unit": "шт.",
-    "location": "Ряд 3 · секція 1",
+    "location": "Ряд 3 · секція 1 · полиця 1",
     "keywords": "молоток цвяхи обценьки",
     "image": "/assets/products/11.png",
-    "demo": true
+    "demo": true,
+    "storeLocation": {
+      "row": 3,
+      "section": 1,
+      "shelf": 1
+    }
   },
   {
     "id": "12",
@@ -186,10 +241,15 @@
     "price": 80.0,
     "stock": 73,
     "unit": "уп.",
-    "location": "Ряд 3 · секція 2",
+    "location": "Ряд 3 · секція 2 · полиця 1",
     "keywords": "саморізи шурупи кріплення 100",
     "image": "/assets/products/12.png",
-    "demo": true
+    "demo": true,
+    "storeLocation": {
+      "row": 3,
+      "section": 2,
+      "shelf": 1
+    }
   },
   {
     "id": "13",
@@ -202,10 +262,15 @@
     "price": 1200.0,
     "stock": 15,
     "unit": "шт.",
-    "location": "Ряд 3 · секція 3",
+    "location": "Ряд 3 · секція 3 · полиця 1",
     "keywords": "змішувач кран кухні хром",
     "image": "/assets/products/13.png",
-    "demo": true
+    "demo": true,
+    "storeLocation": {
+      "row": 3,
+      "section": 3,
+      "shelf": 1
+    }
   },
   {
     "id": "14",
@@ -218,10 +283,15 @@
     "price": 480.0,
     "stock": 21,
     "unit": "компл.",
-    "location": "Ряд 3 · секція 4",
+    "location": "Ряд 3 · секція 4 · полиця 1",
     "keywords": "душ лійка шланг душовий",
     "image": "/assets/products/14.png",
-    "demo": true
+    "demo": true,
+    "storeLocation": {
+      "row": 3,
+      "section": 4,
+      "shelf": 1
+    }
   },
   {
     "id": "15",
@@ -234,10 +304,15 @@
     "price": 1530.0,
     "stock": 5,
     "unit": "шт.",
-    "location": "Ряд 3 · секція 5",
+    "location": "Ряд 3 · секція 5 · полиця 1",
     "keywords": "умивальник раковина керамічний",
     "image": "/assets/products/15.png",
-    "demo": true
+    "demo": true,
+    "storeLocation": {
+      "row": 3,
+      "section": 5,
+      "shelf": 1
+    }
   },
   {
     "id": "16",
@@ -250,10 +325,15 @@
     "price": 180.0,
     "stock": 30,
     "unit": "шт.",
-    "location": "Ряд 4 · секція 1",
+    "location": "Ряд 4 · секція 1 · полиця 1",
     "keywords": "сифон злив умивальник",
     "image": "/assets/products/16.png",
-    "demo": true
+    "demo": true,
+    "storeLocation": {
+      "row": 4,
+      "section": 1,
+      "shelf": 1
+    }
   },
   {
     "id": "17",
@@ -266,10 +346,15 @@
     "price": 60.0,
     "stock": 96,
     "unit": "шт.",
-    "location": "Ряд 4 · секція 2",
+    "location": "Ряд 4 · секція 2 · полиця 1",
     "keywords": "лампа лампочка лед led e27 12 вт",
     "image": "/assets/products/17.png",
-    "demo": true
+    "demo": true,
+    "storeLocation": {
+      "row": 4,
+      "section": 2,
+      "shelf": 1
+    }
   },
   {
     "id": "18",
@@ -282,10 +367,15 @@
     "price": 144.0,
     "stock": 34,
     "unit": "шт.",
-    "location": "Ряд 4 · секція 3",
+    "location": "Ряд 4 · секція 3 · полиця 1",
     "keywords": "розетка подвійна електрика",
     "image": "/assets/products/18.png",
-    "demo": true
+    "demo": true,
+    "storeLocation": {
+      "row": 4,
+      "section": 3,
+      "shelf": 1
+    }
   },
   {
     "id": "19",
@@ -298,10 +388,15 @@
     "price": 400.0,
     "stock": 27,
     "unit": "шт.",
-    "location": "Ряд 4 · секція 4",
+    "location": "Ряд 4 · секція 4 · полиця 1",
     "keywords": "подовжувач мережевий фільтр",
     "image": "/assets/products/19.png",
-    "demo": true
+    "demo": true,
+    "storeLocation": {
+      "row": 4,
+      "section": 4,
+      "shelf": 1
+    }
   },
   {
     "id": "20",
@@ -314,10 +409,15 @@
     "price": 54.0,
     "stock": 250,
     "unit": "м",
-    "location": "Ряд 4 · секція 5",
+    "location": "Ряд 4 · секція 5 · полиця 1",
     "keywords": "кабель провід пвс 3 1.5",
     "image": "/assets/products/20.png",
-    "demo": true
+    "demo": true,
+    "storeLocation": {
+      "row": 4,
+      "section": 5,
+      "shelf": 1
+    }
   },
   {
     "id": "21",
@@ -330,10 +430,15 @@
     "price": 490.0,
     "stock": 13,
     "unit": "шт.",
-    "location": "Ряд 5 · секція 1",
+    "location": "Ряд 5 · секція 1 · полиця 1",
     "keywords": "прожектор світильник вуличний 30",
     "image": "/assets/products/21.png",
-    "demo": true
+    "demo": true,
+    "storeLocation": {
+      "row": 5,
+      "section": 1,
+      "shelf": 1
+    }
   },
   {
     "id": "22",
@@ -346,10 +451,15 @@
     "price": 800.0,
     "stock": 11,
     "unit": "шт.",
-    "location": "Ряд 5 · секція 2",
+    "location": "Ряд 5 · секція 2 · полиця 1",
     "keywords": "чайник електричний електрочайник",
     "image": "/assets/products/22.png",
-    "demo": true
+    "demo": true,
+    "storeLocation": {
+      "row": 5,
+      "section": 2,
+      "shelf": 1
+    }
   },
   {
     "id": "23",
@@ -362,10 +472,15 @@
     "price": 900.0,
     "stock": 8,
     "unit": "шт.",
-    "location": "Ряд 5 · секція 3",
+    "location": "Ряд 5 · секція 3 · полиця 1",
     "keywords": "обігрівач тепловентилятор дуйка",
     "image": "/assets/products/23.png",
-    "demo": true
+    "demo": true,
+    "storeLocation": {
+      "row": 5,
+      "section": 3,
+      "shelf": 1
+    }
   },
   {
     "id": "24",
@@ -378,10 +493,15 @@
     "price": 320.0,
     "stock": 16,
     "unit": "шт.",
-    "location": "Ряд 5 · секція 4",
+    "location": "Ряд 5 · секція 4 · полиця 1",
     "keywords": "ваги кухонні електронні",
     "image": "/assets/products/24.png",
-    "demo": true
+    "demo": true,
+    "storeLocation": {
+      "row": 5,
+      "section": 4,
+      "shelf": 1
+    }
   },
   {
     "id": "25",
@@ -394,10 +514,15 @@
     "price": 700.0,
     "stock": 19,
     "unit": "шт.",
-    "location": "Ряд 5 · секція 5",
+    "location": "Ряд 5 · секція 5 · полиця 1",
     "keywords": "каструля посуд кришка 3 л",
     "image": "/assets/products/25.png",
-    "demo": true
+    "demo": true,
+    "storeLocation": {
+      "row": 5,
+      "section": 5,
+      "shelf": 1
+    }
   },
   {
     "id": "26",
@@ -410,10 +535,15 @@
     "price": 600.0,
     "stock": 14,
     "unit": "шт.",
-    "location": "Ряд 6 · секція 1",
+    "location": "Ряд 6 · секція 1 · полиця 1",
     "keywords": "сковорода пательня 26",
     "image": "/assets/products/26.png",
-    "demo": true
+    "demo": true,
+    "storeLocation": {
+      "row": 6,
+      "section": 1,
+      "shelf": 1
+    }
   },
   {
     "id": "27",
@@ -426,10 +556,15 @@
     "price": 80.0,
     "stock": 45,
     "unit": "шт.",
-    "location": "Ряд 6 · секція 2",
+    "location": "Ряд 6 · секція 2 · полиця 1",
     "keywords": "чашка горнятко кружка",
     "image": "/assets/products/27.png",
-    "demo": true
+    "demo": true,
+    "storeLocation": {
+      "row": 6,
+      "section": 2,
+      "shelf": 1
+    }
   },
   {
     "id": "28",
@@ -442,10 +577,15 @@
     "price": 400.0,
     "stock": 10,
     "unit": "шт.",
-    "location": "Ряд 6 · секція 3",
+    "location": "Ряд 6 · секція 3 · полиця 1",
     "keywords": "машинка самоскид іграшка",
     "image": "/assets/products/28.png",
-    "demo": true
+    "demo": true,
+    "storeLocation": {
+      "row": 6,
+      "section": 3,
+      "shelf": 1
+    }
   },
   {
     "id": "29",
@@ -458,10 +598,15 @@
     "price": 450.0,
     "stock": 0,
     "unit": "компл.",
-    "location": "Ряд 6 · секція 4",
+    "location": "Ряд 6 · секція 4 · полиця 1",
     "keywords": "конструктор іграшка блоки",
     "image": "/assets/products/29.png",
-    "demo": true
+    "demo": true,
+    "storeLocation": {
+      "row": 6,
+      "section": 4,
+      "shelf": 1
+    }
   },
   {
     "id": "30",
@@ -474,9 +619,14 @@
     "price": 680.0,
     "stock": 17,
     "unit": "шт.",
-    "location": "Ряд 6 · секція 5",
+    "location": "Ряд 6 · секція 5 · полиця 1",
     "keywords": "шланг садовий полив 20 м",
     "image": "/assets/products/30.png",
-    "demo": true
+    "demo": true,
+    "storeLocation": {
+      "row": 6,
+      "section": 5,
+      "shelf": 1
+    }
   }
 ]

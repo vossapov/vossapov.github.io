@@ -1,12 +1,8 @@
-# Виробничі примітки
+LUX HALLOWEEN / PRINT / 2026
+A5 148 × 210 mm, 4 pages, original10 goods:05,06,07,10,13,17,22,25,27,28. Sequentialpages, not printerimposition.
+A2 420 × 594 mm, 1 page. Both documents3 mm bleed on each side, explicit TrimBox and BleedBox. Native typography; Noto Sans embedded. ImageGen produced text-free scene, using approved v5 style reference; prices and all factual fields retained from catalog.json with native typesetting.
+All prices, promotion dates and products are demonstrations. AI photos illustrate fictional assortment. This is a visualapproval proof, RGB, not PDF/X. Printer must perform ICC conversion and approve a proof. Original socialprofile logo150px remains unchanged, clipped to its circle: ~181ppi on A5,64ppi on A2. Replace it with official vector before production. Generated hero1054×1492 is approximately180ppi A5 /63ppi A2; large-format print requires higher-resolution approved photography. No claim of pressready quality.
+Each page contains demo disclaimer, phone/address and icons+handles without social descriptors. Final text retains exact sourceprices, units, names, SKU, details. Poster communicates maximum discount50%; catalog minimum is5%.
+Workflow: approvedreference → ImageGen styled scene → native precise data/layout → PDF render → visualQA → data/font/trim checks. scripts/generate_print_final.py is editable layout source.
 
-Демонстраційна кампанія: усі ціни, знижки, залишки й дати вигадані. Зображення товарів ілюстративні, AI-generated, не фото реального асортименту. Не є офіційною акцією магазину.
-
-- 5 товарних макетів × 4 формати: Instagram 1080×1350, Stories 1080×1920, Facebook 1200×630, Threads 1080×1080.
-- A5: 148×210 мм, 4 послідовні сторінки (обкладинка та 10 товарів), не спуск смуг.
-- A2: 420×594 мм, 1 сторінка.
-- Обидва PDF мають 3 мм вильоти, MediaBox/BleedBox і TrimBox; текст векторний, Noto Sans вкладений.
-- Колір RGB: перед друком друкарня має виконати пробу й конвертацію під свій ICC-профіль. Це макет для погодження, не сертифікований PDF/X.
-- Логотип оригінальний растровий 150×150 px, без перемальовування: приблизно 152 ppi на A5 та 54 ppi на A2. Для тиражу обов’язково отримати векторний логотип. AI-ілюстрація на A2 також потребує перевірки ефективної роздільності / заміни для високоякісного друку.
-- Джерело цін: ../catalog.json. Відтворення: scripts/generate_campaign.py.
-- Дизайн заснований на спостережених матеріалах соцмереж (темний фон, жовті акценти, оригінальний червоно-білий знак), не на офіційному брендбуку.
+SOCIAL: 5 concepts × 4 independently composed formats. ImageGen based on approved faucet artwork, with visual verification of every output. Generated images may redraw fine logo/product details; illustrative demo only. Native SVG wrappers normalize exact export dimensions without stretching. Stories keep important content clear of top/bottom interface regions.

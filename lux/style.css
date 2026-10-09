@@ -162,4 +162,6 @@ aside nav a.active svg{color:inherit}
 @media(max-width:700px){#store-map-dialog{padding:20px 12px}.map-layout{grid-template-columns:1fr;gap:12px}.map-product-head{gap:10px}.map-product-head>img{width:50px;height:55px}.map-product-head b{font-size:14px}.map-product-head strong{font-size:12px}.floor-scroll{height:430px}.map-info{display:flex;flex-direction:column}.map-info .gps-demo{align-self:flex-start}#search-page .page-head{gap:10px}#open-store-map{font-size:12px;padding:9px 11px}}
 #map-locate-user{width:100%;margin-top:10px}.map-controls{flex-wrap:wrap}
 
-.product-map{margin-top:24px;border:1px solid #cad2dd;border-radius:12px;overflow:hidden;background:#edf0f5}.product-map>svg{display:block;fill:none;stroke:none;width:100%;height:auto;max-height:780px}.product-map .map-section{cursor:default}.product-map .map-section:hover rect{stroke:#bac6d5;stroke-width:1}.product-map .map-section.selected:hover rect{stroke:#a67900;stroke-width:2}
+.product-map{margin-top:24px;border:1px solid #cad2dd;border-radius:12px;overflow:hidden;background:#edf0f5}.product-map svg{display:block;fill:none;stroke:none;width:100%;height:auto;max-height:780px}.product-map .map-section{cursor:default}.product-map .map-section:hover rect{stroke:#bac6d5;stroke-width:1}.product-map .map-section.selected:hover rect{stroke:#a67900;stroke-width:2}
+
+.product-map{grid-column:1/-1;margin-top:0}.map-landscape{display:block}.map-portrait{display:none}@media(max-width:700px){.map-landscape{display:none}.map-portrait{display:block}}

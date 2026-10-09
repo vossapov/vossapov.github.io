@@ -33,5 +33,22 @@ function productMap(p){
   .replace('</svg>','<text x="267" y="101" text-anchor="end" fill="#226bc0" font-size="10">Ви · демопозиція</text></svg>')
   .replace(/id="([^"]+)"/g,'id="product-$1"')
   .replace('url(#parking-lines)','url(#product-parking-lines)');
- return `<div class="product-map" aria-label="Розташування товару в магазині">${svg}</div>`;
+ return `<div class="product-map" aria-label="Розташування товару в магазині"><div class="map-portrait">${svg}</div><div class="map-landscape">${horizontalProductMap(location,position)}</div></div>`;
+}
+
+function horizontalProductMap(location,position){
+ const path=mapRoute(location,position).map((point,i)=>(i?'L':'M')+point.y+' '+point.x).join(' ');
+ return `<svg viewBox="0 0 1060 420" role="img" aria-label="Мапа магазину: ряд ${location.row}, секція ${location.section}, полиця ${location.shelf}. Парковка та обидва входи внизу. Синя точка — демопозиція користувача.">
+ <rect width="1060" height="420" fill="#edf0f5"/><text x="36" y="31" font-size="16" font-weight="700" fill="#252b35">Ряд ${location.row} · секція ${location.section} · полиця ${location.shelf}</text>
+ <g transform="translate(0 40)"><rect x="35" y="18" width="980" height="284" rx="8" fill="white" stroke="#3b4350" stroke-width="3"/>
+ <rect x="99" y="23" width="880" height="13" rx="3" fill="#cdd3dd"/><rect x="99" y="289" width="850" height="8" rx="3" fill="#cdd3dd"/>
+ ${Array.from({length:15},(_,i)=>{const row=i+1,x=rowTop(row);return `<text x="${x+15}" y="60" text-anchor="middle" font-size="13" font-weight="700" fill="#485364">${row}</text>`+Array.from({length:5},(_,j)=>{const section=j+1,y=sectionX(section),selected=row===location.row&&section===location.section;return `<g aria-label="Ряд ${row}, секція ${section}${selected?', товар тут':''}"><rect x="${x}" y="${y}" width="30" height="33" rx="4" fill="${selected?'#ffcf24':'#dce3ed'}" stroke="${selected?'#a67900':'#bac6d5'}" stroke-width="${selected?2:1}"/><text x="${x+15}" y="${y+21}" text-anchor="middle" font-size="12" fill="#344150">${section}</text></g>`}).join('')}).join('')}
+ <path d="${path}" fill="none" stroke="#2274dc" stroke-width="4" stroke-dasharray="7 6" stroke-linecap="round" stroke-linejoin="round"/>
+ <circle cx="${rowTop(location.row)-11}" cy="${sectionX(location.section)+16}" r="5" fill="#d31835" stroke="white" stroke-width="2"/>
+ <rect x="40" y="321" width="980" height="48" rx="8" fill="#dde2e9"/>
+ ${Array.from({length:17},(_,i)=>`<path d="M${135+i*45} 327v35" stroke="#c6ccd5" stroke-width="2"/>`).join('')}
+ <text x="530" y="352" text-anchor="middle" font-size="12" fill="#596575" stroke="#dde2e9" stroke-width="6" paint-order="stroke">ПАРКОВКА</text>
+ ${[65,975].map((x,i)=>`<path d="M${x-17} 302h34" stroke="white" stroke-width="6"/><path d="M${x} 316v-24m-5 8 5-8 5 8" fill="none" stroke="#29835e" stroke-width="3"/><text x="${x}" y="345" text-anchor="middle" fill="#246a4e" font-size="10">ВХІД ${i+1}</text>`).join('')}
+ <circle cx="${position.y}" cy="${position.x}" r="12" fill="#2274dc" opacity=".15"/><circle cx="${position.y}" cy="${position.x}" r="6" fill="#2274dc" stroke="white" stroke-width="2"/>
+ </g><circle cx="844" cy="25" r="5" fill="#2274dc"/><text x="858" y="30" font-size="12" fill="#226bc0">Ви · демопозиція</text></svg>`;
 }

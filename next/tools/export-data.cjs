@@ -21,6 +21,7 @@
 const fs = require('fs');
 const path = require('path');
 const vm = require('vm');
+const crypto = require('crypto');
 
 const ROOT = path.resolve(__dirname, '..', '..');
 const SRC = path.join(ROOT, 'timeline.js');
@@ -121,6 +122,24 @@ for (const p of projects) {
     preview: r.preview ? '/next/assets/recent/' + p.id + '/' + r.preview : null };
 }
 
+// Original project artwork (e.g. a full Behance banner pack) is listed ahead of the source
+// screens so the homepage dialog shows it right after the cover. Files must stay byte-identical
+// to the downloads recorded in each gallery's sources.json.
+const galleries = JSON.parse(fs.readFileSync(path.join(ROOT, 'next/content/project-galleries.json'), 'utf8'));
+const galleryProblems = [];
+for (const [id, g] of Object.entries(galleries)) {
+  const p = projects.find((x) => x.id === id);
+  if (!p) { galleryProblems.push(id + ': gallery without project'); continue; }
+  const files = g.assets.map((a) => g.dir + a.file);
+  p.screens = files.concat(p.screens.filter((a) => !files.includes(a)));
+  const recorded = Object.fromEntries(JSON.parse(fs.readFileSync(path.join(ROOT, g.sources.slice(1)), 'utf8')).assets.map((a) => [a.file, a.sha256]));
+  for (const a of g.assets) {
+    const f = path.join(ROOT, g.dir.slice(1), a.file);
+    if (!recorded[a.file]) galleryProblems.push(id + ': no recorded source for ' + a.file);
+    else if (fs.existsSync(f) && crypto.createHash('sha256').update(fs.readFileSync(f)).digest('hex') !== recorded[a.file]) galleryProblems.push(id + ': ' + a.file + ' differs from its recorded source');
+  }
+}
+
 // ── Integrity checks (fail loudly instead of shipping a partial snapshot) ──
 // Finished ImageGen scenes are the primary presentation; keep source art intact.
 for (const p of projects) {
@@ -132,7 +151,7 @@ for (const p of projects) {
   if (p.recent) p.recent.preview = generated;
 }
 
-const problems = [];
+const problems = galleryProblems;
 const ids = new Set();
 for (const p of projects) {
   if (ids.has(p.id)) problems.push('duplicate project id ' + p.id);

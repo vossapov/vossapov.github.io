@@ -366,6 +366,18 @@ html.cs-lb-open { overflow: hidden; }
   }
 }
 
+/* Audiostore web banners are ~3.5:1; two per row keeps their copy legible. */
+#sec-product-price-banners .st-board, #sec-brand-discount-banners .st-board,
+#sec-seasonal-campaign-banners .st-board, #sec-gift-with-purchase-banners .st-board {
+  display: grid; columns: auto; grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+#sec-product-price-banners .st-cell, #sec-brand-discount-banners .st-cell,
+#sec-seasonal-campaign-banners .st-cell, #sec-gift-with-purchase-banners .st-cell { margin-bottom: 0; }
+@media (max-width: 640px) {
+  #sec-product-price-banners .st-board, #sec-brand-discount-banners .st-board,
+  #sec-seasonal-campaign-banners .st-board, #sec-gift-with-purchase-banners .st-board { grid-template-columns: minmax(0, 1fr); }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .cs *, .cs *::before, .cs *::after { transition: none !important; animation: none !important; }

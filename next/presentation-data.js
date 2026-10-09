@@ -32,6 +32,93 @@ window.VI_CASES = {
      }
     },
     {
+     "type": "gallery",
+     "kicker": {
+      "en": "Banners · Product prices",
+      "ua": "Банери · Ціни на товари"
+     },
+     "title": {
+      "en": "Product price banners",
+      "ua": "Банери з цінами"
+     },
+     "body": {
+      "en": "One product or product family per banner, with the model name, old and new price and a buy button over a themed photo background.",
+      "ua": "Один товар або серія на банер: назва моделі, стара й нова ціна та кнопка покупки на тематичному фото-тлі."
+     },
+     "imgs": [
+      "/next/assets/projects/audiostore/banner-01.jpg",
+      "/next/assets/projects/audiostore/banner-03.jpg",
+      "/next/assets/projects/audiostore/banner-04.jpg",
+      "/next/assets/projects/audiostore/banner-05.jpg",
+      "/next/assets/projects/audiostore/banner-11.jpg",
+      "/next/assets/projects/audiostore/banner-13.jpg"
+     ]
+    },
+    {
+     "type": "gallery",
+     "kicker": {
+      "en": "Banners · Brand discounts",
+      "ua": "Банери · Знижки на бренди"
+     },
+     "title": {
+      "en": "Brand discount banners",
+      "ua": "Банери зі знижками на бренди"
+     },
+     "body": {
+      "en": "Discounts on Bose, Ultrasone, Urbanears, Audio-Technica, Brainwavz and FiiO, each built around the brand's logo, a large percentage and a product shot.",
+      "ua": "Знижки на Bose, Ultrasone, Urbanears, Audio-Technica, Brainwavz і FiiO: у кожному банері - логотип бренду, великий відсоток знижки та фото товару."
+     },
+     "imgs": [
+      "/next/assets/projects/audiostore/banner-02.jpg",
+      "/next/assets/projects/audiostore/banner-06.png",
+      "/next/assets/projects/audiostore/banner-07.png",
+      "/next/assets/projects/audiostore/banner-08.png",
+      "/next/assets/projects/audiostore/banner-15.jpg",
+      "/next/assets/projects/audiostore/banner-17.jpg",
+      "/next/assets/projects/audiostore/banner-18.jpg"
+     ]
+    },
+    {
+     "type": "gallery",
+     "kicker": {
+      "en": "Banners · Seasonal campaigns",
+      "ua": "Банери · Сезонні акції"
+     },
+     "title": {
+      "en": "Seasonal campaign banners",
+      "ua": "Банери сезонних акцій"
+     },
+     "body": {
+      "en": "Time-limited sales with seasonal art direction: a February FiiO promotion, Black Friday for Bang & Olufsen and two spring sales.",
+      "ua": "Обмежені в часі акції з сезонною подачею: лютнева акція FiiO, Чорна п'ятниця для Bang & Olufsen і два весняні розпродажі."
+     },
+     "imgs": [
+      "/next/assets/projects/audiostore/banner-09.jpg",
+      "/next/assets/projects/audiostore/banner-14.jpg",
+      "/next/assets/projects/audiostore/banner-16.jpg",
+      "/next/assets/projects/audiostore/banner-19.jpg"
+     ]
+    },
+    {
+     "type": "gallery",
+     "kicker": {
+      "en": "Banners · Gifts with purchase",
+      "ua": "Банери · Подарунки до покупки"
+     },
+     "title": {
+      "en": "Gift-with-purchase banners",
+      "ua": "Банери з подарунком до покупки"
+     },
+     "body": {
+      "en": "Headphone offers that show the bonus case next to the product: a hard case for Marshall and a waterproof FiiO HB1 case.",
+      "ua": "Пропозиції на навушники, де кейс-подарунок показано поруч із товаром: жорсткий кейс для Marshall і водонепроникний кейс FiiO HB1."
+     },
+     "imgs": [
+      "/next/assets/projects/audiostore/banner-10.jpg",
+      "/next/assets/projects/audiostore/banner-12.jpg"
+     ]
+    },
+    {
      "type": "wide",
      "kicker": {
       "en": "Cover",
@@ -51,16 +138,130 @@ window.VI_CASES = {
     }
    ],
    "images": [
+    "/next/assets/projects/audiostore/banner-01.jpg",
+    "/next/assets/projects/audiostore/banner-03.jpg",
+    "/next/assets/projects/audiostore/banner-04.jpg",
+    "/next/assets/projects/audiostore/banner-05.jpg",
+    "/next/assets/projects/audiostore/banner-11.jpg",
+    "/next/assets/projects/audiostore/banner-13.jpg",
+    "/next/assets/projects/audiostore/banner-02.jpg",
+    "/next/assets/projects/audiostore/banner-06.png",
+    "/next/assets/projects/audiostore/banner-07.png",
+    "/next/assets/projects/audiostore/banner-08.png",
+    "/next/assets/projects/audiostore/banner-15.jpg",
+    "/next/assets/projects/audiostore/banner-17.jpg",
+    "/next/assets/projects/audiostore/banner-18.jpg",
+    "/next/assets/projects/audiostore/banner-09.jpg",
+    "/next/assets/projects/audiostore/banner-14.jpg",
+    "/next/assets/projects/audiostore/banner-16.jpg",
+    "/next/assets/projects/audiostore/banner-19.jpg",
+    "/next/assets/projects/audiostore/banner-10.jpg",
+    "/next/assets/projects/audiostore/banner-12.jpg",
     "/assets/screenshots/audiostore/audiostore-1.jpg",
     "/next/assets/generated-mockups/audiostore.png",
     "/assets/covers/audiostore.jpg"
    ],
    "kinds": {
+    "/next/assets/projects/audiostore/banner-01.jpg": "board",
+    "/next/assets/projects/audiostore/banner-03.jpg": "board",
+    "/next/assets/projects/audiostore/banner-04.jpg": "board",
+    "/next/assets/projects/audiostore/banner-05.jpg": "board",
+    "/next/assets/projects/audiostore/banner-11.jpg": "board",
+    "/next/assets/projects/audiostore/banner-13.jpg": "board",
+    "/next/assets/projects/audiostore/banner-02.jpg": "board",
+    "/next/assets/projects/audiostore/banner-06.png": "board",
+    "/next/assets/projects/audiostore/banner-07.png": "board",
+    "/next/assets/projects/audiostore/banner-08.png": "board",
+    "/next/assets/projects/audiostore/banner-15.jpg": "board",
+    "/next/assets/projects/audiostore/banner-17.jpg": "board",
+    "/next/assets/projects/audiostore/banner-18.jpg": "board",
+    "/next/assets/projects/audiostore/banner-09.jpg": "board",
+    "/next/assets/projects/audiostore/banner-14.jpg": "board",
+    "/next/assets/projects/audiostore/banner-16.jpg": "board",
+    "/next/assets/projects/audiostore/banner-19.jpg": "board",
+    "/next/assets/projects/audiostore/banner-10.jpg": "board",
+    "/next/assets/projects/audiostore/banner-12.jpg": "board",
     "/assets/screenshots/audiostore/audiostore-1.jpg": "board",
     "/next/assets/generated-mockups/audiostore.png": "board",
     "/assets/covers/audiostore.jpg": "board"
    },
    "captions": {
+    "/next/assets/projects/audiostore/banner-01.jpg": {
+     "en": "FiiO X5 III · price offer",
+     "ua": "FiiO X5 III · суперціна"
+    },
+    "/next/assets/projects/audiostore/banner-02.jpg": {
+     "en": "Bose speakers · −20%",
+     "ua": "Акустика Bose · −20%"
+    },
+    "/next/assets/projects/audiostore/banner-03.jpg": {
+     "en": "FiiO M3K · now on sale",
+     "ua": "FiiO M3K · уже в продажу"
+    },
+    "/next/assets/projects/audiostore/banner-04.jpg": {
+     "en": "ION Vinyl Motion Air · price offer",
+     "ua": "ION Vinyl Motion Air · ціна зі знижкою"
+    },
+    "/next/assets/projects/audiostore/banner-05.jpg": {
+     "en": "S.M.S.L M7 · promo price",
+     "ua": "S.M.S.L M7 · промоціна"
+    },
+    "/next/assets/projects/audiostore/banner-06.png": {
+     "en": "Ultrasone · −40%",
+     "ua": "Ultrasone · −40%"
+    },
+    "/next/assets/projects/audiostore/banner-07.png": {
+     "en": "Urbanears headphones · from 20% off",
+     "ua": "Навушники Urbanears · знижки від 20%"
+    },
+    "/next/assets/projects/audiostore/banner-08.png": {
+     "en": "Audio-Technica pro gear · −12%",
+     "ua": "Професійна Audio-Technica · −12%"
+    },
+    "/next/assets/projects/audiostore/banner-09.jpg": {
+     "en": "FiiO line-up · −15%, 1–14 February",
+     "ua": "Модельний ряд FiiO · −15%, 1–14 лютого"
+    },
+    "/next/assets/projects/audiostore/banner-10.jpg": {
+     "en": "Marshall headphones · hard case as a gift",
+     "ua": "Навушники Marshall · жорсткий кейс у подарунок"
+    },
+    "/next/assets/projects/audiostore/banner-11.jpg": {
+     "en": "Marshall speakers · sale prices",
+     "ua": "Акустика Marshall · розпродаж"
+    },
+    "/next/assets/projects/audiostore/banner-12.jpg": {
+     "en": "FiiO HB1 waterproof case as a gift",
+     "ua": "Водонепроникний кейс FiiO HB1 у подарунок"
+    },
+    "/next/assets/projects/audiostore/banner-13.jpg": {
+     "en": "JBL Flip 4 and Charge 3 · prices",
+     "ua": "JBL Flip 4 і Charge 3 · ціни"
+    },
+    "/next/assets/projects/audiostore/banner-14.jpg": {
+     "en": "Bang & Olufsen · Black Friday −20%",
+     "ua": "Bang & Olufsen · Чорна п'ятниця −20%"
+    },
+    "/next/assets/projects/audiostore/banner-15.jpg": {
+     "en": "Brainwavz · up to −15%",
+     "ua": "Brainwavz · до −15%"
+    },
+    "/next/assets/projects/audiostore/banner-16.jpg": {
+     "en": "Spring discounts · −30%",
+     "ua": "Весняні знижки · −30%"
+    },
+    "/next/assets/projects/audiostore/banner-17.jpg": {
+     "en": "FiiO headphones · −15%",
+     "ua": "Навушники FiiO · −15%"
+    },
+    "/next/assets/projects/audiostore/banner-18.jpg": {
+     "en": "Audio-Technica · up to −20%",
+     "ua": "Audio-Technica · до −20%"
+    },
+    "/next/assets/projects/audiostore/banner-19.jpg": {
+     "en": "FiiO spring sale · up to −20%",
+     "ua": "Весняна акція FiiO · до −20%"
+    },
     "/next/assets/generated-mockups/audiostore.png": {
      "en": "Generated presentation mockup",
      "ua": "Згенерований презентаційний мокап"
@@ -7678,6 +7879,82 @@ window.VI_CASES = {
   }
  },
  "sizes": {
+  "/next/assets/projects/audiostore/banner-01.jpg": [
+   1400,
+   405
+  ],
+  "/next/assets/projects/audiostore/banner-03.jpg": [
+   1400,
+   405
+  ],
+  "/next/assets/projects/audiostore/banner-04.jpg": [
+   1400,
+   405
+  ],
+  "/next/assets/projects/audiostore/banner-05.jpg": [
+   1400,
+   405
+  ],
+  "/next/assets/projects/audiostore/banner-11.jpg": [
+   1400,
+   405
+  ],
+  "/next/assets/projects/audiostore/banner-13.jpg": [
+   1400,
+   405
+  ],
+  "/next/assets/projects/audiostore/banner-02.jpg": [
+   1400,
+   405
+  ],
+  "/next/assets/projects/audiostore/banner-06.png": [
+   1400,
+   405
+  ],
+  "/next/assets/projects/audiostore/banner-07.png": [
+   1400,
+   401
+  ],
+  "/next/assets/projects/audiostore/banner-08.png": [
+   1400,
+   401
+  ],
+  "/next/assets/projects/audiostore/banner-15.jpg": [
+   1400,
+   405
+  ],
+  "/next/assets/projects/audiostore/banner-17.jpg": [
+   1400,
+   405
+  ],
+  "/next/assets/projects/audiostore/banner-18.jpg": [
+   1400,
+   401
+  ],
+  "/next/assets/projects/audiostore/banner-09.jpg": [
+   1400,
+   405
+  ],
+  "/next/assets/projects/audiostore/banner-14.jpg": [
+   1400,
+   405
+  ],
+  "/next/assets/projects/audiostore/banner-16.jpg": [
+   1400,
+   405
+  ],
+  "/next/assets/projects/audiostore/banner-19.jpg": [
+   1400,
+   405
+  ],
+  "/next/assets/projects/audiostore/banner-10.jpg": [
+   1400,
+   405
+  ],
+  "/next/assets/projects/audiostore/banner-12.jpg": [
+   1400,
+   405
+  ],
   "/assets/screenshots/audiostore/audiostore-1.jpg": [
    1400,
    933

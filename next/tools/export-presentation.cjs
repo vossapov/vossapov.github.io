@@ -10,6 +10,8 @@
  *                      It is a plain browser script with one top-level `const`; it is
  *                      evaluated in an empty Node `vm` context and read back as data.
  *   ../data.js         the /next/ snapshot of timeline.js (names, metadata, images).
+ *   ../content/project-galleries.json  original artwork packs (sections + per-image captions)
+ *                      inserted right after a case's overview.
  *
  * The MANIFEST below is the hand-made presentation decision per case, based on the
  * actual images (dimensions + visual review of every asset, 2026-10-07):
@@ -95,6 +97,7 @@ vm.runInNewContext(fs.readFileSync(DATA, 'utf8'), dataBox, { filename: 'data.js'
 const projects = dataBox.window.VI_DATA.projects;
 const recentWork = JSON.parse(fs.readFileSync(path.join(ROOT, 'next/content/recent-work.json'), 'utf8'));
 const recordings = JSON.parse(fs.readFileSync(path.join(ROOT, 'next/content/gameplay-recordings.json'), 'utf8'));
+const galleries = JSON.parse(fs.readFileSync(path.join(ROOT, 'next/content/project-galleries.json'), 'utf8'));
 const additions = Object.fromEntries(JSON.parse(fs.readFileSync(path.join(ROOT, 'next/content/additional-projects.json'), 'utf8')).map(entry => [entry.project.id, entry]));
 
 // ── image dimensions from file headers (PNG IHDR / JPEG SOFn) ──
@@ -164,6 +167,16 @@ for (const p of projects) {
     const { files, ...copy } = s;
     return { ...copy, recent: true, imgs: files.map(recentPath) };
   }));
+  // original artwork galleries lead the case, straight after the overview
+  const gallery = galleries[p.id];
+  if (gallery) {
+    const owned = new Set(gallery.assets.map((a) => a.file));
+    gallery.sections.forEach((s) => s.files.forEach((f) => { if (!owned.has(f)) problems.push(p.id + ': gallery section uses unlisted ' + f); }));
+    const placed = new Set(gallery.sections.flatMap((s) => s.files));
+    owned.forEach((f) => { if (!placed.has(f)) problems.push(p.id + ': gallery asset not in any section ' + f); });
+    const lead = sections.findIndex((s) => s.type === 'narrative') + 1;
+    sections.splice(lead, 0, ...gallery.sections.map(({ files, ...copy }) => ({ ...copy, imgs: files.map((f) => gallery.dir + f) })));
+  }
   // every image the case owns, in order of first appearance: sections, then the rest
   const all = [];
   const add = (a) => { if (a && !all.includes(a)) all.push(a); };
@@ -188,7 +201,7 @@ for (const p of projects) {
   cases[p.id] = { accent: pr.accent, tagline: pr.tagline,
     hero: p.generatedMockup ? { scene: 'board', imgs: [p.generatedMockup] } : { scene: m.hero.scene, imgs: hero },
     generatedMockup: p.generatedMockup || null, sections, images: all, kinds,
-    captions: Object.assign({}, extra ? extra.captions : {}, recent ? Object.fromEntries(recent.assets.map(a => [recentPath(a.file), a.title])) : {},
+    captions: Object.assign({}, extra ? extra.captions : {}, gallery ? Object.fromEntries(gallery.assets.map((a) => [gallery.dir + a.file, a.title])) : {}, recent ? Object.fromEntries(recent.assets.map(a => [recentPath(a.file), a.title])) : {},
       p.generatedMockup ? { [p.generatedMockup]: { en: 'Generated presentation mockup', ua: 'Згенерований презентаційний мокап' } } : {}) };
 }
 for (const id of Object.keys(PRESENT)) if (!projects.some((p) => p.id === id)) problems.push(id + ': present.js entry without project');

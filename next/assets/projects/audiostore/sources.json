@@ -1,0 +1,100 @@
+{
+  "project": "https://www.behance.net/gallery/58228729/audiostore-banners-pack",
+  "assets": [
+    {
+      "file": "banner-01.jpg",
+      "source": "https://mir-s3-cdn-cf.behance.net/project_modules/1400/a466ad58228729.5c9617497fd11.jpg",
+      "sha256": "9c730bb4a35b87dcf9442d49604f47095c0564bf1093d4acbdcb21b039ccbde3"
+    },
+    {
+      "file": "banner-02.jpg",
+      "source": "https://mir-s3-cdn-cf.behance.net/project_modules/1400/fe4cf158228729.5cb92edfdd880.jpg",
+      "sha256": "b1343c273d9f99c2444150d7eb2d299b4a230453b6d12aed35b046f45c744aa8"
+    },
+    {
+      "file": "banner-03.jpg",
+      "source": "https://mir-s3-cdn-cf.behance.net/project_modules/1400/001eb458228729.5c9617497f5b4.jpg",
+      "sha256": "78092efe6ded120dcba67a4a6ae83d93a579edab5e03d31e4f23fa59707c5d55"
+    },
+    {
+      "file": "banner-04.jpg",
+      "source": "https://mir-s3-cdn-cf.behance.net/project_modules/1400/0b1ef558228729.5bba58e4678a6.jpg",
+      "sha256": "970ed2cff702c86580e0ab98caef2e4b96968a6adc459e41f6b070cd713fccaf"
+    },
+    {
+      "file": "banner-05.jpg",
+      "source": "https://mir-s3-cdn-cf.behance.net/project_modules/1400/653f1a58228729.5c9617497fa21.jpg",
+      "sha256": "9b483b1f9e41536b3b3f84fc7a3411be86674c318c53cd8752da7948b5363db2"
+    },
+    {
+      "file": "banner-06.png",
+      "source": "https://mir-s3-cdn-cf.behance.net/project_modules/1400/9d319158228729.5aced63c8c82e.png",
+      "sha256": "cc0b72e028e990739cb27a851513f539e8bcd71fca0a4e68034d1c0eb1c6b19d"
+    },
+    {
+      "file": "banner-07.png",
+      "source": "https://mir-s3-cdn-cf.behance.net/project_modules/1400/a1db4858228729.5b2bb9943e467.png",
+      "sha256": "238b6f7849363f76b89f7f4abf1a85be18a9596379c00154f529cd410ece2e9f"
+    },
+    {
+      "file": "banner-08.png",
+      "source": "https://mir-s3-cdn-cf.behance.net/project_modules/1400/7759cd58228729.5b2bb9943ef43.png",
+      "sha256": "8985694f96b7c1050b3016d9bdb282267322f60b9fed93bd1d8aba98f48fe718"
+    },
+    {
+      "file": "banner-09.jpg",
+      "source": "https://mir-s3-cdn-cf.behance.net/project_modules/1400/3b27ca58228729.5c9617497f005.jpg",
+      "sha256": "85ea5c3a1f5fced7eca989c132401e3bdd254873e28358428e8c8b3a251a2d1d"
+    },
+    {
+      "file": "banner-10.jpg",
+      "source": "https://mir-s3-cdn-cf.behance.net/project_modules/1400/ae628758228729.5bba58e465514.jpg",
+      "sha256": "9f6f1058c8e57bdd0dea4f0cbe9b46040d1a7be21ce212f3f1d602b2f3c241e2"
+    },
+    {
+      "file": "banner-11.jpg",
+      "source": "https://mir-s3-cdn-cf.behance.net/project_modules/1400/b2eb3958228729.5bba58e465bbd.jpg",
+      "sha256": "df287a55cc5b06549a854772492bdebff9d1fd18bb68aff8b5ebc8c5adf59334"
+    },
+    {
+      "file": "banner-12.jpg",
+      "source": "https://mir-s3-cdn-cf.behance.net/project_modules/1400/f34c0f58228729.5a894a72123b9.jpg",
+      "sha256": "5898df4d8b6debf28024c1dac040b912ff853fe8b8def09cb580b4bf60aba7b0"
+    },
+    {
+      "file": "banner-13.jpg",
+      "source": "https://mir-s3-cdn-cf.behance.net/project_modules/1400/d05a8d58228729.5aced63c8eaff.jpg",
+      "sha256": "b41f7e1a692c6ec6a2478fa95ca6642aa83378928ea8979b46ee41e8f694a29c"
+    },
+    {
+      "file": "banner-14.jpg",
+      "source": "https://mir-s3-cdn-cf.behance.net/project_modules/1400/72157d58228729.5c9617497ec57.jpg",
+      "sha256": "3841fa2dcb8f7e18c4d8112c151de96ae7f0fd32b0635affe6aa126e310a9848"
+    },
+    {
+      "file": "banner-15.jpg",
+      "source": "https://mir-s3-cdn-cf.behance.net/project_modules/1400/dd077a58228729.5bba58e46700e.jpg",
+      "sha256": "15ecfffc3ecd35a17e3b98eafa46d25cf936e3024e2eb4649879b590c5b7cada"
+    },
+    {
+      "file": "banner-16.jpg",
+      "source": "https://mir-s3-cdn-cf.behance.net/project_modules/1400/47a7cc58228729.5aced63c8d448.jpg",
+      "sha256": "d72d79438a7be547574c5cd00139c26ea57911ea4fb42511ba4b762bcc569657"
+    },
+    {
+      "file": "banner-17.jpg",
+      "source": "https://mir-s3-cdn-cf.behance.net/project_modules/1400/258d8d58228729.5bba58e466103.jpg",
+      "sha256": "b111654f59c72a25e8f6b7f0e8158abc7fd6c1841171f0e641a113a151844450"
+    },
+    {
+      "file": "banner-18.jpg",
+      "source": "https://mir-s3-cdn-cf.behance.net/project_modules/1400/15d43158228729.5cb92edfde105.jpg",
+      "sha256": "bbfc4d257c7a4c2d5098945613153ed34f050bea0ebc11bae7b3a1340739ca50"
+    },
+    {
+      "file": "banner-19.jpg",
+      "source": "https://mir-s3-cdn-cf.behance.net/project_modules/1400/acf9cf58228729.5cb92edfddb17.jpg",
+      "sha256": "9417f388e447fd6d79f38f44a5609c2784c588082683e7ba477b782f1db60aa3"
+    }
+  ]
+}

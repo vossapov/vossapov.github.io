@@ -1,0 +1,9 @@
+{
+  "id": "diamirror",
+  "tool": "built-in image_gen",
+  "source": "/home/vossapov/Work/thinkpad-migration-staging/C/Users/vossa/Portfolio/next/assets/projects/diamirror/phone-current.png",
+  "prompt": "Use case: product-mockup. Generate a finished premium portfolio photo for DiaMirror using attached app screen as exact visual reference. A refined silver smartphone upright leaning on a small pale sage ceramic support on a cream stone table, airy sage and off-white studio interior, calm soft morning window light, slight natural camera perspective but almost frontal screen for legibility. Landscape 3:2 composition, full device visible, large screen. Preserve entire supplied UI and white layout closely, green DiaMirror logo and wordmark, big value 5,9, trend arrow, graph, Ukrainian text, DEMO notice and bottom switch. Keep the source screen aspect ratio. No people, no medical props, no new labels, no decorative extra copy, no watermark, no reflection obscuring screen. Generate entire final scene including screen content.",
+  "output": "/next/assets/generated-mockups/diamirror.png",
+  "generatedSource": "/home/vossapov/.codex/generated_images/01a12252-5aec-7aa0-9069-2643faf89d71/exec-b019a95a-0ccf-4fab-8c92-8e9d8c2a9a7f.png",
+  "inspection": "Reviewed native generation; faithful main layout, generative fine detail may differ from originals."
+}

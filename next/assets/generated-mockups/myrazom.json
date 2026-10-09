@@ -1,0 +1,9 @@
+{
+  "id": "myrazom",
+  "tool": "built-in image_gen",
+  "source": "/home/vossapov/Work/thinkpad-migration-staging/C/Users/vossa/Portfolio/assets/screenshots/myrazom/myrazom-logo.jpg",
+  "prompt": "Use case: product-mockup. Generate a beautiful landscape 3:2 editorial branding mockup for the supplied Ukrainian volunteer identity. Input is logo reference only; preserve the exact blue M with yellow heart-shaped top mark, navy/bright blue/yellow palette, and the existing wordmark 'Ми_Разом' closely. Scene: natural off-white cotton tote upright beside a dark navy folder and a small stack of cream identity cards, on warm light stone surface with soft daylight shadows, tasteful close product photography. Tote prominently bears the reference icon and 'Ми_Разом'; folder bears same icon; card bears the original Ukrainian stacked descriptor 'Об’єднаний волонтерський штаб Миколаєва'. Do not reproduce the reference sheet layout, instead show finished physical branded objects. No invented slogans, no people, no watermark. Simple confident composition, detailed paper and cotton textures, enough breathing room.",
+  "output": "/next/assets/generated-mockups/myrazom.png",
+  "generatedSource": "/home/vossapov/.codex/generated_images/01a12252-5aec-7aa0-9069-2643faf89d71/exec-99c2f35e-d5c1-4b13-987d-e560fc9dd374.png",
+  "inspection": "Native generation visually reviewed; original identity reference retained."
+}

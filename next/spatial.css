@@ -1,0 +1,210 @@
+/* Spatial timeline — restores the original site's Gantt model (central month axis, employer bands either side,
+   card height = duration) inside the /next/ design system. Geometry comes from app.js (SP constants); this file
+   only paints it. Narrow screens (< 1100px) use employer stacks. */
+
+/* ───── employer overview: collapsed by default so the timeline is reached quickly ───── */
+.career-box { margin-bottom: 14px; }
+.career-sum {
+  display: inline-flex; align-items: center; gap: 10px; min-height: 44px; padding: 0 16px; border-radius: 10px; cursor: pointer;
+  border: 1px solid var(--line-2); background: var(--surface); color: var(--muted); font-size: 14px; font-weight: 500; list-style: none;
+}
+.career-sum::-webkit-details-marker { display: none; }
+.career-sum::before { content: "▸"; font-size: 12px; transition: transform .2s; }
+.career-box[open] > .career-sum::before { transform: rotate(90deg); }
+.career-sum:hover { color: var(--text); }
+.career-box[open] > .career-sum { margin-bottom: 12px; color: var(--text); }
+
+/* ───── page chrome in spatial / stack modes ───── */
+html.sp-desktop { --stick: 140px; }
+html.sp-desktop .atlas, html.sp-stack .atlas { grid-template-columns: minmax(0, 1fr); gap: 0; }
+html.sp-desktop .year-rail, html.sp-stack .year-rail { display: none; }
+html.sp-desktop .year-chips, html.sp-stack .year-chips {
+  display: flex; gap: 6px; overflow-x: auto; position: sticky; top: var(--hdr); z-index: 30; padding: 8px 0; margin: 0 0 12px;
+  background: rgba(14, 15, 18, .95); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line);
+  scrollbar-width: none; overscroll-behavior-x: contain;
+}
+html.sp-desktop .year-chips { justify-content: center; box-shadow: 0 0 0 100vmax rgba(14, 15, 18, .95); clip-path: inset(0 -100vmax); }
+html.sp-desktop .year-chips::-webkit-scrollbar, html.sp-stack .year-chips::-webkit-scrollbar { display: none; }
+html.sp-desktop .year-chips[hidden], html.sp-stack .year-chips[hidden] { display: none !important; }
+html.sp-desktop .chip-btn, html.sp-stack .chip-btn {
+  flex: 0 0 auto; min-height: 44px; min-width: 62px; padding: 0 14px; border-radius: 22px; border: 1px solid var(--line-2);
+  background: var(--surface); color: var(--muted); font-size: 14px; font-weight: 600; cursor: pointer;
+}
+html.sp-desktop .chip-btn:hover, html.sp-stack .chip-btn:hover { color: var(--text); }
+html.sp-desktop .chip-btn[aria-current] { color: var(--text); background: var(--surface-2); border-color: var(--violet); }
+html.sp-stack .chip-btn[data-jump] { border-left: 3px solid var(--co, var(--line-2)); }
+#scaleSeg[hidden] { display: none !important; }
+
+/* ───── canvas ───── */
+.sp-wrap { --spw: min(1680px, calc(100vw - 56px)); width: var(--spw); margin-left: calc((100% - var(--spw)) / 2); overflow-x: auto; overscroll-behavior-x: contain; }
+.sp-canvas { position: relative; overflow: hidden; isolation: isolate; }
+.sp-canvas::after { /* bottom fade: freelance band + axis run past the earliest month */
+  content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 120px; z-index: 4; pointer-events: none;
+  background: linear-gradient(to bottom, transparent, var(--bg) 85%);
+}
+
+/* year regions: jump anchors, full-width rules and axis pills */
+.sp-canvas .sp-year { position: absolute; left: 0; right: 0; margin: 0; z-index: 1; pointer-events: none; border-top: 1px solid rgba(255, 255, 255, .07); }
+.sp-canvas .sp-year:first-child { border-top: 0; }
+.sp-ypill {
+  position: absolute; left: var(--sp-axis, 50%); top: 0; transform: translate(-50%, -50%); padding: 2px 10px; border-radius: 99px; background: #0b0c10;
+  border: 1px solid var(--line-2); color: var(--text); font-size: 12px; font-weight: 600; letter-spacing: .04em; line-height: 16px; white-space: nowrap;
+}
+
+/* axis */
+.sp-axis { position: absolute; left: var(--sp-axis, 50%); top: 0; bottom: 0; width: 0; z-index: 2; pointer-events: none; }
+.sp-axis-line {
+  position: absolute; left: -1px; top: var(--now-y); bottom: 0; width: 2px;
+  background: linear-gradient(to bottom, rgba(167, 139, 250, .55), rgba(167, 139, 250, .35) 85%, transparent);
+}
+.sp-now {
+  position: absolute; left: 0; transform: translateX(-50%); padding: 3px 12px; border-radius: 99px; background: var(--surface);
+  border: 1px solid rgba(167, 139, 250, .45); color: var(--violet); font-size: 11px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; white-space: nowrap;
+}
+.sp-pulse { position: absolute; left: -6px; width: 12px; height: 12px; border-radius: 50%; background: var(--violet); box-shadow: 0 0 0 0 rgba(167, 139, 250, .6); animation: spPulse 2.4s ease-out infinite; }
+@keyframes spPulse { 70% { box-shadow: 0 0 0 12px rgba(167, 139, 250, 0); } 100% { box-shadow: 0 0 0 0 rgba(167, 139, 250, 0); } }
+.sp-break { position: absolute; left: -2px; width: 4px; background: repeating-linear-gradient(to bottom, var(--bg) 0 4px, rgba(167, 139, 250, .35) 4px 7px); }
+.sp-tick { position: absolute; left: -2px; width: 4px; height: 4px; margin-top: -2px; border-radius: 50%; background: var(--faint); opacity: .45; }
+.sp-month { position: absolute; right: 12px; transform: translateY(-50%); font-size: 10.5px; line-height: 1; color: var(--faint); letter-spacing: .04em; white-space: nowrap; }
+
+/* employer bands */
+.sp-band {
+  position: absolute; z-index: 0; box-sizing: border-box;
+  background: color-mix(in srgb, var(--co) 6%, transparent);
+  border-top: 1px solid color-mix(in srgb, var(--co) 26%, transparent);
+  border-bottom: 1px solid color-mix(in srgb, var(--co) 16%, transparent);
+}
+.sp-band--right { border-left: 3px solid color-mix(in srgb, var(--co) 45%, transparent); }
+.sp-band--left { border-right: 3px solid color-mix(in srgb, var(--co) 45%, transparent); }
+.sp-band--amb { background: repeating-linear-gradient(45deg, color-mix(in srgb, var(--co) 9%, transparent) 0 10px, transparent 10px 22px); border-bottom: 0; }
+.sp-band--dim { opacity: .4; }
+.sp-bh {
+  height: 60px; display: flex; align-items: center; gap: 10px; padding: 0 14px; min-width: 0;
+  background: color-mix(in srgb, var(--co) 12%, #0f1015); border-bottom: 1px solid color-mix(in srgb, var(--co) 28%, transparent);
+}
+.sp-band--right .sp-bh { padding-left: 34px; }
+.sp-band--left .sp-bh { padding-right: 34px; }
+.sp-band--narrow .sp-bh { padding-inline: 12px; }
+.sp-logo {
+  flex: 0 0 32px; width: 32px; height: 32px; border-radius: 9px; display: grid; place-items: center;
+  background: color-mix(in srgb, var(--co) 14%, transparent); border: 1px solid color-mix(in srgb, var(--co) 26%, transparent);
+}
+.sp-logo img { width: 20px; height: 20px; object-fit: contain; filter: brightness(0) invert(1); opacity: .85; }
+.sp-logo--init { font-size: 15px; font-weight: 600; color: var(--co-t); }
+.sp-bh-text { display: grid; min-width: 0; line-height: 1.25; }
+.sp-bh-name { font-size: 14px; font-weight: 600; color: var(--co-t); text-decoration: none; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+a.sp-bh-name:hover { text-decoration: underline; text-underline-offset: 3px; }
+.sp-bh-text small { font-size: 11px; letter-spacing: .06em; text-transform: uppercase; color: rgba(255, 255, 255, .58); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.sp-bh-period { margin-left: auto; display: grid; justify-items: end; flex: 0 0 auto; font-size: 12px; line-height: 1.3; color: var(--muted); white-space: nowrap; }
+.sp-bh-period em { font-style: normal; font-size: 11px; color: var(--co-t); }
+.sp-band--narrow .sp-bh-text small, .sp-band--narrow .sp-bh-period em { display: none; }
+.sp-band--narrow .sp-bh-period { white-space: normal; max-width: 9.5ch; font-size: 11px; text-align: right; }
+.sp-band--narrow .sp-bh-text { flex: 0 1 auto; }
+
+/* ───── project cards (button = whole card) ───── */
+.sp-canvas .sp-project {
+  position: absolute; box-sizing: border-box; display: flex; flex-direction: column; gap: 3px; min-width: 0; overflow: hidden;
+  padding: 9px 12px 10px 14px; border-radius: 10px; cursor: pointer; z-index: 3; text-align: left; color: var(--text);
+  font: 400 13px/1.35 var(--font);
+  border: 1px solid color-mix(in srgb, var(--co) 30%, rgba(255, 255, 255, .06));
+  background: linear-gradient(160deg, rgba(255, 255, 255, .035), transparent 55%), linear-gradient(180deg, #16181e, #111318);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, .35); transition: transform .2s, border-color .2s, box-shadow .2s;
+}
+.sp-canvas .sp-project::after { content: none; }
+.sp-canvas .sp-project::before { /* accent stripe on the axis-facing edge */
+  content: ""; position: absolute; top: 8px; bottom: 8px; width: 3px; background: var(--co); opacity: .55; border-radius: 2px;
+}
+.sp-canvas .sp-project[data-side="right"]::before { left: 0; }
+.sp-canvas .sp-project[data-side="left"]::before { right: 0; }
+.sp-canvas .sp-project[data-side="left"] { padding: 9px 14px 10px 12px; }
+.sp-canvas .sp-project:hover { transform: translateY(-2px); border-color: color-mix(in srgb, var(--co) 70%, transparent); box-shadow: 0 12px 28px rgba(0, 0, 0, .5); z-index: 5; }
+.sp-canvas .sp-project:focus-visible { outline: 2px solid var(--cyan); outline-offset: 2px; z-index: 6; }
+.sp-project > * { position: relative; z-index: 1; }
+.sp-head { display: flex; align-items: baseline; gap: 8px; min-width: 0; }
+.sp-name { font-weight: 600; font-size: 14px; line-height: 1.25; color: var(--text); min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.sp-when { font-size: 12px; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.sp-when em { font-style: normal; color: var(--co-t); }
+.sp-genre { font-size: 12px; color: var(--co-t); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.sp-desc { font-size: 12.5px; color: var(--muted); display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3; overflow: hidden; margin-top: 4px; }
+.sp-dur { margin-left: auto; flex: 0 0 auto; font-size: 11px; color: var(--faint); }
+.sp-thumb { position: absolute !important; top: 9px; width: 36px; height: 36px; border-radius: 8px; object-fit: cover; border: 1px solid var(--line-2); }
+.sp-project[data-side="right"] .sp-thumb { right: 10px; }
+.sp-project[data-side="left"] .sp-thumb { right: 14px; }
+.sp-md:has(.sp-thumb) > :not(.sp-thumb):not(.sp-art), .sp-lg:has(.sp-thumb) > .sp-head, .sp-lg:has(.sp-thumb) > .sp-when, .sp-lg:has(.sp-thumb) > .sp-genre,
+.sp-xl:has(.sp-thumb) > .sp-head, .sp-xl:has(.sp-thumb) > .sp-when, .sp-xl:has(.sp-thumb) > .sp-genre { margin-right: 42px; }
+.sp-md .sp-name, .sp-lg .sp-name, .sp-xl .sp-name { white-space: normal; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; }
+.sp-canvas .sp-xs { flex-direction: row; align-items: center; padding-block: 0; }
+.sp-xs .sp-head { flex: 1; align-items: center; }
+.sp-xs .sp-name { font-size: 13px; }
+.sp-amb { background: linear-gradient(180deg, #15161b, #111215); }
+/* long projects: a duration rail and a faint artwork wash keep a large span legible without a giant image */
+.sp-rail { flex: 1 1 auto; min-height: 40px; display: flex; flex-direction: column; align-items: center; gap: 6px; margin-top: 10px; }
+.sp-rail i { flex: 1; width: 0; border-left: 1px dashed color-mix(in srgb, var(--co) 55%, transparent); }
+.sp-rail b { font-size: 11px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--co-t); writing-mode: vertical-rl; transform: rotate(180deg); }
+.sp-project > .sp-art { position: absolute; left: 0; right: 0; top: 120px; bottom: 0; z-index: 0; background-size: cover; background-position: center top; opacity: .13;
+  -webkit-mask-image: linear-gradient(to bottom, #000, transparent 90%); mask-image: linear-gradient(to bottom, #000, transparent 90%); }
+
+/* Narrow concurrency slots prioritise names over decorative thumbnails. */
+.sp-canvas .sp-project { container: sp-card / inline-size; }
+.sp-bh { container: sp-header / inline-size; }
+@container sp-card (max-width: 160px) {
+  .sp-thumb { display: none; }
+  .sp-head, .sp-when, .sp-genre { margin-right: 0 !important; }
+  .sp-when { font-size: 11px; }
+}
+@container sp-header (max-width: 220px) {
+  .sp-bh-period { display: none; }
+}
+
+/* filtered-out projects keep their slot as a faint ghost so no date moves */
+.sp-ghost {
+  position: absolute; box-sizing: border-box; z-index: 2; border-radius: 10px; border: 1px dashed rgba(255, 255, 255, .1);
+  background: rgba(255, 255, 255, .015); padding: 6px 10px; overflow: hidden;
+}
+.sp-ghost span { font-size: 11px; color: rgba(255, 255, 255, .28); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: block; }
+
+/* hover / focus preview */
+.sp-peek {
+  position: fixed; z-index: 45; width: 340px; display: grid; border-radius: 14px; overflow: hidden; pointer-events: none;
+  background: #15171c; border: 1px solid color-mix(in srgb, var(--co) 40%, var(--line-2)); box-shadow: 0 24px 60px rgba(0, 0, 0, .6);
+  opacity: 0; transform: translateY(4px); transition: opacity .16s, transform .16s; visibility: hidden;
+}
+.sp-peek.on { opacity: 1; transform: none; visibility: visible; }
+.sp-peek-media { display: block; aspect-ratio: 16 / 10; background: #0c0d10; }
+.sp-peek-media img { width: 100%; height: 100%; object-fit: cover; }
+.sp-peek-body { display: grid; gap: 4px; padding: 12px 14px 14px; font-size: 13px; }
+.sp-peek-body b { font-size: 16px; }
+.sp-peek-desc { color: var(--muted); display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 4; overflow: hidden; margin-top: 4px; }
+
+/* ───── employer stacks (< 1100px) ───── */
+.sk { display: grid; gap: 28px; }
+.sk-group { scroll-margin-top: 76px; }
+html.sp-stack .sk-group { scroll-margin-top: calc(var(--hdr) + 76px); }
+.sk-head {
+  display: flex; align-items: center; gap: 10px; padding: 10px 12px; margin-bottom: 8px; border-radius: 12px;
+  background: color-mix(in srgb, var(--co) 10%, var(--bg-2)); border-left: 3px solid color-mix(in srgb, var(--co) 60%, transparent);
+}
+.sk-head-text { display: grid; min-width: 0; line-height: 1.25; }
+.sk-head-text b { font-size: 15px; color: var(--co-t); }
+.sk-head-text small { font-size: 11px; letter-spacing: .05em; text-transform: uppercase; color: rgba(255, 255, 255, .58); }
+.sk-list { display: grid; gap: 8px; }
+.sk .sp-project {
+  box-sizing: border-box; display: grid; grid-template-columns: 64px minmax(0, 1fr); gap: 12px; align-items: center; width: 100%; min-height: 44px;
+  padding: 10px; border-radius: 12px; cursor: pointer; text-align: left; color: var(--text); font: 400 13px/1.35 var(--font);
+  border: 1px solid var(--line); background: var(--surface); position: relative;
+}
+.sk .sp-project::after { content: none; }
+.sk .sp-project:hover { border-color: color-mix(in srgb, var(--co) 55%, transparent); }
+.sk .sp-project:focus-visible { outline: 2px solid var(--cyan); outline-offset: 2px; }
+.sk-thumb { width: 64px; height: 64px; border-radius: 8px; object-fit: cover; background: var(--bg-2); }
+.sk-thumb--init { display: grid; place-items: center; font-weight: 600; color: var(--muted); }
+.sk-body { display: grid; gap: 2px; min-width: 0; }
+.sk .sp-name { white-space: normal; }
+.sk-bar { position: relative; height: 4px; margin-top: 6px; border-radius: 2px; background: var(--line); }
+.sk-bar i { position: absolute; top: 0; bottom: 0; border-radius: 2px; background: var(--co); }
+
+@media (prefers-reduced-motion: reduce) {
+  .sp-pulse { animation: none; }
+  .sp-canvas .sp-project, .sp-peek { transition: none; }
+  .sp-canvas .sp-project:hover { transform: none; }
+}

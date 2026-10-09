@@ -1,0 +1,11 @@
+.hero { overflow:clip; background:radial-gradient(ellipse 620px 450px at 78% 48%,rgba(114,75,35,.18),transparent 75%),#0e0f12; }
+.hero-figure.hero-film { position:relative; isolation:isolate; width:min(100%,410px); justify-self:center; margin:0; }
+/* Static studio backdrop: the charcoal and warm floor light continue beyond the video. */
+.hero-film::before { content:''; position:absolute; z-index:-1; inset:-45px -125px 12px; pointer-events:none; background:radial-gradient(ellipse 36% 16% at 52% 85%,rgba(182,117,50,.47) 0%,rgba(113,72,31,.28) 48%,transparent 100%),radial-gradient(ellipse 48% 49% at 51% 43%,rgba(156,105,56,.58) 0%,rgba(124,84,45,.48) 30%,rgba(90,63,36,.30) 56%,rgba(55,41,27,.14) 76%,transparent 100%); filter:blur(28px); }
+.hero-film-stage { position:relative; aspect-ratio:560/832; overflow:hidden; background:#101112; mask-image:linear-gradient(90deg,transparent,#000 23%,#000 77%,transparent),linear-gradient(180deg,transparent,#000 4%,#000 91%,transparent); mask-composite:intersect; }
+.hero-film .hero-film-stage img,.hero-film video { display:block; width:100%; height:100%; object-fit:contain; aspect-ratio:auto; filter:none; }
+.hero-film video { position:absolute; inset:0; opacity:0; transition:opacity .3s ease; }
+.hero-film.is-playing video { opacity:1; }
+.hero-film.film-failed video { display:none; }
+@media(max-width:760px) { .hero-film::before { left:-80px; right:-80px; } .hero-figure.hero-film { width:min(100%,330px); margin:20px auto 0; } }
+@media(prefers-reduced-motion:reduce) { .hero-film video { transition:none; } }

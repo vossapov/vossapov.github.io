@@ -1,0 +1,9 @@
+{
+  "id": "tadafish",
+  "source": "/home/vossapov/Work/thinkpad-migration-staging/C/Users/vossa/Portfolio/assets/screenshots/tadafish/tadafish-5.jpg",
+  "prompt": "Use case: compositing. Finished premium portfolio photograph, landscape 3:2 1536x1024. Input is supporting exact game screen insert for Tada Fish: remove only the outer grey presentation margin and place the rounded landscape game area naturally inside a realistic landscape smartphone. Preserve entire visible game UI, purple crowned fish, underwater artwork, labels and numbers closely. One graphite phone on a low dark polished stone pedestal, ocean cyan and deep violet studio lighting, subtle caustic light on background, elegant restrained product photography. Nearly frontal slightly elevated perspective, screen fills 75% photograph width and remains fully visible. No new lettering, watermark, people or invented game content.",
+  "output_hint": "Generated images are saved to /home/vossapov/.codex/generated_images/01a12253-5597-7f82-a599-16ecc46b8326 as /home/vossapov/.codex/generated_images/01a12253-5597-7f82-a599-16ecc46b8326/exec-05283fd1-813b-4ba4-abe1-7be57cf27dc7.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+  "tool": "native image_gen",
+  "output": "/home/vossapov/Work/thinkpad-migration-staging/C/Users/vossa/Portfolio/next/assets/generated-mockups/tadafish.png",
+  "inspection": "Visually checked; full game layout recognizable; fine details generative."
+}

@@ -1,0 +1,9 @@
+{
+  "id": "evio",
+  "source": "/home/vossapov/Work/thinkpad-migration-staging/C/Users/vossa/Portfolio/assets/screenshots/figma/evio-1.jpg",
+  "prompt": "Use case: compositing. Final premium portfolio product photo, landscape 3:2 1536x1024. Supporting exact insert: supplied ev.io game screenshot displayed completely on one realistic 16:9 slim desktop gaming monitor. Preserve whole futuristic arena, flying figure, HUD all four corners, chat column, top score and badge, colors and fine UI closely. Monitor on clean pale-grey architect desk, cool daylight and very subtle cyan edge light, modern pale concrete studio backdrop. Nearly frontal mild three-quarter camera angle, screen dominates 85% composition width, full monitor and stand visible, partial black keyboard below. Beautiful authentic industrial materials. No new text, logos, watermarks, people, glare or screen redesign.",
+  "output_hint": "Generated images are saved to /home/vossapov/.codex/generated_images/01a12253-5597-7f82-a599-16ecc46b8326 as /home/vossapov/.codex/generated_images/01a12253-5597-7f82-a599-16ecc46b8326/exec-0884d308-6c5f-4e66-95c8-e406a7feb4b3.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+  "tool": "native image_gen",
+  "output": "/home/vossapov/Work/thinkpad-migration-staging/C/Users/vossa/Portfolio/next/assets/generated-mockups/evio.png",
+  "inspection": "Visually checked; full layout retained, fine details generative."
+}

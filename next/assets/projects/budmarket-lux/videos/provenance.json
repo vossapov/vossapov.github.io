@@ -1,0 +1,32 @@
+[
+  {
+    "source": "/home/vossapov/lux/demo/dist/review/media/search.mp4",
+    "file": "search.mp4",
+    "sha256": "2c92fe125a726ff8c8030795cca4f5443d1e8624778c4e6c48290f216075ebfe"
+  },
+  {
+    "source": "/home/vossapov/lux/demo/dist/review/media/search-poster.jpg",
+    "file": "search-poster.jpg",
+    "sha256": "46d1228a37e082c3d2189b2dec6304cb60b8ceecb98ed864ba393c037a75e3dc"
+  },
+  {
+    "source": "/home/vossapov/lux/demo/dist/review/media/campaign.mp4",
+    "file": "campaign.mp4",
+    "sha256": "767250a77f7a27c3b6d57000b443d99e72a95f3e249076f0b7fe404433a85c5f"
+  },
+  {
+    "source": "/home/vossapov/lux/demo/dist/review/media/campaign-poster.jpg",
+    "file": "campaign-poster.jpg",
+    "sha256": "87cd55b0d6c01a3600c2ca2e1bd4966bd38adf94fdedf043b93d66c99d072d88"
+  },
+  {
+    "source": "/home/vossapov/lux/demo/dist/review/media/publish.mp4",
+    "file": "publish.mp4",
+    "sha256": "776af8bbabb6cb39020326d33cb6f964f58a040ee6d9f52ba4f4157580578a8b"
+  },
+  {
+    "source": "/home/vossapov/lux/demo/dist/review/media/publish-poster.jpg",
+    "file": "publish-poster.jpg",
+    "sha256": "398bd4deacd23ddd5b33bae43c6ea9f9be3ecee9f17a6652629423c4333bf4bc"
+  }
+]

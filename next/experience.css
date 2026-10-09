@@ -1,0 +1,99 @@
+/* Portfolio navigation, filters and AI section. Avatar styles live in avatar.css. */
+
+/* ───── header / footer entry points ───── */
+@media (max-width: 520px) { .header-nav .vi-nav-ai { display: none; } }
+
+/* ───── AI in my process ───── */
+.vi-ai { padding: 64px 0 72px; border-top: 1px solid var(--line); scroll-margin-top: var(--stick); }
+.vi-ai:focus { outline: none; }
+.vi-ai-head { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: 16px 48px; align-items: end; margin-bottom: 36px; }
+.vi-ai h2 { font-size: clamp(26px, 3.4vw, 38px); letter-spacing: -.03em; font-weight: 600; line-height: 1.12; margin-top: 6px; }
+.vi-draft {
+  display: inline-flex; align-items: center; gap: 6px; vertical-align: middle; position: relative; top: -.18em;
+  margin-left: 6px; padding: 3px 10px 3px 8px; border: 1px dashed rgba(251, 191, 36, .55); border-radius: 999px;
+  color: #f5cf7a; font-size: 12px; letter-spacing: .02em; font-weight: 500; line-height: 1.4; white-space: nowrap;
+}
+.vi-draft::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: currentColor; }
+.vi-ai-thesis { color: #d3d4db; font-size: 18px; line-height: 1.55; max-width: 60ch; }
+
+.vi-bench {
+  display: grid; grid-template-columns: minmax(250px, .8fr) minmax(0, 1.6fr); grid-template-rows: auto 1fr; gap: 12px 40px;
+  padding-top: 24px; border-top: 1px solid var(--line);
+}
+.vi-bench-label { grid-column: 1 / -1; font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--faint); font-weight: 600; }
+.vi-steps { position: relative; display: grid; align-content: start; gap: 4px; }
+.vi-steps::before { content: ""; position: absolute; left: 27px; top: 30px; bottom: 30px; width: 1px; background: var(--line-2); }
+.vi-step {
+  position: relative; display: grid; grid-template-columns: 36px minmax(0, 1fr); gap: 14px; align-items: center; text-align: left;
+  min-height: 60px; padding: 8px 12px 8px 10px; border: 1px solid transparent; border-radius: 12px; background: transparent; color: var(--muted); cursor: pointer;
+}
+.vi-step:hover { color: var(--text); background: rgba(255, 255, 255, .025); }
+.vi-step[aria-selected="true"] { color: var(--text); background: var(--surface); border-color: var(--line-2); }
+.vi-step-n {
+  position: relative; z-index: 1; display: grid; place-items: center; width: 36px; height: 36px; border-radius: 50%;
+  border: 1px solid var(--line-2); background: var(--bg); font-size: 12px; font-weight: 600; letter-spacing: .02em; font-variant-numeric: tabular-nums;
+}
+.vi-step[aria-selected="true"] .vi-step-n { background: var(--text); color: #101114; border-color: var(--text); }
+.vi-step-txt { display: grid; gap: 1px; min-width: 0; }
+.vi-step-t { font-size: 15px; font-weight: 600; line-height: 1.3; }
+.vi-step-s { font-size: 13px; color: var(--faint); line-height: 1.35; }
+
+.vi-panel { padding: 22px 26px 24px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); min-height: 100%; }
+.vi-panel:focus-visible { outline-offset: 3px; }
+.vi-panel-kicker { font-size: 13px; color: var(--faint); margin-bottom: 14px; }
+.vi-panel-n { font-variant-numeric: tabular-nums; color: var(--muted); font-weight: 600; }
+.vi-rows { display: grid; gap: 0; margin: 0; }
+.vi-row { display: grid; grid-template-columns: minmax(130px, .34fr) minmax(0, 1fr); gap: 6px 24px; padding: 14px 0; border-top: 1px solid var(--line); }
+.vi-row:first-child { border-top: 0; padding-top: 0; }
+.vi-row dt { font-size: 13px; color: var(--faint); font-weight: 500; line-height: 1.5; }
+.vi-row dd { margin: 0; color: #d3d4db; font-size: 15px; line-height: 1.55; }
+.vi-row-me dt { color: var(--text); }
+.vi-row-me dd { color: var(--text); }
+.vi-row-me dd::before { content: ""; display: inline-block; width: 7px; height: 7px; margin-right: 8px; border-radius: 50%; background: var(--cyan); vertical-align: .1em; }
+
+.vi-prompt { margin-top: 6px; border-top: 1px solid var(--line); }
+.vi-prompt summary {
+  display: flex; align-items: center; gap: 8px; min-height: 44px; padding-top: 6px; cursor: pointer; list-style: none;
+  font-size: 13px; font-weight: 600; color: var(--muted); border-radius: 8px;
+}
+.vi-prompt summary::-webkit-details-marker { display: none; }
+.vi-prompt summary::before { content: ""; width: 7px; height: 7px; border-right: 1.6px solid currentColor; border-bottom: 1.6px solid currentColor; transform: rotate(-45deg); transition: transform .15s; }
+.vi-prompt[open] summary::before { transform: rotate(45deg); }
+.vi-prompt summary:hover { color: var(--text); }
+.vi-prompt blockquote {
+  margin: 4px 0 8px; padding: 14px 16px; border-radius: 10px; background: var(--bg-2); border: 1px solid var(--line);
+  font-size: 14px; line-height: 1.6; color: #d3d4db;
+}
+.vi-prompt-note { font-size: 12px; color: var(--faint); }
+
+.vi-ai-foot { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 20px 48px; margin-top: 36px; padding-top: 24px; border-top: 1px solid var(--line); }
+.vi-ai-foot h3 { font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--faint); font-weight: 600; margin-bottom: 10px; }
+.vi-principles ul { display: grid; gap: 6px; }
+.vi-principles li { position: relative; padding-left: 18px; color: #d3d4db; font-size: 15px; }
+.vi-principles li::before { content: ""; position: absolute; left: 0; top: .78em; width: 8px; height: 1px; background: var(--muted); }
+.vi-tool-list { display: flex; flex-wrap: wrap; gap: 8px; }
+.vi-tool-list li { padding: 5px 12px; border: 1px solid var(--line-2); border-radius: 999px; font-size: 13px; color: var(--text); }
+.vi-ai-note { grid-column: 1 / -1; font-size: 13px; color: var(--faint); }
+
+@media (max-width: 860px) {
+  .vi-ai { padding: 48px 0 56px; }
+  .vi-ai-head { grid-template-columns: 1fr; margin-bottom: 24px; }
+  .vi-ai-thesis { font-size: 16px; }
+  .vi-bench { grid-template-columns: 1fr; gap: 12px; padding-top: 18px; }
+  .vi-steps { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+  .vi-steps::before { display: none; }
+  .vi-step { grid-template-columns: 30px minmax(0, 1fr); gap: 10px; min-height: 56px; padding: 8px 10px; border-color: var(--line); }
+  .vi-step-n { width: 30px; height: 30px; font-size: 11px; }
+  .vi-step-s { display: none; }
+  .vi-step-t { font-size: 14px; }
+  .vi-panel { padding: 18px 16px 18px; }
+  .vi-row { grid-template-columns: 1fr; gap: 4px; padding: 12px 0; }
+  .vi-ai-foot { grid-template-columns: 1fr; margin-top: 24px; }
+}
+@media (max-width: 360px) {
+  .vi-step { grid-template-columns: 1fr; gap: 6px; align-content: start; }
+  .vi-draft { margin-left: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .vi-prompt summary::before { transition: none; }
+}

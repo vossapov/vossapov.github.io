@@ -1,0 +1,95 @@
+[
+  {
+    "output": "/home/vossapov/workspace/output/lacetti-mockups/01-dashboard-final.png",
+    "sha256": "ae00d2f2cf9b9dca3f615800c109d5392e61290f941be8c6f109affb83bfb247",
+    "size": [
+      1536,
+      1024
+    ],
+    "generated_base": "/home/vossapov/workspace/output/lacetti-mockups/01-dashboard.png",
+    "base_sha256": "79893bfb52ac2402ee879b8e34de61c546cb7c68b621c16b267b24bc6e0131b4",
+    "native_source": "/home/vossapov/Work/thinkpad-migration-staging/C/Users/vossa/Lacetti/dist/Lacetti-Portfolio/screenshots/01-dashboard-cruise.png",
+    "source_sha256": "14f901586941ed95cf56a8fd3edf8eb54be04b3f07e7f51b62d4fed621062bc7",
+    "destination_quad_tl_tr_br_bl": [
+      [
+        477,
+        292
+      ],
+      [
+        1164,
+        301
+      ],
+      [
+        1177,
+        687
+      ],
+      [
+        475,
+        695
+      ]
+    ],
+    "method": "native screenshot perspective projection; 01/03 foreground left-of-x320 optical defocus to conceal generated OEM gauge errors; other cabin pixels unchanged"
+  },
+  {
+    "output": "/home/vossapov/workspace/output/lacetti-mockups/02-fuel-final.png",
+    "sha256": "f0255f2bd812696c7a25cbbb34826ac155bccbe581ea057992dbbef9df4aa716",
+    "size": [
+      1536,
+      1024
+    ],
+    "generated_base": "/home/vossapov/workspace/output/lacetti-mockups/02-fuel.png",
+    "base_sha256": "f70a923d9cca7e64e365b403433f0e3fc43589ad70df2101586a6aaa23d9f7a8",
+    "native_source": "/home/vossapov/Work/thinkpad-migration-staging/C/Users/vossa/Lacetti/dist/Lacetti-Portfolio/screenshots/08-fuel-overview.png",
+    "source_sha256": "aa78efe1f8d4ca7ee2f37337d7ee368a3fbab14f2f52c583a6bcf0f9937cb090",
+    "destination_quad_tl_tr_br_bl": [
+      [
+        210,
+        168
+      ],
+      [
+        1311,
+        170
+      ],
+      [
+        1310,
+        781
+      ],
+      [
+        208,
+        782
+      ]
+    ],
+    "method": "native screenshot perspective projection; 01/03 foreground left-of-x320 optical defocus to conceal generated OEM gauge errors; other cabin pixels unchanged"
+  },
+  {
+    "output": "/home/vossapov/workspace/output/lacetti-mockups/03-trips-final.png",
+    "sha256": "369e6143459751bd30216829b1d86510e76405ec2e668f597d7c6bd48836b80e",
+    "size": [
+      1536,
+      1024
+    ],
+    "generated_base": "/home/vossapov/workspace/output/lacetti-mockups/03-trips.png",
+    "base_sha256": "3ed7d24bf47e3781272e568c86ebe4d187c0bec3ab3ab78fa7effaf6280474b9",
+    "native_source": "/home/vossapov/Work/thinkpad-migration-staging/C/Users/vossa/Lacetti/dist/Lacetti-Portfolio/screenshots/06-trip-detail.png",
+    "source_sha256": "7e46393e941137f3fd1df24a9be8284c75a8be3cc0187e46d9b8047b1321d113",
+    "destination_quad_tl_tr_br_bl": [
+      [
+        373,
+        198
+      ],
+      [
+        1263,
+        202
+      ],
+      [
+        1230,
+        745
+      ],
+      [
+        339,
+        690
+      ]
+    ],
+    "method": "native screenshot perspective projection; 01/03 foreground left-of-x320 optical defocus to conceal generated OEM gauge errors; other cabin pixels unchanged"
+  }
+]

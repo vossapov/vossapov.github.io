@@ -1,0 +1,53 @@
+{
+  "status": "generated-reviewed-integrated-local",
+  "selectedMethod": "Wan 2.2 image-to-video via Hugging Face ZeroGPU",
+  "demo": "https://huggingface.co/spaces/zerogpu-aoti/wan2-2-fp8da-aoti-faster",
+  "source": "assets/mockups/mascot-scene-raw.png",
+  "costConstraint": "Unauthenticated free demo only. No paid API, paid credits or subscription.",
+  "durationSeconds": 4,
+  "steps": 4,
+  "seed": 27419,
+  "prompt": "Locked-off camera. Preserve this exact detailed stylized male character and his golden puppy, their faces, clothing, proportions and warm studio lighting. A restrained premium portfolio hero animation. The man breathes subtly, blinks once naturally and gives a very small friendly wave with his already raised hand. His lips remain closed with the same gentle smile. The seated puppy gently tilts its head a few degrees then settles. Both stay in their original positions. Minimal slow natural movement, crisp facial detail, stable hands, static dark background, no camera movement, no zoom, no scene change, no text.",
+  "negativePrompt": "talking, speech, open mouth on man, exaggerated acting, large movements, camera movement, zoom, distorted face, changed identity, deformed hands, extra fingers, missing fingers, extra limbs, flickering, melting, blurring, text, watermark, new objects",
+  "acceptance": [
+    "Recognisable original face and hairstyle",
+    "Stable fingers and dog anatomy",
+    "No talking or camera movement",
+    "Inspect the full clip before changing the homepage",
+    "Prepare a seamless loop only from an acceptable generation",
+    "Muted inline video with poster, pause and reduced-motion support"
+  ],
+  "research": {
+    "wan": "https://github.com/Wan-Video/Wan2.2",
+    "freeQuota": "https://huggingface.co/docs/hub/spaces-zerogpu",
+    "livePortraitNotSelected": "Standard distribution includes InsightFace detection models restricted to non-commercial research; commercial use requires replacing those models.",
+    "livePortraitLicense": "https://github.com/KlingAIResearch/LivePortrait/blob/main/LICENSE",
+    "localHardware": "RTX 2050 detected, 7.5 GiB system RAM; nvidia-smi cannot connect to driver. Local Wan setup not attempted."
+  },
+  "externalUploadConsent": "User explicitly replied роби! after the destination and image were named.",
+  "eventId": "41e294868a934ecd82d25a15c063df9f",
+  "result": {
+    "model": "Wan2.2 I2V 14B with Lightning LoRA, FP8 + AoT",
+    "sourceDuration": 4.0625,
+    "loopDuration": 8,
+    "width": 560,
+    "height": 832,
+    "fps": 16,
+    "paidCost": 0,
+    "loopMethod": "Forward 64 frames followed by reverse 64 frames; no interpolated frames.",
+    "files": {
+      "wan-original.mp4": {
+        "bytes": 286485,
+        "sha256": "ba236b1aec4678958265475db6f5fc7860cb681420fb9dcffa6ec64f92fcf66b"
+      },
+      "avatar-loop.mp4": {
+        "bytes": 726800,
+        "sha256": "8380e2ba8276f2c3f41a846f5d84e77f00581cd13300b1d116c3dab7d8639e53"
+      },
+      "poster.jpg": {
+        "bytes": 37851,
+        "sha256": "7455cfaeac5b25f1f19080120917901a9f15e153f40c5f52f85910bc49ce6e15"
+      }
+    }
+  }
+}

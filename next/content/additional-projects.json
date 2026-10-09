@@ -1,0 +1,1058 @@
+[
+  {
+    "project": {
+      "id": "diaapp",
+      "co": "personal",
+      "s": [
+        2026,
+        7
+      ],
+      "e": [
+        2026,
+        8
+      ],
+      "endInclusive": true,
+      "ongoing": false,
+      "name": [
+        "DiaApp",
+        "DiaApp"
+      ],
+      "genre": [
+        "Glucose display for children",
+        "Дитячий екран глюкози"
+      ],
+      "platform": "Android · Tablet",
+      "engine": null,
+      "category": "apps",
+      "family": null,
+      "style": null,
+      "links": [],
+      "cover": "/next/assets/projects/diaapp/overview.png",
+      "thumb": null,
+      "mockup": "/next/assets/projects/diaapp/overview.png",
+      "screens": [
+        "/next/assets/projects/diaapp/current.png",
+        "/next/assets/projects/diaapp/high.png",
+        "/next/assets/projects/diaapp/low.png"
+      ],
+      "desc": [
+        "A child-friendly glucose display: a large reading, trend arrow and puppy character make changes easier to recognise without navigating a sensor app.",
+        "Дитячий екран глюкози: велике значення, стрілка тренду й цуценя допомагають помітити зміни без навігації застосунком сенсора."
+      ],
+      "bullets": [],
+      "highlights": []
+    },
+    "presentation": {
+      "accent": "#9dcc67",
+      "tagline": {
+        "en": "Glucose readings in a child's visual language.",
+        "ua": "Показники глюкози зрозумілою дитині мовою."
+      },
+      "sections": [
+        {
+          "type": "narrative",
+          "title": {
+            "en": "A display, not another complex app",
+            "ua": "Екран замість складного застосунку"
+          },
+          "body": {
+            "en": "DiaApp puts the glucose reading and trend on a dedicated Android display. Unlike DiaMirror's shared viewing, this project focuses on a child-friendly, at-a-glance interface.",
+            "ua": "DiaApp виносить значення глюкози та тренд на окремий Android-дисплей. На відміну від спільного перегляду в DiaMirror, тут фокус на дитячому інтерфейсі, зрозумілому з одного погляду."
+          }
+        },
+        {
+          "type": "wide",
+          "title": {
+            "en": "Reading and trend at a glance",
+            "ua": "Значення та тренд з одного погляду"
+          },
+          "body": {
+            "en": "The large reading and trend arrow show the current state. A history graph below shows how glucose changed over four hours, without navigating another screen.",
+            "ua": "Велике число та стрілка тренду показують поточний стан. Графік унизу — зміни глюкози за чотири години, без переходу на інший екран."
+          },
+          "imgs": [
+            "/next/assets/projects/diaapp/current.png"
+          ]
+        },
+        {
+          "type": "wide",
+          "title": {
+            "en": "A visible change of state",
+            "ua": "Помітна зміна стану"
+          },
+          "body": {
+            "en": "Colour, trend and the character change together: yellow for a high reading, red for a low one. The history curve follows the same thresholds.",
+            "ua": "Колір, тренд і персонаж змінюються разом: жовтий — високе значення, червоний — низьке. Крива історії змінює колір за тими самими порогами."
+          },
+          "imgs": [
+            "/next/assets/projects/diaapp/high.png",
+            "/next/assets/projects/diaapp/low.png"
+          ]
+        }
+      ]
+    },
+    "manifest": {
+      "kind": "tablet",
+      "hero": {
+        "scene": "tablet",
+        "imgs": [
+          "current.png"
+        ]
+      },
+      "over": {
+        "overview.png": "board"
+      }
+    },
+    "captions": {
+      "/next/assets/projects/diaapp/current.png": {
+        "en": "Glucose reading and four-hour history",
+        "ua": "Значення глюкози та історія за чотири години"
+      },
+      "/next/assets/projects/diaapp/high.png": {
+        "en": "High reading and upward trend",
+        "ua": "Високе значення та висхідний тренд"
+      },
+      "/next/assets/projects/diaapp/low.png": {
+        "en": "Low reading and downward trend",
+        "ua": "Низьке значення та спадний тренд"
+      },
+      "/next/assets/projects/diaapp/overview.png": {
+        "en": "DiaApp with glucose history in a tablet mockup",
+        "ua": "DiaApp з історією глюкози у мокапі планшета"
+      }
+    }
+  },
+  {
+    "project": {
+      "id": "lacetti-link",
+      "co": "personal",
+      "s": [
+        2026,
+        9
+      ],
+      "e": [
+        2026,
+        9
+      ],
+      "endInclusive": true,
+      "ongoing": false,
+      "name": [
+        "Lacetti Link",
+        "Lacetti Link"
+      ],
+      "genre": [
+        "Automotive dashboard",
+        "Автомобільна панель"
+      ],
+      "platform": "Android · TEYES",
+      "engine": null,
+      "category": "apps",
+      "family": null,
+      "style": null,
+      "links": [],
+      "cover": "/next/assets/projects/lacetti-link/mockups/01-dashboard-final.png",
+      "thumb": null,
+      "mockup": "/next/assets/projects/lacetti-link/mockups/01-dashboard-final.png",
+      "screens": [
+        "/next/assets/projects/lacetti-link/mockups/01-dashboard-final.png",
+        "/next/assets/projects/lacetti-link/mockups/02-fuel-final.png",
+        "/next/assets/projects/lacetti-link/mockups/03-trips-final.png",
+        "/next/assets/projects/lacetti-link/native/01-dashboard-cruise.png",
+        "/next/assets/projects/lacetti-link/native/02-dashboard-city.png",
+        "/next/assets/projects/lacetti-link/native/03-music.png",
+        "/next/assets/projects/lacetti-link/native/04-trips-month.png",
+        "/next/assets/projects/lacetti-link/native/05-trips-day.png",
+        "/next/assets/projects/lacetti-link/native/06-trip-detail.png",
+        "/next/assets/projects/lacetti-link/native/07-trip-charts.png",
+        "/next/assets/projects/lacetti-link/native/08-fuel-overview.png",
+        "/next/assets/projects/lacetti-link/native/09-fuel-calibration.png",
+        "/next/assets/projects/lacetti-link/native/10-oil-service.png"
+      ],
+      "desc": [
+        "An Android head-unit interface for Chevrolet Lacetti: instruments, music, trip history and separate LPG, petrol and oil tracking.",
+        "Інтерфейс Android-магнітоли Chevrolet Lacetti: прилади, музика, історія поїздок та окремий облік газу, бензину й оливи."
+      ],
+      "bullets": [
+        [
+          "Instrument and music hierarchy",
+          "Ієрархія приладів і музики"
+        ],
+        [
+          "Fuel and oil tracking",
+          "Облік пального й оливи"
+        ],
+        [
+          "Trip history and charts",
+          "Історія поїздок та графіки"
+        ]
+      ],
+      "highlights": []
+    },
+    "presentation": {
+      "accent": "#bc9cff",
+      "tagline": {
+        "en": "The car's instruments, music and history — together.",
+        "ua": "Прилади, музика та історія автомобіля — разом."
+      },
+      "sections": [
+        {
+          "type": "narrative",
+          "title": {
+            "en": "One interface for everyday driving",
+            "ua": "Один інтерфейс для щоденних поїздок"
+          },
+          "body": {
+            "en": "A head-unit interface that brings the main instrument, music controls and vehicle history together. Large readings work at a glance; fuel and trip details stay one tap away. The screens use native Android demo captures; the cabin mockups are generated.",
+            "ua": "Інтерфейс магнітоли об'єднує головний прилад, керування музикою та історію автомобіля. Великі показники читаються з одного погляду, а пальне й деталі поїздок доступні окремо. Екрани зняті в Android-демо; салон у мокапах згенерований."
+          }
+        },
+        {
+          "type": "wide",
+          "title": {
+            "en": "The essentials at a glance",
+            "ua": "Головне — з одного погляду"
+          },
+          "body": {
+            "en": "Speed and RPM share one instrument. Clock, weather and fuel sit above; full-width music controls remain easy to reach.",
+            "ua": "Швидкість і оберти зібрані в одному приладі. Над ним — час, погода й витрата пального; поруч — великі кнопки керування музикою."
+          },
+          "imgs": [
+            "/next/assets/projects/lacetti-link/mockups/01-dashboard-final.png"
+          ]
+        },
+        {
+          "type": "wide",
+          "title": {
+            "en": "Fuel today. The story of each trip.",
+            "ua": "Пальне зараз. Історія кожної поїздки."
+          },
+          "body": {
+            "en": "Separate LPG and petrol levels, average consumption and oil top-up tracking. The trip journal goes from month and day summaries to a route and speed, RPM and consumption charts.",
+            "ua": "Окремі рівні газу й бензину, середня витрата та облік доливу оливи. Журнал поїздок веде від підсумків за місяць і день до маршруту та графіків швидкості, обертів і споживання."
+          },
+          "imgs": [
+            "/next/assets/projects/lacetti-link/mockups/02-fuel-final.png",
+            "/next/assets/projects/lacetti-link/mockups/03-trips-final.png"
+          ]
+        },
+        {
+          "type": "video",
+          "title": {
+            "en": "Driving: dashboard and music",
+            "ua": "Їзда: панель і музика"
+          },
+          "body": {
+            "en": "A native demo recording: changing speed and RPM, followed by music controls.",
+            "ua": "Запис Android-демо: зміна швидкості й обертів, потім керування музикою."
+          },
+          "imgs": [
+            "/next/assets/projects/lacetti-link/native/01-dashboard-cruise.png",
+            "/next/assets/projects/lacetti-link/native/02-dashboard-city.png",
+            "/next/assets/projects/lacetti-link/native/03-music.png"
+          ],
+          "video": {
+            "src": "/next/assets/projects/lacetti-link/videos/01-driving-and-music.mp4",
+            "poster": "/next/assets/projects/lacetti-link/native/01-dashboard-cruise.png",
+            "captions": {
+              "ua": "/next/assets/projects/lacetti-link/videos/01-driving-and-music-ua.vtt",
+              "en": "/next/assets/projects/lacetti-link/videos/01-driving-and-music-en.vtt"
+            }
+          },
+          "videoKind": "landscape"
+        },
+        {
+          "type": "video",
+          "title": {
+            "en": "Trip history: from day to detail",
+            "ua": "Історія поїздок: від дня до деталей"
+          },
+          "body": {
+            "en": "The trip journal starts with a monthly summary, drills down to the day view, then shows individual trip details with route, fuel consumption and driving analytics.",
+            "ua": "Журнал поїздок починається з місячного огляду, переходить до денного виду, потім показує деталі окремої поїздки з маршрутом, витратою пального й аналітикою їзди."
+          },
+          "imgs": [
+            "/next/assets/projects/lacetti-link/native/04-trips-month.png",
+            "/next/assets/projects/lacetti-link/native/05-trips-day.png",
+            "/next/assets/projects/lacetti-link/native/06-trip-detail.png",
+            "/next/assets/projects/lacetti-link/native/07-trip-charts.png"
+          ],
+          "video": {
+            "src": "/next/assets/projects/lacetti-link/videos/02-trip-history.mp4",
+            "poster": "/next/assets/projects/lacetti-link/native/04-trips-month.png",
+            "captions": {
+              "ua": "/next/assets/projects/lacetti-link/videos/02-trip-history-ua.vtt",
+              "en": "/next/assets/projects/lacetti-link/videos/02-trip-history-en.vtt"
+            }
+          },
+          "videoKind": "landscape"
+        },
+        {
+          "type": "video",
+          "title": {
+            "en": "Fuel and maintenance tracking",
+            "ua": "Облік пального та обслуговування"
+          },
+          "body": {
+            "en": "Separate LPG and petrol levels, animated tank fills, level calibration and the oil top-up dialog.",
+            "ua": "Окремі рівні газу й бензину, рух рідини в баках, калібрування рівня та вікно доливу оливи."
+          },
+          "imgs": [
+            "/next/assets/projects/lacetti-link/native/08-fuel-overview.png",
+            "/next/assets/projects/lacetti-link/native/09-fuel-calibration.png",
+            "/next/assets/projects/lacetti-link/native/10-oil-service.png"
+          ],
+          "video": {
+            "src": "/next/assets/projects/lacetti-link/videos/03-fuel-and-service.mp4",
+            "poster": "/next/assets/projects/lacetti-link/native/08-fuel-overview.png",
+            "captions": {
+              "ua": "/next/assets/projects/lacetti-link/videos/03-fuel-and-service-ua.vtt",
+              "en": "/next/assets/projects/lacetti-link/videos/03-fuel-and-service-en.vtt"
+            }
+          },
+          "videoKind": "landscape"
+        }
+      ]
+    },
+    "manifest": {
+      "kind": "tablet",
+      "hero": {
+        "scene": "board",
+        "imgs": [
+          "01-dashboard-final.png"
+        ]
+      },
+      "over": {
+        "01-dashboard-final.png": "board",
+        "02-fuel-final.png": "board",
+        "03-trips-final.png": "board"
+      }
+    },
+    "captions": {
+      "/next/assets/projects/lacetti-link/native/01-dashboard-cruise.png": {
+        "en": "Cruising dashboard with steady speed & RPM",
+        "ua": "Панель крейсерської їзди зі стійкою швидкістю та обертами"
+      },
+      "/next/assets/projects/lacetti-link/native/02-dashboard-city.png": {
+        "en": "City driving with varied speed changes",
+        "ua": "Міська їзда зі змінами швидкості"
+      },
+      "/next/assets/projects/lacetti-link/native/03-music.png": {
+        "en": "Music player with track display",
+        "ua": "Плеєр музики з відображенням треку"
+      },
+      "/next/assets/projects/lacetti-link/native/04-trips-month.png": {
+        "en": "Monthly trip overview & mileage summary",
+        "ua": "Місячний огляд поїздок і підсумок пробігу"
+      },
+      "/next/assets/projects/lacetti-link/native/05-trips-day.png": {
+        "en": "Day view with trip list & fuel efficiency",
+        "ua": "Денний вид зі списком поїздок і показниками паливної ефективності"
+      },
+      "/next/assets/projects/lacetti-link/native/06-trip-detail.png": {
+        "en": "Single trip breakdown: distance, fuel, time",
+        "ua": "Розбір однієї поїздки: відстань, паливо, час"
+      },
+      "/next/assets/projects/lacetti-link/native/07-trip-charts.png": {
+        "en": "Trip analytics: consumption & pattern charts",
+        "ua": "Аналітика поїздок: графіки споживання й закономірностей"
+      },
+      "/next/assets/projects/lacetti-link/native/08-fuel-overview.png": {
+        "en": "LPG, petrol and oil levels",
+        "ua": "Рівні газу, бензину й оливи"
+      },
+      "/next/assets/projects/lacetti-link/native/09-fuel-calibration.png": {
+        "en": "Fuel level calibration",
+        "ua": "Калібрування рівня пального"
+      },
+      "/next/assets/projects/lacetti-link/native/10-oil-service.png": {
+        "en": "Oil top-up and replacement",
+        "ua": "Долив та заміна оливи"
+      },
+      "/next/assets/projects/lacetti-link/overview.png": {
+        "en": "Selected interface views in mockups",
+        "ua": "Вибрані екрани в мокапах"
+      },
+      "/next/assets/projects/lacetti-link/mockups/01-dashboard-final.png": {
+        "en": "Dashboard in the cabin",
+        "ua": "Головний екран у салоні"
+      },
+      "/next/assets/projects/lacetti-link/mockups/02-fuel-final.png": {
+        "en": "Fuel and oil",
+        "ua": "Пальне й олива"
+      },
+      "/next/assets/projects/lacetti-link/mockups/03-trips-final.png": {
+        "en": "Trip details",
+        "ua": "Деталі поїздки"
+      }
+    }
+  },
+  {
+    "project": {
+      "id": "diamirror",
+      "brandMark": "/next/assets/projects/diamirror/logo-mark.png",
+      "co": "personal",
+      "s": [
+        2026,
+        7
+      ],
+      "e": [
+        2026,
+        8
+      ],
+      "endInclusive": true,
+      "ongoing": false,
+      "name": [
+        "DiaMirror",
+        "DiaMirror"
+      ],
+      "genre": [
+        "Glucose monitoring for families",
+        "Моніторинг глюкози для родини"
+      ],
+      "platform": "Mobile Web · Android",
+      "engine": null,
+      "category": "apps",
+      "family": null,
+      "style": null,
+      "links": [],
+      "cover": "/next/assets/projects/diamirror/overview.png",
+      "thumb": null,
+      "mockup": "/next/assets/projects/diamirror/overview.png",
+      "screens": [
+        "/next/assets/projects/diamirror/phone-current.png",
+        "/next/assets/projects/diamirror/phone-history.png",
+        "/next/assets/projects/diamirror/phone-stale.png"
+      ],
+      "desc": [
+        "DiaMirror takes glucose readings from the native apps of different sensors and brings them into one web and mobile interface. Access can be shared with any number of people.",
+        "DiaMirror підхоплює показники цукру з рідних застосунків різних сенсорів і показує їх у спільному веб- та мобільному інтерфейсі. Доступом можна поділитися з будь-якою кількістю людей."
+      ],
+      "bullets": [],
+      "highlights": []
+    },
+    "presentation": {
+      "accent": "#69c7a3",
+      "tagline": {
+        "en": "Readings from different sensors, on the web and on your phone.",
+        "ua": "Показники різних сенсорів у вебі й на телефоні."
+      },
+      "sections": [
+        {
+          "type": "narrative",
+          "title": {
+            "en": "How it works",
+            "ua": "Як це працює"
+          },
+          "body": {
+            "en": "DiaMirror takes glucose readings from the native apps of different sensors and brings them into one web and mobile interface. Access can be shared with any number of people.",
+            "ua": "DiaMirror підхоплює показники цукру з рідних застосунків різних сенсорів і показує їх у спільному веб- та мобільному інтерфейсі. Доступом можна поділитися з будь-якою кількістю людей."
+          }
+        },
+        {
+          "type": "duo",
+          "title": {
+            "en": "Shared access",
+            "ua": "Спільний доступ"
+          },
+          "body": {
+            "en": "Parents, relatives and caregivers can follow the same readings without forwarding screenshots, switching between manufacturers' apps or relying on one phone.",
+            "ua": "Батьки, рідні й вихователі бачать ті самі показники. Не потрібно пересилати скриншоти, перемикатися між застосунками виробників або прив'язувати перегляд до одного телефона."
+          },
+          "imgs": [
+            "/next/assets/projects/diamirror/phone-current.png",
+            "/next/assets/projects/diamirror/phone-history.png"
+          ]
+        },
+        {
+          "type": "feature",
+          "title": {
+            "en": "Data freshness",
+            "ua": "Актуальність даних"
+          },
+          "body": {
+            "en": "The trend and update time help distinguish a fresh reading from stale data. Screens show demo values.",
+            "ua": "Графік і час оновлення допомагають відрізнити свіжий показник від застарілого. На екранах демонстраційні дані."
+          },
+          "imgs": [
+            "/next/assets/projects/diamirror/phone-stale.png"
+          ]
+        }
+      ]
+    },
+    "manifest": {
+      "kind": "phone",
+      "hero": {
+        "scene": "trio",
+        "imgs": [
+          "phone-current.png",
+          "phone-history.png",
+          "phone-stale.png"
+        ]
+      },
+      "over": {
+        "overview.png": "board"
+      }
+    },
+    "captions": {
+      "/next/assets/projects/diamirror/phone-current.png": {
+        "en": "Current reading · demo",
+        "ua": "Поточний показник · демо"
+      },
+      "/next/assets/projects/diamirror/phone-history.png": {
+        "en": "24-hour history · demo",
+        "ua": "Історія за 24 години · демо"
+      },
+      "/next/assets/projects/diamirror/phone-stale.png": {
+        "en": "Stale reading · demo",
+        "ua": "Застарілий показник · демо"
+      },
+      "/next/assets/projects/diamirror/overview.png": {
+        "en": "Selected interface views in mockups",
+        "ua": "Вибрані екрани в мокапах"
+      }
+    }
+  },
+  {
+    "project": {
+      "id": "fluger-kids",
+      "co": "personal",
+      "s": [
+        2026,
+        7
+      ],
+      "e": [
+        2026,
+        8
+      ],
+      "endInclusive": true,
+      "ongoing": false,
+      "name": [
+        "Fluger Kids",
+        "Флюгер для дітей"
+      ],
+      "genre": [
+        "Child-friendly alert interface",
+        "Дитячий інтерфейс тривог"
+      ],
+      "platform": "Android · Home display",
+      "engine": null,
+      "category": "apps",
+      "family": null,
+      "style": null,
+      "links": [],
+      "cover": "/next/assets/projects/fluger-kids/overview.png",
+      "thumb": null,
+      "mockup": "/next/assets/projects/fluger-kids/overview.png",
+      "screens": [
+        "/next/assets/projects/fluger-kids/radar-green.png",
+        "/next/assets/projects/fluger-kids/radar-amber.png",
+        "/next/assets/projects/fluger-kids/radar-grey.png",
+        "/next/assets/projects/fluger-kids/radar-red.png"
+      ],
+      "desc": [
+        "A child-friendly radar with calm, alert, danger and no-data states. The demo shows moving threats, sweep highlights and fading trails.",
+        "Дитячий радар зі станами спокою, тривоги, небезпеки й відсутності даних. Демо показує рух загроз, підсвічування променем і згасання слідів."
+      ],
+      "bullets": [
+        [
+          "A child-oriented visual language for the home display",
+          "Дитяча візуальна мова для домашнього дисплея"
+        ],
+        [
+          "Illustrated states, radar and short status labels",
+          "Ілюстровані стани, радар і короткі підписи"
+        ],
+        [
+          "An explicit unknown state instead of false reassurance",
+          "Окремий невідомий стан замість хибного спокою"
+        ]
+      ],
+      "highlights": []
+    },
+    "presentation": {
+      "accent": "#e9b66f",
+      "tagline": {
+        "en": "A familiar character, a short label, a readable state.",
+        "ua": "Знайомий персонаж, короткий підпис, зрозумілий стан."
+      },
+      "sections": [
+        {
+          "type": "narrative",
+          "title": {
+            "en": "A separate visual language for children",
+            "ua": "Окрема візуальна мова для дітей"
+          },
+          "body": {
+            "en": "I designed the child-facing radar module of the home display separately from the glucose view. An illustrated scene and a short status label explain the state without a dense technical dashboard. This is an unofficial personal project, not an official Fluger app or a replacement for official alerts.\n\nThe images are presentation reconstructions using the project's original scene assets, existing web radar prototype and Android layout proportions. They are not native runtime screenshots. Radar states are demonstrations; no location or live threat data is included. Characters belong to their respective rights holders.",
+            "ua": "Я опрацював дитячий модуль радара домашнього дисплея окремо від екрана глюкози. Ілюстрована сцена та короткий підпис передають стан без складної технічної панелі. Це неофіційний особистий проєкт, не офіційний застосунок Флюгера й не заміна офіційних сповіщень.\n\nЗображення - презентаційна реконструкція з оригінальних сцен проєкту, наявного web-прототипу радара та пропорцій Android-макета, а не знімки запущеного Android-застосунку. Стани демонстраційні, без геолокації та живих даних про загрози. Права на персонажів належать їхнім правовласникам."
+          }
+        },
+        {
+          "type": "video",
+          "title": {
+            "en": "Danger in motion",
+            "ua": "Небезпека в русі"
+          },
+          "body": {
+            "en": "The scene changes from calm to alert and danger. Targets move across the radar; the sweep highlights them with expanding rings and fading trails. This 18-second prototype recording uses simulated paths, not live threats.",
+            "ua": "Сцена переходить від спокою до тривоги й небезпеки. Загрози рухаються через радар; промінь підсвічує їх кільцями, які згасають разом зі слідом. Це 18-секундний запис прототипу з умовними траєкторіями, не живі дані."
+          },
+          "imgs": [
+            "/next/assets/projects/fluger-kids/radar-red.png"
+          ],
+          "video": {
+            "src": "/next/assets/projects/fluger-kids/radar-demo.mp4",
+            "poster": "/next/assets/projects/fluger-kids/radar-red.png",
+            "captions": {
+              "ua": "/next/assets/projects/fluger-kids/radar-demo-ua.vtt",
+              "en": "/next/assets/projects/fluger-kids/radar-demo-en.vtt"
+            }
+          }
+        },
+        {
+          "type": "feature",
+          "title": {
+            "en": "Unknown is not calm",
+            "ua": "Невідомо не означає спокійно"
+          },
+          "body": {
+            "en": "Missing data has a separate, desaturated scene and an explicit label. It must not reuse the green calm state. This makes uncertainty visible to the adult without adding more controls to the child-facing screen.",
+            "ua": "Для відсутніх даних є окрема знебарвлена сцена та прямий підпис. Вона не повторює зелений стан спокою. Так невизначеність залишається помітною для дорослого, а дитячий екран не отримує зайвих елементів керування."
+          },
+          "imgs": [
+            "/next/assets/projects/fluger-kids/radar-grey.png"
+          ]
+        }
+      ]
+    },
+    "manifest": {
+      "kind": "phone",
+      "hero": {
+        "scene": "trio",
+        "imgs": [
+          "radar-green.png",
+          "radar-red.png",
+          "radar-amber.png"
+        ]
+      },
+      "over": {
+        "overview.png": "board"
+      }
+    },
+    "captions": {
+      "/next/assets/projects/fluger-kids/radar-green.png": {
+        "en": "Calm · presentation prototype",
+        "ua": "Спокій · презентаційний прототип"
+      },
+      "/next/assets/projects/fluger-kids/radar-amber.png": {
+        "en": "Alert · presentation prototype",
+        "ua": "Тривога · презентаційний прототип"
+      },
+      "/next/assets/projects/fluger-kids/radar-grey.png": {
+        "en": "No data · presentation prototype",
+        "ua": "Немає даних · презентаційний прототип"
+      },
+      "/next/assets/projects/fluger-kids/overview.png": {
+        "en": "Selected interface views in mockups",
+        "ua": "Вибрані екрани в мокапах"
+      },
+      "/next/assets/projects/fluger-kids/radar-red.png": {
+        "en": "Danger · simulated moving threats",
+        "ua": "Небезпека · імітація руху загроз"
+      }
+    }
+  },
+  {
+    "project": {
+      "id": "budmarket-lux",
+      "co": "personal",
+      "s": [
+        2026,
+        10
+      ],
+      "e": [
+        2026,
+        10
+      ],
+      "endInclusive": true,
+      "ongoing": false,
+      "name": [
+        "Budmarket Lux",
+        "Будмаркет Люкс"
+      ],
+      "genre": [
+        "Retail assistant & campaign workspace",
+        "Помічник магазину та рекламний кабінет"
+      ],
+      "platform": "Responsive Web · Desktop & Mobile",
+      "engine": null,
+      "category": "apps",
+      "family": null,
+      "style": null,
+      "role": [
+        "Product Designer · UX/UI",
+        "Продуктовий дизайнер · UX/UI"
+      ],
+      "links": [
+        {
+          "label": "Live demo",
+          "url": "https://vossapov.github.io/lux/"
+        },
+        {
+          "label": "Presentation landing",
+          "url": "https://vossapov.github.io/lux/review/"
+        }
+      ],
+      "cover": "/next/assets/projects/budmarket-lux/mockups/desktop-catalog.png",
+      "thumb": null,
+      "mockup": "/next/assets/projects/budmarket-lux/mockups/desktop-catalog.png",
+      "screens": [
+        "/next/assets/projects/budmarket-lux/mockups/desktop-catalog.png",
+        "/next/assets/projects/budmarket-lux/mockups/desktop-marketing.png",
+        "/next/assets/projects/budmarket-lux/mockups/mobile-search.png",
+        "/next/assets/projects/budmarket-lux/mockups/mobile-campaign.png",
+        "/next/assets/projects/budmarket-lux/mockups/landing.png"
+      ],
+      "desc": [
+        "A responsive retail assistant that connects product search, in-store location and campaign creation. Desk research, UX/UI, a working prototype and a presentation landing page.",
+        "Адаптивний помічник магазину, який поєднує пошук товарів, місце в залі та створення кампаній. Дослідження, UX/UI, робочий прототип і презентаційний лендінг."
+      ],
+      "bullets": [
+        [
+          "Desk research and product scenario definition.",
+          "Кабінетне дослідження й визначення продуктових сценаріїв."
+        ],
+        [
+          "Responsive UX/UI for product search, location and campaign creation.",
+          "Адаптивний UX/UI пошуку товарів, навігації та створення кампаній."
+        ],
+        [
+          "Working prototype, promotional design system and presentation landing.",
+          "Робочий прототип, рекламна дизайн-система та презентаційний лендінг."
+        ]
+      ],
+      "highlights": []
+    },
+    "presentation": {
+      "accent": "#ffcf24",
+      "tagline": {
+        "en": "Less routine. More time for the customer.",
+        "ua": "Менше рутини. Більше часу для покупця."
+      },
+      "sections": [
+        {
+          "type": "narrative",
+          "title": {
+            "en": "A store assistant, designed around the next useful answer",
+            "ua": "Помічник магазину, побудований навколо потрібної відповіді"
+          },
+          "body": {
+            "en": "What is this product? Is it in stock? Where can I find it? Lux brings those questions into one responsive workspace, then extends the same product data into campaign creation. The project covers product discovery, UX/UI, a working desktop and mobile prototype, promotional materials and a presentation landing page.\n\nThe starting hypothesis was that a sales assistant should be able to answer a customer without an extra trip to the checkout. I used that as a design direction to explore, with a working demo to make the idea concrete.",
+            "ua": "Що це за товар? Чи є він у наявності? Де його знайти? Lux об’єднує ці запитання в одному адаптивному інтерфейсі, а потім використовує ті самі товарні дані для створення кампаній. Проєкт охоплює дослідження, UX/UI, робочий десктопний і мобільний прототип, рекламні матеріали та презентаційний лендінг.\n\nПочаткова гіпотеза: продавець має відповідати покупцеві без додаткового звернення до каси. Цей напрям я перевів у конкретні сценарії та робочу демонстрацію."
+          }
+        },
+        {
+          "type": "wide",
+          "title": {
+            "en": "One workspace for the shop floor and the desk",
+            "ua": "Один інструмент для торгового залу й робочого місця"
+          },
+          "body": {
+            "en": "The desktop version gives the catalog and product details room to breathe. The mobile version keeps the same core questions close at hand: identity, price, stock and location. Both are parts of one responsive web product.",
+            "ua": "На десктопі каталог і деталі товару отримують більше простору. На телефоні поруч залишаються головні відповіді: який це товар, ціна, залишок і місце. Обидві версії — частини одного адаптивного вебпродукту."
+          },
+          "imgs": [
+            "/next/assets/projects/budmarket-lux/mockups/desktop-catalog.png"
+          ]
+        },
+        {
+          "type": "narrative",
+          "title": {
+            "en": "Research: understand the store before drawing the interface",
+            "ua": "Дослідження: зрозуміти магазин до проєктування інтерфейсу"
+          },
+          "body": {
+            "en": "I reviewed the public presence of Budmarket Lux in Nova Odesa: product categories, contact information, brand imagery and the way offers are communicated. The research archive contains 21 visual materials, including repeated logo assets. Instagram was cross-checked against supplier and local sources, with conflicting contact details recorded rather than silently resolved.\n\nA closer visual audit identified full-frame product photography, bold headings, compact offer blocks and category-specific accents. These became a working design reference. No official brand book was available. This was desk research and scenario exploration; staff interviews and measured task timings were not part of the documented work.",
+            "ua": "Я дослідив публічну присутність Будмаркету Люкс у Новій Одесі: категорії товарів, контакти, візуальну мову та подачу пропозицій. Архів містить 21 візуальний матеріал, зокрема повтори логотипа. Дані Instagram зіставлено з джерелами постачальника й громади; розбіжності в контактах зафіксовано окремо.\n\nДетальний візуальний аудит виявив фотографії товарів на весь кадр, жирні заголовки, компактні блоки пропозицій та акценти відповідно до категорії. На цій основі сформовано робочий стилістичний довідник. Офіційного брендбука не було. Це кабінетне дослідження й опрацювання сценаріїв; інтерв’ю з працівниками та вимірювання часу завдань не входили в задокументовану роботу."
+          }
+        },
+        {
+          "type": "process",
+          "title": {
+            "en": "Turn everyday friction into design decisions",
+            "ua": "Перетворити щоденні труднощі на дизайнерські рішення"
+          },
+          "body": {
+            "en": "I treated these as problems to investigate and design for, rather than as quantified findings. Each one needed a visible response in the prototype.",
+            "ua": "Це проблеми для дослідження й проєктування, а не кількісно підтверджені висновки. Кожна мала отримати конкретне рішення в прототипі."
+          },
+          "items": [
+            {
+              "en": "An answer requires another lookup → put the photo, price, stock and unit together in the product card.",
+              "ua": "Відповідь потребує додаткової перевірки → зібрати фото, ціну, залишок і одиницю виміру в картці товару."
+            },
+            {
+              "en": "The exact product name is unknown → support text, SKU, photo and voice, with alternatives when the match is ambiguous.",
+              "ua": "Точна назва невідома → дати пошук текстом, артикулом, фото й голосом та показувати варіанти за неоднозначного запиту."
+            },
+            {
+              "en": "A catalog result does not explain where to go → show the row, section, shelf and route inside the product view.",
+              "ua": "Товар знайдено в каталозі, але не в залі → показати ряд, секцію, полицю й маршрут у картці."
+            },
+            {
+              "en": "A campaign brief is scattered across products, dates and formats → collect it once, confirm the summary, then create individual tasks.",
+              "ua": "Бриф розпадається на товари, дати й формати → зібрати його один раз, підтвердити підсумок і створити окремі завдання."
+            },
+            {
+              "en": "Generated work needs review and corrections → provide previews, editable instructions, retry states and version history.",
+              "ua": "Згенеровані матеріали потребують перевірки й правок → додати прев’ю, редаговані інструкції, повторні спроби та історію версій."
+            }
+          ]
+        },
+        {
+          "type": "wide",
+          "title": {
+            "en": "Mobile: stay with the customer",
+            "ua": "Мобільна версія: залишатися поруч із покупцем"
+          },
+          "body": {
+            "en": "The main flow is short: enter a name or SKU, select a match, read the product card and locate the item. The map appears in the product view without a separate setup step. Bottom navigation keeps the main areas within reach.\n\nDesign rationale: a direct lookup is easier to inspect than a single confident answer. Ambiguous matches remain a list; an unavailable product remains unavailable. Leading zeros in SKUs are preserved.",
+            "ua": "Основний шлях короткий: ввести назву чи артикул, обрати відповідник, переглянути картку й знайти товар. Мапа з’являється прямо в картці без окремого налаштування. Нижня навігація тримає головні розділи під рукою.\n\nЛогіка рішення: результат пошуку має бути зрозумілим і перевірним. Неоднозначні збіги залишаються списком, відсутній товар — відсутнім. Нулі на початку артикулу зберігаються."
+          },
+          "imgs": [
+            "/next/assets/projects/budmarket-lux/mockups/mobile-search.png"
+          ]
+        },
+        {
+          "type": "video",
+          "title": {
+            "en": "Demo 01 — find the product and its location",
+            "ua": "Демо 01 — знайти товар і його місце"
+          },
+          "body": {
+            "en": "A name search leads to the product card, then to the row, section and shelf on the map. This 18-second edit uses real mobile interface captures; pauses are shortened.\n\nThe catalog contains 30 fictional demo products. The store layout and moving position illustrate the navigation concept; they are not live indoor positioning.",
+            "ua": "Пошук за назвою веде до картки, а потім — до ряду, секції та полиці на мапі. Цей 18-секундний монтаж складається з реальних мобільних екранів; паузи скорочено.\n\nУ каталозі 30 вигаданих демонстраційних товарів. Схема залу й рух позиції ілюструють навігацію, а не реальне визначення місця всередині магазину."
+          },
+          "videoKind": "phone",
+          "video": {
+            "src": "/next/assets/projects/budmarket-lux/videos/search.mp4",
+            "poster": "/next/assets/projects/budmarket-lux/videos/search-poster.jpg",
+            "captions": {
+              "en": "/next/assets/projects/budmarket-lux/videos/search-en.vtt",
+              "ua": "/next/assets/projects/budmarket-lux/videos/search-ua.vtt"
+            }
+          }
+        },
+        {
+          "type": "narrative",
+          "title": {
+            "en": "Support different inputs without hiding uncertainty",
+            "ua": "Різні способи введення без приховування невизначеності"
+          },
+          "body": {
+            "en": "Text and SKU search form the dependable core. Photo search returns visually similar catalog candidates, while voice offers another way to enter a query and hear a Ukrainian response. The user still checks the exact variant and dimensions.\n\nThe trade-off is deliberate: several plausible matches are more useful than an unverified exact identification. Voice depends on browser support, and image similarity is not a probability of the correct SKU. These boundaries shaped the empty, ambiguous and error states.",
+            "ua": "Основа — текстовий пошук і артикул. Пошук за фото повертає візуально схожі позиції каталогу, а голос дає інший спосіб ввести запит і почути відповідь українською. Точну модифікацію та розміри користувач перевіряє сам.\n\nДизайнерський компроміс: кілька правдоподібних варіантів корисніші за неперевірену точну відповідь. Голос залежить від підтримки браузера, а візуальна схожість не є ймовірністю правильного артикулу. Ці обмеження визначили порожні, неоднозначні й помилкові стани."
+          }
+        },
+        {
+          "type": "wide",
+          "title": {
+            "en": "Desktop: give campaign work a clear structure",
+            "ua": "Десктоп: надати роботі з кампаніями чітку структуру"
+          },
+          "body": {
+            "en": "Marketing is organised as campaigns, sets and individual assets. A campaign keeps the brief and product facts together; each product–format combination gets its own task. Previews, original downloads and grouped ZIP exports serve different review and delivery needs.\n\nThis structure makes it possible to inspect one asset, revise it and retain its earlier versions without losing the context of the campaign.",
+            "ua": "Маркетинг організовано як кампанії, набори й окремі матеріали. Кампанія зберігає бриф і товарні дані; кожна комбінація товару та формату отримує власне завдання. Прев’ю, завантаження оригіналів і ZIP-архіви закривають різні потреби перевірки й передачі.\n\nТака структура дозволяє переглянути один макет, доопрацювати його та зберегти попередні версії в контексті кампанії."
+          },
+          "imgs": [
+            "/next/assets/projects/budmarket-lux/mockups/desktop-marketing.png"
+          ]
+        },
+        {
+          "type": "process",
+          "title": {
+            "en": "From a rough request to a reviewable result",
+            "ua": "Від короткого запиту до результату для перевірки"
+          },
+          "body": {
+            "en": "The creation flow asks for confirmation at the point where an interpretation becomes a production task. Unknown product codes are flagged rather than replaced with unrelated items.",
+            "ua": "У сценарії створення підтвердження з’являється там, де інтерпретація запиту перетворюється на завдання. Невідомі артикули позначаються для перевірки, а не замінюються випадковими товарами."
+          },
+          "items": [
+            {
+              "en": "Describe the campaign and add product photos, a list or a supported file.",
+              "ua": "Описати кампанію й додати фото товарів, список або підтримуваний файл."
+            },
+            {
+              "en": "Review the extracted products, dates and formats; fill in what is missing.",
+              "ua": "Перевірити розпізнані товари, дати й формати та доповнити відсутнє."
+            },
+            {
+              "en": "Confirm the brief and inspect the individual product–format tasks.",
+              "ua": "Підтвердити бриф і переглянути окремі завдання для товарів та форматів."
+            },
+            {
+              "en": "Generate, preview and request changes while keeping version history.",
+              "ua": "Згенерувати, переглянути й описати правки зі збереженням історії версій."
+            },
+            {
+              "en": "Download the originals or continue into the publication demo.",
+              "ua": "Завантажити оригінали або перейти до демонстраційної публікації."
+            }
+          ]
+        },
+        {
+          "type": "wide",
+          "title": {
+            "en": "Mobile creation with visible progress and control",
+            "ua": "Створення з телефона зі зрозумілим прогресом і контролем"
+          },
+          "body": {
+            "en": "The campaign workflow remains available on a phone: a short description becomes a reviewable brief, followed by task status and generated previews. Queue, retry and revision states explain what is happening without discarding the user’s input.\n\nActual generation and regeneration were verified through the local Codex connection. The public static demo presents the workflow and prepared materials; it does not run that local generator.",
+            "ua": "Сценарій кампанії доступний і на телефоні: короткий опис стає брифом для перевірки, далі — статусами завдань і прев’ю. Черга, повторні спроби та правки пояснюють перебіг роботи, зберігаючи введені дані.\n\nРеальну генерацію й повторну генерацію перевірено через локальне підключення Codex. Публічне статичне демо показує сценарій і підготовлені матеріали, але не запускає цей локальний генератор."
+          },
+          "imgs": [
+            "/next/assets/projects/budmarket-lux/mockups/mobile-campaign.png"
+          ]
+        },
+        {
+          "type": "video",
+          "title": {
+            "en": "Demo 02 — brief, generate, refine",
+            "ua": "Демо 02 — описати, згенерувати, доопрацювати"
+          },
+          "body": {
+            "en": "The 30-second walkthrough follows a campaign description through analysis, confirmation, a generated asset and a revised version. The outputs shown were actually generated. Waiting time is removed from this edit of real mobile captures.\n\nThe important design moment is the return loop: a user can explain what needs to change and review a new version instead of starting the campaign again.",
+            "ua": "30-секундна демонстрація проводить від опису кампанії через аналіз і підтвердження до згенерованого макета та нової версії. Показані матеріали справді згенеровано. У монтажі реальних мобільних екранів вирізано очікування.\n\nКлючовий дизайнерський момент — цикл правок: користувач описує потрібну зміну й переглядає нову версію, не створюючи кампанію заново."
+          },
+          "videoKind": "phone",
+          "video": {
+            "src": "/next/assets/projects/budmarket-lux/videos/campaign.mp4",
+            "poster": "/next/assets/projects/budmarket-lux/videos/campaign-poster.jpg",
+            "captions": {
+              "en": "/next/assets/projects/budmarket-lux/videos/campaign-en.vtt",
+              "ua": "/next/assets/projects/budmarket-lux/videos/campaign-ua.vtt"
+            }
+          }
+        },
+        {
+          "type": "narrative",
+          "title": {
+            "en": "Build a visual system, then test it across formats",
+            "ua": "Побудувати візуальну систему й перевірити її у форматах"
+          },
+          "body": {
+            "en": "The promotional direction went through several control iterations. The reference audit led to photographic product scenes, a clear offer hierarchy and compact contact areas. Once the control direction was selected, it expanded into five product stories across four social formats: 20 PNG assets, plus a four-page A5 flyer and an A2 poster.\n\nReview caught concrete issues: Stories safe areas, a drill colliding with a discount figure, contact text that needed more room and inconsistent export proportions. Each format was adjusted rather than treated as a central crop. The campaign uses fictional prices and offers; print files remain approval mockups.",
+            "ua": "Рекламний напрям пройшов кілька контрольних ітерацій. Аудит референсів привів до фотографічних товарних сцен, чіткої ієрархії пропозиції й компактних контактних блоків. Обраний напрям масштабовано на п’ять товарних сюжетів у чотирьох соціальних форматах: 20 PNG, чотиристорінковий A5-флаєр та A2-постер.\n\nПеревірка виявила конкретні проблеми: безпечні поля Stories, зіткнення дриля з відсотком знижки, дрібні контакти й неточні пропорції експорту. Кожен формат адаптовано окремо. Ціни та акції вигадані; друковані файли залишаються макетами для погодження."
+          }
+        },
+        {
+          "type": "video",
+          "title": {
+            "en": "Demo 03 — organise publication and the SMM queue",
+            "ua": "Демо 03 — організувати публікацію й чергу SMM"
+          },
+          "body": {
+            "en": "This 27-second sequence connects asset selection, channels, editable copy and timing with the planned and published views in SMM. The interaction is designed to work for a single asset or a whole set.\n\nIt is a publication simulation: no posts are sent to social networks, the queue stays in the current browser and no background schedule is executed. The video shows real interface states with shortened pauses.",
+            "ua": "27-секундний сценарій поєднує вибір матеріалів, каналів, тексту й часу з переглядом запланованих та опублікованих записів у SMM. Взаємодія розрахована і на окремий макет, і на цілий набір.\n\nЦе симуляція публікації: дописи не надсилаються в соцмережі, черга залишається в поточному браузері, фоновий розклад не виконується. Відео показує реальні стани інтерфейсу зі скороченими паузами."
+          },
+          "videoKind": "phone",
+          "video": {
+            "src": "/next/assets/projects/budmarket-lux/videos/publish.mp4",
+            "poster": "/next/assets/projects/budmarket-lux/videos/publish-poster.jpg",
+            "captions": {
+              "en": "/next/assets/projects/budmarket-lux/videos/publish-en.vtt",
+              "ua": "/next/assets/projects/budmarket-lux/videos/publish-ua.vtt"
+            }
+          }
+        },
+        {
+          "type": "wide",
+          "title": {
+            "en": "A landing page that explains the product through use",
+            "ua": "Лендінг, який пояснює продукт через дію"
+          },
+          "body": {
+            "en": "The presentation landing page turns the feature set into three recognisable tasks: find a product, create a campaign and prepare a post. Short videos lead the story, supported by concise steps, clear demo boundaries and a direct route into the application.\n\nThe final section explains what a real rollout needs: store data, product locations, access and publication connections. Responsive layouts make the presentation useful both at a desktop review and when opened from a phone.",
+            "ua": "Презентаційний лендінг перетворює набір функцій на три зрозумілі задачі: знайти товар, створити кампанію та підготувати допис. Основу розповіді складають короткі відео, доповнені кроками, чіткими межами демо й переходом у застосунок.\n\nФінальний блок пояснює потреби впровадження: дані магазину, розташування товарів, доступи та підключення публікації. Адаптивна верстка працює і під час десктопного рев’ю, і на телефоні."
+          },
+          "imgs": [
+            "/next/assets/projects/budmarket-lux/mockups/landing.png"
+          ]
+        },
+        {
+          "type": "narrative",
+          "title": {
+            "en": "Validation: check the details that can break trust",
+            "ua": "Перевірка: увага до деталей, від яких залежить довіра"
+          },
+          "body": {
+            "en": "The implementation includes checks for exact SKUs, ambiguous and empty search results, zero stock, discount arithmetic, file import and campaign validation. Map checks cover 30 product assignments and 150 routes from the two entrances. Interface reviews covered desktop and mobile widths, the campaign wizard and mobile map.\n\nThese are implementation and visual checks, not a staff usability study. The next useful validation is a store pilot: connect an agreed read-only data source, check representative products with employees, then measure lookup time and completion accuracy.",
+            "ua": "Реалізація має перевірки точних артикулів, неоднозначних і порожніх результатів, нульових залишків, арифметики знижок, імпорту файлів та брифів. Для мапи перевірено 30 прив’язок товарів і 150 маршрутів від двох входів. Перегляд інтерфейсу охопив десктопну й мобільну ширину, майстер кампанії та мобільну мапу.\n\nЦе технічні й візуальні перевірки, а не дослідження з працівниками. Наступний корисний крок — пілот у магазині: погоджене джерело даних лише на читання, контрольні товари разом із командою та вимірювання часу й точності пошуку."
+          }
+        },
+        {
+          "type": "narrative",
+          "title": {
+            "en": "Outcome: a concrete product direction, ready for a pilot",
+            "ua": "Результат: конкретний продуктовий напрям, готовий до пілоту"
+          },
+          "body": {
+            "en": "The result is a working responsive demo, a campaign creation workflow, a reviewed promotional set and a landing page with three product walkthroughs. Together they make the idea tangible enough to discuss with a store team and scope the next stage.\n\nThe demo is not connected to live inventory, and no improvement in sales or staff efficiency has been measured. Its value at this stage is a coherent experience that can be tried, reviewed and validated against the realities of the store.",
+            "ua": "Результат — робоче адаптивне демо, сценарій створення кампаній, перевірений рекламний комплект і лендінг із трьома демонстраціями. Разом вони роблять ідею конкретною для обговорення з командою магазину та визначення наступного етапу.\n\nДемо не підключене до реальних залишків; зміни продажів або ефективності працівників не вимірювалися. На цьому етапі цінність — цілісний досвід, який можна спробувати, переглянути й перевірити в умовах магазину."
+          }
+        }
+      ]
+    },
+    "manifest": {
+      "kind": "board",
+      "hero": {
+        "scene": "board",
+        "imgs": [
+          "desktop-catalog.png"
+        ]
+      },
+      "over": {
+        "desktop-catalog.png": "board",
+        "desktop-marketing.png": "board",
+        "mobile-search.png": "board",
+        "mobile-campaign.png": "board",
+        "landing.png": "board"
+      }
+    },
+    "captions": {
+      "/next/assets/projects/budmarket-lux/mockups/desktop-catalog.png": {
+        "en": "One workspace for the shop floor and the desk",
+        "ua": "Один інструмент для торгового залу й робочого місця"
+      },
+      "/next/assets/projects/budmarket-lux/mockups/mobile-search.png": {
+        "en": "Mobile: stay with the customer",
+        "ua": "Мобільна версія: залишатися поруч із покупцем"
+      },
+      "/next/assets/projects/budmarket-lux/videos/search-poster.jpg": {
+        "en": "Demo 01 — find the product and its location",
+        "ua": "Демо 01 — знайти товар і його місце"
+      },
+      "/next/assets/projects/budmarket-lux/mockups/desktop-marketing.png": {
+        "en": "Desktop: give campaign work a clear structure",
+        "ua": "Десктоп: надати роботі з кампаніями чітку структуру"
+      },
+      "/next/assets/projects/budmarket-lux/mockups/mobile-campaign.png": {
+        "en": "Mobile creation with visible progress and control",
+        "ua": "Створення з телефона зі зрозумілим прогресом і контролем"
+      },
+      "/next/assets/projects/budmarket-lux/videos/campaign-poster.jpg": {
+        "en": "Demo 02 — brief, generate, refine",
+        "ua": "Демо 02 — описати, згенерувати, доопрацювати"
+      },
+      "/next/assets/projects/budmarket-lux/videos/publish-poster.jpg": {
+        "en": "Demo 03 — organise publication and the SMM queue",
+        "ua": "Демо 03 — організувати публікацію й чергу SMM"
+      },
+      "/next/assets/projects/budmarket-lux/mockups/landing.png": {
+        "en": "A landing page that explains the product through use",
+        "ua": "Лендінг, який пояснює продукт через дію"
+      }
+    }
+  }
+]

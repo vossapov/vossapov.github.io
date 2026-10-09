@@ -1,0 +1,9 @@
+{
+  "id": "voznesensk",
+  "tool": "built-in image_gen",
+  "source": "/home/vossapov/Work/thinkpad-migration-staging/C/Users/vossa/Portfolio/assets/screenshots/voznesensk/voznesensk-construction.jpg",
+  "prompt": "Use case: product-mockup. Create a complete premium editorial identity mockup photograph in landscape 3:2. Supplied image is the exact logo and wordmark reference for a Ukrainian community foundation. Scene: an off-white textured presentation folder standing beside a small stack of invitation cards and a muted deep purple envelope on a clean pale warm-grey stone tabletop. Soft directional daylight, realistic paper fibres and subtle debossed/printed ink, gently angled camera, tasteful spacious composition, no people. Apply the reference purple human-heart symbol with its original shapes and slight stippled texture to folder and cards. Folder displays the original large Ukrainian serif wordmark on two lines exactly 'ФОНД ГРОМАДИ' and 'ВОЗНЕСЕНСЬКА'. Preserve identity closely. Do not include construction guides, English explanation, measurement arrows, or 'Logo Construction' from the reference sheet. No new slogans, fake contact details, extra copy, watermark or alternative logo. This is a finished physical mockup scene, not a flat design board.",
+  "output": "/next/assets/generated-mockups/voznesensk.png",
+  "generatedSource": "/home/vossapov/.codex/generated_images/01a12252-5aec-7aa0-9069-2643faf89d71/exec-66326eae-7f1b-461e-a3e1-ad2ba6f677e9.png",
+  "inspection": "Native generation visually reviewed; original identity reference retained."
+}

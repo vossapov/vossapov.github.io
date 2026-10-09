@@ -1,0 +1,44 @@
+{
+  "synthetic": true,
+  "evidence": "Presentation prototype animation, not an Android runtime recording. Reuses original scene PNGs, embedded threat PNGs and radar drawing functions. Only synthetic display paths are added.",
+  "source": [
+    "DiaApp/ui-concept/radar-demo.html",
+    "DiaApp/app/src/main/res/drawable-nodpi/radar_scene_{green,amber,red}.png"
+  ],
+  "duration_seconds": 18,
+  "fps": 24,
+  "dimensions": [
+    936,
+    1680
+  ],
+  "hit_count": 3,
+  "states": [
+    {
+      "second": 0,
+      "state": "calm"
+    },
+    {
+      "second": 2,
+      "state": "alert"
+    },
+    {
+      "second": 5,
+      "state": "danger"
+    },
+    {
+      "second": 15,
+      "state": "alert"
+    },
+    {
+      "second": 17,
+      "state": "calm"
+    }
+  ],
+  "blocked_external_hosts": [
+    "fonts.googleapis.com"
+  ],
+  "assets": {
+    "radar-red.png": "a912ef55635a702ac7558c0ca8df9f9f1bd41fe8c277e3193fd934b26f6b5612",
+    "radar-demo.mp4": "e09b09ba41508198b91e928e058168a36574960a53876efbcac9dc87d8fbdbe9"
+  }
+}

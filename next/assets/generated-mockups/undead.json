@@ -1,0 +1,9 @@
+{
+  "id": "undead",
+  "source": "/home/vossapov/Work/thinkpad-migration-staging/C/Users/vossa/Portfolio/assets/screenshots/native/undead-4.jpg",
+  "prompt": "Use case: compositing. Create one finished premium portfolio mockup photograph, landscape 3:2 1536x1024. Exact supplied Undead game screenshot is the supporting screen insert: place it full and uncropped onto a 16:9 matte-black desktop gaming monitor, preserve street artwork, full HUD, inventory, labels and layout as closely as possible. Monitor fills 85% photo width, nearly frontal mild perspective, clean architectural graphite desk and dark concrete background, subtle warm amber sidelight and cool rim light, restrained cinematic product photography, partial keyboard below for context. No people, added text, logos or watermarks. Display remains clear without glare, complete screenshot edges visible. Output final raster.",
+  "output_hint": "Generated images are saved to /home/vossapov/.codex/generated_images/01a12253-5597-7f82-a599-16ecc46b8326 as /home/vossapov/.codex/generated_images/01a12253-5597-7f82-a599-16ecc46b8326/exec-b1ed9391-a5a7-47e0-8653-93658c9fe57c.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+  "tool": "native image_gen",
+  "output": "/home/vossapov/Work/thinkpad-migration-staging/C/Users/vossa/Portfolio/next/assets/generated-mockups/undead.png",
+  "inspection": "Visually checked; full layout retained, fine text generative."
+}

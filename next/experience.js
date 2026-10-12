@@ -9,26 +9,27 @@
     if (l === 'en' || l === 'ua') return l;
     return /^uk/i.test(root.lang) ? 'ua' : 'en';
   }
-  function mq(q) {
-    var m = window.matchMedia ? window.matchMedia(q) : null;
-    return m || { matches: false, addEventListener: function () {} };
-  }
-  function watch(m, fn) { if (m.addEventListener) m.addEventListener('change', fn); else if (m.addListener) m.addListener(fn); }
   function h(tag, cls, attrs) {
     var n = doc.createElement(tag);
     if (cls) n.className = cls;
     if (attrs) Object.keys(attrs).forEach(function (k) { n.setAttribute(k, attrs[k]); });
     return n;
   }
-  function clamp(v, a, b) { return v < a ? a : v > b ? b : v; }
   function setText(n, s) { if (n.textContent !== s) n.textContent = s; }
 
-  /* ───────── AI section ───────── */
+  /* ───────── AI section: phase swimlanes (me / AI agents) + proof strip ───────── */
+  var IO_SVG = '<svg viewBox="0 0 44 30" aria-hidden="true" focusable="false">' +
+    '<path class="vi-io-me" d="M12 3v23M7.5 21.5 12 26l4.5-4.5"/><path class="vi-io-ai" d="M32 27V4M27.5 8.5 32 4l4.5 4.5"/></svg>';
+  var BACK_SVG = '<svg class="vi-cycle-back" viewBox="0 0 24 24" aria-hidden="true" focusable="false">' +
+    '<path d="M19.5 12a7.5 7.5 0 1 1-2.2-5.3"/><path d="M19.5 4.5v4h-4"/></svg>';
+
   function initAI() {
     var COPY = window.VI_AI_COPY;
     var contact = doc.getElementById('contact');
     if (!COPY || !COPY.en || !contact || doc.getElementById('ai-work')) return;
     function C() { return COPY[lang()] || COPY.en; }
+    function pad(n) { return (n < 10 ? '0' : '') + n; }
+    var base = COPY.en, phaseCount = (base.phases || []).length;
 
     var sec = h('section', 'vi-ai', { id: 'ai-work', 'aria-labelledby': 'viAiTitle', tabindex: '-1' });
     sec.innerHTML =
@@ -38,96 +39,131 @@
             '<p class="eyebrow" data-vi="eyebrow"></p>' +
             '<h2 id="viAiTitle"><span data-vi="title"></span> <span class="vi-draft" data-vi="badge"></span></h2>' +
           '</div>' +
-          '<p class="vi-ai-thesis" data-vi="thesis"></p>' +
+          '<div class="vi-ai-intro">' +
+            '<p class="vi-ai-lede" data-vi="lede"></p>' +
+            '<ul class="vi-legend"><li class="vi-k vi-k-me" data-lg="me"></li><li class="vi-k vi-k-ai" data-lg="ai"></li></ul>' +
+          '</div>' +
         '</header>' +
-        '<div class="vi-bench">' +
-          '<p class="vi-bench-label" id="viBenchLabel" data-vi="benchLabel"></p>' +
-          '<div class="vi-steps" role="tablist" aria-labelledby="viBenchLabel"></div>' +
-          '<div class="vi-panels"></div>' +
+        '<div class="vi-board">' +
+          '<div class="vi-board-top">' +
+            '<h3 class="vi-label" id="viMapLabel" data-vi="mapLabel"></h3>' +
+            '<div class="vi-cycle-wrap">' +
+              '<p class="vi-cycle-label" id="viCycleLabel" data-vi="cycleLabel"></p>' +
+              '<ol class="vi-cycle" aria-labelledby="viCycleLabel"></ol>' +
+            '</div>' +
+          '</div>' +
+          '<ol class="vi-lanes" aria-labelledby="viMapLabel"></ol>' +
         '</div>' +
+        '<section class="vi-proof" aria-labelledby="viProofLabel">' +
+          '<div class="vi-proof-head"><h3 class="vi-label" id="viProofLabel" data-vi="proofLabel"></h3><p class="vi-proof-hint" data-vi="proofHint"></p></div>' +
+          '<ul class="vi-proof-list"></ul>' +
+        '</section>' +
         '<div class="vi-ai-foot">' +
-          '<div class="vi-principles"><h3 data-vi="principlesLabel"></h3><ul></ul></div>' +
-          '<div class="vi-tools"><h3 data-vi="toolsLabel"></h3><ul class="vi-tool-list"></ul></div>' +
+          '<div class="vi-principles"><h3 class="vi-label" data-vi="principlesLabel"></h3><ol></ol></div>' +
+          '<div class="vi-tools"><h3 class="vi-label" data-vi="toolsLabel"></h3><ul class="vi-tool-list"></ul></div>' +
           '<p class="vi-ai-note" data-vi="note"></p>' +
         '</div>' +
       '</div>';
     contact.parentNode.insertBefore(sec, contact);
+    var board = sec.querySelector('.vi-board');
 
-    var tablist = sec.querySelector('.vi-steps'), panels = sec.querySelector('.vi-panels');
-    var vertical = mq('(min-width: 861px)');
-    var tabs = [], pans = [], sel = 0;
-    function pad(i) { return (i + 1 < 10 ? '0' : '') + (i + 1); }
+    // Loop rail: the same four beats repeat inside every phase.
+    var cycle = sec.querySelector('.vi-cycle'), beats = [];
+    (base.cycle || []).forEach(function (b, i, all) {
+      var li = h('li', 'is-' + b.who);
+      li.innerHTML = '<span></span>' + (i === all.length - 1 ? BACK_SVG : '');
+      cycle.appendChild(li); beats.push(li);
+    });
 
-    function build(n) {
-      tablist.textContent = ''; panels.textContent = ''; tabs = []; pans = [];
-      for (var i = 0; i < n; i++) {
-        var tab = h('button', 'vi-step', { type: 'button', role: 'tab', id: 'viTab' + i, 'aria-controls': 'viPanel' + i });
-        tab.innerHTML = '<span class="vi-step-n" aria-hidden="true">' + pad(i) + '</span>' +
-          '<span class="vi-step-txt"><span class="vi-step-t"></span><span class="vi-step-s"></span></span>';
-        var pan = h('div', 'vi-panel', { role: 'tabpanel', id: 'viPanel' + i, 'aria-labelledby': 'viTab' + i, tabindex: '0' });
-        pan.innerHTML =
-          '<p class="vi-panel-kicker"><span class="vi-panel-n"></span> <span class="vi-panel-t"></span></p>' +
-          '<dl class="vi-rows">' +
-            '<div class="vi-row vi-row-in"><dt data-l="input"></dt><dd data-f="input"></dd></div>' +
-            '<div class="vi-row vi-row-ai"><dt data-l="ai"></dt><dd data-f="ai"></dd></div>' +
-            '<div class="vi-row vi-row-me"><dt data-l="me"></dt><dd data-f="me"></dd></div>' +
+    // Swimlanes: a decorative key column, then one list item per phase (head / me / brief-result / AI).
+    var lanes = sec.querySelector('.vi-lanes'), phases = [];
+    lanes.style.setProperty('--n', phaseCount);
+    var key = h('li', 'vi-lane-key', { 'aria-hidden': 'true' });
+    key.innerHTML = '<span class="vi-key-head"></span><span class="vi-key-me"></span><span class="vi-key-io"></span><span class="vi-key-ai"></span>';
+    lanes.appendChild(key);
+    for (var i = 0; i < phaseCount; i++) {
+      var ph = h('li', 'vi-phase');
+      ph.innerHTML =
+        '<div class="vi-ph-head"><span class="vi-ph-n">' + pad(i + 1) + '</span><h4 class="vi-ph-t"></h4><ul class="vi-ph-proj"></ul></div>' +
+        '<div class="vi-cell vi-cell-me"><span class="vi-cell-k"></span><p></p></div>' +
+        '<div class="vi-io">' + IO_SVG + '</div>' +
+        '<div class="vi-cell vi-cell-ai"><span class="vi-cell-k"></span><p></p></div>';
+      lanes.appendChild(ph); phases.push(ph);
+    }
+
+    // Proof strip: real project visuals; each card marks the phases it used and highlights them above.
+    var plist = sec.querySelector('.vi-proof-list'), cards = [];
+    (base.proof || []).forEach(function (p) {
+      var li = h('li', 'vi-proof-item vi-proof-' + p.key);
+      var bars = '';
+      for (var k = 1; k <= phaseCount; k++) bars += '<li' + (p.phases.indexOf(k) >= 0 ? ' class="is-on"' : '') + '>' + pad(k) + '</li>';
+      li.innerHTML =
+        '<div class="vi-proof-media' + (p.fit === 'contain' ? ' is-contain' : '') + '"><img src="' + p.img + '" alt="" loading="lazy" decoding="async"></div>' +
+        '<div class="vi-proof-body">' +
+          '<h4 class="vi-proof-t"></h4><p class="vi-proof-meta"></p>' +
+          '<p class="vi-proof-fig"><b></b><span></span></p>' +
+          '<dl class="vi-proof-rows">' +
+            '<div class="vi-pr vi-pr-me"><dt data-pl="me"></dt><dd data-pf="me"></dd></div>' +
+            '<div class="vi-pr vi-pr-ai"><dt data-pl="ai"></dt><dd data-pf="ai"></dd></div>' +
           '</dl>' +
-          '<details class="vi-prompt"><summary data-l="prompt"></summary>' +
-            '<blockquote><p data-f="prompt"></p></blockquote><p class="vi-prompt-note" data-l="promptNote"></p></details>';
-        tablist.appendChild(tab); panels.appendChild(pan);
-        tabs.push(tab); pans.push(pan);
-        tab.addEventListener('click', select.bind(null, i, false));
+          '<p class="vi-sr vi-proof-phases"></p>' +
+          '<ol class="vi-proof-ph" aria-hidden="true">' + bars + '</ol>' +
+          '<a class="vi-proof-link"></a>' +
+        '</div>';
+      plist.appendChild(li); cards.push(li);
+      function on() {
+        board.setAttribute('data-hl', '');
+        phases.forEach(function (n, j) { n.classList.toggle('is-hl', p.phases.indexOf(j + 1) >= 0); });
       }
-    }
-    function select(i, focus) {
-      sel = i;
-      tabs.forEach(function (t, k) {
-        var on = k === i;
-        t.setAttribute('aria-selected', String(on));
-        t.tabIndex = on ? 0 : -1;
-        pans[k].hidden = !on;
-      });
-      if (focus) tabs[i].focus();
-    }
-    tablist.addEventListener('keydown', function (e) {
-      var i = tabs.indexOf(doc.activeElement);
-      if (i < 0) return;
-      var n = tabs.length, j = null;
-      if (e.key === 'ArrowDown' || e.key === 'ArrowRight') j = (i + 1) % n;
-      else if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') j = (i - 1 + n) % n;
-      else if (e.key === 'Home') j = 0;
-      else if (e.key === 'End') j = n - 1;
-      if (j === null) return;
-      e.preventDefault();
-      select(j, true);
+      function off() { board.removeAttribute('data-hl'); }
+      li.addEventListener('mouseenter', on); li.addEventListener('mouseleave', off);
+      li.addEventListener('focusin', on); li.addEventListener('focusout', off);
     });
 
     function render() {
-      var c = C(), steps = c.steps || [];
-      if (steps.length !== tabs.length) {
-        var hadFocus = tabs.indexOf(doc.activeElement) >= 0;
-        build(steps.length);
-        select(Math.min(sel, steps.length - 1), hadFocus);
-      }
+      var c = C(), labels = c.labels || {}, keys = c.keys || {};
       sec.querySelectorAll('[data-vi]').forEach(function (n) { setText(n, c[n.getAttribute('data-vi')] || ''); });
+      sec.querySelectorAll('[data-lg]').forEach(function (n) { setText(n, (c.legend || {})[n.getAttribute('data-lg')] || ''); });
       sec.querySelector('.vi-draft').hidden = c.draft === false;
       sec.classList.toggle('is-draft', c.draft !== false);
-      tabs.forEach(function (t, i) {
-        var s = steps[i];
-        setText(t.querySelector('.vi-step-t'), s.title);
-        setText(t.querySelector('.vi-step-s'), s.short || '');
-        var p = pans[i];
-        setText(p.querySelector('.vi-panel-n'), (c.stepWord || '') + ' ' + pad(i));
-        setText(p.querySelector('.vi-panel-t'), s.title);
-        p.querySelectorAll('[data-l]').forEach(function (n) { setText(n, (c.labels || {})[n.getAttribute('data-l')] || ''); });
-        p.querySelectorAll('[data-f]').forEach(function (n) { setText(n, s[n.getAttribute('data-f')] || ''); });
-        p.querySelector('.vi-prompt').hidden = !s.prompt;
+
+      beats.forEach(function (li, i) { setText(li.firstChild, ((c.cycle || [])[i] || base.cycle[i]).text); });
+
+      setText(key.querySelector('.vi-key-me'), keys.me || '');
+      setText(key.querySelector('.vi-key-ai'), keys.ai || '');
+      setText(key.querySelector('.vi-key-io'), keys.io || '');
+      phases.forEach(function (ph, i) {
+        var s = (c.phases || [])[i] || base.phases[i];
+        setText(ph.querySelector('.vi-ph-t'), s.title);
+        fillList(ph.querySelector('.vi-ph-proj'), s.projects || []);
+        setText(ph.querySelector('.vi-cell-me .vi-cell-k'), keys.me || '');
+        setText(ph.querySelector('.vi-cell-me p'), s.me);
+        setText(ph.querySelector('.vi-cell-ai .vi-cell-k'), keys.ai || '');
+        setText(ph.querySelector('.vi-cell-ai p'), s.ai);
       });
-      fillList(sec.querySelector('.vi-principles ul'), c.principles || []);
+
+      cards.forEach(function (li, i) {
+        var p = (c.proof || [])[i] || base.proof[i], fig = p.figure || {};
+        setText(li.querySelector('.vi-proof-t'), p.title);
+        setText(li.querySelector('.vi-proof-meta'), p.meta || '');
+        setText(li.querySelector('.vi-proof-fig b'), fig.value || '');
+        setText(li.querySelector('.vi-proof-fig span'), fig.label || '');
+        li.querySelector('.vi-proof-fig').hidden = !fig.value;
+        li.querySelectorAll('[data-pl]').forEach(function (n) { setText(n, labels[n.getAttribute('data-pl')] || ''); });
+        li.querySelectorAll('[data-pf]').forEach(function (n) { setText(n, p[n.getAttribute('data-pf')] || ''); });
+        setText(li.querySelector('.vi-proof-phases'), (labels.phases || '') + ': ' + p.phases.map(function (k) {
+          return ((c.phases || [])[k - 1] || base.phases[k - 1]).title;
+        }).join(', '));
+        var a = li.querySelector('.vi-proof-link');
+        a.href = '/next/case.html?id=' + encodeURIComponent(p.case) + '&lang=' + lang();
+        setText(a, p.link || '');
+        a.setAttribute('aria-label', (p.link || '') + ': ' + p.title);
+      });
+
+      fillList(sec.querySelector('.vi-principles ol'), c.principles || []);
       fillList(sec.querySelector('.vi-tool-list'), c.tools || []);
       sec.querySelector('.vi-principles').hidden = !(c.principles || []).length;
       sec.querySelector('.vi-tools').hidden = !(c.tools || []).length;
-      tablist.setAttribute('aria-orientation', vertical.matches ? 'vertical' : 'horizontal');
       links(c);
     }
     function fillList(ul, items) {
@@ -150,11 +186,9 @@
     }
     function links(c) {
       if (navA) setText(navA, c.navLabel || 'AI');
-      if (footA) setText(footA, c.footerLabel || c.title);
+      if (footA) setText(footA, c.footerLabel || c.eyebrow);
     }
 
-    watch(vertical, render);
-    select(0, false);
     render();
     onLang.push(render);
   }

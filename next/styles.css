@@ -239,14 +239,14 @@ button, input, select { font: inherit; color: inherit; }
 .year-rail { position: sticky; top: calc(var(--stick) + 4px); display: grid; border-left: 1px solid var(--line); }
 .rail-btn {
   display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 8px; min-height: 44px; padding: 0 10px 0 14px;
-  background: transparent; border: 0; border-left: 2px solid transparent; margin-left: -1px; cursor: pointer; color: var(--muted); text-align: left;
+  background: transparent; border: 0; cursor: pointer; color: var(--muted); text-align: left;
 }
 .rail-btn:hover { color: var(--text); background: rgba(255, 255, 255, .03); }
 .rail-y { font-size: 14px; font-weight: 600; }
 .rail-bar { height: 3px; background: var(--line); border-radius: 2px; overflow: hidden; }
 .rail-bar i { display: block; height: 100%; background: var(--faint); }
 .rail-n { font-size: 12px; color: var(--faint); min-width: 12px; text-align: right; }
-.rail-btn[aria-current] { color: var(--text); border-left-color: var(--violet); background: rgba(167, 139, 250, .07); }
+.rail-btn[aria-current] { color: var(--text); background: rgba(167, 139, 250, .07); }
 .rail-btn[aria-current] .rail-bar i { background: var(--violet); }
 .year-chips { display: none; }
 @media (max-width: 959px) {

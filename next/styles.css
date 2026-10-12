@@ -1,8 +1,8 @@
 /* Experience atlas — restrained dark-neutral, macOS-inspired editorial styling.
    Accents (violet / pink / cyan) are used sparingly: focus, selection, active state. */
-@font-face { font-family: "Fixel Text"; src: url("assets/fonts/FixelText-Regular.otf") format("opentype"); font-weight: 400; font-style: normal; font-display: swap; }
-@font-face { font-family: "Fixel Text"; src: url("assets/fonts/FixelText-Medium.otf") format("opentype"); font-weight: 500; font-style: normal; font-display: swap; }
-@font-face { font-family: "Fixel Text"; src: url("assets/fonts/FixelText-SemiBold.otf") format("opentype"); font-weight: 600; font-style: normal; font-display: swap; }
+@font-face { font-family: "Fixel Text"; src: url("assets/fonts/FixelText-Regular.woff2") format("woff2"), url("assets/fonts/FixelText-Regular.otf") format("opentype"); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "Fixel Text"; src: url("assets/fonts/FixelText-Medium.woff2") format("woff2"), url("assets/fonts/FixelText-Medium.otf") format("opentype"); font-weight: 500; font-style: normal; font-display: swap; }
+@font-face { font-family: "Fixel Text"; src: url("assets/fonts/FixelText-SemiBold.woff2") format("woff2"), url("assets/fonts/FixelText-SemiBold.otf") format("opentype"); font-weight: 600; font-style: normal; font-display: swap; }
 
 :root {
   --bg: #0e0f12;

@@ -97,8 +97,9 @@
       var li = h('li', 'vi-proof-item vi-proof-' + p.key);
       var bars = '';
       for (var k = 1; k <= phaseCount; k++) bars += '<li' + (p.phases.indexOf(k) >= 0 ? ' class="is-on"' : '') + '>' + pad(k) + '</li>';
+      var webp = window.VI_WEBP && window.VI_WEBP[p.img], src = webp ? webp[0] || p.img : p.img;
       li.innerHTML =
-        '<div class="vi-proof-media' + (p.fit === 'contain' ? ' is-contain' : '') + '"><img src="' + p.img + '" alt="" loading="lazy" decoding="async"></div>' +
+        '<div class="vi-proof-media' + (p.fit === 'contain' ? ' is-contain' : '') + '"><img src="' + src + '" alt="" loading="lazy" decoding="async"></div>' +
         '<div class="vi-proof-body">' +
           '<h4 class="vi-proof-t"></h4><p class="vi-proof-meta"></p>' +
           '<p class="vi-proof-fig"><b></b><span></span></p>' +

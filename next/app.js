@@ -266,6 +266,10 @@
   }
 
   /* ───────── image helpers ───────── */
+  // Raster masters (often 2–6 MB) stay untouched; screens use WebP derivatives built by
+  // next/tools/build-web-images.py and listed in next/webp-map.js (full ≤2400px / 360px thumb).
+  var WEBP = window.VI_WEBP || {};
+  function web(u, small) { var m = u && WEBP[u]; return m ? (small ? m[1] : m[0]) || u : u; }
   function cardImage(p) { return (p.recent && p.recent.preview) || p.cover || p.mockup || p.thumb || (p.screens && p.screens[0]) || null; }
   function monogram(p) {
     return p.name[0].split(/[\s:]+/).filter(Boolean).slice(0, 2).map(function (w) { return w[0]; }).join('').toUpperCase();
@@ -278,7 +282,7 @@
   function mediaHtml(p) {
     var src = cardImage(p);
     if (!src) return fallbackHtml(p);
-    return '<img src="' + esc(src) + '" alt="' + esc(T('img.preview', { n: L(p.name) })) + '" loading="lazy" decoding="async" data-fb="' + p.id + '">';
+    return '<img src="' + esc(web(src)) + '" alt="' + esc(T('img.preview', { n: L(p.name) })) + '" loading="lazy" decoding="async" data-fb="' + p.id + '">';
   }
   // Broken images → in-place text fallback (error events don't bubble: capture)
   doc.addEventListener('error', function (e) {
@@ -485,9 +489,9 @@
       (tier !== 'xs' ? '<span class="sp-when">' + esc(spRange(p)) + ' <em>· ' + esc(projDur(p)) + '</em></span>' : '') +
       (tier === 'md' || tier === 'lg' || tier === 'xl' ? '<span class="sp-genre">' + esc(L(p.genre)) + '</span>' : '') +
       ((tier === 'lg' || tier === 'xl') && detail ? '<span class="sp-desc">' + esc(L(p.desc)) + '</span>' : '') +
-      ((tier === 'md' || tier === 'lg' || tier === 'xl') && img ? '<img class="sp-thumb" src="' + esc(img) + '" alt="" loading="lazy" decoding="async">' : '') +
+      ((tier === 'md' || tier === 'lg' || tier === 'xl') && img ? '<img class="sp-thumb" src="' + esc(web(img, true)) + '" alt="" loading="lazy" decoding="async">' : '') +
       (tier === 'xl' ? '<span class="sp-rail" aria-hidden="true"><i></i><b>' + esc(T('sp.mo', { n: months })) + '</b><i></i></span>' +
-        (p.cover || p.mockup ? '<span class="sp-art" aria-hidden="true" style="background-image:url(\'' + esc(p.cover || p.mockup) + '\')"></span>' : '') : '');
+        (p.cover || p.mockup ? '<span class="sp-art" aria-hidden="true" style="background-image:url(\'' + esc(web(p.cover || p.mockup)) + '\')"></span>' : '') : '');
     return '<button type="button" class="sp-project card-open sp-' + tier + (c.ambient ? ' sp-amb' : '') + '" data-open="' + p.id + '"' + data +
       ' aria-haspopup="dialog" aria-label="' + esc(projAria(p, c)) + '" style="' + geo + '">' + inner + '</button>';
   }
@@ -559,7 +563,7 @@
           var img = p.thumb || cardImage(p);
           return '<li><button type="button" class="sp-project card-open sk-item" data-open="' + p.id + '" data-start="' + iso(p._s) + '" data-end="' + iso(p._e) +
             '" data-co="' + p.co + '" data-side="' + c.side + '" aria-haspopup="dialog" aria-label="' + esc(projAria(p, c)) + '">' +
-            (img ? '<img class="sk-thumb" src="' + esc(img) + '" alt="" loading="lazy" decoding="async">' : '<span class="sk-thumb sk-thumb--init" aria-hidden="true">' + esc(monogram(p)) + '</span>') +
+            (img ? '<img class="sk-thumb" src="' + esc(web(img, true)) + '" alt="" loading="lazy" decoding="async">' : '<span class="sk-thumb sk-thumb--init" aria-hidden="true">' + esc(monogram(p)) + '</span>') +
             '<span class="sk-body"><span class="sp-name">' + esc(L(p.name)) + '</span>' +
             '<span class="sp-when">' + esc(fmtDate(p.s) + ' – ' + fmtDate(p.e, p.ongoing)) + ' <em>· ' + esc(projDur(p)) + '</em></span>' +
             '<span class="sp-genre">' + esc(L(p.genre)) + '</span>' +
@@ -644,7 +648,7 @@
     var c = coById[p.co], img = cardImage(p);
     peekFor = btn;
     peekEl.style.setProperty('--co', c.color); peekEl.style.setProperty('--co-t', coText(c.color));
-    peekEl.innerHTML = (img ? '<span class="sp-peek-media"><img src="' + esc(img) + '" alt="" decoding="async"></span>' : '') +
+    peekEl.innerHTML = (img ? '<span class="sp-peek-media"><img src="' + esc(web(img)) + '" alt="" decoding="async"></span>' : '') +
       '<span class="sp-peek-body"><span class="card-co"><i></i>' + esc(coName(c)) + '</span><b>' + esc(L(p.name)) + '</b>' +
       '<span class="sp-when">' + esc(fmtDate(p.s) + ' – ' + fmtDate(p.e, p.ongoing)) + ' · ' + esc(projDur(p)) + '</span>' +
       '<span class="sp-genre">' + esc(L(p.genre)) + '</span><span class="sp-peek-desc">' + esc(L(p.desc)) + '</span></span>';
@@ -855,7 +859,7 @@
       return '<a class="btn" href="' + esc(l.url) + '" target="_blank" rel="noopener">' + esc(linkLabel(l)) + ' ↗<span class="sr-only">' + esc(T('newtab')) + '</span></a>';
     }).join('');
     var thumbs = multi ? '<div class="dlg-thumbs" role="group" aria-label="' + esc(T('d.gallery')) + '">' + gal.map(function (u, i) {
-      return '<button type="button" class="dlg-thumb" data-gi="' + i + '" aria-label="' + esc(T('d.thumb', { i: i + 1 })) + '"><img src="' + esc(u) + '" alt="" loading="lazy" decoding="async"></button>';
+      return '<button type="button" class="dlg-thumb" data-gi="' + i + '" aria-label="' + esc(T('d.thumb', { i: i + 1 })) + '"><img src="' + esc(web(u, true)) + '" alt="" loading="lazy" decoding="async"></button>';
     }).join('') + '</div>' : '';
     return '<div class="dlg-media" role="group" aria-roledescription="carousel" aria-label="' + esc(T('d.gallery')) + '">' +
       '<div class="dlg-stage" id="dlgStage">' + (gal.length ? '' : fallbackHtml(p, 'big')) + '</div>' +
@@ -887,7 +891,7 @@
     var p = byId[state.p]; if (!p || !gal.length) return;
     galIdx = (i + gal.length) % gal.length;
     var stage = $('#dlgStage');
-    stage.innerHTML = '<img src="' + esc(gal[galIdx]) + '" alt="' + esc(T('img.shot', { n: L(p.name), i: galIdx + 1 })) + '" data-fb="' + p.id + '" decoding="async">';
+    stage.innerHTML = '<img src="' + esc(web(gal[galIdx])) + '" alt="' + esc(T('img.shot', { n: L(p.name), i: galIdx + 1 })) + '" data-fb="' + p.id + '" decoding="async">';
     var ct = $('#dlgCounter');
     if (ct) ct.textContent = T('d.counter', { i: galIdx + 1, n: gal.length });
     $$('.dlg-thumb', dlg).forEach(function (b, k) {

@@ -180,9 +180,13 @@
   // ── frames ──
   // A "shot" is a button that opens the full-size viewer. The frame around the image
   // depends on the manifest kind; boards (already-composed artwork) are never framed.
+  // Raster masters stay untouched ("open original file"); pages show WebP derivatives
+  // from next/tools/build-web-images.py, listed in next/webp-map.js.
+  var WEBP = window.VI_WEBP || {};
+  function web(a, small) { var m = a && WEBP[a]; return m ? (small ? m[1] : m[0]) || a : a; }
   function imgTag(a, eager, cls) {
     var wh = sizes[a] || [1600, 1000];
-    return '<img class="' + (cls || 'dv-img') + '" src="' + esc(a) + '" width="' + wh[0] + '" height="' + wh[1] + '" alt="' + esc(alt(a)) + '"' +
+    return '<img class="' + (cls || 'dv-img') + '" src="' + esc(web(a)) + '" width="' + wh[0] + '" height="' + wh[1] + '" alt="' + esc(alt(a)) + '"' +
       (eager ? ' fetchpriority="high"' : ' loading="lazy"') + ' decoding="async">';
   }
   function ar(a) { var wh = sizes[a] || [16, 10]; return wh[0] + ' / ' + wh[1]; }
@@ -315,7 +319,7 @@
           '<div class="cs-feat-text">' + head(s) + '<div class="cs-prose">' + body + '</div>' +
           '<a class="cs-btn cs-btn-ghost cs-video-download" href="' + esc(v.src) + '" download>' + (lang === 'ua' ? 'Завантажити MP4' : 'Download MP4') + '</a></div>' +
           '<div class="cs-feat-art"><div class="cs-video-stage"><div class="' + videoFrame + '" style="--ar:' + ar(v.poster) + '"><div class="dv-screen">' +
-          '<video class="dv-img" controls muted playsinline preload="none" poster="' + esc(v.poster) + '" aria-label="' + esc(s._title) + '">' +
+          '<video class="dv-img" controls muted playsinline preload="none" poster="' + esc(web(v.poster)) + '" aria-label="' + esc(s._title) + '">' +
           '<source src="' + esc(v.src) + '" type="video/mp4">' +
           '<track ' + (P.id === 'budmarket-lux' && lang === 'en' ? 'default ' : '') + 'kind="captions" src="' + esc(v.captions[lang]) + '" srclang="' + (lang === 'ua' ? 'uk' : 'en') + '" label="' + (lang === 'ua' ? 'Українська' : 'English') + '">' +
           '</video></div></div></div></div></div>' + (imgs.length ? '<div class="cs-video-screens">' + stage(imgs, 'gallery', s._title) + '</div>' : '') + close;
@@ -420,7 +424,7 @@
     var img = c && (c.hero.scene === 'board' ? c.hero.imgs[0] : (p.cover || p.mockup || c.hero.imgs[0])) || p.thumb;
     return '<a class="cs-next cs-next-' + dir + '" href="' + caseHref(p.id, lang) + '" rel="' + dir + '">' +
       '<span class="cs-next-label">' + esc(label) + '</span>' +
-      (img ? '<span class="cs-next-img">' + '<img src="' + esc(img) + '" alt="" loading="lazy" decoding="async"' +
+      (img ? '<span class="cs-next-img">' + '<img src="' + esc(web(img)) + '" alt="" loading="lazy" decoding="async"' +
         (sizes[img] ? ' width="' + sizes[img][0] + '" height="' + sizes[img][1] + '"' : '') + '></span>' : '<span class="cs-next-img cs-next-img-none" aria-hidden="true"></span>') +
       '<span class="cs-next-name">' + esc(L(p.name)) + '</span><span class="cs-next-genre">' + esc(L(p.genre)) + '</span></a>';
   }
@@ -457,7 +461,7 @@
     cur = (i + images.length) % images.length;
     var a = images[cur];
     var wh = sizes[a] || [0, 0];
-    lbImg.src = a;
+    lbImg.src = web(a);
     if (wh[0]) { lbImg.width = wh[0]; lbImg.height = wh[1]; }
     lbImg.alt = alt(a);
     doc.getElementById('cs-lb-title').textContent = captions[a] || name;

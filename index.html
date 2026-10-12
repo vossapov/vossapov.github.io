@@ -3,181 +3,194 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Valentyn Ihnatov — Game UI/UX Designer</title>
-  <meta name="description" content="Valentyn Ihnatov — Versatile Game UI/UX Designer with 5+ years in the gaming industry. Figma · Design Systems · Unity · iOS/Android/PC">
+  <title>Valentyn Ihnatov — Game UI/UX Designer · Experience atlas</title>
+  <meta name="description" content="Valentyn Ihnatov — Game UI/UX designer. A chronological atlas of projects and employers, with search, filters and project details.">
+  <meta name="color-scheme" content="dark">
+  <link rel="canonical" href="https://vossapov.github.io/">
   <meta property="og:type" content="website">
+  <meta property="og:url" content="https://vossapov.github.io/">
   <meta property="og:title" content="Valentyn Ihnatov — Game UI/UX Designer">
-  <meta property="og:description" content="Versatile Game UI/UX Designer specializing in modern game UI. Full pipeline from UX research and wireframing to art direction and design systems.">
-  <meta property="og:image" content="/assets/screenshots/undead-1.png">
+  <meta property="og:description" content="Game UI/UX designer: a timeline of projects and employers, full case studies and how I work with AI.">
+  <meta property="og:image" content="https://vossapov.github.io/assets/screenshots/undead-1.png">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%236366f1'/%3E%3Ctext x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' font-family='system-ui%2Csans-serif' font-weight='700' font-size='13' fill='white'%3EVI%3C/text%3E%3C/svg%3E">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=Kanit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/style.css?v=20260708f">
+  <meta name="theme-color" content="#0e0f12">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23181a20'/%3E%3Ctext x='50%25' y='56%25' dominant-baseline='middle' text-anchor='middle' font-family='system-ui%2Csans-serif' font-weight='700' font-size='13' fill='%23e9e9ee'%3EVI%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="/next/styles.css?v=no-side-accents-1">
+  <link rel="stylesheet" href="/next/spatial.css?v=no-side-accents-1">
+  <link rel="stylesheet" href="/next/experience.css?v=ai-infographic-1">
+  <link rel="stylesheet" href="/next/hero-video.css?v=3">
 </head>
 <body>
+  <a class="skip-link" href="#work" data-i18n="skip">Skip to the timeline</a>
 
-  <!-- Pinned corner UI (top-right): language + always-available contact actions -->
-  <div class="corner-ui corner-ui--tr">
-    <div class="lang-toggle">
-      <button class="lang-btn active" data-lang="en">EN</button>
-      <span class="lang-sep">/</span>
-      <button class="lang-btn" data-lang="ua">UA</button>
+  <header class="site-header" id="top">
+    <div class="wrap header-row">
+      <a class="brand" href="#top" aria-label="Valentyn Ihnatov">
+        <span class="brand-mark" aria-hidden="true">VI</span>
+        <span class="brand-text"><b>Valentyn Ihnatov</b><i data-i18n="role">Game UI/UX Designer</i></span>
+      </a>
+      <nav class="header-nav" data-i18n-attrs="aria-label:nav.label" aria-label="Primary">
+        <a href="#work" data-i18n="nav.work">Work</a>
+        <a href="#contact" data-i18n="nav.contact">Contact</a>
+        <a href="/cv.pdf" download data-i18n="nav.cv">CV ↓</a>
+      </nav>
+      <div class="header-end">
+        <div class="seg lang-seg" role="group" data-i18n-attrs="aria-label:lang.label" aria-label="Language">
+          <button type="button" class="seg-btn" data-set-lang="en" lang="en" aria-pressed="true">EN</button>
+          <button type="button" class="seg-btn" data-set-lang="ua" lang="uk" aria-pressed="false">UA</button>
+        </div>
+      </div>
     </div>
-    <a href="/cv.pdf" class="btn-mini btn-mini--ghost" download>
-      <span data-en="CV ↓" data-ua="CV ↓">CV ↓</span>
-    </a>
-    <a href="#contact" class="btn-mini btn-mini--solid">
-      <span data-en="Contact me" data-ua="Звʼязатися">Contact me</span>
-    </a>
-  </div>
+  </header>
 
   <main>
-
-    <!-- HERO (v4 — display style, self-contained intro) -->
-    <section class="hero hero--v3 hero--v4">
-      <div class="hero-glow"></div>
-      <div class="hero-v3-inner hero-split">
-        <div class="hero-textcol">
-        <div class="hero-status anim-item visible">
-          <span class="hero-status-dot"></span>
-          <span data-en="Open to opportunities" data-ua="Відкритий до пропозицій">Open to opportunities</span>
-        </div>
-
-        <div class="hero-core">
-          <h1 class="hero-display display-grad">
-            <span data-en="Hi, I'm Valentyn" data-ua="Привіт, я Валентин">Hi, I'm Valentyn</span>
-          </h1>
-
-          <p class="hero-desc"
-             data-en="Game UI/UX designer with 10+ years in design and 5+ in gaming. Full pipeline — UX research, wireframes, art direction and design systems in Figma."
-             data-ua="Game UI/UX дизайнер: 10+ років у дизайні, 5+ у геймдеві. Повний цикл — UX-ресерч, вайрфрейми, арт-дірекшн і дизайн-системи у Figma.">
-            Game UI/UX designer with 10+ years in design and 5+ in gaming. Full pipeline — UX research, wireframes, art direction and design systems in Figma.
-          </p>
-
-          <div class="hero-stats">
-            <div class="stat">
-              <span class="stat-n">5+</span>
-              <span class="stat-l" data-en="Years in gaming" data-ua="Років у геймдеві">Years in gaming</span>
-            </div>
-            <div class="stat">
-              <span class="stat-n">10+</span>
-              <span class="stat-l" data-en="Years in design" data-ua="Років у дизайні">Years in design</span>
-            </div>
-            <div class="stat">
-              <span class="stat-n">15+</span>
-              <span class="stat-l" data-en="Projects shipped" data-ua="Проєктів здано">Projects shipped</span>
-            </div>
-          </div>
-
+    <section class="hero" aria-labelledby="heroTitle">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow" data-i18n="hero.eyebrow">Game UI/UX Designer</p>
+          <h1 id="heroTitle">Valentyn Ihnatov</h1>
+          <p class="hero-lede" data-i18n="hero.lede">Game UI/UX designer with 10+ years in design and 5+ in gaming. Full pipeline — UX research, wireframes, art direction and design systems in Figma.</p>
           <div class="hero-actions">
-            <a href="#experience" class="btn-pill btn-pill--solid btn-pill--lg magnet-btn">
-              <span data-en="View my work" data-ua="Дивитись роботи">View my work</span>
-              <svg width="15" height="15" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7l5 5 5-5"/></svg>
-            </a>
-            <a href="https://www.linkedin.com/in/valentyn-ihnatov-a103a1153/" target="_blank" rel="noopener" class="btn-pill btn-pill--ghost">LinkedIn</a>
+            <a class="btn btn-primary" href="#work" data-i18n="hero.cta">Explore the timeline</a>
+            <a class="btn" href="https://www.linkedin.com/in/valentyn-ihnatov-a103a1153/" target="_blank" rel="noopener">LinkedIn<span class="sr-only" data-i18n="newtab"> (opens in a new tab)</span></a>
+            <a class="btn" href="https://t.me/vossapov" target="_blank" rel="noopener">Telegram<span class="sr-only" data-i18n="newtab"> (opens in a new tab)</span></a>
+            <a class="btn" href="/cv.pdf" download data-i18n="nav.cv">CV ↓</a>
+          </div>
+          <dl class="hero-facts" id="heroFacts" aria-live="off"></dl>
+        </div>
+        <figure class="hero-figure hero-film">
+          <div class="hero-film-stage">
+            <img src="/next/assets/hero-video/poster.jpg" width="560" height="832" alt="" data-i18n-attrs="alt:hero.alt" decoding="async" fetchpriority="high">
+            <video id="heroVideo" muted loop playsinline preload="none" poster="/next/assets/hero-video/poster.jpg" aria-hidden="true" tabindex="-1">
+              <source src="/next/assets/hero-video/avatar-loop.mp4" type="video/mp4">
+            </video>
+          </div>
+        </figure>
+      </div>
+    </section>
+
+    <section class="work" id="work" aria-labelledby="workTitle" tabindex="-1">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow" data-i18n="work.eyebrow">Experience atlas</p>
+            <h2 id="workTitle" data-i18n="work.title">Projects across time</h2>
+          </div>
+          <p class="section-note" data-i18n="work.note">Newest first. Each project sits in the year it ended; its bar shows the months it spanned, so overlapping work stays visible.</p>
+        </div>
+
+        <details class="career-box" id="careerBox">
+          <summary class="career-sum"><span data-i18n="career.sum">Employer overview</span></summary>
+          <figure class="career" id="career" role="group" aria-label="Career"></figure>
+        </details>
+
+        <div class="toolbar" role="search" data-i18n-attrs="aria-label:tb.label" aria-label="Filter projects">
+          <label class="search">
+            <span class="sr-only" data-i18n="tb.searchLabel">Search projects, employers or genres</span>
+            <svg aria-hidden="true" width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="9" cy="9" r="5.5"/><path d="M13.5 13.5 17 17"/></svg>
+            <input type="search" id="q" autocomplete="off" spellcheck="false" placeholder="Search name, employer, genre…" data-i18n-attrs="placeholder:tb.searchPh">
+          </label>
+
+          <details class="filters-disclosure" id="filtersBox">
+            <summary class="filters-summary" data-i18n="tb.filters">Filters & View</summary>
+            <div class="filters-panel">
+              <div class="filters-group">
+                <p class="filters-label" data-i18n="tb.category">Category</p>
+                <div class="seg cats" id="cats" role="group" data-i18n-attrs="aria-label:tb.category" aria-label="Category"></div>
+              </div>
+
+              <div class="filters-group">
+                <p class="filters-label" data-i18n="tb.company">Employer</p>
+                <label class="select">
+                  <span class="sr-only" data-i18n="tb.company">Employer</span>
+                  <select id="co"></select>
+                </label>
+              </div>
+
+              <div class="filters-group">
+                <p class="filters-label" data-i18n="tb.view">View</p>
+                <div class="seg" id="viewSeg" role="group" data-i18n-attrs="aria-label:tb.view" aria-label="View">
+                  <button type="button" class="seg-btn" data-view="timeline" data-i18n="tb.timeline" aria-pressed="true">Timeline</button>
+                  <button type="button" class="seg-btn" data-view="gallery" data-i18n="tb.gallery" aria-pressed="false">Gallery</button>
+                </div>
+              </div>
+
+              <div class="filters-group">
+                <p class="filters-label" data-i18n="tb.density">Density</p>
+                <div class="seg" id="densSeg" role="group" data-i18n-attrs="aria-label:tb.density" aria-label="Density">
+                  <button type="button" class="seg-btn" data-dens="overview" data-i18n="tb.overview" aria-pressed="false">Overview</button>
+                  <button type="button" class="seg-btn" data-dens="detail" data-i18n="tb.detail" aria-pressed="true">Detail</button>
+                </div>
+              </div>
+
+              <div class="filters-group">
+                <p class="filters-label" data-i18n="tb.scale">Scale</p>
+                <div class="seg" id="scaleSeg" role="group" data-i18n-attrs="aria-label:tb.scale" aria-label="Scale">
+                  <button type="button" class="seg-btn" data-scale="compact" data-i18n="sc.compact" aria-pressed="false">Compact</button>
+                  <button type="button" class="seg-btn" data-scale="standard" data-i18n="sc.standard" aria-pressed="true">Standard</button>
+                  <button type="button" class="seg-btn" data-scale="expanded" data-i18n="sc.expanded" aria-pressed="false">Expanded</button>
+                </div>
+              </div>
+
+              <div class="filters-action">
+                <button type="button" class="btn btn-quiet" id="reset" data-i18n="tb.reset">Reset filters</button>
+              </div>
+            </div>
+          </details>
+        </div>
+        <p class="status" id="status" role="status" aria-live="polite"></p>
+
+        <nav class="year-chips" id="yearChips" data-i18n-attrs="aria-label:yr.label" aria-label="Jump to year"></nav>
+
+        <div class="atlas">
+          <nav class="year-rail" id="yearRail" data-i18n-attrs="aria-label:yr.label" aria-label="Jump to year"></nav>
+          <div class="stream" id="stream">
+            <noscript>
+              <div class="noscript">
+                <p>The experience atlas needs JavaScript. You can still reach everything on the original site:</p>
+                <p><a href="/classic.html">Open the classic portfolio</a> · <a href="/cv.pdf" download>Download CV</a> · <a href="mailto:vossapov@gmail.com">vossapov@gmail.com</a> · <a href="https://t.me/vossapov">Telegram</a> · <a href="https://www.linkedin.com/in/valentyn-ihnatov-a103a1153/">LinkedIn</a> · <a href="https://www.behance.net/vossapov">Behance</a></p>
+              </div>
+            </noscript>
           </div>
         </div>
-        </div><!-- /.hero-textcol -->
 
-        <!-- Hero portrait -->
-        <div class="hero-scene" id="heroScene">
-          <div class="hero-char-glow" aria-hidden="true"></div>
-          <img class="hero-char" id="heroChar" src="/assets/mockups/mascot-scene.png?v=20260708f"
-               alt="Valentyn Ihnatov — Game UI/UX designer, waving, with his dog" draggable="false">
-        </div>
-      </div>
-      <div class="hero-scroll" aria-hidden="true">
-        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M4 7l5 5 5-5"/>
-        </svg>
+        <aside class="legend" id="legend" data-i18n-attrs="aria-label:lg.label" aria-label="How to read"></aside>
       </div>
     </section>
 
-    <!-- MARQUEE — scroll-driven screenshot strips -->
-    <section class="marquee-section" aria-hidden="true">
-      <div class="mq-row" id="mqRow1"></div>
-      <div class="mq-row" id="mqRow2"></div>
-    </section>
-
-    <!-- TIMELINE / PROJECTS -->
-    <section class="tl-section" id="experience">
-      <div class="container">
-        <h2 class="section-display display-grad" data-en="Experience" data-ua="Досвід">Experience</h2>
-        <div class="tl-toolbar" id="tlToolbar"></div>
-      </div>
-      <div class="tl-root" id="tlRoot"></div>
-      <div class="container">
-        <div class="tl-list" id="tlList" hidden></div>
-        <div class="tl-tiles" id="tlTiles" hidden></div>
-      </div>
-
-      <!-- Experience outro: short narrative + external portfolios -->
-      <div class="container">
-        <div class="exp-outro">
-          <p class="exp-outro-text"
-             data-en="Five studios, a dozen shipped titles — from a Steam survival shooter to match-3 live-ops, casino multiplayer and a gamification SaaS. I picked up projects at every stage: starting UI from scratch, rescuing legacy Photoshop pipelines into Figma design systems, and supporting teams through release. More work is on my Dribbble and Behance."
-             data-ua="П'ять студій і десяток відвантажених проєктів — від survival-шутера в Steam до match-3 live-ops, казино-мультиплеєра та геймфікаційного SaaS. Заходив на проєкти на будь-якій стадії: UI з нуля, порятунок легасі Photoshop-пайплайнів у дизайн-системи Figma, супровід команд до релізу. Більше робіт — на Dribbble і Behance.">
-            Five studios, a dozen shipped titles — from a Steam survival shooter to match-3 live-ops, casino multiplayer and a gamification SaaS. I picked up projects at every stage: starting UI from scratch, rescuing legacy Photoshop pipelines into Figma design systems, and supporting teams through release. More work is on my Dribbble and Behance.
-          </p>
-          <div class="exp-outro-links">
-            <a href="https://dribbble.com/vossapov" target="_blank" rel="noopener" class="btn-pill btn-pill--ghost">Dribbble ↗</a>
-            <a href="https://www.behance.net/vossapov" target="_blank" rel="noopener" class="btn-pill btn-pill--ghost">Behance ↗</a>
-          </div>
-        </div>
+    <section class="contact" id="contact" aria-labelledby="contactTitle" tabindex="-1">
+      <div class="wrap">
+        <p class="eyebrow" data-i18n="ct.eyebrow">Contact</p>
+        <h2 id="contactTitle" data-i18n="ct.title">Open to new projects</h2>
+        <p class="contact-lede" data-i18n="ct.lede">Looking for a Game UI/UX designer? I'm available for freelance projects, full-time positions, and design consulting.</p>
+        <ul class="contact-list">
+          <li><a href="https://t.me/vossapov" target="_blank" rel="noopener"><b>Telegram</b><span>@vossapov</span></a></li>
+          <li><a href="mailto:vossapov@gmail.com"><b data-i18n="ct.email">Email</b><span>vossapov@gmail.com</span></a></li>
+          <li><a href="https://www.linkedin.com/in/valentyn-ihnatov-a103a1153/" target="_blank" rel="noopener"><b>LinkedIn</b><span>valentyn-ihnatov</span></a></li>
+          <li><a href="https://dribbble.com/vossapov" target="_blank" rel="noopener"><b>Dribbble</b><span>vossapov</span></a></li>
+          <li><a href="https://www.behance.net/vossapov" target="_blank" rel="noopener"><b>Behance</b><span>vossapov</span></a></li>
+          <li><a href="/cv.pdf" download><b data-i18n="ct.cv">CV</b><span>PDF ↓</span></a></li>
+        </ul>
       </div>
     </section>
-
-    <!-- CONTACT CTA -->
-    <section class="cta-section" id="contact">
-    <div class="container">
-      <div class="cta-inner anim-item">
-        <div class="cta-glow"></div>
-        <p class="cta-label" data-en="Let's work together" data-ua="Давайте співпрацювати">Let's work together</p>
-        <h2 class="cta-title" data-en="Open to new projects" data-ua="Відкритий до нових проєктів">Open to new projects</h2>
-        <p class="cta-desc"
-           data-en="Looking for a Game UI/UX designer? I'm available for freelance projects, full-time positions, and design consulting."
-           data-ua="Шукаєте Game UI/UX дизайнера? Відкритий до фрілансу, штатних позицій та дизайн-консалтингу.">
-          Looking for a Game UI/UX designer? I'm available for freelance projects, full-time positions, and design consulting.
-        </p>
-        <div class="contact-list">
-          <a class="contact-item" href="https://t.me/vossapov" target="_blank" rel="noopener">
-            <b>Telegram</b><span>@vossapov</span>
-          </a>
-          <a class="contact-item" href="mailto:vossapov@gmail.com">
-            <b data-en="Email" data-ua="Пошта">Email</b><span>vossapov@gmail.com</span>
-          </a>
-          <a class="contact-item" href="https://www.linkedin.com/in/valentyn-ihnatov-a103a1153/" target="_blank" rel="noopener">
-            <b>LinkedIn</b><span>valentyn-ihnatov</span>
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
   </main>
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-inner">
-        <p class="footer-name">Valentyn Ihnatov</p>
-        <div class="footer-links">
-          <a href="mailto:vossapov@gmail.com">vossapov@gmail.com</a>
-          <a href="https://t.me/vossapov" target="_blank" rel="noopener">Telegram</a>
-          <a href="https://www.linkedin.com/in/valentyn-ihnatov-a103a1153/" target="_blank" rel="noopener">LinkedIn</a>
-          <a href="https://dribbble.com/vossapov" target="_blank" rel="noopener">Dribbble</a>
-          <a href="https://www.behance.net/vossapov" target="_blank" rel="noopener">Behance</a>
-        </div>
-        <p class="footer-copy">© 2026</p>
-      </div>
+  <footer class="site-footer">
+    <div class="wrap footer-row">
+      <span>© 2026 Valentyn Ihnatov</span>
+      <a href="#top" data-i18n="ft.top">Back to top ↑</a>
     </div>
   </footer>
 
-  <button class="back-to-top" id="backToTop" aria-label="Back to top" title="Back to top">↑</button>
+  <dialog id="dlg" class="dlg" aria-labelledby="dlgTitle">
+    <button type="button" class="dlg-close" id="dlgClose" data-action="close" aria-label="Close project details" data-i18n-attrs="aria-label:d.close"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 4l10 10M14 4 4 14"/></svg></button>
+    <div class="dlg-shell" id="dlgBody"></div>
+  </dialog>
 
-  <script src="/timeline.js?v=20260708f"></script>
-  <script src="/script.js?v=20260708f"></script>
+  <script src="/next/data.js?v=budmarket-en-1"></script>
+  <script src="/next/app.js?v=budmarket-en-1"></script>
+  <script src="/next/ai-content.js?v=ai-infographic-1"></script>
+  <script src="/next/experience.js?v=ai-infographic-1"></script>
+  <script src="/next/hero-video.js?v=3"></script>
 </body>
 </html>

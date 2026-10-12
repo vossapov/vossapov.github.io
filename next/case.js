@@ -106,12 +106,12 @@
     return 'case.html?id=' + encodeURIComponent(pid) + '&lang=' + l + (anchor ? '#' + encodeURIComponent(anchor) : '');
   }
   function timelineHref() {
-    var u = new URL('/next/', location.origin);
+    var u = new URL('/', location.origin);
     // Reuse the timeline state the visitor came from (filters, view) — same-origin /next/ only.
     try {
       if (doc.referrer) {
         var r = new URL(doc.referrer);
-        if (r.origin === location.origin && (r.pathname === '/next/' || r.pathname === '/next/index.html')) {
+        if (r.origin === location.origin && (r.pathname === '/' || r.pathname === '/index.html' || r.pathname === '/next/' || r.pathname === '/next/index.html')) {
           ['q', 'cat', 'co', 'view', 'dens', 'y'].forEach(function (k) {
             var v = r.searchParams.get(k);
             if (v != null && v.length <= 80) u.searchParams.set(k, v);
@@ -127,8 +127,8 @@
   var back = doc.getElementById('cs-back');
   back.href = backHref;
   back.setAttribute('aria-label', T('backLong'));
-  doc.getElementById('cs-foot-back').href = '/next/?lang=' + lang;
-  doc.querySelector('.cs-brand').href = '/next/?lang=' + lang;
+  doc.getElementById('cs-foot-back').href = '/?lang=' + lang;
+  doc.querySelector('.cs-brand').href = '/?lang=' + lang;
   var other = lang === 'ua' ? 'en' : 'ua';
   var langA = doc.getElementById('cs-lang');
   langA.textContent = other === 'ua' ? 'UA' : 'EN';
@@ -443,7 +443,7 @@
     doc.title = T('nfTitle') + ' · Valentyn Ihnatov';
     var msg = !DATA || !CASES ? T('dataErr') : id == null || id === '' ? T('nfNoId') : T('nfBody', { id: id });
     main.innerHTML = '<div class="cs-wrap cs-msg"><p class="cs-kicker">404</p><h1 class="cs-h1">' + esc(T('nfTitle')) + '</h1>' +
-      '<p class="cs-lede">' + esc(msg) + '</p><p><a class="cs-btn" href="/next/?lang=' + lang + '">' + esc(T('nfBack')) + '</a></p></div>';
+      '<p class="cs-lede">' + esc(msg) + '</p><p><a class="cs-btn" href="/?lang=' + lang + '">' + esc(T('nfBack')) + '</a></p></div>';
     main.removeAttribute('aria-busy');
   }
 

@@ -719,7 +719,11 @@
   }
 
   function renderLegend() {
-    $('#legend').innerHTML = '<h3>' + esc(T('lg.t')) + '</h3><ul><li>' + esc(T('lg.1')) + '</li><li>' + esc(T('lg.2')) + '</li><li>' +
+    /* The "how to read the atlas" aside was removed from the page on the owner's request; keep this
+       guarded so the language-switch path that still calls it is a no-op when the element is absent. */
+    var lg = $('#legend');
+    if (!lg) return;
+    lg.innerHTML = '<h3>' + esc(T('lg.t')) + '</h3><ul><li>' + esc(T('lg.1')) + '</li><li>' + esc(T('lg.2')) + '</li><li>' +
       esc(T('lg.3', { end: fmtDate(NOW) })) + '</li><li>' + esc(T('lg.4')) + '</li></ul>';
   }
 

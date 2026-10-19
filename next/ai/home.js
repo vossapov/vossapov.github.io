@@ -305,34 +305,34 @@
       box.appendChild(howSec);
     }
 
-    /* 4 — per audience: promise, the drawing, the tasks, the proof, the way on */
-    var PROOF = COPY.proof || {};
+    /* 4 — per audience: a clean half/half field — the drawing on one side, all the copy on the
+       other. Sides alternate down the page. The drawing fades in once and blends with the tint. */
+    var fadeEls = [];
     AUD.forEach(function (slug, idx) {
       var aud = t.aud && t.aud[slug];
       if (!aud) return;
-      var sec = h('section', 'vh-aud vh-ov-aud vh-ov-tone--' + slug + ' vh-aud--' + slug, { id: 'aud-' + slug, 'aria-labelledby': 'aud-' + slug + '-title' });
+      var sec = h('section', 'vh-aud vh-ov-aud vh-ov-tone--' + slug + ' vh-aud--' + slug, { id: 'aud-' + slug, 'aria-labelledby': 'aud-' + slug + '-title', 'data-ov-idx': String(idx) });
       var panel = h('div', 'vh-wrap vh-ov-panel');
 
-      var head = h('div', 'vh-ov-head');
+      var row = h('div', 'vh-aud-grid vh-ov-grid');
+      var figId = COPY.figures && COPY.figures[slug];
+      var fig = h('figure', 'vh-aud-art vh-ov-art' + (figId && window.VIAnatomy ? ' vh-aud-art--figure' : ''));
+      if (figId && window.VIAnatomy) window.VIAnatomy.mount(fig, slug);
+      row.appendChild(fig);
+      fadeEls.push(fig);
+
+      var copy = h('div', 'vh-aud-copy vh-ov-copy');
       var meta = h('p', 'ngo-case-meta');
       var count = h('span', 'ngo-case-count');
       setText(count, (idx + 1) + ' ' + (ov.of || '/') + ' ' + AUD.length);
       meta.appendChild(count);
-      head.appendChild(meta);
+      copy.appendChild(meta);
       var h3 = h('h3', 'ngo-h2 vh-ov-aud-title', { id: 'aud-' + slug + '-title', tabindex: '-1' });
       setText(h3, aud.title);
-      head.appendChild(h3);
+      copy.appendChild(h3);
       var promise = h('p', 'vh-ov-promise');
       setRich(promise, aud.hero);
-      head.appendChild(promise);
-      panel.appendChild(head);
-
-      var row = h('div', 'vh-aud-grid vh-ov-grid');
-      var figId = COPY.figures && COPY.figures[slug];
-      var fig = h('figure', 'vh-aud-art' + (figId && window.VIAnatomy ? ' vh-aud-art--figure' : ''));
-      if (figId && window.VIAnatomy) window.VIAnatomy.mount(fig, slug);
-      row.appendChild(fig);
-      var copy = h('div', 'vh-aud-copy');
+      copy.appendChild(promise);
       var lead = h('p', 'vh-aud-lead');
       setText(lead, aud.lead || aud.line);
       copy.appendChild(lead);
@@ -352,29 +352,23 @@
       row.appendChild(copy);
       panel.appendChild(row);
 
-      var pr = PROOF[slug] || {};
-      var cards = [];
-      if (pr.cases) pr.cases.forEach(function (id) { var c = caseCard(slug, id, ov); if (c) cards.push(c); });
-      if (pr.design) pr.design.forEach(function (k) { var c = designCard(k, ov); if (c) cards.push(c); });
-      if (cards.length) {
-        var proof = h('div', 'vh-ov-proof');
-        var ph = h('div', 'vh-ov-proof-head');
-        var pl = h('h4', 'vh-ov-label');
-        setText(pl, pr.design ? ov.proofDesign : ov.proof);
-        ph.appendChild(pl);
-        var pn = h('p', 'vh-ov-proof-note');
-        setText(pn, pr.design ? ov.proofDesignNote : ov.proofDemo);
-        ph.appendChild(pn);
-        proof.appendChild(ph);
-        var list = h('div', 'vh-ov-cases', { 'data-n': String(cards.length) });
-        cards.forEach(function (c) { list.appendChild(c); });
-        proof.appendChild(list);
-        panel.appendChild(proof);
-      }
-
       sec.appendChild(panel);
       box.appendChild(sec);
     });
+
+    /* fade the drawings in as they enter the viewport (once each); respect reduced motion */
+    if (fadeEls.length) {
+      if (reduce || !window.IntersectionObserver) {
+        fadeEls.forEach(function (el) { el.classList.add('is-in'); });
+      } else {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) {
+            if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); }
+          });
+        }, { threshold: 0.25, rootMargin: '0px 0px -10% 0px' });
+        fadeEls.forEach(function (el) { io.observe(el); });
+      }
+    }
 
     var c = t.contact;
     if (c) {

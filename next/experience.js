@@ -24,6 +24,10 @@
     '<path d="M19.5 12a7.5 7.5 0 1 1-2.2-5.3"/><path d="M19.5 4.5v4h-4"/></svg>';
 
   function initAI() {
+    /* The "AI in my process" section (#ai-work) is hidden for now on the owner's request — we will
+       rework it later. Skip building the section and its header/footer entry links entirely. */
+    return;
+    /* eslint-disable no-unreachable */
     var COPY = window.VI_AI_COPY;
     var contact = doc.getElementById('contact');
     if (!COPY || !COPY.en || !contact || doc.getElementById('ai-work')) return;

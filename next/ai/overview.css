@@ -55,33 +55,51 @@
 /* ───────── 3. how it works (the band from ngo.css) ───────── */
 #branch-ai .vh-ov-how { margin-top: clamp(48px, 7vw, 96px); }
 
-/* ───────── 4. an audience: its own tinted field ───────── */
+/* ───────── 4. an audience: a half/half field — drawing one side, copy the other ───────── */
 #branch-ai .vh-ov-aud { padding-block: clamp(28px, 4vw, 48px) 0; background: transparent; }
 #branch-ai .vh-ov-how + .vh-ov-aud { padding-top: clamp(48px, 7vw, 96px); }
 #branch-ai .vh-ov-panel {
-  display: grid; gap: clamp(24px, 3vw, 40px); padding: clamp(24px, 4vw, 56px);
+  padding: clamp(24px, 4vw, 56px);
   border-radius: var(--ngo-radius); background: var(--tone-50);
 }
-#branch-ai .vh-ov-head { display: grid; justify-items: start; gap: 14px; }
-#branch-ai .vh-ov-aud-title { font-size: clamp(32px, 4.2vw, 60px); max-width: 22ch; overflow-wrap: break-word; hyphens: manual; }
+#branch-ai .vh-ov-aud-title { font-size: clamp(32px, 4.2vw, 60px); max-width: 20ch; overflow-wrap: break-word; hyphens: manual; }
 #branch-ai .vh-ov-aud-title:focus { outline: none; }
 #branch-ai .vh-ov-promise {
   font-family: var(--ngo-display); font-size: clamp(20px, 1.9vw, 26px); font-weight: 600; letter-spacing: -.02em; line-height: 1.25;
   color: var(--vh-ink); text-wrap: balance;
 }
 #branch-ai .vh-ov-promise mark.hl { --hl: color-mix(in srgb, var(--tone) 34%, transparent); }
-#branch-ai .vh-ov-grid { align-items: start; }
+
+/* half the field is the drawing, half is the copy; both vertically centred so a tall drawing
+   reads as a true 50/50 split rather than squeezing the text */
+#branch-ai .vh-ov-grid { align-items: center; grid-template-columns: minmax(0, 1fr); }
 @media (min-width: 861px) {
-  #branch-ai .vh-ov-grid:has(.vh-aud-art--figure) { grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr); }
+  #branch-ai .vh-ov-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(32px, 5vw, 88px); }
+  /* alternate the sides down the page: even audiences keep the drawing left, odd flip it right */
+  #branch-ai .vh-ov-aud[data-ov-idx="1"] .vh-ov-art,
+  #branch-ai .vh-ov-aud[data-ov-idx="3"] .vh-ov-art { order: 2; }
 }
-/* the drawing sits straight on the tinted field */
-#branch-ai .vh-ov-panel .vh-anatomy { --anatomy-paper: var(--tone-50); }
-#branch-ai .vh-ov-aud .vh-aud-copy { gap: 16px; }
+/* the drawing: large, centred in its half, and tinted by the field it sits on via a blend mode,
+   so it is no longer a flat grey on a coloured background */
+#branch-ai .vh-ov-art { margin: 0; min-width: 0; display: grid; place-items: center; }
+#branch-ai .vh-ov-art .vh-anatomy {
+  --anatomy-paper: transparent; --anatomy-page: transparent; --anatomy-card: transparent;
+  mix-blend-mode: luminosity; opacity: .96;
+}
+@media (min-width: 861px) {
+  #branch-ai .vh-ov-art .vh-anatomy { width: 100%; max-width: 560px; }
+}
+/* fade the drawing in once, as it scrolls into view */
+#branch-ai .vh-ov-art { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s cubic-bezier(.16, 1, .3, 1); }
+#branch-ai .vh-ov-art.is-in { opacity: 1; transform: none; }
+#branch-ai .vh-ov-copy { display: grid; justify-items: start; gap: 16px; align-content: center; min-width: 0; }
+#branch-ai .vh-ov-copy > * { max-width: 100%; }
 .vh-ov-label {
   font-family: var(--vh-font); font-size: 13px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--tone-ink, var(--vh-ink-2));
 }
 #branch-ai .vh-ov-aud .vh-points { gap: 14px; }
 #branch-ai .vh-ov-aud .vh-points li::before { background: var(--tone); }
+#branch-ai .vh-ov-aud .vh-aud-lead { font-size: 17px; line-height: 1.55; color: var(--vh-ink-2); max-width: 46ch; }
 #branch-ai .vh-ov-more { margin-top: 6px; }
 #branch-ai .vh-ov-panel .ngo-pill--primary, .ai-page--rich .vh-ov-more {
   background: var(--ngo-dark); color: #fff; border-color: transparent; font-weight: 600; box-shadow: 0 12px 24px -14px rgba(0, 0, 0, .6);
@@ -168,6 +186,7 @@
 
 @media (prefers-reduced-motion: reduce) {
   #branch-ai .vh-ov-nav .vh-for-btn:hover, .vh-ov-case:hover { transform: none; }
+  #branch-ai .vh-ov-art { opacity: 1; transform: none; transition: none; }
 }
 .ai-page--rich .ai-kicker {
   display: inline-flex; align-items: center; min-height: 32px; padding: 4px 14px; border-radius: 16px; background: var(--ngo-pink-50);

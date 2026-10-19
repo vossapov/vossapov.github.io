@@ -1,0 +1,268 @@
+/* Non-profit page (next/ai/ngo/ngo.js + page.js). Same light world as the rest of the AI branch,
+   pushed further: Fixel Display headlines with a highlighter mark, four named accent colours that own
+   whole fields (violet = the offer, coral = Kyivtyl, pink = Gora Dobra, teal = microgrants),
+   a dark "how it works" band for rhythm, and small isometric line spots in the figures' style.
+   Everything is scoped to .ai-page--rich (non-profit and business pages share this look). */
+
+@font-face {
+  font-family: "Fixel Display";
+  src: url("/next/assets/fonts/FixelDisplay-SemiBold.woff2") format("woff2");
+  font-weight: 600; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "Fixel Display";
+  src: url("/next/assets/fonts/FixelDisplay-Bold.woff2") format("woff2");
+  font-weight: 700; font-style: normal; font-display: swap;
+}
+
+.ai-page--rich {
+  --ngo-display: "Fixel Display", var(--vh-font);
+  --ngo-violet: #6b4ce6; --ngo-violet-ink: #4a2fc4; --ngo-violet-50: #efebff; --ngo-violet-100: #e2dbff;
+  --ngo-coral: #ff6b4a; --ngo-coral-ink: #c23f1f; --ngo-coral-50: #fff0ea;
+  --ngo-pink: #f0508a; --ngo-pink-ink: #b8235a; --ngo-pink-50: #ffedf3;
+  --ngo-teal: #0fa39b; --ngo-teal-ink: #0a7a74; --ngo-teal-50: #e3f6f3;
+  --ngo-sun: #ffd84d;
+  --ngo-dark: #17152a;
+  --ngo-radius: 32px;
+}
+.ai-page--rich ::selection { background: var(--ngo-sun); color: var(--vh-ink); }
+
+/* ───────── shared type ───────── */
+.ai-page--rich h1,
+.ai-page--rich .ai-got-title,
+.ai-page--rich .ngo-h2,
+.ai-page--rich .vh-contact h2,
+.ai-page--rich .vh-contact-plain h2,
+.ai-page--rich .ai-others-title {
+  font-family: var(--ngo-display); font-weight: 600; letter-spacing: -.035em;
+}
+.ai-page--rich mark.hl {
+  color: inherit; padding: 0 .06em; margin: 0 -.06em;
+  background: linear-gradient(transparent 58%, var(--hl, var(--ngo-sun)) 58%, var(--hl, var(--ngo-sun)) 90%, transparent 90%);
+  -webkit-box-decoration-break: clone; box-decoration-break: clone;
+}
+.ngo-h2 { font-size: clamp(32px, 4.2vw, 60px); line-height: 1.02; text-wrap: balance; }
+.ngo-h3 { font-family: var(--ngo-display); font-size: 22px; font-weight: 600; letter-spacing: -.02em; line-height: 1.2; }
+.ngo-lead { font-size: clamp(17px, 1.4vw, 20px); line-height: 1.55; color: var(--vh-ink-2); max-width: 60ch; text-wrap: pretty; }
+.ngo-note { font-size: 14px; line-height: 1.5; color: var(--vh-ink-2); max-width: 64ch; }
+
+/* (legacy) tag chip */
+.ngo-tag {
+  justify-self: start; display: inline-flex; align-items: center; gap: 8px; min-height: 32px; padding: 0 14px;
+  border-radius: 999px; background: var(--tone, var(--ngo-violet)); color: #fff;
+  font-size: 14px; font-weight: 600; letter-spacing: .01em; white-space: nowrap;
+}
+.ngo-tag::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: #fff; opacity: .9; }
+
+/* ───────── hero ───────── */
+.ai-page--rich .ai-hero {
+  position: relative; isolation: isolate;
+  background:
+    radial-gradient(520px 360px at 12% 30%, rgba(107, 76, 230, .10), transparent 70%),
+    radial-gradient(420px 300px at 92% 85%, rgba(255, 107, 74, .10), transparent 70%),
+    var(--vh-ground);
+}
+.ai-page--rich .ai-hero-copy h1 { font-size: clamp(42px, 5.6vw, 84px); line-height: .98; }
+.ai-page--rich .ai-hero-lead { font-size: clamp(17px, 1.35vw, 19px); max-width: 48ch; }
+.ai-hero-cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 4px; }
+.ai-page--rich .vh-pill { border-width: 2px; }
+.ngo-pill--primary, .ai-page--rich .ai-hero-cta .vh-pill:first-child {
+  background: var(--tone, var(--ngo-violet)); border-color: transparent; color: #fff;
+  box-shadow: 0 10px 24px -14px var(--tone, var(--ngo-violet));
+}
+.ngo-pill--primary:hover, .ai-page--rich .ai-hero-cta .vh-pill:first-child:hover {
+  background: var(--tone-ink, var(--ngo-violet-ink)); box-shadow: 0 14px 28px -14px var(--tone, var(--ngo-violet));
+}
+.ai-page--rich .ai-hero-cta .vh-pill:not(:first-child) { background: #fff; border-color: rgba(29, 27, 43, .14); }
+
+/* what you get: a violet field, four points with a coloured lead bar, the context spot at the side */
+.ai-page--rich .ai-got { padding-block: clamp(24px, 4vw, 48px); }
+.ai-page--rich .ai-got > .vh-wrap {
+  display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 300px); gap: clamp(16px, 3vw, 48px); align-items: center;
+  padding: clamp(28px, 4vw, 56px); border-radius: var(--ngo-radius); background: var(--ngo-violet-50);
+}
+.ai-page--rich .ai-got-title { font-size: clamp(28px, 3.2vw, 44px); grid-column: 1; }
+.ai-page--rich .ai-got .vh-points { grid-column: 1; margin-top: 0; gap: 18px 40px; }
+.ai-page--rich .ai-got .ngo-spot { grid-column: 2; grid-row: 1 / span 2; }
+.ai-page--rich .vh-points li { padding: 14px 0 0; font-size: 17px; }
+.ai-page--rich .vh-points li::before {
+  top: 0; left: 0; width: 28px; height: 4px; border-radius: 2px; background: var(--ngo-violet);
+}
+.ai-page--rich .vh-points li:nth-child(4n+2)::before { background: var(--ngo-coral); }
+.ai-page--rich .vh-points li:nth-child(4n+3)::before { background: var(--ngo-pink); }
+.ai-page--rich .vh-points li:nth-child(4n+4)::before { background: var(--ngo-teal); }
+@media (max-width: 860px) {
+  .ai-page--rich .ai-got > .vh-wrap { grid-template-columns: 1fr; }
+  .ai-page--rich .ai-got .ngo-spot { grid-column: 1; grid-row: auto; order: -1; width: 180px; }
+}
+
+/* spot illustrations (isometric line drawings, transparent PNG → WebP) */
+.ngo-spot { margin: 0; min-width: 0; }
+.ngo-spot img { width: 100%; max-width: 300px; height: auto; display: block; }
+
+/* ───────── how it works: a light band with the generated infographic ───────── */
+.ngo-how { margin-top: clamp(40px, 6vw, 88px); padding-block: clamp(48px, 7vw, 104px) clamp(40px, 6vw, 80px); background: #fff; }
+.ngo-how-head { display: grid; gap: 12px; max-width: 760px; }
+.ngo-steps { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; margin-top: 32px; counter-reset: ngo; }
+.ngo-step { display: grid; grid-template-rows: auto auto 1fr; align-content: start; gap: 14px; counter-increment: ngo; min-width: 0; padding: 18px; border: 1px solid var(--vh-line, #e5e3ed); border-radius: 20px; background: #fff; }
+.ngo-step-art { display: grid; place-items: center; margin: 0; height: 200px; }
+.ngo-step-art img { display: block; width: 200px; height: 200px; max-width: 100%; object-fit: contain; }
+.ngo-step h3 { display: flex; align-items: baseline; gap: 10px; font-family: var(--ngo-display); font-size: clamp(19px, 1.7vw, 23px); font-weight: 600; letter-spacing: -.02em; line-height: 1.2; color: var(--vh-ink); }
+.ngo-step h3::before {
+  content: counter(ngo); flex: none; width: 30px; height: 30px; border-radius: 50%; display: inline-grid; place-items: center; transform: translateY(-2px);
+  font-size: 15px; font-weight: 700; color: #fff; background: var(--c, var(--ngo-violet));
+}
+.ngo-step:nth-child(1) { --c: var(--ngo-violet); }
+.ngo-step:nth-child(2) { --c: var(--ngo-coral); }
+.ngo-step:nth-child(3) { --c: var(--ngo-pink); }
+.ngo-step:nth-child(4) { --c: var(--ngo-teal); }
+.ngo-step p { font-size: 16px; line-height: 1.6; color: var(--vh-ink-2); text-wrap: pretty; }
+@media (max-width: 1100px) {
+  .ngo-steps { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 520px) {
+  .ngo-steps { grid-template-columns: 1fr; gap: 16px; }
+}
+
+/* ───────── examples of our work: a named section, numbered projects ───────── */
+.ngo-work-head { padding-block: clamp(64px, 9vw, 128px) clamp(8px, 2vw, 16px); scroll-margin-top: calc(var(--vh-hdr) + 8px); }
+.ngo-work-head .vh-wrap { display: grid; gap: 14px; }
+.ngo-work-head .ngo-h2 { font-size: clamp(38px, 5vw, 72px); }
+.ngo-work-nav { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin-top: clamp(14px, 2vw, 24px); }
+.ngo-work-nav a {
+  display: grid; grid-template-columns: 40px minmax(0, 1fr); gap: 14px; align-items: center; min-height: 72px; padding: 14px 18px;
+  border-radius: 20px; background: var(--tone-50); color: var(--vh-ink); text-decoration: none;
+  transition: transform .2s cubic-bezier(.2, .8, .2, 1), box-shadow .2s;
+}
+.ngo-work-nav a:hover { transform: translateY(-2px); box-shadow: 0 12px 24px -16px var(--tone); }
+.ngo-work-num { width: 40px; height: 40px; border-radius: 50%; display: grid; place-items: center; background: var(--tone); color: #fff; font-family: var(--ngo-display); font-size: 18px; font-weight: 700; }
+.ngo-work-name { font-family: var(--ngo-display); font-size: 17px; font-weight: 600; letter-spacing: -.01em; line-height: 1.25; }
+.ngo-work-nav-item--membership { --tone: var(--ngo-coral); --tone-50: var(--ngo-coral-50); }
+.ngo-work-nav-item--posters { --tone: var(--ngo-pink); --tone-50: var(--ngo-pink-50); }
+.ngo-work-nav-item--microgrants { --tone: var(--ngo-teal); --tone-50: var(--ngo-teal-50); }
+.ngo-work-nav-item--lux-search { --tone: var(--ngo-coral); --tone-50: var(--ngo-coral-50); }
+.ngo-work-nav-item--lux-campaign { --tone: var(--ngo-pink); --tone-50: var(--ngo-pink-50); }
+.ngo-work-nav[data-n="2"] { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+@media (max-width: 760px) { .ngo-work-nav { grid-template-columns: 1fr; gap: 8px; } .ngo-work-nav a { min-height: 60px; } }
+
+/* project meta line: big number of total, kind, organisation */
+.ngo-case-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 10px; }
+.ngo-case-count {
+  display: inline-flex; align-items: center; min-height: 32px; padding: 0 14px; border-radius: 999px; background: var(--tone); color: #fff;
+  font-family: var(--ngo-display); font-size: 15px; font-weight: 700; letter-spacing: .01em; font-variant-numeric: tabular-nums;
+}
+.ngo-case-kind, .ngo-case-org {
+  display: inline-flex; align-items: center; min-height: 32px; padding: 0 12px; border-radius: 999px; background: #fff;
+  font-size: 14px; font-weight: 600; color: var(--tone-ink);
+}
+.ngo-case-org { color: var(--vh-ink-2); font-weight: 500; }
+
+/* ───────── a case: its own tinted field ───────── */
+.ngo-case { padding-block: clamp(28px, 4vw, 48px) 0; scroll-margin-top: calc(var(--vh-hdr) + 8px); overflow-x: clip; }
+.ngo-work-head + .ngo-case { padding-top: clamp(24px, 3vw, 40px); }
+.ngo-case--membership { --tone: var(--ngo-coral); --tone-ink: var(--ngo-coral-ink); --tone-50: var(--ngo-coral-50); }
+.ngo-case--posters { --tone: var(--ngo-pink); --tone-ink: var(--ngo-pink-ink); --tone-50: var(--ngo-pink-50); }
+.ngo-case--microgrants { --tone: var(--ngo-teal); --tone-ink: var(--ngo-teal-ink); --tone-50: var(--ngo-teal-50); }
+.ngo-case--lux-search { --tone: var(--ngo-coral); --tone-ink: var(--ngo-coral-ink); --tone-50: var(--ngo-coral-50); }
+.ngo-case--lux-campaign { --tone: var(--ngo-pink); --tone-ink: var(--ngo-pink-ink); --tone-50: var(--ngo-pink-50); }
+.ngo-case > .vh-wrap {
+  display: grid; gap: clamp(24px, 3vw, 40px); padding: clamp(24px, 4vw, 56px);
+  border-radius: var(--ngo-radius); background: var(--tone-50, #fff);
+}
+.ngo-case-head { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: clamp(16px, 3vw, 40px); align-items: center; }
+.ngo-case-titles { display: grid; gap: 14px; justify-items: start; }
+.ngo-case-head .ngo-h2 mark.hl { --hl: color-mix(in srgb, var(--tone) 34%, transparent); }
+.ngo-case-head .ngo-spot { width: clamp(140px, 16vw, 220px); }
+.ngo-case-grid { display: grid; grid-template-columns: minmax(0, .95fr) minmax(0, 1.05fr); gap: clamp(20px, 3vw, 44px); align-items: start; }
+
+/* before → after, then the result as a statement */
+.ngo-ba { display: grid; gap: 14px; }
+.ngo-ba-item { display: grid; gap: 8px; padding: 20px 22px; border-radius: 22px; background: #fff; }
+.ngo-ba-item--before { background: rgba(255, 255, 255, .55); }
+.ngo-ba-label {
+  justify-self: start; display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 600;
+  letter-spacing: .06em; text-transform: uppercase; color: var(--vh-ink-2);
+}
+.ngo-ba-item--after .ngo-ba-label { color: var(--tone-ink); }
+.ngo-ba-label svg { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.ngo-ba-item p { font-size: 16.5px; line-height: 1.6; color: var(--vh-ink); text-wrap: pretty; max-width: 58ch; }
+.ngo-ba-item--before p { color: var(--vh-ink-2); }
+.ngo-result {
+  font-family: var(--ngo-display); font-size: clamp(20px, 1.9vw, 26px); font-weight: 600; letter-spacing: -.02em; line-height: 1.25;
+  color: var(--vh-ink); padding: 6px 0 0 0; text-wrap: balance;
+}
+.ngo-result-label { display: block; font-family: var(--vh-font); font-size: 13px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--tone-ink); margin-bottom: 8px; }
+
+/* device frames around real demo screenshots, on a solid tone panel */
+.ngo-stage { display: grid; gap: 22px; padding: clamp(20px, 3vw, 36px); border-radius: 26px; background: var(--tone); min-width: 0; }
+.ngo-visuals { display: flex; gap: clamp(12px, 2vw, 22px); align-items: flex-end; justify-content: center; min-width: 0; }
+.ngo-shot { margin: 0; min-width: 0; background: #1d1b2b; box-shadow: 0 24px 44px -24px rgba(23, 21, 42, .7); }
+.ngo-shot img { width: 100%; height: auto; display: block; background: #f6f5fb; }
+.ngo-shot--phone { flex: 0 1 220px; padding: 7px; border-radius: 30px; }
+.ngo-shot--phone img { border-radius: 23px; aspect-ratio: 390 / 844; object-fit: cover; object-position: top; }
+.ngo-shot--desktop { flex: 1 1 auto; padding: 18px 6px 6px; border-radius: 14px; position: relative; }
+.ngo-shot--desktop::before {
+  content: ""; position: absolute; left: 12px; top: 7px; width: 34px; height: 5px; border-radius: 3px;
+  background: radial-gradient(circle at 2.5px 2.5px, #5b5870 2.5px, transparent 3px) 0 0 / 12px 5px repeat-x;
+}
+.ngo-shot--desktop img { border-radius: 8px; aspect-ratio: 1440 / 900; object-fit: cover; object-position: top; }
+.ngo-visuals--phone-phone .ngo-shot--phone:nth-child(2) { transform: translateY(-18px) rotate(2deg); }
+.ngo-visuals--phone-phone .ngo-shot--phone:nth-child(1) { transform: rotate(-2deg); }
+.ngo-visuals--desktop-phone .ngo-shot--phone, .ngo-visuals--phone-desktop .ngo-shot--phone { flex-basis: 170px; }
+.ngo-visuals--desktop-phone .ngo-shot--desktop, .ngo-visuals--phone-desktop .ngo-shot--desktop { flex-basis: 0; flex-grow: 1; }
+.ngo-visuals--desktop-phone .ngo-shot--phone { margin-left: -60px; margin-bottom: -10px; position: relative; z-index: 1; }
+.ngo-visuals--phone-desktop .ngo-shot--phone { order: 2; margin-left: -60px; margin-bottom: -10px; position: relative; z-index: 1; }
+
+.ngo-try { display: grid; justify-items: start; gap: 10px; }
+.ngo-try-row { display: flex; flex-wrap: wrap; gap: 10px; }
+.ngo-try .vh-pill { min-height: 50px; padding: 0 22px; font-size: 16px; font-weight: 600; background: #fff; border-color: transparent; color: var(--vh-ink); }
+.ngo-try .vh-pill.ngo-pill--primary { background: var(--ngo-dark); color: #fff; box-shadow: 0 12px 24px -14px rgba(0, 0, 0, .6); }
+.ngo-try .vh-pill.ngo-pill--primary:hover { background: #000; }
+.ngo-try .vh-pill--video svg { width: 14px; height: 14px; }
+.ngo-try-note { font-size: 13.5px; line-height: 1.45; color: rgba(255, 255, 255, .92); max-width: 46ch; }
+
+@media (max-width: 900px) {
+  .ngo-case-grid { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 560px) {
+  .ngo-case > .vh-wrap { width: calc(100% - 20px); border-radius: 26px; padding: 22px 16px; }
+  .ngo-case-head { grid-template-columns: minmax(0, 1fr) 96px; align-items: start; }
+  .ngo-case-head .ngo-spot { width: 96px; }
+  .ngo-ba-item { padding: 16px; border-radius: 18px; }
+  .ngo-stage { padding: 18px 14px; border-radius: 20px; }
+  .ngo-shot--phone { flex-basis: 46%; padding: 5px; border-radius: 22px; }
+  .ngo-shot--phone img { border-radius: 17px; }
+  .ngo-visuals--desktop-phone .ngo-shot--phone, .ngo-visuals--phone-desktop .ngo-shot--phone { flex-basis: 34%; margin-left: -40px; }
+  .ngo-visuals--phone-phone .ngo-shot--phone:nth-child(2) { transform: translateY(-10px) rotate(2deg); }
+}
+
+/* ───────── microgrants: pain points by stage, each with the tool's answer ───────── */
+.ngo-micro-intro { display: grid; gap: 12px; }
+.ngo-map-title { margin-bottom: 14px; }
+.ngo-map { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; margin: 0; padding: 0; list-style: none; }
+.ngo-pain { display: grid; grid-template-rows: auto auto 1fr; gap: 10px; align-content: start; padding: 18px 18px 20px; border-radius: 22px; background: #fff; }
+.ngo-pain-stage {
+  justify-self: start; display: inline-flex; align-items: center; min-height: 26px; padding: 0 10px; border-radius: 999px;
+  background: var(--ngo-teal-50); color: var(--ngo-teal-ink); font-size: 12.5px; font-weight: 600; letter-spacing: .02em;
+}
+.ngo-pain-text { font-family: var(--ngo-display); font-size: 18px; font-weight: 600; letter-spacing: -.015em; line-height: 1.3; color: var(--vh-ink); text-wrap: balance; }
+.ngo-map-tool {
+  display: grid; grid-template-columns: 22px minmax(0, 1fr); gap: 10px; align-items: start; padding-top: 12px;
+  border-top: 1px solid rgba(15, 163, 155, .22); color: var(--vh-ink-2); font-size: 15px; line-height: 1.5;
+}
+.ngo-map-tool::before {
+  content: ""; width: 22px; height: 22px; border-radius: 50%; margin-top: 0;
+  background: var(--ngo-teal) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 8.4 6.7 11 12 5.2'/%3E%3C/svg%3E") center / 14px no-repeat;
+}
+@media (max-width: 1000px) { .ngo-map { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 600px) { .ngo-map { grid-template-columns: 1fr; gap: 10px; } .ngo-pain { padding: 16px; border-radius: 18px; } }
+
+.ai-page--rich .vh-contact { margin-top: clamp(40px, 6vw, 88px); }
+.ai-page--rich .vh-contact .vh-pill { background: var(--ngo-violet); border-color: transparent; color: #fff; font-weight: 600; box-shadow: 0 10px 24px -14px var(--ngo-violet); }
+.ai-page--rich .vh-contact .vh-pill:hover { background: var(--ngo-violet-ink); }
+.ai-page--rich .vh-contact h2 mark.hl, .ai-page--rich .ai-hero h1 mark.hl { --hl: var(--ngo-sun); }
+.ai-page--rich .ai-other { background-image: linear-gradient(#fff, #fff), linear-gradient(100deg, var(--ngo-violet), var(--ngo-coral), var(--ngo-teal)); }
+
+@media (prefers-reduced-motion: reduce) {
+  .ngo-visuals--phone-phone .ngo-shot--phone:nth-child(n) { transform: none; }
+}

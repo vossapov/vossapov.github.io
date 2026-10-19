@@ -3,37 +3,46 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Valentyn Ihnatov — Game UI/UX Designer · Experience atlas</title>
-  <meta name="description" content="Valentyn Ihnatov — Game UI/UX designer. A chronological atlas of projects and employers, with search, filters and project details.">
-  <meta name="color-scheme" content="dark">
+  <title>Valentyn Ihnatov — UI/UX design and AI automation</title>
+  <meta name="description" content="Valentyn Ihnatov — UI/UX designer for games, apps and web, and AI automation for business, non-profits, design and art teams, and individuals.">
+  <meta name="color-scheme" content="dark light">
   <link rel="canonical" href="https://vossapov.github.io/">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://vossapov.github.io/">
-  <meta property="og:title" content="Valentyn Ihnatov — Game UI/UX Designer">
-  <meta property="og:description" content="Game UI/UX designer: a timeline of projects and employers, full case studies and how I work with AI.">
+  <meta property="og:title" content="Valentyn Ihnatov — UI/UX design and AI automation">
+  <meta property="og:description" content="Game UI/UX design: projects and case studies. AI automation: assistants for business, non-profits, design and art teams, and personal setups.">
   <meta property="og:image" content="https://vossapov.github.io/assets/screenshots/undead-1.png">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="theme-color" content="#0e0f12">
+  <meta name="theme-color" content="#0c0c0c">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23181a20'/%3E%3Ctext x='50%25' y='56%25' dominant-baseline='middle' text-anchor='middle' font-family='system-ui%2Csans-serif' font-weight='700' font-size='13' fill='%23e9e9ee'%3EVI%3C/text%3E%3C/svg%3E">
   <link rel="preload" href="/next/assets/fonts/FixelText-Regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/next/assets/fonts/FixelText-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/next/styles.css?v=perf-1">
   <link rel="stylesheet" href="/next/spatial.css?v=no-side-accents-1">
   <link rel="stylesheet" href="/next/experience.css?v=ai-infographic-1">
+  <link rel="preload" href="/next/assets/fonts/FixelText-Light.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/next/hero-video.css?v=3">
+  <link rel="stylesheet" href="/next/ai/anatomy/kit/iso.css?v=anatomy-6">
+  <link rel="stylesheet" href="/next/ai/ai.css?v=merge6-1">
+  <link rel="preload" href="/next/assets/fonts/FixelDisplay-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/next/ai/ngo/ngo.css?v=biz-1">
+  <link rel="stylesheet" href="/next/ai/overview.css?v=merge6-1">
+  <link rel="preload" href="/next/assets/fonts/FixelText-Black.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/next/jack.css?v=merge6-1">
 </head>
 <body>
-  <a class="skip-link" href="#work" data-i18n="skip">Skip to the timeline</a>
+  <a class="skip-link" href="#choose" data-ai="choose">What are you here for?</a>
 
   <header class="site-header" id="top">
     <div class="wrap header-row">
       <a class="brand" href="#top" aria-label="Valentyn Ihnatov">
         <span class="brand-mark" aria-hidden="true">VI</span>
-        <span class="brand-text"><b>Valentyn Ihnatov</b><i data-i18n="role">Game UI/UX Designer</i></span>
+        <span class="brand-text"><b>Valentyn Ihnatov</b><i data-i18n="role">UI/UX design · AI automation</i></span>
       </a>
       <nav class="header-nav" data-i18n-attrs="aria-label:nav.label" aria-label="Primary">
-        <a href="#work" data-i18n="nav.work">Work</a>
-        <a href="#contact" data-i18n="nav.contact">Contact</a>
+        <a href="/?b=design#work" data-branch-pick="design" data-i18n="nav.design">Design</a>
+        <a href="/?b=ai" data-branch-pick="ai" data-i18n="nav.ai">AI automation</a>
+        <a href="#contact" data-nav-contact data-i18n="nav.contact">Contact</a>
         <a href="/cv.pdf" download data-i18n="nav.cv">CV ↓</a>
       </nav>
       <div class="header-end">
@@ -46,17 +55,19 @@
   </header>
 
   <main>
-    <section class="hero" aria-labelledby="heroTitle">
+    <section class="hero" id="intro" aria-labelledby="heroTitle">
       <div class="wrap hero-grid">
         <div class="hero-copy">
-          <p class="eyebrow" data-i18n="hero.eyebrow">Game UI/UX Designer</p>
+          <p class="eyebrow" data-i18n="hero.eyebrow">UI/UX designer · AI automation</p>
           <h1 id="heroTitle">Valentyn Ihnatov</h1>
-          <p class="hero-lede" data-i18n="hero.lede">Game UI/UX designer with 10+ years in design and 5+ in gaming. Full pipeline — UX research, wireframes, art direction and design systems in Figma.</p>
+          <p class="hero-lede" data-i18n="hero.lede">I design interfaces for games, apps and the web — 10+ years in design, 5+ in gaming. And I build AI assistants: an easy interface to an assistant that knows your context and takes everyday work off your hands.</p>
+          <ul class="hero-fields">
+            <li><a class="hero-field hero-field--design" href="/?b=design#work" data-branch-pick="design"><b data-i18n="hero.design.t">UI/UX design</b><span data-i18n="hero.design.p">Games, apps, web: UX research, wireframes, art direction, design systems in Figma</span></a></li>
+            <li><a class="hero-field hero-field--ai" href="/?b=ai" data-branch-pick="ai"><b data-i18n="hero.ai.t">AI automation</b><span data-i18n="hero.ai.p">Assistants for business, non-profits, design and art teams, and you personally</span></a></li>
+          </ul>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#work" data-i18n="hero.cta">Explore the timeline</a>
-            <a class="btn" href="https://www.linkedin.com/in/valentyn-ihnatov-a103a1153/" target="_blank" rel="noopener">LinkedIn<span class="sr-only" data-i18n="newtab"> (opens in a new tab)</span></a>
             <a class="btn" href="https://t.me/vossapov" target="_blank" rel="noopener">Telegram<span class="sr-only" data-i18n="newtab"> (opens in a new tab)</span></a>
-            <a class="btn" href="/cv.pdf" download data-i18n="nav.cv">CV ↓</a>
+            <a class="btn" href="https://www.linkedin.com/in/valentyn-ihnatov-a103a1153/" target="_blank" rel="noopener">LinkedIn<span class="sr-only" data-i18n="newtab"> (opens in a new tab)</span></a>
           </div>
           <dl class="hero-facts" id="heroFacts" aria-live="off"></dl>
         </div>
@@ -71,6 +82,21 @@
       </div>
     </section>
 
+    <section class="vh-fork" id="choose" aria-labelledby="vhChoose">
+      <h2 id="vhChoose" class="vh-fork-q" data-ai="choose">What are you here for?</h2>
+      <a class="vh-choice vh-choice--design" href="/?b=design" data-branch-pick="design" aria-pressed="false">
+        <span class="vh-choice-kicker" data-ai="design.kicker">01 — Design</span>
+        <span class="vh-choice-title" data-ai="design.title">UI/UX design</span>
+        <span class="vh-choice-line" data-ai="design.line">Games, apps, web</span>
+      </a>
+      <a class="vh-choice vh-choice--ai" href="/?b=ai" data-branch-pick="ai" aria-pressed="false">
+        <span class="vh-choice-kicker" data-ai="ai.kicker">02 — Automation</span>
+        <span class="vh-choice-title" data-ai="ai.title">AI automation</span>
+        <span class="vh-choice-line" data-ai="ai.line">For business, non-profits, design teams and you</span>
+      </a>
+    </section>
+
+    <div class="vh-branch" id="branch-design" data-branch="design" hidden>
     <section class="work" id="work" aria-labelledby="workTitle" tabindex="-1">
       <div class="wrap">
         <div class="section-head">
@@ -175,6 +201,9 @@
         </ul>
       </div>
     </section>
+    </div>
+
+    <div class="vh-branch vh-ai ai-page--rich" id="branch-ai" data-branch="ai" hidden></div>
   </main>
 
   <footer class="site-footer">
@@ -191,9 +220,16 @@
 
   <script src="/next/data.js?v=budmarket-en-1"></script>
   <script src="/next/webp-map.js?v=perf-1"></script>
-  <script src="/next/app.js?v=perf-1"></script>
-  <script src="/next/ai-content.js?v=perf-1"></script>
+  <script src="/next/app.js?v=merge6-1"></script>
+  <script src="/next/ai-content.js?v=merge6-1"></script>
   <script src="/next/experience.js?v=perf-1"></script>
+  <script src="/next/ai/content.js?v=merge6-1"></script>
+  <script src="/next/ai/anatomy.js?v=anatomy-6"></script>
+  <script src="/next/ai/biz/content.js?v=lux-frame-1"></script>
+  <script src="/next/ai/ngo/content.js?v=ngo-merge-1"></script>
+  <script src="/next/ai/ngo/ngo.js?v=merge6-1"></script>
+  <script src="/next/ai/home.js?v=merge6-1"></script>
   <script src="/next/hero-video.js?v=3"></script>
+  <script src="/next/jack.js?v=split-2"></script>
 </body>
 </html>

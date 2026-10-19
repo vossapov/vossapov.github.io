@@ -20,13 +20,16 @@
   /* ───────── i18n ───────── */
   var I18N = {
     en: {
-      skip: 'Skip to the timeline', role: 'Game UI/UX Designer', newtab: ' (opens in a new tab)',
+      skip: 'Skip to the timeline', role: 'UI/UX design · AI automation', newtab: ' (opens in a new tab)',
       'nav.label': 'Primary', 'nav.work': 'Work', 'nav.contact': 'Contact', 'nav.cv': 'CV ↓',
+      'nav.design': 'Design', 'nav.ai': 'AI automation',
       'nav.original': 'Original version', 'nav.originalTitle': 'Open the original portfolio',
       'lang.label': 'Language',
-      'hero.eyebrow': 'Game UI/UX Designer', 'hero.cta': 'Explore the timeline',
-      'hero.lede': 'Game UI/UX designer with 10+ years in design and 5+ in gaming. Full pipeline — UX research, wireframes, art direction and design systems in Figma.',
-      'hero.alt': 'Valentyn Ihnatov, game UI/UX designer, waving, with his dog',
+      'hero.eyebrow': 'UI/UX designer · AI automation', 'hero.cta': 'Explore the timeline',
+      'hero.lede': 'I design interfaces for games, apps and the web — 10+ years in design, 5+ in gaming. And I build AI assistants: an easy interface to an assistant that knows your context and takes everyday work off your hands.',
+      'hero.design.t': 'UI/UX design', 'hero.design.p': 'Games, apps, web: UX research, wireframes, art direction, design systems in Figma',
+      'hero.ai.t': 'AI automation', 'hero.ai.p': 'Assistants for business, non-profits, design and art teams, and you personally',
+      'hero.alt': 'Valentyn Ihnatov, UI/UX designer, waving, with his dog',
       'hero.f.projects': 'Projects', 'hero.f.employers': 'Companies & tracks', 'hero.f.range': 'Design journey',
       'work.eyebrow': 'Work & experience', 'work.title': 'Projects across time',
       'work.note': 'Newest at the top. Company bands share one month scale; personal projects have their own track on the far right. Card height represents project duration.',
@@ -71,13 +74,16 @@
       'store.link': 'Link'
     },
     ua: {
-      skip: 'Перейти до таймлайну', role: 'Game UI/UX дизайнер', newtab: ' (відкриється в новій вкладці)',
+      skip: 'Перейти до таймлайну', role: 'UI/UX дизайн · ШІ-автоматизація', newtab: ' (відкриється в новій вкладці)',
       'nav.label': 'Головна навігація', 'nav.work': 'Роботи', 'nav.contact': 'Контакти', 'nav.cv': 'CV ↓',
+      'nav.design': 'Дизайн', 'nav.ai': 'ШІ-автоматизація',
       'nav.original': 'Оригінальна версія', 'nav.originalTitle': 'Відкрити оригінальне портфоліо',
       'lang.label': 'Мова',
-      'hero.eyebrow': 'Game UI/UX дизайнер', 'hero.cta': 'Дивитись таймлайн',
-      'hero.lede': 'Game UI/UX дизайнер: 10+ років у дизайні, 5+ у геймдеві. Повний цикл — UX-ресерч, вайрфрейми, арт-дірекшн і дизайн-системи у Figma.',
-      'hero.alt': 'Валентин Ігнатов, game UI/UX дизайнер, махає рукою, поруч його пес',
+      'hero.eyebrow': 'UI/UX дизайнер · ШІ-автоматизація', 'hero.cta': 'Дивитись таймлайн',
+      'hero.lede': 'Проєктую інтерфейси для ігор, застосунків і вебу — 10+ років у дизайні, 5+ у геймдеві. І будую ШІ-помічників: зручний інтерфейс до помічника, який знає ваш контекст і бере на себе щоденну роботу.',
+      'hero.design.t': 'UI/UX дизайн', 'hero.design.p': 'Ігри, застосунки, веб: UX-ресерч, вайрфрейми, арт-дірекшн, дизайн-системи у Figma',
+      'hero.ai.t': 'ШІ-автоматизація', 'hero.ai.p': 'Помічники для бізнесу, НКО, дизайн і арт відділів і вас особисто',
+      'hero.alt': 'Валентин Ігнатов, UI/UX дизайнер, махає рукою, поруч його пес',
       'hero.f.projects': 'Проєкти', 'hero.f.employers': 'Компанії та напрями', 'hero.f.range': 'Досвід у дизайні',
       'work.eyebrow': 'Роботи та досвід', 'work.title': 'Проєкти в часі',
       'work.note': 'Найновіше вгорі. Смуги компаній мають спільну шкалу місяців, власні проєкти — окремий стовпчик праворуч. Висота картки дорівнює тривалості проєкту.',
@@ -222,6 +228,8 @@
   }
   function buildUrl() {
     var u = new URLSearchParams();
+    var branch = new URLSearchParams(window.location.search).get('b'); // owned by next/ai/home.js
+    if (branch === 'design' || branch === 'ai') u.set('b', branch);
     if (state.lang !== 'en') u.set('lang', state.lang);
     if (norm(state.q)) u.set('q', state.q.trim());
     if (state.cat !== 'all') u.set('cat', state.cat);

@@ -1,9 +1,0 @@
-{
-  "id": "gunbit",
-  "source": "/home/vossapov/Work/thinkpad-migration-staging/C/Users/vossa/Portfolio/assets/screenshots/native/gunbit-2.jpg",
-  "prompt": "Use case: compositing. One finished premium portfolio product mockup photograph, landscape 3:2 1536x1024. Place supplied exact Gunbit portrait screenshot as supporting screen insert on graphite smartphone, preserve full 9:16 screenshot, both versus cards, characters, items, labels and neon artwork closely. Phone upright slightly angled on brushed dark metal stage; cinematic cyan illumination left and muted ruby illumination right, black studio background, tasteful industrial minimalism and soft pools of reflected light. Whole phone large and fully in frame, near-frontal screen, realistic hardware, no glare obscuring content. No added copy, logos, watermarks, people or hands.",
-  "output_hint": "Generated images are saved to /home/vossapov/.codex/generated_images/01a12253-5597-7f82-a599-16ecc46b8326 as /home/vossapov/.codex/generated_images/01a12253-5597-7f82-a599-16ecc46b8326/exec-5146abc6-10b4-4a4e-a700-e70793899049.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
-  "tool": "native image_gen",
-  "output": "/home/vossapov/Work/thinkpad-migration-staging/C/Users/vossa/Portfolio/next/assets/generated-mockups/gunbit.png",
-  "inspection": "Visually checked; both versus cards retained; MapName omitted and fine details generative."
-}

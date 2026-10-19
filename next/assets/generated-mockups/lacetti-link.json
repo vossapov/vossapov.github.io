@@ -1,9 +1,0 @@
-{
-  "id": "lacetti-link",
-  "tool": "built-in image_gen",
-  "source": "/home/vossapov/Work/thinkpad-migration-staging/C/Users/vossa/Portfolio/next/assets/projects/lacetti-link/native/01-dashboard-cruise.png",
-  "prompt": "Use case: product-mockup. Generate a complete premium automotive portfolio photograph for Lacetti Link. Reference image is the actual app screen; faithfully reproduce the whole UI on an aftermarket widescreen Android head unit in a tasteful realistic Chevrolet Lacetti cabin, dashboard centre console, dark grey tactile plastics and subtle brushed trim. Camera close to head unit, nearly frontal with slight natural perspective so the screen is large and readable, steering wheel partially visible on left. Cool dusk ambient light outside, warm subtle instrument glow, clean uncluttered car interior, no people. Landscape 3:2. Preserve reference Ukrainian UI, large speed 52, 15:08 time, 21° weather, round gauge, media controls and exact overall arrangement as closely as possible. No extra text or logos, no floating overlays, no redesign, no collage. Generate entire scene with screen included.",
-  "output": "/next/assets/generated-mockups/lacetti-link.png",
-  "generatedSource": "/home/vossapov/.codex/generated_images/01a12252-5aec-7aa0-9069-2643faf89d71/exec-de66a928-00df-445f-b0ab-3831fa6af8f0.png",
-  "inspection": "Reviewed native generation; faithful main layout, generative fine detail may differ from originals."
-}

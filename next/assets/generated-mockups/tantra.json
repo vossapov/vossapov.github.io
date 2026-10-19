@@ -1,9 +1,0 @@
-{
-  "id": "tantra",
-  "source": "/home/vossapov/Work/thinkpad-migration-staging/C/Users/vossa/Portfolio/assets/screenshots/figma/tantra-5.jpg",
-  "prompt": "Use case: compositing. Finished polished portfolio product photograph, landscape 3:2 1536x1024. Exact supplied Tantra Sadhana settings screen is supporting insert for one wide landscape smartphone; preserve entire screenshot aspect ratio, golden ornate settings frame, text and controls closely. Realistic dark bronze phone on understated warm travertine pedestal, soft morning sidelight, sand and cinnamon studio palette, minimalist background with architectural shadow, refined quiet luxury. Near frontal angle, complete phone visible, screen fills 80% photograph width, sharp artwork without reflections over content. No external lettering, watermark, extra symbols, people or hands; no redesign of screen.",
-  "output_hint": "Generated images are saved to /home/vossapov/.codex/generated_images/01a12253-5597-7f82-a599-16ecc46b8326 as /home/vossapov/.codex/generated_images/01a12253-5597-7f82-a599-16ecc46b8326/exec-091fbca1-fe49-435d-a731-e21a0794c33b.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
-  "tool": "native image_gen",
-  "output": "/home/vossapov/Work/thinkpad-migration-staging/C/Users/vossa/Portfolio/next/assets/generated-mockups/tantra.png",
-  "inspection": "Visually checked; full layout retained, fine details generative."
-}

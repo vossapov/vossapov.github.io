@@ -1,7 +1,0 @@
-{
-  "tool": "native image_gen",
-  "prompt": "Use case: compositing. Create a finished premium portfolio product photograph, landscape 3:2, 1536x1024. The supplied image is the exact supporting screen insert for Sort Dash: Enchanted. Place the entire portrait screenshot, including all UI and bottom banner, on a beautiful modern graphite smartphone standing on a low lilac ceramic plinth. Warm apricot and lavender studio background, soft golden window lighting, tactile matte surfaces, elegant gentle three-quarter perspective, realistic glass and metal. One phone dominates the photograph and is fully visible with breathing room. Preserve the screenshot artwork, wording, numbers, hierarchy, colors and aspect ratio closely, no redesign or invented UI. Camera almost square to screen for clarity; no reflection obscuring content. No added text, logos, watermarks, people or hands. Output one finished raster image.",
-  "source": "/home/vossapov/Work/thinkpad-migration-staging/C/Users/vossa/Portfolio/assets/screenshots/tilesort/tilesort-1.jpg",
-  "output": "next/assets/generated-mockups/tilesort.png",
-  "inspection": "Composition and screen checked; generative text/details may differ from original."
-}

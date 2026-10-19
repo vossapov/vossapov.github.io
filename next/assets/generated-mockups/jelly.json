@@ -1,9 +1,0 @@
-{
-  "id": "jelly",
-  "source": "/home/vossapov/Work/thinkpad-migration-staging/C/Users/vossa/Portfolio/assets/screenshots/native/jelly-2.jpg",
-  "prompt": "Use case: compositing. One beautiful finished product photograph for Jelly Valley game portfolio, landscape 3:2 1536x1024. Use supplied portrait game screenshot as exact supporting screen insert on a graphite smartphone with a 9:16 display and unobtrusive bezel, no notch covering interface. All original colorful tree village artwork, characters, top resources and bottom Decorate Explore Journal controls remain visible, preserve screenshot geometry, colors, labels and detail closely. Phone standing upright on matte mint-green architectural plinth, soft cream studio background with subtle leaf shadows, bright diffuse daylight, refined realistic materials and gentle perspective. Frame full phone large and prominent, screen clear and legible. No added words, logos, watermark, hands or people.",
-  "output_hint": "Generated images are saved to /home/vossapov/.codex/generated_images/01a12253-5597-7f82-a599-16ecc46b8326 as /home/vossapov/.codex/generated_images/01a12253-5597-7f82-a599-16ecc46b8326/exec-a71a34d9-b4e7-46ee-8395-dc90de525903.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
-  "tool": "native image_gen",
-  "output": "/home/vossapov/Work/thinkpad-migration-staging/C/Users/vossa/Portfolio/next/assets/generated-mockups/jelly.png",
-  "inspection": "Visually checked; full layout retained, fine details generative."
-}

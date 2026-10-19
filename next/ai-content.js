@@ -10,7 +10,7 @@
 window.VI_AI_COPY = {
   en: {
     draft: false,
-    navLabel: 'AI',
+    navLabel: 'AI in process',
     footerLabel: 'AI in my process',
     eyebrow: 'AI in my process',
     title: 'I set the direction. Agents produce. I\u00a0decide what stays.',
@@ -119,7 +119,7 @@ window.VI_AI_COPY = {
   },
   ua: {
     draft: false,
-    navLabel: 'AI',
+    navLabel: 'AI у процесі',
     footerLabel: 'AI у моєму процесі',
     eyebrow: 'AI у моєму процесі',
     title: 'Я задаю напрям. Агенти виконують. Я\u00a0вирішую, що лишається.',

@@ -1,9 +1,0 @@
-{
-  "id": "fluger-kids",
-  "tool": "built-in image_gen",
-  "source": "/home/vossapov/Work/thinkpad-migration-staging/C/Users/vossa/Portfolio/next/assets/projects/fluger-kids/radar-green.png",
-  "prompt": "Use case: product-mockup. Generate one complete beautiful portfolio photograph for Fluger Kids using the attached source screen faithfully. A compact portrait Android home display with softly rounded pale frame standing upright on a low light birch shelf in a gentle child-friendly home corner. Soft sage wall, very subtle out-of-focus wooden shapes, warm natural daylight. Landscape 3:2, full display visible, generous breathing room, the display large and almost frontal. Screen shows exactly the supplied bright green radar UI, recognizable friendly spotted firefighter dog giving thumbs up, green circular radar and Ukrainian word 'спокійно' at bottom, preserving source composition, colors and aspect ratio closely. No extra UI or text, no people, no extra characters, no watermark. Screen not obscured by reflections. Premium believable materials and soft contact shadows. Generate the complete scene, not a blank device template.",
-  "output": "/next/assets/generated-mockups/fluger-kids.png",
-  "generatedSource": "/home/vossapov/.codex/generated_images/01a12252-5aec-7aa0-9069-2643faf89d71/exec-0e70e2b7-81f3-470a-b8c9-665335a32ec0.png",
-  "inspection": "Reviewed native generation; faithful main layout, generative fine detail may differ from originals."
-}

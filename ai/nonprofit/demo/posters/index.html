@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Конструктор постерів — демонстрація</title>
+<meta name="robots" content="noindex">
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#f6f5fb">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%231d1b2b'/%3E%3Ctext x='50%25' y='56%25' dominant-baseline='middle' text-anchor='middle' font-family='system-ui%2Csans-serif' font-weight='700' font-size='13' fill='%23fff'%3EVI%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="/ai/nonprofit/demo/demo.css?v=demo-stage-1">
+<link rel="stylesheet" href="/ai/nonprofit/demo/stage.css?v=lux-frame-1">
+<link rel="stylesheet" href="/ai/nonprofit/demo/posters/poster.css?v=ngo-1">
+<link rel="stylesheet" href="/ai/nonprofit/demo/posters/style.css?v=demo-stage-1">
+</head>
+<body class="demo-staged">
+
+<header class="stage-bar">
+  <div class="stage-bar-in">
+    <a class="stage-back" href="/ai/nonprofit/?lang=ua#case-posters" data-stage-back><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg><span class="stage-back-long">Назад до кейсу</span><span class="stage-back-short">Назад</span></a>
+    <span class="stage-label"><span class="stage-chip">Демонстрація</span><span class="stage-name">Конструктор постерів для пошуку патронів</span></span>
+    <button type="button" class="stage-reset" data-demo-reset="vi-ngo-demo-posters" data-confirm="Почати спочатку? Введені дані зникнуть."><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12a8 8 0 1 0 2.4-5.7M4 4v4.5h4.5"/></svg><span>Почати спочатку</span></button>
+  </div>
+</header>
+
+<div class="stage">
+<div class="demo-frame">
+<div class="demo-frame-chrome" aria-hidden="true"><span class="demo-frame-dots"><i></i><i></i><i></i></span><span class="demo-frame-title">Фонд «Демо» · Конструктор постерів</span></div>
+<div class="demo-frame-body">
+
+<div class="pe">
+  <header class="pe-head">
+    <div class="pe-title">
+      <h1>Конструктор постерів</h1>
+      <p>Фонд «Демо» · постер A4 українською й німецькою, Story і два пости</p>
+    </div>
+  </header>
+
+  <nav class="steps-bar" aria-label="Кроки">
+    <button type="button" class="step-dot active" data-step="1"><b>1</b><span>Про дитину</span></button>
+    <span class="step-line"></span>
+    <button type="button" class="step-dot" data-step="2"><b>2</b><span>Історія</span></button>
+    <span class="step-line"></span>
+    <button type="button" class="step-dot" data-step="3"><b>3</b><span>Потреби</span></button>
+    <span class="step-line"></span>
+    <button type="button" class="step-dot" data-step="4"><b>4</b><span>Готово</span></button>
+  </nav>
+
+  <div class="pe-grid">
+    <main class="pe-form">
+
+      <section class="page active" data-step="1">
+        <h2>Хто ця дитина?</h2>
+        <div class="d-field">
+          <label class="d-label" for="name_ua">Як звати дитину?</label>
+          <input type="text" id="name_ua" class="d-input" placeholder="Наприклад: Ліна" autocomplete="off">
+          <div class="pe-de-line"><span class="pe-tag">DE</span><input type="text" id="name_de" class="d-input d-input--de" aria-label="Ім’я латиницею для німецького тексту" autocomplete="off"></div>
+          <div class="d-error" data-error-for="name_ua"></div>
+        </div>
+        <div class="pe-row">
+          <div class="d-field">
+            <span class="d-label" id="ageLabel">Скільки років?</span>
+            <div class="age-stepper" role="group" aria-labelledby="ageLabel">
+              <button type="button" class="age-btn" data-delta="-1" aria-label="Менше">−</button>
+              <input type="number" id="age" value="8" min="1" max="18" inputmode="numeric" aria-labelledby="ageLabel">
+              <button type="button" class="age-btn" data-delta="1" aria-label="Більше">+</button>
+            </div>
+          </div>
+          <div class="d-field">
+            <label class="d-label" for="ref_id">Номер анкети</label>
+            <input type="text" id="ref_id" class="d-input" autocomplete="off">
+          </div>
+        </div>
+        <div class="d-field">
+          <span class="d-label">Хлопчик чи дівчинка?</span>
+          <span class="d-sub">Ілюстрація підбирається за віком і статтю</span>
+          <div class="gender-picker">
+            <label class="gender-card"><input type="radio" name="gender" value="f"><img id="gender-img-f" src="/ai/nonprofit/demo/posters/assets/child_7_10_f.webp" alt=""><span>Дівчинка</span></label>
+            <label class="gender-card"><input type="radio" name="gender" value="m"><img id="gender-img-m" src="/ai/nonprofit/demo/posters/assets/child_7_10_m.webp" alt=""><span>Хлопчик</span></label>
+          </div>
+        </div>
+        <div class="d-field">
+          <label class="d-label" for="region_ua">Область</label>
+          <select id="region_ua" class="d-select"></select>
+          <div class="pe-de-line"><span class="pe-tag">DE</span><span class="pe-de-static" id="region_de_view"></span></div>
+        </div>
+        <div class="nav-buttons"><span></span><button type="button" class="d-btn d-btn--primary btn-next" data-target="2">Далі</button></div>
+      </section>
+
+      <section class="page" data-step="2">
+        <h2>Коротка історія</h2>
+        <p class="page-hint">Декілька речень: хто дитина, з чим живе, чим особлива.</p>
+        <div class="d-field">
+          <label class="d-label" for="story_ua">Історія українською</label>
+          <textarea id="story_ua" class="d-textarea" rows="6" maxlength="350"></textarea>
+          <div class="char-counter" id="story-ua-counter">0 / 350</div>
+        </div>
+        <div class="d-field">
+          <label class="d-label" for="story_de">Німецькою</label>
+          <div class="pe-warn" id="deWarn" hidden>Українську історію змінено — перевірте німецький текст.</div>
+          <textarea id="story_de" class="d-textarea" rows="6" maxlength="420"></textarea>
+          <div class="char-counter" id="story-de-counter">0 / 420</div>
+        </div>
+        <div class="nav-buttons">
+          <button type="button" class="d-btn btn-back" data-target="1">Назад</button>
+          <button type="button" class="d-btn d-btn--primary btn-next" data-target="3">Далі</button>
+        </div>
+      </section>
+
+      <section class="page" data-step="3">
+        <h2>Що потрібно щомісяця?</h2>
+        <p class="page-hint">Від 1 до 5 пунктів. Позиції з довідника отримують німецьку назву самі; власні — допишіть німецькою вручну.</p>
+        <div id="items-list" class="items"></div>
+        <button type="button" id="btn-add-item" class="d-btn d-btn--small">Додати пункт</button>
+        <datalist id="needs-list"></datalist>
+        <div class="d-field">
+          <label class="d-label" for="amount">Разом на місяць <span class="d-sub" id="amount-mode">рахуємо з пунктів</span></label>
+          <div class="amount-wrap">
+            <input type="number" id="amount" min="0" max="999" step="5" class="d-input amount-input" inputmode="numeric">
+            <span class="currency">€</span>
+            <button type="button" id="btn-reset-amount" class="d-btn d-btn--small d-btn--ghost" hidden>Повернути автосуму</button>
+          </div>
+        </div>
+        <div class="d-error" data-error-for="items"></div>
+        <div class="nav-buttons">
+          <button type="button" class="d-btn btn-back" data-target="2">Назад</button>
+          <button type="button" class="d-btn d-btn--primary btn-next" data-target="4">Готово</button>
+        </div>
+      </section>
+
+      <section class="page page--final" data-step="4">
+        <h2>Набір готовий</h2>
+        <p class="page-hint">Чотири файли для цієї дитини: постер A4, сторіз і два пости.</p>
+        <div class="final-actions">
+          <button type="button" class="d-btn d-btn--primary" id="btn-zip">Завантажити все (ZIP)</button>
+          <button type="button" class="d-btn btn-back" data-target="1">Змінити дані</button>
+        </div>
+        <div class="formats" id="formats"></div>
+      </section>
+    </main>
+
+    <aside class="pe-live" aria-label="Перегляд постера A4">
+      <div class="pe-live-head"><span>Постер A4</span><span class="d-sub">оновлюється під час заповнення</span></div>
+      <div class="pv-frame" data-fmt="a4" id="liveFrame"></div>
+    </aside>
+  </div>
+</div>
+
+</div>
+</div>
+<p class="stage-note">Демо на вигаданих даних. Нічого не надсилається — усе лишається у вашому браузері.</p>
+</div>
+
+<div class="export-host" id="exportHost" aria-hidden="true"></div>
+
+<script src="/ai/nonprofit/demo/vendor/html-to-image-1.11.11.js"></script>
+<script src="/ai/nonprofit/demo/vendor/jspdf-2.5.1.umd.min.js"></script>
+<script src="/ai/nonprofit/demo/vendor/jszip-3.10.1.min.js"></script>
+<script src="/ai/nonprofit/demo/demo.js?v=demo-stage-1"></script>
+<script src="/ai/nonprofit/demo/stage.js?v=lux-frame-1"></script>
+<script src="/ai/nonprofit/demo/posters/tips.js?v=demo-stage-1"></script>
+<script src="/ai/nonprofit/demo/posters/data.js?v=ngo-1"></script>
+<script src="/ai/nonprofit/demo/posters/templates.js?v=ngo-1"></script>
+<script src="/ai/nonprofit/demo/posters/app.js?v=demo-stage-1"></script>
+</body>
+</html>

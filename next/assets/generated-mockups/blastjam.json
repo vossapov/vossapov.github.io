@@ -1,8 +1,0 @@
-{
-  "id": "blastjam",
-  "tool": "built-in image_gen",
-  "source": "/next/assets/recent/blastjam/shooter-skin.png",
-  "output": "/next/assets/generated-mockups/blastjam.png",
-  "prompt": "Use case: product-mockup. Create a beautiful premium portfolio mockup for Tatem Blast mobile game using the attached actual screen as the screen-content reference. Landscape 3:2 composition, a single elegant graphite smartphone standing at a slight natural three-quarter angle on a softly curved lavender studio plinth, subtle cyan backdrop, soft believable studio shadows, polished editorial product photography. The screen must faithfully show the supplied colorful game UI, preserve its buttons, characters, typography and proportions as closely as possible. Device dominates the composition and all of it is visible. No added copy, logos, labels or watermark. Generate the complete finished scene including the displayed screen; this is not a blank template.",
-  "note": "AI-generated presentation; original screens remain available for exact UI inspection."
-}

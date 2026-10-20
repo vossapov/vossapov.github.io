@@ -17,8 +17,8 @@
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23181a20'/%3E%3Ctext x='50%25' y='56%25' dominant-baseline='middle' text-anchor='middle' font-family='system-ui%2Csans-serif' font-weight='700' font-size='13' fill='%23e9e9ee'%3EVI%3C/text%3E%3C/svg%3E">
   <link rel="preload" href="/next/assets/fonts/FixelText-Regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/next/assets/fonts/FixelText-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/next/styles.css?v=perf-1">
-  <link rel="stylesheet" href="/next/spatial.css?v=no-side-accents-1">
+  <link rel="stylesheet" href="/next/styles.css?v=timeline-controls-1">
+  <link rel="stylesheet" href="/next/spatial.css?v=timeline-controls-1">
   <link rel="stylesheet" href="/next/experience.css?v=ai-infographic-1">
   <link rel="preload" href="/next/assets/fonts/FixelText-Light.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/next/hero-video.css?v=3">
@@ -104,74 +104,22 @@
             <p class="eyebrow" data-i18n="work.eyebrow">Experience atlas</p>
             <h2 id="workTitle" data-i18n="work.title">Projects across time</h2>
           </div>
-          <p class="section-note" data-i18n="work.note">Newest first. Each project sits in the year it ended; its bar shows the months it spanned, so overlapping work stays visible.</p>
+          <p class="section-note" data-i18n="work.note">For more than 10 years I have designed games, apps, websites and visual identities. For the last 5+ years I have focused on game UI/UX, combining research, interface design, art direction and design systems.</p>
         </div>
 
-        <details class="career-box" id="careerBox">
-          <summary class="career-sum"><span data-i18n="career.sum">Employer overview</span></summary>
-          <figure class="career" id="career" role="group" aria-label="Career"></figure>
-        </details>
-
-        <div class="toolbar" role="search" data-i18n-attrs="aria-label:tb.label" aria-label="Filter projects">
-          <label class="search">
-            <span class="sr-only" data-i18n="tb.searchLabel">Search projects, employers or genres</span>
-            <svg aria-hidden="true" width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="9" cy="9" r="5.5"/><path d="M13.5 13.5 17 17"/></svg>
-            <input type="search" id="q" autocomplete="off" spellcheck="false" placeholder="Search name, employer, genre…" data-i18n-attrs="placeholder:tb.searchPh">
-          </label>
-
-          <details class="filters-disclosure" id="filtersBox">
-            <summary class="filters-summary" data-i18n="tb.filters">Filters & View</summary>
-            <div class="filters-panel">
-              <div class="filters-group">
-                <p class="filters-label" data-i18n="tb.category">Category</p>
-                <div class="seg cats" id="cats" role="group" data-i18n-attrs="aria-label:tb.category" aria-label="Category"></div>
-              </div>
-
-              <div class="filters-group">
-                <p class="filters-label" data-i18n="tb.company">Employer</p>
-                <label class="select">
-                  <span class="sr-only" data-i18n="tb.company">Employer</span>
-                  <select id="co"></select>
-                </label>
-              </div>
-
-              <div class="filters-group">
-                <p class="filters-label" data-i18n="tb.view">View</p>
-                <div class="seg" id="viewSeg" role="group" data-i18n-attrs="aria-label:tb.view" aria-label="View">
-                  <button type="button" class="seg-btn" data-view="timeline" data-i18n="tb.timeline" aria-pressed="true">Timeline</button>
-                  <button type="button" class="seg-btn" data-view="gallery" data-i18n="tb.gallery" aria-pressed="false">Gallery</button>
-                </div>
-              </div>
-
-              <div class="filters-group">
-                <p class="filters-label" data-i18n="tb.density">Density</p>
-                <div class="seg" id="densSeg" role="group" data-i18n-attrs="aria-label:tb.density" aria-label="Density">
-                  <button type="button" class="seg-btn" data-dens="overview" data-i18n="tb.overview" aria-pressed="false">Overview</button>
-                  <button type="button" class="seg-btn" data-dens="detail" data-i18n="tb.detail" aria-pressed="true">Detail</button>
-                </div>
-              </div>
-
-              <div class="filters-group">
-                <p class="filters-label" data-i18n="tb.scale">Scale</p>
-                <div class="seg" id="scaleSeg" role="group" data-i18n-attrs="aria-label:tb.scale" aria-label="Scale">
-                  <button type="button" class="seg-btn" data-scale="compact" data-i18n="sc.compact" aria-pressed="false">Compact</button>
-                  <button type="button" class="seg-btn" data-scale="standard" data-i18n="sc.standard" aria-pressed="true">Standard</button>
-                  <button type="button" class="seg-btn" data-scale="expanded" data-i18n="sc.expanded" aria-pressed="false">Expanded</button>
-                </div>
-              </div>
-
-              <div class="filters-action">
-                <button type="button" class="btn btn-quiet" id="reset" data-i18n="tb.reset">Reset filters</button>
-              </div>
-            </div>
-          </details>
+        <div class="atlas-toolbar" data-i18n-attrs="aria-label:tb.label" aria-label="Project controls">
+          <div class="quick-sort">
+            <span class="toolbar-label" data-i18n="tb.quick">Quick sort</span>
+            <div class="seg cats" id="cats" role="group" data-i18n-attrs="aria-label:tb.category" aria-label="Project type"></div>
+          </div>
+          <div class="seg view-seg" id="viewSeg" role="group" data-i18n-attrs="aria-label:tb.view" aria-label="View">
+            <button type="button" class="seg-btn" data-view="timeline" data-i18n="tb.timeline" aria-pressed="true">Timeline</button>
+            <button type="button" class="seg-btn" data-view="gallery" data-i18n="tb.gallery" aria-pressed="false">Gallery</button>
+          </div>
         </div>
         <p class="status" id="status" role="status" aria-live="polite"></p>
 
-        <nav class="year-chips" id="yearChips" data-i18n-attrs="aria-label:yr.label" aria-label="Jump to year"></nav>
-
         <div class="atlas">
-          <nav class="year-rail" id="yearRail" data-i18n-attrs="aria-label:yr.label" aria-label="Jump to year"></nav>
           <div class="stream" id="stream">
             <noscript>
               <div class="noscript">
@@ -218,7 +166,7 @@
 
   <script src="/next/data.js?v=ust-1"></script>
   <script src="/next/webp-map.js?v=ust-1"></script>
-  <script src="/next/app.js?v=edits7-1"></script>
+  <script src="/next/app.js?v=timeline-controls-1"></script>
   <script src="/next/ai-content.js?v=merge6-1"></script>
   <script src="/next/experience.js?v=edits7-1"></script>
   <script src="/next/ai/content.js?v=merge6-1"></script>

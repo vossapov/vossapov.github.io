@@ -32,27 +32,14 @@
       'hero.alt': 'Valentyn Ihnatov, UI/UX designer, waving, with his dog',
       'hero.f.projects': 'Projects', 'hero.f.employers': 'Companies & tracks', 'hero.f.range': 'Design journey',
       'work.eyebrow': 'Work & experience', 'work.title': 'Projects across time',
-      'work.note': 'Newest at the top. Company bands share one month scale; personal projects have their own track on the far right. Card height represents project duration.',
-      'career.label': 'Career at a glance. Employers and the months they cover, with project spans:',
-      'career.title': 'Career at a glance', 'present': 'Present',
-      'career.hint': 'Select an employer to explore their projects.',
-      'career.sel': 'Showing {n}. Select it again to clear.',
-      'career.scale': 'Horizontal axis is true time, {a}–{b}. Faint bar = employer period; solid marks = projects.',
-      'career.row': '{n}, {r}, {d}. {c} {p}.', 'career.rowSel': 'Selected. Select again to clear.',
-      'tb.label': 'Filter projects', 'tb.searchLabel': 'Search projects, employers or genres',
-      'tb.searchPh': 'Search name, employer, genre…', 'tb.category': 'Category', 'tb.company': 'Employer',
-      'tb.allCompanies': 'All employers', 'tb.view': 'View', 'tb.timeline': 'Timeline', 'tb.gallery': 'Gallery',
-      'tb.density': 'Density', 'tb.overview': 'Overview', 'tb.detail': 'Detail', 'tb.reset': 'Reset filters', 'tb.filters': 'Filters & View',
-      'cat.all': 'All', 'cat.games': 'Games', 'cat.web': 'Web', 'cat.apps': 'Apps', 'cat.branding': 'Branding',
-      'yr.label': 'Jump to year', 'yr.go': 'Go to {y}',
+      'work.note': 'For more than 10 years I have designed games, apps, websites and visual identities. For the last 5+ years I have focused on game UI/UX, combining research, interface design, art direction and design systems.',
+      'tb.label': 'Project controls', 'tb.quick': 'Quick sort', 'tb.category': 'Project type',
+      'tb.view': 'View', 'tb.timeline': 'Timeline', 'tb.gallery': 'Gallery', 'tb.reset': 'Show all projects',
+      'cat.all': 'All', 'cat.games': 'Games', 'cat.digital': 'Web & apps', 'cat.branding': 'Branding',
+      'present': 'Present',
       'st.all': '{n} {projects} across {y} {years}.', 'st.some': 'Showing {n} of {t} {projects} across {y} {years}.',
-      'st.none': 'No projects match these filters.',
-      'empty.title': 'No projects match', 'empty.text': 'Try a different word, or clear the category and employer filters.',
-      'lg.label': 'How to read the atlas', 'lg.t': 'How to read this',
-      'lg.1': 'Vertical position and card height follow one month scale shared by both sides; a thin break under each employer heading is the only non-time space, and it runs across both sides.',
-      'lg.2': 'Projects that ran in parallel sit in parallel columns inside their employer band. Freelance is the striped outer track on the left; personal projects occupy the outer track on the right. Filters fade non-matching cards in place, so dates never move.',
-      'lg.3': 'Dates are month-level ranges from the portfolio dataset (latest entry: {end}). “Present” marks ranges left open in the source, not today’s date.',
-      'lg.4': 'Web = websites, apps and SaaS product UI. Games = game UI. Branding = identity and print.',
+      'st.none': 'No projects match this type.',
+      'empty.title': 'No projects match', 'empty.text': 'Choose another project type or show all projects.',
       'yr.proj1': 'project', 'yr.projN': 'projects', 'yr.ribbons': 'Employers active this year',
       'beyond': 'Beyond the dataset range',
       'continues': 'Started earlier', 'from': 'from {d}', 'to': 'to',
@@ -63,9 +50,8 @@
       'd.platform': 'Platform', 'd.engine': 'Engine', 'd.employer': 'Employer', 'd.role': 'Role',
       'd.about': 'About', 'd.points': 'Details', 'd.highlights': 'Highlights', 'd.links': 'Links',
       'd.case': 'Full case →', 'd.caseNote': '',
-      'tb.scale': 'Scale', 'sc.compact': 'Compact', 'sc.standard': 'Standard', 'sc.expanded': 'Expanded',
       'sp.label': 'Timeline: employers either side of a shared month axis, newest at the top', 'sp.now': 'Now',
-      'sp.mo': '{n} mo', 'sp.dur': 'lasted {d}', 'sk.jump': 'Jump to employer', 'career.sum': 'Employer overview',
+      'sp.mo': '{n} mo', 'sp.dur': 'lasted {d}',
       'img.preview': 'Preview of {n}', 'img.shot': '{n} — image {i}',
       'dur.yr1': 'yr', 'dur.yrN': 'yrs', 'dur.mo': 'mo', 'dur.lt': '< 1 mo',
       'ct.eyebrow': 'Contact', 'ct.title': 'Open to new projects', 'ct.email': 'Email', 'ct.cv': 'CV',
@@ -86,27 +72,14 @@
       'hero.alt': 'Валентин Ігнатов, UI/UX дизайнер, махає рукою, поруч його пес',
       'hero.f.projects': 'Проєкти', 'hero.f.employers': 'Компанії та напрями', 'hero.f.range': 'Досвід у дизайні',
       'work.eyebrow': 'Роботи та досвід', 'work.title': 'Проєкти в часі',
-      'work.note': 'Найновіше вгорі. Смуги компаній мають спільну шкалу місяців, власні проєкти — окремий стовпчик праворуч. Висота картки дорівнює тривалості проєкту.',
-      'career.label': 'Кар’єра коротко. Роботодавці, місяці, які вони охоплюють, і проміжки проєктів:',
-      'career.title': 'Кар’єра коротко', 'present': 'Зараз',
-      'career.hint': 'Оберіть роботодавця, щоб побачити його проєкти.',
-      'career.sel': 'Показано: {n}. Натисніть ще раз, щоб скинути.',
-      'career.scale': 'Горизонтальна вісь — справжній час, {a}–{b}. Бліда смуга — період роботодавця; суцільні позначки — проєкти.',
-      'career.row': '{n}, {r}, {d}. {c} {p}.', 'career.rowSel': 'Обрано. Натисніть ще раз, щоб скинути.',
-      'tb.label': 'Фільтри проєктів', 'tb.searchLabel': 'Пошук за проєктом, роботодавцем або жанром',
-      'tb.searchPh': 'Назва, роботодавець, жанр…', 'tb.category': 'Категорія', 'tb.company': 'Роботодавець',
-      'tb.allCompanies': 'Усі роботодавці', 'tb.view': 'Вигляд', 'tb.timeline': 'Таймлайн', 'tb.gallery': 'Галерея',
-      'tb.density': 'Щільність', 'tb.overview': 'Огляд', 'tb.detail': 'Деталі', 'tb.reset': 'Скинути фільтри', 'tb.filters': 'Фільтри та Вигляд',
-      'cat.all': 'Усі', 'cat.games': 'Ігри', 'cat.web': 'Веб', 'cat.apps': 'Застосунки', 'cat.branding': 'Брендинг',
-      'yr.label': 'Перейти до року', 'yr.go': 'Перейти до {y}',
+      'work.note': 'Понад 10 років проєктую ігри, застосунки, вебсайти та візуальні айдентики. Останні 5+ років зосереджений на Game UI/UX, де поєдную дослідження, дизайн інтерфейсів, артдирекшн і дизайн-системи.',
+      'tb.label': 'Керування проєктами', 'tb.quick': 'Швидке сортування', 'tb.category': 'Тип проєкту',
+      'tb.view': 'Вигляд', 'tb.timeline': 'Таймлайн', 'tb.gallery': 'Галерея', 'tb.reset': 'Показати всі проєкти',
+      'cat.all': 'Усі', 'cat.games': 'Ігри', 'cat.digital': 'Веб і застосунки', 'cat.branding': 'Брендування',
+      'present': 'Зараз',
       'st.all': '{n} {projects} за {y} {years}.', 'st.some': 'Показано {n} із {t} {projects} за {y} {years}.',
-      'st.none': 'За цими фільтрами проєктів немає.',
-      'empty.title': 'Нічого не знайдено', 'empty.text': 'Спробуйте інше слово або приберіть фільтри категорії та роботодавця.',
-      'lg.label': 'Як читати атлас', 'lg.t': 'Як це читати',
-      'lg.1': 'Положення і висота карток підпорядковані одній шкалі місяців для обох боків; тонкий розрив під заголовком роботодавця — єдиний простір поза часом, і він однаковий для обох боків.',
-      'lg.2': 'Паралельні проєкти стоять у паралельних колонках усередині смуги роботодавця. Фріланс — смугаста зовнішня доріжка ліворуч, власні проєкти — окрема смуга праворуч. Фільтри приглушують невідповідні картки на місці, тож дати не зсуваються.',
-      'lg.3': 'Дати — місячні діапазони з даних портфоліо (остання позиція: {end}). «Зараз» позначає діапазон, залишений відкритим у джерелі, а не сьогоднішню дату.',
-      'lg.4': 'Веб = сайти, застосунки та продуктовий UI SaaS. Ігри = ігровий UI. Брендинг = айдентика та друк.',
+      'st.none': 'Для цього типу проєктів немає.',
+      'empty.title': 'Нічого не знайдено', 'empty.text': 'Оберіть інший тип або покажіть усі проєкти.',
       'yr.proj1': 'проєкт', 'yr.projN': 'проєктів', 'yr.ribbons': 'Роботодавці цього року',
       'beyond': 'Поза діапазоном даних',
       'continues': 'Почався раніше', 'from': 'з {d}', 'to': 'до',
@@ -117,9 +90,8 @@
       'd.platform': 'Платформа', 'd.engine': 'Рушій', 'd.employer': 'Роботодавець', 'd.role': 'Роль',
       'd.about': 'Про проєкт', 'd.points': 'Деталі', 'd.highlights': 'Ключове', 'd.links': 'Посилання',
       'd.case': 'Повний кейс →', 'd.caseNote': '',
-      'tb.scale': 'Масштаб', 'sc.compact': 'Компактно', 'sc.standard': 'Стандарт', 'sc.expanded': 'Розгорнуто',
       'sp.label': 'Таймлайн: роботодавці обабіч спільної осі місяців, найновіше вгорі', 'sp.now': 'Зараз',
-      'sp.mo': '{n} міс.', 'sp.dur': 'тривав {d}', 'sk.jump': 'Перейти до роботодавця', 'career.sum': 'Огляд роботодавців',
+      'sp.mo': '{n} міс.', 'sp.dur': 'тривав {d}',
       'img.preview': 'Превʼю: {n}', 'img.shot': '{n} — зображення {i}',
       'dur.yr1': 'р.', 'dur.yrN': 'р.', 'dur.mo': 'міс.', 'dur.lt': '< 1 міс.',
       'ct.eyebrow': 'Контакти', 'ct.title': 'Відкритий до нових проєктів', 'ct.email': 'Пошта', 'ct.cv': 'CV',
@@ -191,53 +163,43 @@
   function projDur(p) { return fmtDur(p._e - p._s); }
 
   /* ───────── filtering ───────── */
-  function norm(s) { return String(s || '').toLowerCase().trim(); }
   function match(p, f) {
-    if (f.cat !== 'all' && p.category !== f.cat) return false;
-    if (f.co !== 'all' && p.co !== f.co) return false;
-    if (f.q) {
-      var terms = f.q.split(/\s+/);
-      for (var i = 0; i < terms.length; i++) if (p._hay.indexOf(terms[i]) === -1) return false;
-    }
+    if (f.cat === 'digital' && p.category !== 'web' && p.category !== 'apps') return false;
+    if (f.cat !== 'all' && f.cat !== 'digital' && p.category !== f.cat) return false;
     return true;
   }
   function filtered(over) {
-    var f = { q: norm(state.q), cat: state.cat, co: state.co };
+    var f = { cat: state.cat };
     if (over) for (var k in over) f[k] = over[k];
     return projects.filter(function (p) { return match(p, f); });
   }
-  function filtersActive() { return !!(norm(state.q) || state.cat !== 'all' || state.co !== 'all'); }
+  function filtersActive() { return state.cat !== 'all'; }
 
   /* ───────── URL ↔ state ───────── */
-  var CATS = ['all', 'games', 'web', 'apps', 'branding'];
+  var CATS = ['all', 'games', 'digital', 'branding'];
   function readUrl() {
     var u = new URLSearchParams(window.location.search);
-    var lang = u.get('lang');
-    var s = {
-      q: (u.get('q') || '').slice(0, 80),
-      cat: CATS.indexOf(u.get('cat')) > -1 ? u.get('cat') : 'all',
-      co: coById[u.get('co')] ? u.get('co') : 'all',
+    var lang = u.get('lang'), rawCat = u.get('cat');
+    if (rawCat === 'web' || rawCat === 'apps') rawCat = 'digital';
+    return {
+      q: '',
+      cat: CATS.indexOf(rawCat) > -1 ? rawCat : 'all',
+      co: 'all',
       view: u.get('view') === 'gallery' ? 'gallery' : 'timeline',
-      dens: u.get('dens') === 'overview' ? 'overview' : 'detail',
-      scale: ['compact', 'expanded'].indexOf(u.get('scale')) > -1 ? u.get('scale') : 'standard',
-      y: /^\d{4}$/.test(u.get('y') || '') ? +u.get('y') : null,
+      dens: 'detail',
+      scale: 'standard',
+      y: null,
       p: byId[u.get('p')] ? u.get('p') : null,
       lang: lang === 'ua' || lang === 'en' ? lang : null
     };
-    return s;
   }
   function buildUrl() {
     var u = new URLSearchParams();
     var branch = new URLSearchParams(window.location.search).get('b'); // owned by next/ai/home.js
     if (branch === 'design' || branch === 'ai') u.set('b', branch);
     if (state.lang !== 'en') u.set('lang', state.lang);
-    if (norm(state.q)) u.set('q', state.q.trim());
     if (state.cat !== 'all') u.set('cat', state.cat);
-    if (state.co !== 'all') u.set('co', state.co);
     if (state.view !== 'timeline') u.set('view', state.view);
-    if (state.dens !== 'detail') u.set('dens', state.dens);
-    if (state.scale !== 'standard') u.set('scale', state.scale);
-    if (state.y) u.set('y', state.y);
     if (state.p) u.set('p', state.p);
     var qs = u.toString();
     return window.location.pathname + (qs ? '?' + qs : '');
@@ -367,7 +329,6 @@
    * Filters fade non-matching cards in place (ghosts keep their slot) — no date ever moves. */
   var SP = { PAD_TOP: 76, PAD_BOTTOM: 140, HEADER_H: 60, GAPV: 8, AX: 56, OP: 12, GX: 12, MIN_COLS: 3 };
   var SCALES = { compact: 44, standard: 64, expanded: 96 };
-  var SCALE_KEYS = ['compact', 'standard', 'expanded'];
   var spMQ = window.matchMedia ? window.matchMedia('(min-width: 960px)') : { matches: true };
   var NOW_I = mn(NOW);
   var BOTTOM_I = (function () {
@@ -619,33 +580,6 @@
     return list;
   }
 
-  function renderNav(list) {
-    var counts = yearCounts;
-    var max = Math.max.apply(null, yearsShown.map(function (y) { return counts[y]; }).concat([1]));
-    var rail = yearsShown.map(function (y) {
-      return '<button type="button" class="rail-btn" data-year="' + y + '" aria-label="' + esc(T('yr.go', { y: y }) + ', ' + counts[y] + ' ' + plural(counts[y], [T('yr.proj1'), T('yr.projN'), T('yr.projN')])) + '">' +
-        '<span class="rail-y">' + y + '</span><span class="rail-bar" aria-hidden="true"><i style="width:' + Math.round(counts[y] / max * 100) + '%"></i></span>' +
-        '<span class="rail-n" aria-hidden="true">' + counts[y] + '</span></button>';
-    }).join('');
-    $('#yearRail').innerHTML = rail;
-    var chips = $('#yearChips');
-    if (mode === 'stack') { // years are not linear in employer stacks: jump between employers instead
-      var shownCo = companies.filter(function (c) { return list.some(function (p) { return p.co === c.id; }); })
-        .sort(function (a, b) { return (!!a.ambient - !!b.ambient) || (mn(b.e) - mn(a.e)) || (mn(b.s) - mn(a.s)); });
-      chips.setAttribute('aria-label', T('sk.jump'));
-      chips.innerHTML = shownCo.map(function (c) {
-        return '<button type="button" class="chip-btn" data-jump="g-' + c.id + '" style="--co:' + esc(c.color) + '">' + esc(coName(c)) + '</button>';
-      }).join('');
-      chips.hidden = !shownCo.length;
-    } else {
-      chips.setAttribute('aria-label', T('yr.label'));
-      chips.innerHTML = yearsShown.map(function (y) {
-        return '<button type="button" class="chip-btn" data-year="' + y + '" aria-label="' + esc(T('yr.go', { y: y })) + '">' + y + '</button>';
-      }).join('');
-      chips.hidden = !yearsShown.length;
-    }
-    $('#yearRail').hidden = !yearsShown.length;
-  }
 
   /* hover / focus preview (desktop spatial only) */
   var peekEl = null, peekTimer = 0, peekFor = null;
@@ -686,55 +620,12 @@
   streamEl.addEventListener('focusout', function () { hidePeek(); });
   window.addEventListener('scroll', function () { if (peekFor && !peekFor.matches(':focus-visible')) hidePeek(); }, { passive: true });
 
-  function renderCareer(list) {
-    var hit = {};
-    list.forEach(function (p) { hit[p.id] = true; });
-    var span = SPAN_END - SPAN_START || 1;
-    var pct = function (idx) { return ((idx - SPAN_START) / span * 100).toFixed(2) + '%'; };
-    var yFirst = Math.ceil((SPAN_START - 1) / 12), yLast = Math.floor((SPAN_END - 1) / 12);
-    var y0 = Math.floor((SPAN_START - 1) / 12);
-    var ticks = '';
-    for (var y = yFirst; y <= yLast; y += 2) ticks += '<span style="left:' + pct(y * 12 + 1) + '">' + y + '</span>';
-    var rows = companiesSorted.map(function (c) {
-      var sel = state.co === c.id, dim = state.co !== 'all' && !sel;
-      var end = c.ongoing ? T('present') : fmtDate(c.e);
-      var dates = fmtDate(c.s) + ' – ' + end;
-      var n = projects.filter(function (p) { return p.co === c.id; }).length;
-      var segs = projects.filter(function (p) { return p.co === c.id; }).map(function (p) {
-        return '<i class="cr-seg' + (hit[p.id] ? '' : ' off') + '" style="left:' + pct(p._s) + ';width:' + Math.max(((p._e - p._s) / span * 100), 0.6).toFixed(2) + '%"></i>';
-      }).join('');
-      var tip = T('career.row', { n: coName(c), r: L(c.role), d: dates, c: n, p: plural(n, [T('yr.proj1'), T('yr.projN'), T('yr.projN')]) }) + (sel ? ' ' + T('career.rowSel') : '');
-      return '<li class="cr' + (dim ? ' dim' : '') + (sel ? ' sel' : '') + '" style="--co:' + esc(c.color) + '">' +
-        '<button type="button" class="cr-btn" data-co="' + c.id + '" aria-pressed="' + sel + '" title="' + esc(tip) + '" aria-label="' + esc(tip) + '">' +
-        '<span class="cr-label"><b>' + esc(coName(c)) + '</b><small>' + esc(dates) + '</small></span>' +
-        '<span class="cr-track"><span class="cr-range' + (c.ongoing ? ' open' : '') + '" style="left:' + pct(mn(c.s)) + ';width:' + ((Math.min(mn(c.e), SPAN_END) - mn(c.s)) / span * 100).toFixed(2) + '%"></span>' + segs + '</span></button></li>';
-    }).join('');
-    var el = $('#career');
-    var selName = state.co !== 'all' ? coName(coById[state.co]) : '';
-    var hint = state.co === 'all' ? T('career.hint') : T('career.sel', { n: selName });
-    el.innerHTML = '<figcaption><span>' + esc(T('career.title')) + '</span><em>' + esc(hint) + '</em></figcaption><ul>' + rows +
-      '</ul><div class="cr-axis" aria-hidden="true"><span class="cr-axis-pad"></span><span class="cr-ticks">' + ticks + '</span></div>' +
-      '<p class="cr-scale">' + esc(T('career.scale', { a: y0, b: Math.floor((SPAN_END - 1) / 12) })) + '</p>';
-    el.setAttribute('aria-label', T('career.title') + '. ' + T('career.hint'));
-  }
-
-  function renderLegend() {
-    /* The "how to read the atlas" aside was removed from the page on the owner's request; keep this
-       guarded so the language-switch path that still calls it is a no-op when the element is absent. */
-    var lg = $('#legend');
-    if (!lg) return;
-    lg.innerHTML = '<h3>' + esc(T('lg.t')) + '</h3><ul><li>' + esc(T('lg.1')) + '</li><li>' + esc(T('lg.2')) + '</li><li>' +
-      esc(T('lg.3', { end: fmtDate(NOW) })) + '</li><li>' + esc(T('lg.4')) + '</li></ul>';
-  }
-
   /* ───────── toolbar ───────── */
-  var catsEl = $('#cats'), coSel = $('#co');
+  var catsEl = $('#cats');
   function buildToolbar() {
     catsEl.innerHTML = CATS.map(function (c) {
       return '<button type="button" class="seg-btn" data-cat="' + c + '" aria-pressed="false"><span>' + esc(T('cat.' + c)) + '</span> <small class="cnt"></small></button>';
     }).join('');
-    var opts = ['<option value="all"></option>'].concat(companiesSorted.map(function (c) { return '<option value="' + c.id + '"></option>'; }));
-    coSel.innerHTML = opts.join('');
   }
   function updateToolbar(list) {
     $$('[data-cat]', catsEl).forEach(function (b) {
@@ -744,19 +635,7 @@
       $('.cnt', b).textContent = n;
       b.setAttribute('aria-label', T('cat.' + c) + ', ' + n + ' ' + plural(n, [T('yr.proj1'), T('yr.projN'), T('yr.projN')]));
     });
-    var o = coSel.options;
-    o[0].textContent = T('tb.allCompanies') + ' (' + filtered({ co: 'all' }).length + ')';
-    for (var i = 1; i < o.length; i++) {
-      var c = coById[o[i].value];
-      o[i].textContent = coName(c) + ' (' + filtered({ co: c.id }).length + ')';
-    }
-    coSel.value = state.co;
     $$('[data-view]', $('#viewSeg')).forEach(function (b) { b.setAttribute('aria-pressed', String(b.getAttribute('data-view') === state.view)); });
-    $$('[data-dens]', $('#densSeg')).forEach(function (b) { b.setAttribute('aria-pressed', String(b.getAttribute('data-dens') === state.dens)); });
-    $$('[data-scale]', $('#scaleSeg')).forEach(function (b) { b.setAttribute('aria-pressed', String(b.getAttribute('data-scale') === state.scale)); });
-    $('#scaleSeg').hidden = mode !== 'spatial';
-    $('#reset').disabled = !filtersActive();
-    var q = $('#q'); if (doc.activeElement !== q && q.value !== state.q) q.value = state.q;
     var st = $('#status');
     var yn = yearsShown.length, n = list.length;
     var vars = { n: n, t: projects.length, y: yn,
@@ -773,8 +652,6 @@
 
   function renderAll() {
     var list = renderStream();
-    renderNav(list);
-    renderCareer(list);
     updateToolbar(list);
     spy(true);
   }
@@ -793,11 +670,12 @@
   }
   function setActive(y) {
     activeYear = y;
-    $$('[data-year]', $('#yearRail')).forEach(function (b) {
+    var rail = $('#yearRail'), chips = $('#yearChips');
+    if (!rail || !chips) return;
+    $$('[data-year]', rail).forEach(function (b) {
       var on = +b.getAttribute('data-year') === y;
       if (on) b.setAttribute('aria-current', 'true'); else b.removeAttribute('aria-current');
     });
-    var chips = $('#yearChips');
     $$('[data-year]', chips).forEach(function (b) {
       var on = +b.getAttribute('data-year') === y;
       if (on) { b.setAttribute('aria-current', 'true');
@@ -981,7 +859,7 @@
   function setLang(lang, quiet) {
     state.lang = lang;
     store.set('lang', lang);
-    applyStatic(); renderFacts(); buildToolbar(); renderLegend();
+    applyStatic(); renderFacts(); buildToolbar();
     renderAll();
     if (state.p && dlg.open) fillDialog();
     if (!quiet) syncUrl(false);
@@ -998,33 +876,14 @@
     if ((v = t.getAttribute('data-set-lang'))) { if (v !== state.lang) setLang(v); return; }
     if ((v = t.getAttribute('data-open'))) { openProject(v, true, t); return; }
     if (t.getAttribute('data-action') === 'close') { dlg.close(); return; }
-    if (t.getAttribute('data-action') === 'reset' || t.id === 'reset') {
-      state.q = ''; state.cat = 'all'; state.co = 'all'; $('#q').value = ''; filterChanged(true); return;
-    }
-    if ((v = t.getAttribute('data-co'))) {
-      state.co = state.co === v ? 'all' : v; filterChanged(true);
-      var again = $('[data-co="' + v + '"]', $('#career')); if (again) again.focus({ preventScroll: true });
-      return;
+    if (t.getAttribute('data-action') === 'reset') {
+      state.cat = 'all'; filterChanged(true); return;
     }
     if ((v = t.getAttribute('data-cat'))) { state.cat = v; filterChanged(true); return; }
     if ((v = t.getAttribute('data-view'))) { state.view = v; store.set('view', v); renderAll(); syncUrl(true); return; }
-    if ((v = t.getAttribute('data-dens'))) { state.dens = v; store.set('dens', v); rerenderKeepYear(); syncUrl(true); return; }
-    if ((v = t.getAttribute('data-scale'))) { if (v !== state.scale) { state.scale = v; store.set('scale', v); rerenderKeepYear(); syncUrl(true); } return; }
-    if ((v = t.getAttribute('data-jump'))) { var g = doc.getElementById(v); if (g) g.scrollIntoView({ behavior: reduce ? 'instant' : 'smooth', block: 'start' }); return; }
-    if ((v = t.getAttribute('data-year'))) {
-      state.y = +v; syncUrl(true); jumpTo(+v, true); setActive(+v); return;
-    }
     if ((v = t.getAttribute('data-gal'))) { showImage(galIdx + (+v)); return; }
     if ((v = t.getAttribute('data-gi'))) { showImage(+v); return; }
   });
-  var qTimer = 0;
-  $('#q').addEventListener('input', function (e) {
-    state.q = e.target.value;
-    clearTimeout(qTimer);
-    qTimer = setTimeout(function () { state.y = null; renderAll(); syncUrl(false); }, 140);
-  });
-  coSel.addEventListener('change', function () { state.co = coSel.value; filterChanged(true); });
-
   window.addEventListener('popstate', function () {
     var s = readUrl();
     var before = [state.q, state.cat, state.co, state.view, state.dens, state.scale].join('|');
@@ -1033,9 +892,7 @@
     var wantLang = s.lang || 'en';
     if (wantLang !== state.lang) setLang(wantLang, true);
     else if (before !== after) renderAll();
-    $('#q').value = state.q;
-    state.y = s.y ? validYear(s.y) : null;
-    if (state.y && state.y !== activeYear && !suppressNav) jumpTo(state.y, false);
+    state.y = null;
     if (s.p) {
       if (!dlg.open || state.p !== s.p) openProject(s.p, false);
     } else if (dlg.open) {
@@ -1053,18 +910,13 @@
     var storedLang = store.get('lang');
     state.lang = s.lang || (storedLang === 'ua' ? 'ua' : 'en');
     var hasQuery = window.location.search.length > 1;
-    state.q = s.q; state.cat = s.cat; state.co = s.co;
+    state.q = ''; state.cat = s.cat; state.co = 'all';
     state.view = hasQuery ? s.view : (store.get('view') === 'gallery' ? 'gallery' : 'timeline');
-    state.dens = hasQuery ? s.dens : (store.get('dens') === 'overview' ? 'overview' : 'detail');
-    state.scale = hasQuery ? s.scale : (SCALE_KEYS.indexOf(store.get('scale')) > -1 ? store.get('scale') : 'standard');
-    $('#q').value = state.q;
-    applyStatic(); renderFacts(); buildToolbar(); renderLegend();
+    state.dens = 'detail';
+    state.scale = 'standard';
+    applyStatic(); renderFacts(); buildToolbar();
     renderAll();
     var initialP = s.p;
-    if (s.y) {
-      state.y = validYear(s.y);
-      requestAnimationFrame(function () { jumpTo(state.y, false); });
-    }
     syncUrl(false);
     if (initialP) { requestAnimationFrame(function () { openProject(initialP, false); }); }
   })();

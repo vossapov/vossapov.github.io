@@ -1028,15 +1028,15 @@ window.VI_DATA = {
      "ua": "Останні роботи · вересень-жовтень 2026"
     },
     "summary": {
-     "en": "I designed the skin and background shop screens, refined offer presentation and prepared the visual assets for handoff. I also worked through the Fortune Wheel flow: reward progression, ad or coin spins, and the Last Chance reminder.",
-     "ua": "Я опрацював екрани магазину скінів і фонів, подачу спеціальних пропозицій та підготовку графіки до передачі в розробку. Окремо пропрацював UX колеса фортуни: прогрес нагород, спіни за рекламу або монети й нагадування Last Chance."
+     "en": "I designed the skin and background shop screens, refined offer presentation and prepared the visual assets for handoff. I also designed the home screen and the Fortune Wheel screen: progress track, resources, High Chance progression and the choice between rewarded video and coins.",
+     "ua": "Я опрацював екрани магазину скінів і фонів, подачу спеціальних пропозицій та підготовку графіки до передачі в розробку. Окремо оформив головний екран і екран колеса фортуни: трек прогресу, ресурси, прогрес High Chance та вибір між рекламою й монетами."
     },
     "images": [
      "/next/assets/recent/blastjam/shooter-skin.png",
      "/next/assets/recent/blastjam/backgrounds.png",
      "/next/assets/recent/blastjam/welcome-pack.png",
-     "/next/assets/recent/blastjam/wheel-rv-coins.png",
-     "/next/assets/recent/blastjam/last-chance.png"
+     "/next/assets/recent/blastjam/home-screen.png",
+     "/next/assets/recent/blastjam/fortune-wheel.png"
     ],
     "preview": "/next/assets/generated-mockups/blastjam.png"
    },

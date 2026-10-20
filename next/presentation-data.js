@@ -1761,21 +1761,21 @@ window.VI_CASES = {
     {
      "type": "feature",
      "kicker": {
-      "en": "Recent work · UX wireframes",
-      "ua": "Останні роботи · UX-вайрфрейми"
+      "en": "Recent work · Visual design",
+      "ua": "Останні роботи · Візуальний дизайн"
      },
      "title": {
-      "en": "Fortune Wheel and Last Chance",
-      "ua": "Колесо фортуни та Last Chance"
+      "en": "Home screen and Fortune Wheel",
+      "ua": "Головний екран і колесо фортуни"
      },
      "body": {
-      "en": "I mapped the free and subsequent spins, High Chance progression, reward collection and the choice between rewarded video and coins. I designed the Last Chance reminder with the remaining spins and a clear return to the wheel. These are UX wireframes, not final game artwork or an implemented feature.",
-      "ua": "Я пропрацював безкоштовний і наступні спіни, прогрес High Chance, отримання нагород та вибір між рекламою й монетами. Оформив нагадування Last Chance із залишком спінів і зрозумілим поверненням до колеса. Це UX-вайрфрейми, а не фінальний ігровий арт чи вже реалізована механіка."
+      "en": "The home screen gathers the resource bar, the chest progress track, the Fortune Wheel entry with its timer and the main Play button with the hard-level marker. The Fortune Wheel screen lays out the High Chance progression, the prize sectors and the spin choice between a rewarded video and coins. Final visual design prepared for developer handoff.",
+      "ua": "Головний екран збирає панель ресурсів, трек прогресу скринь, вхід до колеса фортуни з таймером і головну кнопку Play із позначкою складного рівня. Екран колеса фортуни розкладає прогрес High Chance, сектори нагород і вибір спіна - за рекламу або за монети. Фінальний візуальний дизайн, підготовлений до передачі в розробку."
      },
      "recent": true,
      "imgs": [
-      "/next/assets/recent/blastjam/wheel-rv-coins.png",
-      "/next/assets/recent/blastjam/last-chance.png"
+      "/next/assets/recent/blastjam/home-screen.png",
+      "/next/assets/recent/blastjam/fortune-wheel.png"
      ]
     },
     {
@@ -1929,8 +1929,8 @@ window.VI_CASES = {
     "/next/assets/recent/blastjam/shooter-skin.png",
     "/next/assets/recent/blastjam/welcome-pack.png",
     "/next/assets/recent/blastjam/backgrounds.png",
-    "/next/assets/recent/blastjam/wheel-rv-coins.png",
-    "/next/assets/recent/blastjam/last-chance.png",
+    "/next/assets/recent/blastjam/home-screen.png",
+    "/next/assets/recent/blastjam/fortune-wheel.png",
     "/next/assets/projects/blastjam/videos/gameplay-poster.png",
     "/assets/screenshots/blastjam/blastjam-2.jpg",
     "/assets/screenshots/blastjam/blastjam-1.jpg",
@@ -1944,8 +1944,8 @@ window.VI_CASES = {
     "/next/assets/recent/blastjam/shooter-skin.png": "phone",
     "/next/assets/recent/blastjam/welcome-pack.png": "phone",
     "/next/assets/recent/blastjam/backgrounds.png": "phone",
-    "/next/assets/recent/blastjam/wheel-rv-coins.png": "phone",
-    "/next/assets/recent/blastjam/last-chance.png": "phone",
+    "/next/assets/recent/blastjam/home-screen.png": "phone",
+    "/next/assets/recent/blastjam/fortune-wheel.png": "phone",
     "/next/assets/projects/blastjam/videos/gameplay-poster.png": "phone",
     "/assets/screenshots/blastjam/blastjam-2.jpg": "phone",
     "/assets/screenshots/blastjam/blastjam-1.jpg": "phone",
@@ -1968,13 +1968,13 @@ window.VI_CASES = {
      "en": "Welcome Pack",
      "ua": "Welcome Pack"
     },
-    "/next/assets/recent/blastjam/wheel-rv-coins.png": {
-     "en": "Fortune Wheel · UX wireframe",
-     "ua": "Колесо фортуни · UX-вайрфрейм"
+    "/next/assets/recent/blastjam/home-screen.png": {
+     "en": "Home screen",
+     "ua": "Головний екран"
     },
-    "/next/assets/recent/blastjam/last-chance.png": {
-     "en": "Last Chance · UX wireframe",
-     "ua": "Last Chance · UX-вайрфрейм"
+    "/next/assets/recent/blastjam/fortune-wheel.png": {
+     "en": "Fortune Wheel",
+     "ua": "Колесо фортуни"
     },
     "/next/assets/generated-mockups/blastjam.png": {
      "en": "Generated presentation mockup",
@@ -8295,13 +8295,13 @@ window.VI_CASES = {
    416,
    900
   ],
-  "/next/assets/recent/blastjam/wheel-rv-coins.png": [
-   324,
-   700
+  "/next/assets/recent/blastjam/home-screen.png": [
+   1440,
+   3116
   ],
-  "/next/assets/recent/blastjam/last-chance.png": [
-   474,
-   1024
+  "/next/assets/recent/blastjam/fortune-wheel.png": [
+   1440,
+   3116
   ],
   "/next/assets/projects/blastjam/videos/gameplay-poster.png": [
    720,

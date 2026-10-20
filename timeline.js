@@ -911,7 +911,7 @@ const COMPANIES = [
     name: 'Tatem Games',
     role: ['Game UI/UX Designer', 'Game UI/UX дизайнер'],
     color: '#2dd4bf', bg: 'rgba(45,212,191,0.06)', border: 'rgba(45,212,191,0.20)',
-    side: 'left', s: [2026, 5], e: [2026, 9],
+    side: 'left', s: [2026, 5], e: NOW,
     url: 'https://tatem.games/',
   },
   {

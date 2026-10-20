@@ -21,9 +21,9 @@ window.VI_DATA = {
    ],
    "e": [
     2026,
-    9
+    11
    ],
-   "ongoing": false,
+   "ongoing": true,
    "ambient": false,
    "url": "https://tatem.games/",
    "logo": null

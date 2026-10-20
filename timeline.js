@@ -971,7 +971,7 @@ const COMPANIES = [
 const PROJECTS = [
   /* BEHANCE:projects */
   {
-    id: 'audiostore', co: 'soundmagco', s: [2018, 1], e: [2018, 4],
+    id: 'audiostore', co: 'soundmagco', s: [2017, 1], e: [2022, 2],
     name:    ["Audiostore Banners", "Банери Audiostore"],
     genre:   ["Web banners / display advertising", "Веб-банери / медійна реклама"],
     platform: 'Web', engine: null,
@@ -982,7 +982,7 @@ const PROJECTS = [
     links: [{ label: 'behance.net', url: "https://www.behance.net/gallery/58228729/audiostore-banners-pack" }],
   },
   {
-    id: 'soundmag', co: 'soundmagco', s: [2017, 9], e: [2017, 12],
+    id: 'soundmag', co: 'soundmagco', s: [2017, 1], e: [2022, 2],
     name:    ["Soundmag", "Soundmag"],
     genre:   ["Brand identity — audio retail", "Фірмовий стиль — аудіоритейл"],
     platform: 'Branding', engine: null,
@@ -1059,7 +1059,7 @@ const PROJECTS = [
     links: [{ label: 'behance.net', url: "https://www.behance.net/gallery/106204651/" }],
   },
   {
-    id: 'anthracite', co: 'freelance', s: [2021, 11], e: [2021, 12],
+    id: 'anthracite', co: 'freelance', s: [2021, 11], e: [2022, 4],
     name:    ["Anthracite Coffee", "Anthracite"],
     genre:   ["Brand identity / Coffee shop", "Фірмовий стиль / Кав'ярня"],
     platform: 'Branding', engine: null,
@@ -1070,7 +1070,7 @@ const PROJECTS = [
     links: [{ label: 'behance.net', url: "https://www.behance.net/gallery/132397781/Anthracite-Coffee-Shop-Branding" }],
   },
   {
-    id: 'voskresensk', co: 'freelance', s: [2021, 11], e: [2021, 12],
+    id: 'voskresensk', co: 'freelance', s: [2021, 8], e: [2021, 10],
     name:    ["Voskresensk Territory Branding", "Воскресенська громада"],
     genre:   ["Territory / place branding", "Брендинг території"],
     platform: 'Branding', engine: null,
@@ -1083,7 +1083,7 @@ const PROJECTS = [
 
   // ── Tatem Games ──────────────────────────────────────────────
   {
-    id: 'blastjam', co: 'tatem', s: [2026, 7], e: [2026, 9],
+    id: 'blastjam', co: 'tatem', s: [2026, 7], e: [2026, 10],
     name:    ['Tatem Blast: Color Pop', 'Tatem Blast: Color Pop'],
     genre:   ['3D Block-Blast Puzzle', '3D block-blast головоломка'],
     platform: 'Mobile', engine: null,
@@ -1320,7 +1320,7 @@ const PROJECTS = [
     links: [],
   },
   {
-    id: 'halfgod', co: 'freelance', s: [2026, 1], e: [2026, 3],
+    id: 'halfgod', co: 'freelance', s: [2025, 10], e: [2026, 3],
     name:    ['HalfGod', 'HalfGod'],
     genre:   ['Brand Identity', 'Айдентика бренду'],
     platform: 'Branding', engine: null,
@@ -1375,7 +1375,7 @@ const PROJECTS = [
     links: [],
   },
   {
-    id: 'onlyriffs', co: 'freelance', s: [2022, 12], e: [2023, 1],
+    id: 'onlyriffs', co: 'freelance', s: [2022, 12], e: [2023, 3],
     name:    ['OnlyRiffs', 'OnlyRiffs'],
     genre:   ['Music Creator Platform', 'Платформа для музикантів'],
     platform: 'Web', engine: null,

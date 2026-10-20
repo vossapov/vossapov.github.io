@@ -194,12 +194,12 @@ window.VI_DATA = {
    "id": "audiostore",
    "co": "soundmagco",
    "s": [
-    2018,
+    2017,
     1
    ],
    "e": [
-    2018,
-    4
+    2022,
+    2
    ],
    "ongoing": false,
    "name": [
@@ -281,11 +281,11 @@ window.VI_DATA = {
    "co": "soundmagco",
    "s": [
     2017,
-    9
+    1
    ],
    "e": [
-    2017,
-    12
+    2022,
+    2
    ],
    "ongoing": false,
    "name": [
@@ -814,8 +814,8 @@ window.VI_DATA = {
     11
    ],
    "e": [
-    2021,
-    12
+    2022,
+    4
    ],
    "ongoing": false,
    "name": [
@@ -886,11 +886,11 @@ window.VI_DATA = {
    "co": "freelance",
    "s": [
     2021,
-    11
+    8
    ],
    "e": [
     2021,
-    12
+    10
    ],
    "ongoing": false,
    "name": [
@@ -964,7 +964,7 @@ window.VI_DATA = {
    ],
    "e": [
     2026,
-    9
+    10
    ],
    "ongoing": false,
    "name": [
@@ -2308,8 +2308,8 @@ window.VI_DATA = {
    "id": "halfgod",
    "co": "freelance",
    "s": [
-    2026,
-    1
+    2025,
+    10
    ],
    "e": [
     2026,
@@ -2719,7 +2719,7 @@ window.VI_DATA = {
    ],
    "e": [
     2023,
-    1
+    3
    ],
    "ongoing": false,
    "name": [
@@ -2899,11 +2899,11 @@ window.VI_DATA = {
    "co": "personal",
    "s": [
     2026,
-    9
+    8
    ],
    "e": [
     2026,
-    9
+    10
    ],
    "endInclusive": true,
    "ongoing": false,

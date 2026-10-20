@@ -7968,6 +7968,246 @@ window.VI_CASES = {
      "ua": "Згенерований презентаційний мокап"
     }
    }
+  },
+  "ust-system": {
+   "accent": "#4f7cff",
+   "tagline": {
+    "en": "The tools an organisation needs before it can work in public.",
+    "ua": "Інструменти, без яких організація не може працювати публічно."
+   },
+   "hero": {
+    "scene": "board",
+    "imgs": [
+     "/next/assets/generated-mockups/ust-system.png"
+    ]
+   },
+   "generatedMockup": "/next/assets/generated-mockups/ust-system.png",
+   "sections": [
+    {
+     "type": "narrative",
+     "title": {
+      "en": "From a group of founders to an organisation",
+      "ua": "Від групи засновників до організації"
+     },
+     "body": {
+      "en": "«United. Strong. Together.» was founded by veterans, educators and parents. Before launching any project, the team needed basic infrastructure: a public face, a shared vision, a way to approve decisions and a way to accept new members.\n\nI designed and assembled this system: the website, the team vision section, the admin area, document signing for meetings and the membership form.",
+      "ua": "ГО «Об’єднані. Сильні. Разом!» заснували ветерани, освітяни та батьки. Перш ніж запускати проєкти, команді потрібна була базова інфраструктура: публічне обличчя, спільне бачення, спосіб ухвалювати рішення і приймати нових членів.\n\nЯ спроєктував і зібрав цю систему: сайт, розділ бачення команди, адміністрування, підписання документів засідань і форму вступу."
+     }
+    },
+    {
+     "type": "wide",
+     "title": {
+      "en": "Website and team vision",
+      "ua": "Сайт і бачення команди"
+     },
+     "body": {
+      "en": "The website introduces the organisation, its directions, team and reporting. Each founder's view of the future was recorded from voice notes and turned into a personal page; together they form a shared vision issue the team works from.",
+      "ua": "Сайт представляє організацію, її напрями, команду та звітність. Бачення кожного із засновників записали з голосових повідомлень і оформили в окрему сторінку; разом вони складають спільний «номер» бачення, від якого відштовхується команда."
+     },
+     "imgs": [
+      "/next/assets/projects/ust-system/home.png",
+      "/next/assets/projects/ust-system/vision.png"
+     ]
+    },
+    {
+     "type": "wide",
+     "title": {
+      "en": "Signatures and membership online",
+      "ua": "Підписи та членство онлайн"
+     },
+     "body": {
+      "en": "Meeting protocols are uploaded once and collected online: each signer opens a link from the phone, reads the PDF, enters their name and signs with a finger or a photo. The finished document gets a signature sheet and is published. New members apply through a step-by-step form that produces a ready application.",
+      "ua": "Протоколи засідань завантажуються один раз і підписуються онлайн: кожен підписант відкриває посилання з телефона, читає PDF, вводить ПІБ і ставить підпис пальцем або фото. Готовий документ отримує аркуш підписів і публікується. Нові члени подають заяву через покрокову форму, яка формує готовий документ."
+     },
+     "imgs": [
+      "/next/assets/projects/ust-system/sign-m.png",
+      "/next/assets/projects/ust-system/membership-m.png",
+      "/next/assets/projects/ust-system/documents-m.png"
+     ]
+    },
+    {
+     "type": "wide",
+     "title": {
+      "en": "Documents and administration",
+      "ua": "Документи й адміністрування"
+     },
+     "body": {
+      "en": "The public documents page separates what is being signed now from the published archive, so members and partners see the organisation's decisions openly. Shown with sample documents and names.",
+      "ua": "Публічна сторінка документів відділяє те, що зараз на підписанні, від опублікованого архіву, тож члени й партнери відкрито бачать рішення організації. Показано на прикладах документів та імен."
+     },
+     "imgs": [
+      "/next/assets/projects/ust-system/documents.png"
+     ]
+    }
+   ],
+   "images": [
+    "/next/assets/projects/ust-system/home.png",
+    "/next/assets/projects/ust-system/vision.png",
+    "/next/assets/projects/ust-system/sign-m.png",
+    "/next/assets/projects/ust-system/membership-m.png",
+    "/next/assets/projects/ust-system/documents-m.png",
+    "/next/assets/projects/ust-system/documents.png",
+    "/next/assets/generated-mockups/ust-system.png"
+   ],
+   "kinds": {
+    "/next/assets/projects/ust-system/home.png": "browser",
+    "/next/assets/projects/ust-system/vision.png": "browser",
+    "/next/assets/projects/ust-system/sign-m.png": "phone",
+    "/next/assets/projects/ust-system/membership-m.png": "phone",
+    "/next/assets/projects/ust-system/documents-m.png": "phone",
+    "/next/assets/projects/ust-system/documents.png": "browser",
+    "/next/assets/generated-mockups/ust-system.png": "board"
+   },
+   "captions": {
+    "/next/assets/projects/ust-system/home.png": {
+     "en": "Organisation website: directions, team and reporting",
+     "ua": "Сайт організації: напрями, команда та звітність"
+    },
+    "/next/assets/projects/ust-system/vision.png": {
+     "en": "Shared vision: five founders' voices in one issue",
+     "ua": "Спільне бачення: голоси п'яти засновників в одному номері"
+    },
+    "/next/assets/projects/ust-system/documents.png": {
+     "en": "Documents portal: being signed and published (sample data)",
+     "ua": "Портал документів: на підписанні та опубліковані (приклад даних)"
+    },
+    "/next/assets/projects/ust-system/sign-m.png": {
+     "en": "Signing a protocol from the phone (sample data)",
+     "ua": "Підписання протоколу з телефона (приклад даних)"
+    },
+    "/next/assets/projects/ust-system/membership-m.png": {
+     "en": "Membership application, step 1 of 5",
+     "ua": "Заява на вступ, крок 1 із 5"
+    },
+    "/next/assets/projects/ust-system/documents-m.png": {
+     "en": "Documents on mobile (sample data)",
+     "ua": "Документи на телефоні (приклад даних)"
+    },
+    "/next/assets/generated-mockups/ust-system.png": {
+     "en": "Generated presentation mockup",
+     "ua": "Згенерований презентаційний мокап"
+    }
+   }
+  },
+  "ust-drone-school": {
+   "accent": "#3b82f6",
+   "tagline": {
+    "en": "One school, three audiences, three honest pages.",
+    "ua": "Одна школа, три аудиторії, три чесні сторінки."
+   },
+   "hero": {
+    "scene": "board",
+    "imgs": [
+     "/next/assets/generated-mockups/ust-drone-school.png"
+    ]
+   },
+   "generatedMockup": "/next/assets/generated-mockups/ust-drone-school.png",
+   "sections": [
+    {
+     "type": "narrative",
+     "title": {
+      "en": "A drone is science, not a weapon",
+      "ua": "Дрон — це наука, а не зброя"
+     },
+     "body": {
+      "en": "The NGO's first project is an engineering school where teenagers learn electronics, physics, radio and code by building their own drone. The same project has to convince three different readers, so instead of one landing page I designed a hub and three audience pages.\n\nThe structure came from the team's audience research: the fears parents named, what a community has to provide, and what actually motivates a teenager.",
+      "ua": "Перший проєкт ГО — інженерна школа, де підлітки вивчають електроніку, фізику, радіо й код, збираючи власний дрон. Один проєкт має переконати трьох різних читачів, тому замість одного лендингу я спроєктував вхідну сторінку і три сторінки під аудиторії.\n\nСтруктура виросла з дослідження аудиторії командою: страхи, які називали батьки, що має дати громада і що насправді мотивує підлітка."
+     }
+    },
+    {
+     "type": "wide",
+     "title": {
+      "en": "Parents: from fear to trust",
+      "ua": "Батькам: від страху до довіри"
+     },
+     "body": {
+      "en": "The parents' page starts from the first association — war and the news — and answers it directly: what children actually do in class, who teaches them, and why piloting is only a small part of the programme.",
+      "ua": "Сторінка для батьків починає з першої асоціації — війна й новини — і чесно на неї відповідає: що діти насправді роблять на заняттях, хто їх навчає і чому пілотування — лише невелика частина програми."
+     },
+     "imgs": [
+      "/next/assets/projects/ust-drone-school/parents.png"
+     ]
+    },
+    {
+     "type": "wide",
+     "title": {
+      "en": "Communities and teens",
+      "ua": "Громадам і підліткам"
+     },
+     "body": {
+      "en": "Communities get a turnkey offer: the hromada provides a room, the team brings the programme, mentors and method. Teens get the opposite tone — build it, fly it, it's your science — with the course laid out as a path from soldering to the first flight.",
+      "ua": "Громади отримують пропозицію під ключ: громада дає приміщення, команда привозить програму, наставників і методику. Підліткам — протилежний тон: збери, підніми в небо, це твоя наука — а курс показано як шлях від паяння до першого польоту."
+     },
+     "imgs": [
+      "/next/assets/projects/ust-drone-school/communities.png",
+      "/next/assets/projects/ust-drone-school/teens.png"
+     ]
+    },
+    {
+     "type": "wide",
+     "title": {
+      "en": "One entry, mobile first",
+      "ua": "Один вхід, зручно з телефона"
+     },
+     "body": {
+      "en": "The project page asks a single question — who are you? — and routes the reader to their page. All audience pages work on a phone, where most parents and teens open them from messengers.",
+      "ua": "Сторінка проєкту ставить одне запитання — хто ви? — і веде читача на його сторінку. Усі сторінки аудиторій працюють на телефоні, де їх найчастіше відкривають батьки й підлітки з месенджерів."
+     },
+     "imgs": [
+      "/next/assets/projects/ust-drone-school/hub.png",
+      "/next/assets/projects/ust-drone-school/teens-m.png",
+      "/next/assets/projects/ust-drone-school/communities-m.png"
+     ]
+    }
+   ],
+   "images": [
+    "/next/assets/projects/ust-drone-school/parents.png",
+    "/next/assets/projects/ust-drone-school/communities.png",
+    "/next/assets/projects/ust-drone-school/teens.png",
+    "/next/assets/projects/ust-drone-school/hub.png",
+    "/next/assets/projects/ust-drone-school/teens-m.png",
+    "/next/assets/projects/ust-drone-school/communities-m.png",
+    "/next/assets/generated-mockups/ust-drone-school.png"
+   ],
+   "kinds": {
+    "/next/assets/projects/ust-drone-school/parents.png": "browser",
+    "/next/assets/projects/ust-drone-school/communities.png": "browser",
+    "/next/assets/projects/ust-drone-school/teens.png": "browser",
+    "/next/assets/projects/ust-drone-school/hub.png": "browser",
+    "/next/assets/projects/ust-drone-school/teens-m.png": "phone",
+    "/next/assets/projects/ust-drone-school/communities-m.png": "phone",
+    "/next/assets/generated-mockups/ust-drone-school.png": "board"
+   },
+   "captions": {
+    "/next/assets/projects/ust-drone-school/parents.png": {
+     "en": "Parents: «Your child learns to build the future, not to fear it»",
+     "ua": "Батькам: «Ваша дитина вчиться будувати майбутнє, а не боятися його»"
+    },
+    "/next/assets/projects/ust-drone-school/communities.png": {
+     "en": "Communities: a turnkey drone school",
+     "ua": "Громадам: школа дронів під ключ"
+    },
+    "/next/assets/projects/ust-drone-school/teens.png": {
+     "en": "Teens: «Build a drone. Fly it. It's your science.»",
+     "ua": "Підліткам: «Збери дрон. Підніми в небо. Це твоя наука.»"
+    },
+    "/next/assets/projects/ust-drone-school/hub.png": {
+     "en": "Project page that routes each audience",
+     "ua": "Сторінка проєкту, що веде кожну аудиторію"
+    },
+    "/next/assets/projects/ust-drone-school/teens-m.png": {
+     "en": "Teens' page on a phone",
+     "ua": "Сторінка для підлітків на телефоні"
+    },
+    "/next/assets/projects/ust-drone-school/communities-m.png": {
+     "en": "Communities' page on a phone",
+     "ua": "Сторінка для громад на телефоні"
+    },
+    "/next/assets/generated-mockups/ust-drone-school.png": {
+     "en": "Generated presentation mockup",
+     "ua": "Згенерований презентаційний мокап"
+    }
+   }
   }
  },
  "sizes": {
@@ -9586,6 +9826,62 @@ window.VI_CASES = {
   "/next/assets/projects/diaguide/cover.png": [
    1268,
    1800
+  ],
+  "/next/assets/projects/ust-system/home.png": [
+   1440,
+   900
+  ],
+  "/next/assets/projects/ust-system/vision.png": [
+   1440,
+   900
+  ],
+  "/next/assets/projects/ust-system/sign-m.png": [
+   780,
+   1688
+  ],
+  "/next/assets/projects/ust-system/membership-m.png": [
+   780,
+   1688
+  ],
+  "/next/assets/projects/ust-system/documents-m.png": [
+   780,
+   1688
+  ],
+  "/next/assets/projects/ust-system/documents.png": [
+   1440,
+   900
+  ],
+  "/next/assets/generated-mockups/ust-system.png": [
+   1536,
+   1024
+  ],
+  "/next/assets/projects/ust-drone-school/parents.png": [
+   1600,
+   944
+  ],
+  "/next/assets/projects/ust-drone-school/communities.png": [
+   1600,
+   944
+  ],
+  "/next/assets/projects/ust-drone-school/teens.png": [
+   1600,
+   944
+  ],
+  "/next/assets/projects/ust-drone-school/hub.png": [
+   1440,
+   900
+  ],
+  "/next/assets/projects/ust-drone-school/teens-m.png": [
+   780,
+   1688
+  ],
+  "/next/assets/projects/ust-drone-school/communities-m.png": [
+   780,
+   1688
+  ],
+  "/next/assets/generated-mockups/ust-drone-school.png": [
+   1536,
+   1024
   ]
  }
 };

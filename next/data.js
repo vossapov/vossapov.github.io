@@ -73,6 +73,31 @@ window.VI_DATA = {
    "logo": "/assets/companies/argentics.svg"
   },
   {
+   "id": "ust",
+   "name": [
+    "NGO «United. Strong. Together.»",
+    "ГО «Об’єднані. Сильні. Разом!»"
+   ],
+   "role": [
+    "UI/UX Designer · Systems & Automation",
+    "UI/UX дизайнер · система та автоматизація"
+   ],
+   "color": "#4f7cff",
+   "side": "left",
+   "s": [
+    2025,
+    12
+   ],
+   "e": [
+    2026,
+    5
+   ],
+   "ongoing": false,
+   "ambient": false,
+   "url": null,
+   "logo": null
+  },
+  {
    "id": "fg",
    "name": "FG Factory",
    "role": [
@@ -3195,6 +3220,108 @@ window.VI_DATA = {
     "/next/assets/projects/diaguide/cover.png"
    ],
    "generatedMockup": "/next/assets/generated-mockups/diaguide.png"
+  },
+  {
+   "id": "ust-system",
+   "co": "ust",
+   "s": [
+    2025,
+    12
+   ],
+   "e": [
+    2026,
+    2
+   ],
+   "endInclusive": true,
+   "ongoing": false,
+   "name": [
+    "NGO digital system",
+    "Цифрова система ГО"
+   ],
+   "genre": [
+    "Website, team vision, signing & membership",
+    "Сайт, бачення команди, підписання й членство"
+   ],
+   "platform": "Web",
+   "engine": null,
+   "category": "web",
+   "family": null,
+   "style": null,
+   "links": [],
+   "cover": "/next/assets/generated-mockups/ust-system.png",
+   "thumb": "/next/assets/generated-mockups/ust-system.png",
+   "mockup": "/next/assets/generated-mockups/ust-system.png",
+   "screens": [
+    "/next/assets/projects/ust-system/home.png",
+    "/next/assets/projects/ust-system/vision.png",
+    "/next/assets/projects/ust-system/documents.png",
+    "/next/assets/projects/ust-system/sign-m.png",
+    "/next/assets/projects/ust-system/membership-m.png",
+    "/next/assets/projects/ust-system/documents-m.png"
+   ],
+   "desc": [
+    "The core digital system of a young NGO: the organisation's website, a vision page for every team member, an admin area, online signature collection for meeting documents and a membership application flow.",
+    "Основна цифрова система молодої ГО: сайт організації, сторінка бачення кожного з команди, адміністрування, онлайн-збір підписів під документами засідань і подання заяви на вступ."
+   ],
+   "bullets": [],
+   "highlights": [],
+   "original": false,
+   "sourceArtwork": [
+    "/next/assets/projects/ust-system/home.png",
+    "/next/assets/projects/ust-system/home.png"
+   ],
+   "generatedMockup": "/next/assets/generated-mockups/ust-system.png"
+  },
+  {
+   "id": "ust-drone-school",
+   "co": "ust",
+   "s": [
+    2026,
+    3
+   ],
+   "e": [
+    2026,
+    4
+   ],
+   "endInclusive": true,
+   "ongoing": false,
+   "name": [
+    "Drone School",
+    "Школа дронів"
+   ],
+   "genre": [
+    "Landing pages for parents, communities and teens",
+    "Сторінки для батьків, громад і підлітків"
+   ],
+   "platform": "Web",
+   "engine": null,
+   "category": "web",
+   "family": null,
+   "style": null,
+   "links": [],
+   "cover": "/next/assets/generated-mockups/ust-drone-school.png",
+   "thumb": "/next/assets/generated-mockups/ust-drone-school.png",
+   "mockup": "/next/assets/generated-mockups/ust-drone-school.png",
+   "screens": [
+    "/next/assets/projects/ust-drone-school/parents.png",
+    "/next/assets/projects/ust-drone-school/communities.png",
+    "/next/assets/projects/ust-drone-school/teens.png",
+    "/next/assets/projects/ust-drone-school/hub.png",
+    "/next/assets/projects/ust-drone-school/teens-m.png",
+    "/next/assets/projects/ust-drone-school/communities-m.png"
+   ],
+   "desc": [
+    "Three pages for the NGO's engineering drone school, one per audience: parents who need trust and safety, communities who need a turnkey format, and teens who need a reason to build.",
+    "Три сторінки інженерної школи дронів ГО — для кожної аудиторії окремо: батькам потрібні довіра й безпека, громадам — формат під ключ, підліткам — причина збирати власний дрон."
+   ],
+   "bullets": [],
+   "highlights": [],
+   "original": false,
+   "sourceArtwork": [
+    "/next/assets/projects/ust-drone-school/parents.png",
+    "/next/assets/projects/ust-drone-school/parents.png"
+   ],
+   "generatedMockup": "/next/assets/generated-mockups/ust-drone-school.png"
   }
  ]
 };

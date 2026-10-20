@@ -931,6 +931,14 @@ const COMPANIES = [
     url: 'https://argentics.io',
   },
   {
+    id: 'ust',
+    name: ['NGO «United. Strong. Together.»', 'ГО «Об’єднані. Сильні. Разом!»'],
+    role: ['UI/UX Designer · Systems & Automation', 'UI/UX дизайнер · система та автоматизація'],
+    color: '#4f7cff', bg: 'rgba(79,124,255,0.06)', border: 'rgba(79,124,255,0.20)',
+    side: 'left', s: [2025, 12], e: [2026, 5],
+    url: null,
+  },
+  {
     id: 'fg',
     name: 'FG Factory',
     role: ['Game UI/UX Designer', 'Game UI/UX дизайнер'],

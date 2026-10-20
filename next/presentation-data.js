@@ -7876,6 +7876,98 @@ window.VI_CASES = {
      "ua": "Лендінг, який пояснює продукт через дію"
     }
    }
+  },
+  "diaguide": {
+   "accent": "#2f8f84",
+   "tagline": {
+    "en": "Medical knowledge laid out as a calm, human book.",
+    "ua": "Медичні знання, зверстані як спокійна, людяна книга."
+   },
+   "hero": {
+    "scene": "board",
+    "imgs": [
+     "/next/assets/generated-mockups/diaguide.png"
+    ]
+   },
+   "generatedMockup": "/next/assets/generated-mockups/diaguide.png",
+   "sections": [
+    {
+     "type": "narrative",
+     "title": {
+      "en": "A handbook, not a brochure",
+      "ua": "Посібник, а не брошура"
+     },
+     "body": {
+      "en": "«Type 2 Diabetes» is a 156-page printed handbook published by the Dia-Dzen patient NGO with the support of Boehringer Ingelheim. A medical editor turned expert interviews into plain language; I was the designer, responsible for the book's layout, typographic system and the illustrations and infographics that carry its meaning.\n\nThe brief was warmth over clinic: a reader who has just received a diagnosis should feel calm, not overwhelmed. A cream paper tone, restrained accent colours and generous air run through all fifteen chapters.",
+      "ua": "«Діабет 2 типу» — друкований посібник на 156 сторінок, виданий пацієнтською ГО «Діа-Дзен» за підтримки Boehringer Ingelheim. Медичний редактор перетворив інтерв'ю з експертами на зрозумілу мову; я був дизайнером — відповідав за верстку книги, типографічну систему та ілюстрації й інфографіку, що несуть її зміст.\n\nЗавдання було про людяність, а не клінічність: читач, який щойно дізнався про діагноз, має почуватися спокійно, а не розгублено. Кремовий тон паперу, стримані акцентні кольори й багато повітря проходять крізь усі п'ятнадцять розділів."
+     }
+    },
+    {
+     "type": "wide",
+     "title": {
+      "en": "Cover and chapter system",
+      "ua": "Обкладинка та система розділів"
+     },
+     "body": {
+      "en": "The cover pairs a watercolour illustration — a woman walking through a park — with a bold title block, so the book reads as a companion for everyday life rather than a clinical manual. Inside, each chapter opens with a numbered kicker, a serif heading and a thin rule; one accent colour and a consistent footer keep 156 pages coherent.",
+      "ua": "Обкладинка поєднує акварельну ілюстрацію — жінку, що йде парком, — із виразним заголовковим блоком, тож книга читається як супутник у щоденному житті, а не клінічний довідник. Усередині кожен розділ відкривається нумерованим надзаголовком, засічковим заголовком і тонкою лінією; один акцентний колір і сталий колонтитул тримають 156 сторінок цілісними."
+     },
+     "imgs": [
+      "/next/assets/projects/diaguide/page-insulin.png"
+     ]
+    },
+    {
+     "type": "wide",
+     "title": {
+      "en": "Infographics that explain",
+      "ua": "Інфографіка, що пояснює"
+     },
+     "body": {
+      "en": "Where the text turns abstract, a drawing takes over: insulin as a key that opens the cell, and two glucose curves — Maria's smooth line and Galina's roller-coaster — that share the same HbA1c yet tell very different stories. Flat, colour-coded illustrations let a reader grasp a mechanism at a glance, without medical training.",
+      "ua": "Там, де текст стає абстрактним, слово бере на себе малюнок: інсулін як ключ, що відмикає клітину, і дві криві глюкози — рівна лінія Марії та «американські гірки» Галини, — що мають однаковий HbA1c, але розповідають геть різні історії. Плоскі ілюстрації з кольоровим кодуванням дають читачеві схопити механізм з одного погляду, без медичної освіти."
+     },
+     "imgs": [
+      "/next/assets/projects/diaguide/page-graphs.png",
+      "/next/assets/projects/diaguide/page-hba1c.png"
+     ]
+    }
+   ],
+   "images": [
+    "/next/assets/projects/diaguide/page-insulin.png",
+    "/next/assets/projects/diaguide/page-graphs.png",
+    "/next/assets/projects/diaguide/page-hba1c.png",
+    "/next/assets/generated-mockups/diaguide.png",
+    "/next/assets/projects/diaguide/cover.png"
+   ],
+   "kinds": {
+    "/next/assets/projects/diaguide/page-insulin.png": "board",
+    "/next/assets/projects/diaguide/page-graphs.png": "board",
+    "/next/assets/projects/diaguide/page-hba1c.png": "board",
+    "/next/assets/generated-mockups/diaguide.png": "board",
+    "/next/assets/projects/diaguide/cover.png": "board"
+   },
+   "captions": {
+    "/next/assets/projects/diaguide/cover.png": {
+     "en": "Front cover: title block and watercolour illustration",
+     "ua": "Передня обкладинка: заголовковий блок та акварельна ілюстрація"
+    },
+    "/next/assets/projects/diaguide/page-insulin.png": {
+     "en": "Chapter opener with the «insulin as a key» illustration",
+     "ua": "Відкриття розділу з ілюстрацією «інсулін як ключ»"
+    },
+    "/next/assets/projects/diaguide/page-graphs.png": {
+     "en": "Maria vs Galina: same HbA1c, different glucose control",
+     "ua": "Марія і Галина: однаковий HbA1c, різний контроль глюкози"
+    },
+    "/next/assets/projects/diaguide/page-hba1c.png": {
+     "en": "HbA1c and C-peptide explained with an inline infographic",
+     "ua": "HbA1c та С-пептид, пояснені вбудованою інфографікою"
+    },
+    "/next/assets/generated-mockups/diaguide.png": {
+     "en": "Generated presentation mockup",
+     "ua": "Згенерований презентаційний мокап"
+    }
+   }
   }
  },
  "sizes": {
@@ -9474,6 +9566,26 @@ window.VI_CASES = {
   "/next/assets/projects/budmarket-lux/mockups/landing.png": [
    1536,
    1024
+  ],
+  "/next/assets/projects/diaguide/page-insulin.png": [
+   1284,
+   1800
+  ],
+  "/next/assets/projects/diaguide/page-graphs.png": [
+   1284,
+   1800
+  ],
+  "/next/assets/projects/diaguide/page-hba1c.png": [
+   1284,
+   1800
+  ],
+  "/next/assets/generated-mockups/diaguide.png": [
+   1536,
+   1024
+  ],
+  "/next/assets/projects/diaguide/cover.png": [
+   1268,
+   1800
   ]
  }
 };

@@ -3146,6 +3146,55 @@ window.VI_DATA = {
    ],
    "highlights": [],
    "original": false
+  },
+  {
+   "id": "diaguide",
+   "co": "freelance",
+   "s": [
+    2026,
+    6
+   ],
+   "e": [
+    2026,
+    8
+   ],
+   "endInclusive": true,
+   "ongoing": false,
+   "name": [
+    "Type 2 Diabetes Handbook",
+    "Посібник «Діабет 2 типу»"
+   ],
+   "genre": [
+    "Editorial design — print handbook",
+    "Редакційний дизайн — друкований посібник"
+   ],
+   "platform": "Print",
+   "engine": null,
+   "category": "branding",
+   "family": null,
+   "style": null,
+   "links": [],
+   "cover": "/next/assets/generated-mockups/diaguide.png",
+   "thumb": "/next/assets/generated-mockups/diaguide.png",
+   "mockup": "/next/assets/generated-mockups/diaguide.png",
+   "screens": [
+    "/next/assets/projects/diaguide/cover.png",
+    "/next/assets/projects/diaguide/page-insulin.png",
+    "/next/assets/projects/diaguide/page-graphs.png",
+    "/next/assets/projects/diaguide/page-hba1c.png"
+   ],
+   "desc": [
+    "A 156-page printed handbook on type 2 diabetes for a general audience: layout, typographic system and explanatory infographics that turn dense medical material into calm, readable pages.",
+    "Друкований посібник про діабет 2 типу на 156 сторінок для широкої аудиторії: верстка, типографічна система та пояснювальна інфографіка, що перетворюють щільний медичний матеріал на спокійні, читабельні сторінки."
+   ],
+   "bullets": [],
+   "highlights": [],
+   "original": false,
+   "sourceArtwork": [
+    "/next/assets/projects/diaguide/cover.png",
+    "/next/assets/projects/diaguide/cover.png"
+   ],
+   "generatedMockup": "/next/assets/generated-mockups/diaguide.png"
   }
  ]
 };

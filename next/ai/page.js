@@ -73,7 +73,10 @@
   }
   function T() { return COPY[state.lang] || COPY.en; }
   function pageUrl(s) { return '/ai/' + s + '/' + (state.lang === 'ua' ? '?lang=ua' : ''); }
-  function branchUrl() { return '/?b=ai' + (state.lang === 'ua' ? '&lang=ua' : ''); }
+  function branchUrl() {
+    var home = window.VI_SITES ? window.VI_SITES.aiHome() : '/ai/';
+    return home + (state.lang === 'ua' ? '?lang=ua' : '');
+  }
 
   /* ───────── blocks ───────── */
   function contactBlock() {

@@ -26,7 +26,8 @@
   }
 
   function project(p, W, lang) {
-    var a = h('a', 'vh-ov-case vh-ov-case--project', { href: '/next/case.html?id=' + encodeURIComponent(p.case) + '&lang=' + lang });
+    var caseHref = '/next/case.html?id=' + encodeURIComponent(p.case) + '&lang=' + lang;
+    var a = h('a', 'vh-ov-case vh-ov-case--project', { href: window.VI_SITES ? window.VI_SITES.portfolio(caseHref) : caseHref });
     var fig = h('span', 'vh-ov-case-shot vh-ov-project-shot' + (p.fit === 'contain' ? ' is-contain' : ''));
     var webp = window.VI_WEBP && window.VI_WEBP[p.img]; /* web-sized WebP (next/webp-map.js), not the master */
     var im = h('img', null, { src: webp && webp[0] || p.img, alt: '', loading: 'lazy', decoding: 'async' });

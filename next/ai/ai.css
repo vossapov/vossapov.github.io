@@ -57,6 +57,10 @@ body.vh-light .brand-text { display: grid; line-height: 1.2; }
 body.vh-light .brand-text b { font-weight: 600; font-size: 15px; }
 body.vh-light .brand-text i { display: none; } /* the light surfaces do not pre-answer the fork */
 body.vh-light .header-end { display: flex; align-items: center; gap: 14px; }
+body.vh-light .ai-home-portfolio { display: inline-flex; align-items: center; min-height: 44px; padding: 0 6px; color: var(--vh-ink-2); font-size: 14px; font-weight: 500; text-decoration: none; }
+body.vh-light .ai-home-portfolio:hover { color: var(--vh-ink); text-decoration: underline; text-underline-offset: 4px; }
+/* the standalone automation home has no dark frame above it: the sheet starts flush under the header */
+body.ai-home #branch-ai.vh-ai { margin-top: 0; border-radius: 0; }
 body.vh-light .header-nav { display: none; }
 body.vh-light .seg { display: inline-flex; flex-wrap: wrap; gap: 2px; padding: 3px; border-radius: 11px; background: #fff; border: 1px solid var(--vh-line); }
 body.vh-light .seg-btn {

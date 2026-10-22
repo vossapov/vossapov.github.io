@@ -4,6 +4,9 @@
    `figure.caption` is the drawing's accessible description (svg aria-label); nothing is shown
    around the drawings — benefits live in the copy. */
 window.VI_AI = {
+  /* the automation site lives on its own domain; the UI/UX portfolio stays on vossapov.github.io.
+     Locally (127.0.0.1 / localhost) both are served from one checkout, so links stay relative. */
+  sites: { portfolio: 'https://vossapov.github.io', ai: 'https://sab-ai.com.ua' },
   contacts: {
     telegram: 'https://t.me/vossapov',
     email: 'mailto:vossapov@gmail.com',
@@ -126,6 +129,8 @@ window.VI_AI = {
     },
     contact: { title: 'Розкажіть, що забирає ваш час', cta: 'Обговорити задачу', email: 'Пошта' },
     pageTitle: 'Валентин Ігнатов — UI/UX дизайн і ШІ-автоматизація',
+    siteTitle: 'ШІ-помічники — Валентин Ігнатов',
+    portfolio: 'UI/UX портфоліо',
     lang: 'Мова'
   },
   en: {
@@ -223,6 +228,22 @@ window.VI_AI = {
     },
     contact: { title: 'Tell me what’s eating your time', cta: 'Discuss your task', email: 'Email' },
     pageTitle: 'Valentyn Ihnatov — UI/UX design and AI automation',
+    siteTitle: 'AI assistants — Valentyn Ihnatov',
+    portfolio: 'UI/UX portfolio',
     lang: 'Language'
   }
 };
+
+/* cross-site links: VI_SITES.ai('/ai/erp/'), VI_SITES.portfolio('/next/case.html?id=x'), VI_SITES.aiHome() */
+window.VI_SITES = (function () {
+  var S = window.VI_AI.sites;
+  var host = window.location.hostname;
+  var local = host === '127.0.0.1' || host === 'localhost' || host === '';
+  var onAi = !local && S.ai.indexOf('//' + host) > -1;
+  var onPortfolio = !local && S.portfolio.indexOf('//' + host) > -1;
+  return {
+    aiHome: function () { return local ? '/ai/' : (onAi ? '/' : S.ai + '/'); },
+    ai: function (path) { return local || onAi ? path : S.ai + path; },
+    portfolio: function (path) { return local || onPortfolio ? path : S.portfolio + path; }
+  };
+})();

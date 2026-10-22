@@ -10,7 +10,7 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://vossapov.github.io/">
   <meta property="og:title" content="Valentyn Ihnatov — UI/UX design and AI automation">
-  <meta property="og:description" content="Game UI/UX design: projects and case studies. AI automation: assistants for business, non-profits, design and art teams, and personal setups.">
+  <meta property="og:description" content="Game UI/UX design: projects and case studies across games, apps, web and identity. AI automation: sab-ai.com.ua.">
   <meta property="og:image" content="https://vossapov.github.io/assets/screenshots/undead-1.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="theme-color" content="#0c0c0c">
@@ -22,16 +22,16 @@
   <link rel="stylesheet" href="/next/experience.css?v=ai-infographic-1">
   <link rel="preload" href="/next/assets/fonts/FixelText-Light.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/next/hero-video.css?v=3">
-  <link rel="stylesheet" href="/next/ai/anatomy/kit/iso.css?v=anatomy-6">
-  <link rel="stylesheet" href="/next/ai/ai.css?v=merge6-1">
-  <link rel="preload" href="/next/assets/fonts/FixelDisplay-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/next/ai/ngo/ngo.css?v=biz-1">
-  <link rel="stylesheet" href="/next/ai/overview.css?v=edits7-1">
+  <link rel="stylesheet" href="/next/ai/ai.css?v=sab-ai-1">
   <link rel="preload" href="/next/assets/fonts/FixelText-Black.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/next/jack.css?v=merge6-1">
+  <script>/* the automation branch moved to its own domain: keep old /?b=ai links working */
+    (function () { var u = new URLSearchParams(location.search), h = location.hash, aud = /^#(aud-|ai-contact)/.test(h);
+      if (u.get('b') === 'ai' || aud) location.replace('https://sab-ai.com.ua/' + (u.get('lang') === 'ua' ? '?lang=ua' : '') + (aud ? h : '')); })();
+  </script>
 </head>
-<body>
-  <a class="skip-link" href="#choose" data-ai="choose">What are you here for?</a>
+<body class="vh-dark">
+  <a class="skip-link" href="#work" data-i18n="skip">Skip to the timeline</a>
 
   <header class="site-header" id="top">
     <div class="wrap header-row">
@@ -40,9 +40,9 @@
         <span class="brand-text"><b>Valentyn Ihnatov</b><i data-i18n="role">UI/UX design · AI automation</i></span>
       </a>
       <nav class="header-nav" data-i18n-attrs="aria-label:nav.label" aria-label="Primary">
-        <a href="/?b=design#work" data-branch-pick="design" data-i18n="nav.design">Design</a>
-        <a href="/?b=ai" data-branch-pick="ai" data-i18n="nav.ai">AI automation</a>
-        <a href="#contact" data-nav-contact data-i18n="nav.contact">Contact</a>
+        <a href="#work" data-i18n="nav.design">Design</a>
+        <a href="https://sab-ai.com.ua/" data-i18n="nav.ai" data-i18n-attrs="href:ai.href">AI automation</a>
+        <a href="#contact" data-i18n="nav.contact">Contact</a>
         <a href="/cv.pdf" download data-i18n="nav.cv">CV ↓</a>
       </nav>
       <div class="header-end">
@@ -62,8 +62,8 @@
           <h1 id="heroTitle">Valentyn Ihnatov</h1>
           <p class="hero-lede" data-i18n="hero.lede">I design interfaces for games, apps and the web — 10+ years in design, 5+ in gaming. And I build AI assistants: an easy interface to an assistant that knows your context and takes everyday work off your hands.</p>
           <ul class="hero-fields">
-            <li><a class="hero-field hero-field--design" href="/?b=design#work" data-branch-pick="design"><b data-i18n="hero.design.t">UI/UX design</b><span data-i18n="hero.design.p">Games, apps, web: UX research, wireframes, art direction, design systems in Figma</span></a></li>
-            <li><a class="hero-field hero-field--ai" href="/?b=ai" data-branch-pick="ai"><b data-i18n="hero.ai.t">AI automation</b><span data-i18n="hero.ai.p">Assistants for business, non-profits, design and art teams, and you personally</span></a></li>
+            <li><a class="hero-field hero-field--design" href="#work"><b data-i18n="hero.design.t">UI/UX design</b><span data-i18n="hero.design.p">Games, apps, web: UX research, wireframes, art direction, design systems in Figma</span></a></li>
+            <li><a class="hero-field hero-field--ai" href="https://sab-ai.com.ua/" data-i18n-attrs="href:ai.href"><b data-i18n="hero.ai.t">AI automation</b><span data-i18n="hero.ai.p">Assistants for business, non-profits, design and art teams, and you personally</span></a></li>
           </ul>
           <div class="hero-actions">
             <a class="btn" href="https://t.me/vossapov" target="_blank" rel="noopener">Telegram<span class="sr-only" data-i18n="newtab"> (opens in a new tab)</span></a>
@@ -82,21 +82,7 @@
       </div>
     </section>
 
-    <section class="vh-fork" id="choose" aria-labelledby="vhChoose">
-      <h2 id="vhChoose" class="vh-fork-q" data-ai="choose">What are you here for?</h2>
-      <a class="vh-choice vh-choice--design" href="/?b=design" data-branch-pick="design" aria-pressed="false">
-        <span class="vh-choice-kicker" data-ai="design.kicker">01 — Design</span>
-        <span class="vh-choice-title" data-ai="design.title">UI/UX design</span>
-        <span class="vh-choice-line" data-ai="design.line">Games, apps, web</span>
-      </a>
-      <a class="vh-choice vh-choice--ai" href="/?b=ai" data-branch-pick="ai" aria-pressed="false">
-        <span class="vh-choice-kicker" data-ai="ai.kicker">02 — Automation</span>
-        <span class="vh-choice-title" data-ai="ai.title">AI automation</span>
-        <span class="vh-choice-line" data-ai="ai.line">For business, non-profits, design teams and you</span>
-      </a>
-    </section>
-
-    <div class="vh-branch" id="branch-design" data-branch="design" hidden>
+    <div class="vh-branch" id="branch-design" data-branch="design">
     <section class="work" id="work" aria-labelledby="workTitle" tabindex="-1">
       <div class="wrap">
         <div class="section-head">
@@ -148,8 +134,6 @@
       </div>
     </section>
     </div>
-
-    <div class="vh-branch vh-ai ai-page--rich" id="branch-ai" data-branch="ai" hidden></div>
   </main>
 
   <footer class="site-footer">
@@ -166,15 +150,9 @@
 
   <script src="/next/data.js?v=ust-1"></script>
   <script src="/next/webp-map.js?v=ust-1"></script>
-  <script src="/next/app.js?v=timeline-controls-1"></script>
-  <script src="/next/ai-content.js?v=merge6-1"></script>
+  <script src="/next/app.js?v=sab-ai-1"></script>
+  <script src="/next/ai-content.js?v=sab-ai-1"></script>
   <script src="/next/experience.js?v=edits7-1"></script>
-  <script src="/next/ai/content.js?v=merge6-1"></script>
-  <script src="/next/ai/anatomy.js?v=anatomy-6"></script>
-  <script src="/next/ai/biz/content.js?v=lux-frame-1"></script>
-  <script src="/next/ai/ngo/content.js?v=ngo-merge-1"></script>
-  <script src="/next/ai/ngo/ngo.js?v=merge6-1"></script>
-  <script src="/next/ai/home.js?v=edits7-1"></script>
   <script src="/next/hero-video.js?v=3"></script>
   <script src="/next/jack.js?v=edits7-1"></script>
 </body>

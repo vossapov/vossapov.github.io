@@ -217,7 +217,8 @@
     var p = null;
     (D && D.proof || []).forEach(function (x) { if (x.key === key) p = x; });
     if (!p) return null;
-    var a = h('a', 'vh-ov-case vh-ov-case--project', { href: '/next/case.html?id=' + encodeURIComponent(p.case) + '&lang=' + lang(), 'data-key': 'project:' + key });
+    var caseHref = '/next/case.html?id=' + encodeURIComponent(p.case) + '&lang=' + lang();
+    var a = h('a', 'vh-ov-case vh-ov-case--project', { href: window.VI_SITES ? window.VI_SITES.portfolio(caseHref) : caseHref, 'data-key': 'project:' + key });
     var fig = h('span', 'vh-ov-case-shot vh-ov-project-shot' + (p.fit === 'contain' ? ' is-contain' : ''));
     /* the web-sized WebP from next/webp-map.js, not the multi-MB master (same rule as experience.js) */
     var webp = window.VI_WEBP && window.VI_WEBP[p.img];
@@ -437,9 +438,58 @@
   }
 
   /* ───────── wiring ───────── */
+  /* standalone automation home (/ai/ locally, / on sab-ai.com.ua): no fork, no design branch,
+     the page owns language switching (app.js is not loaded there) */
+  function standaloneLang() {
+    var p = pickParam(searchOf(openedUrl()), 'lang');
+    if (p === 'ua' || p === 'en') return p;
+    try { return window.localStorage.getItem('vi-next-lang') === 'ua' ? 'ua' : 'en'; } catch (e) { return 'en'; }
+  }
+  function applyStandaloneLang(l) {
+    root.lang = l === 'ua' ? 'uk' : 'en';
+    root.setAttribute('data-lang', l);
+    $$('[data-set-lang]').forEach(function (b) { b.setAttribute('aria-pressed', String(b.getAttribute('data-set-lang') === l)); });
+    var t = T();
+    if (t && t.siteTitle) doc.title = t.siteTitle;
+    var seg = $('.lang-seg');
+    if (t && t.lang && seg) seg.setAttribute('aria-label', t.lang);
+    $$('[data-portfolio-link]').forEach(function (a) {
+      a.setAttribute('href', (window.VI_SITES ? window.VI_SITES.portfolio('/') : '/') + (l === 'ua' ? '?lang=ua' : ''));
+      if (t && t.portfolio) setText(a.querySelector('span') || a, t.portfolio);
+    });
+    var brand = $('.brand');
+    if (brand) brand.setAttribute('href', (window.VI_SITES ? window.VI_SITES.aiHome() : '/ai/') + (l === 'ua' ? '?lang=ua' : ''));
+  }
+  function initStandalone(box) {
+    var l = standaloneLang();
+    applyStandaloneLang(l);
+    renderAi();
+    box.hidden = false;
+    var bootHash = hashOf(openedUrl()) || window.location.hash;
+    if (bootHash.length > 1) {
+      var target = doc.getElementById(bootHash.slice(1));
+      if (target && box.contains(target)) requestAnimationFrame(function () { target.scrollIntoView({ block: 'start' }); });
+    }
+    doc.addEventListener('click', function (e) {
+      var btn = e.target && e.target.closest ? e.target.closest('[data-set-lang]') : null;
+      if (!btn) return;
+      var v = btn.getAttribute('data-set-lang');
+      if ((v !== 'ua' && v !== 'en') || v === lang()) return;
+      try { window.localStorage.setItem('vi-next-lang', v); } catch (err) { /* unavailable */ }
+      var u = params();
+      if (v === 'ua') u.set('lang', 'ua'); else u.delete('lang');
+      var qs = u.toString();
+      try { window.history.replaceState(null, '', window.location.pathname + (qs ? '?' + qs : '') + window.location.hash); } catch (err) { /* sandboxed */ }
+      applyStandaloneLang(v);
+      renderAi();
+    });
+    return true;
+  }
+
   function init() {
     var box = doc.getElementById('branch-ai');
     if (!box || !doc.body || !COPY) return false;
+    if (doc.body.hasAttribute('data-ai-home')) return initStandalone(box);
 
     var opened = openedUrl();
     state.branch = branchFrom(searchOf(opened) || window.location.search, hashOf(opened) || window.location.hash);

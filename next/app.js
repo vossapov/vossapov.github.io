@@ -22,7 +22,7 @@
     en: {
       skip: 'Skip to the timeline', role: 'UI/UX design · AI automation', newtab: ' (opens in a new tab)',
       'nav.label': 'Primary', 'nav.work': 'Work', 'nav.contact': 'Contact', 'nav.cv': 'CV ↓',
-      'nav.design': 'Design', 'nav.ai': 'AI automation',
+      'nav.design': 'Design', 'nav.ai': 'AI automation', 'ai.href': 'https://sab-ai.com.ua/',
       'nav.original': 'Original version', 'nav.originalTitle': 'Open the original portfolio',
       'lang.label': 'Language',
       'hero.eyebrow': 'UI/UX designer · AI automation', 'hero.cta': 'Explore the timeline',
@@ -62,7 +62,7 @@
     ua: {
       skip: 'Перейти до таймлайну', role: 'UI/UX дизайн · ШІ-автоматизація', newtab: ' (відкриється в новій вкладці)',
       'nav.label': 'Головна навігація', 'nav.work': 'Роботи', 'nav.contact': 'Контакти', 'nav.cv': 'CV ↓',
-      'nav.design': 'Дизайн', 'nav.ai': 'ШІ-автоматизація',
+      'nav.design': 'Дизайн', 'nav.ai': 'ШІ-автоматизація', 'ai.href': 'https://sab-ai.com.ua/?lang=ua',
       'nav.original': 'Оригінальна версія', 'nav.originalTitle': 'Відкрити оригінальне портфоліо',
       'lang.label': 'Мова',
       'hero.eyebrow': 'UI/UX дизайнер · ШІ-автоматизація', 'hero.cta': 'Дивитись таймлайн',
@@ -195,8 +195,6 @@
   }
   function buildUrl() {
     var u = new URLSearchParams();
-    var branch = new URLSearchParams(window.location.search).get('b'); // owned by next/ai/home.js
-    if (branch === 'design' || branch === 'ai') u.set('b', branch);
     if (state.lang !== 'en') u.set('lang', state.lang);
     if (state.cat !== 'all') u.set('cat', state.cat);
     if (state.view !== 'timeline') u.set('view', state.view);

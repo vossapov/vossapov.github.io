@@ -27,7 +27,7 @@
 }
 @media (max-width: 520px) { :root { --vh-hdr: 64px; --vh-wrap: calc(100% - 28px); } }
 
-/* ───────── base (identical values to styles.css, so loading after it is a no-op) ───────── */
+/* ───────── shared resets and scoped light-world base ───────── */
 *, *::before, *::after { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
 body { margin: 0; }
@@ -40,7 +40,7 @@ button, input, select { font: inherit; color: inherit; }
 .sr-only { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap; }
 .vh-wrap, .wrap { width: var(--vh-wrap); margin-inline: auto; }
 
-body.vh-light { background: var(--vh-ground); color: var(--vh-ink); color-scheme: light; }
+body.vh-light { background: var(--vh-ground); color: var(--vh-ink); color-scheme: light; font-family: var(--vh-font); }
 body.vh-dark { background: var(--bg); color: var(--text); }
 body.vh-light ::selection { background: #d9d0fb; }
 body.vh-light :focus-visible { outline: 2px solid var(--vh-focus); outline-offset: 3px; border-radius: 6px; }

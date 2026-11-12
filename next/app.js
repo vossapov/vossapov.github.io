@@ -141,7 +141,8 @@
   var byId = {};
   projects.forEach(function (p) {
     byId[p.id] = p;
-    p._s = mn(p.s); p._e = mn(p.e) + (p.endInclusive ? 1 : 0);
+    // Nugget's owner-specified Apr–May period uses inclusive months; other legacy geometry stays intact.
+    p._s = mn(p.s); p._e = mn(p.e) + (p.endInclusive || p.id === 'nugget' ? 1 : 0);
     p._hay = [p.name.join(' '), p.genre.join(' '), coById[p.co].name instanceof Array ? coById[p.co].name.join(' ') : coById[p.co].name,
       p.platform, p.engine || '', p.id].join(' ').toLowerCase();
   });
@@ -415,7 +416,8 @@
     return 'rgb(' + out.join(',') + ')';
   }
   function spRange(p) { // compact on-card range: "May – Jul 2026" when both ends share a year
-    if (!p.ongoing && p.s[0] === p.e[0]) return (p.s[1] === p.e[1] ? '' : MONTHS[state.lang][p.s[1]] + ' – ') + MONTHS[state.lang][p.e[1]] + ' ' + p.e[0];
+    var months = state.lang === 'ua' ? ['', 'січ', 'лют', 'бер', 'квіт', 'трав', 'черв', 'лип', 'серп', 'вер', 'жовт', 'лист', 'груд'] : MONTHS.en;
+    if (!p.ongoing && p.s[0] === p.e[0]) return (p.s[1] === p.e[1] ? '' : months[p.s[1]] + ' – ') + months[p.e[1]] + ' ' + p.e[0];
     return fmtDate(p.s) + ' – ' + fmtDate(p.e, p.ongoing);
   }
   function projAria(p, c) {
@@ -532,7 +534,7 @@
             '" data-co="' + p.co + '" data-side="' + c.side + '" aria-haspopup="dialog" aria-label="' + esc(projAria(p, c)) + '">' +
             (img ? '<img class="sk-thumb" src="' + esc(web(img, true)) + '" alt="" loading="lazy" decoding="async">' : '<span class="sk-thumb sk-thumb--init" aria-hidden="true">' + esc(monogram(p)) + '</span>') +
             '<span class="sk-body"><span class="sp-name">' + esc(L(p.name)) + '</span>' +
-            '<span class="sp-when">' + esc(fmtDate(p.s) + ' – ' + fmtDate(p.e, p.ongoing)) + ' <em>· ' + esc(projDur(p)) + '</em></span>' +
+            '<span class="sp-when">' + esc(spRange(p)) + ' <em>· ' + esc(projDur(p)) + '</em></span>' +
             '<span class="sp-genre">' + esc(L(p.genre)) + '</span>' +
             '<span class="sk-bar" aria-hidden="true"><i style="left:' + (Math.min(l, 0.98) * 100).toFixed(2) + '%;width:' + (Math.min(w, 1 - Math.min(l, 0.98)) * 100).toFixed(2) + '%"></i></span></span></button></li>';
         }).join('') + '</ol></section>';

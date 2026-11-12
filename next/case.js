@@ -149,6 +149,8 @@
   window.addEventListener('hashchange', syncLang);
 
   if (!P || !C) { notFound(); return; }
+  // Lux's numbered workflow screens need near-native phone text sizing.
+  if (P.id === 'budmarket-lux') doc.documentElement.setAttribute('data-case', P.id);
   if (P.original === false) orig.remove();
   else orig.href = '/project.html#' + encodeURIComponent(P.id);
   orig.setAttribute('aria-label', T('origLong'));
@@ -293,13 +295,114 @@
   function chips(items) {
     return items && items.length ? '<ul class="cs-chips">' + items.map(function (it) { return '<li>' + esc(L(it)) + '</li>'; }).join('') + '</ul>' : '';
   }
+  // Approved Lux composition: full screens, the existing graphite phone shell,
+  // short captions and connected groups. No generic feature-card renderer changes.
+  function luxIcon(a) {
+    return a ? '<img class="lux-icon" src="' + esc(a) + '" alt="" aria-hidden="true" width="320" height="256" loading="lazy">' : '';
+  }
+  function luxFlow(s) {
+    var f = s.flow;
+    return '<div class="lux-intro"><div>' + head(s) + '<div class="cs-prose">' + paras(L(s.body)) + '</div></div>' +
+      '<aside class="lux-prompt cs-context-card" aria-labelledby="' + s._id + '-h">' + luxIcon(f.icon) + '<blockquote>' + esc(L(f.prompt)) + '</blockquote><p>' + esc(L(f.context)) + '</p></aside></div>' +
+      f.groups.map(function (g, gi) {
+        return '<div class="lux-group' + (f.groups.length === 1 ? ' lux-group-single' : '') + '">' +
+          (f.groups.length > 1 ? '<header class="lux-group-head"><span class="lux-phase">' + String(gi + 1).padStart(2, '0') + ' / ' + String(f.groups.length).padStart(2, '0') + '</span><div><h3>' + esc(L(g.title)) + '</h3><p>' + esc(L(g.body)) + '</p></div></header>' : '') +
+          '<div class="lux-journey lux-journey-' + g.steps.length + '">' + g.steps.map(function (step, i) {
+            return '<figure class="lux-step lux-step-' + (i + 1) + '"><figcaption><span class="lux-number">' + esc(step.number) + '</span><div><h4>' + esc(L(step.title)) + '</h4><p>' + esc(L(step.body)) + '</p></div></figcaption>' +
+              '<div class="lux-device">' + shot(step.image, { kind: 'phone' }) + '</div><p class="lux-result">' + esc(L(step.result)) + '</p></figure>';
+          }).join('') + '<svg class="lux-connections" aria-hidden="true"></svg></div>' +
+          (g.detail ? '<details class="lux-detail"><summary>' + esc(L(g.detail.title)) + '</summary><div class="lux-detail-body"><p>' + esc(L(g.detail.body)) + '</p><div class="lux-device">' + shot(g.detail.image, { kind: 'phone' }) + '</div></div></details>' : '') + '</div>';
+      }).join('') + '<footer class="lux-summary"><p>' + esc(L(f.summary)) + '</p><small>' + esc(L(f.note)) + '</small></footer>' +
+      '<p class="lux-hint">' + (lang === 'ua' ? 'Натисніть на телефон, щоб розгорнути повний екран. У перегляді доступний масштаб 1:1.' : 'Select a phone to expand the complete screen. Actual-size (1:1) viewing is available.') + '</p>';
+  }
+  // Generic opt-in workflows share device primitives, not Lux's case-specific DOM/CSS.
+  function workflow(s) {
+    var f = s.flow || {}, groups = f.groups || [], number = 0;
+    function copy(tag, value, cls) { return L(value) ? '<' + tag + (cls ? ' class="' + cls + '"' : '') + '>' + esc(L(value)) + '</' + tag + '>' : ''; }
+    function device(image, kind) { return image ? '<div class="wf-device wf-device-' + kind + '">' + shot(image, { kind: kind }) + '</div>' : ''; }
+    return '<div class="wf-intro"><div>' + head(s) + (L(s.body) ? '<div class="cs-prose">' + paras(L(s.body)) + '</div>' : '') + '</div>' +
+      (f.icon || L(f.prompt) || L(f.context) ? '<aside class="wf-prompt cs-context-card" aria-labelledby="' + s._id + '-h">' + (f.icon ? '<img class="wf-icon" src="' + esc(f.icon) + '" alt="" aria-hidden="true" width="320" height="256" loading="lazy">' : '') + copy('blockquote', f.prompt) + copy('p', f.context) + '</aside>' : '') + '</div>' +
+      groups.map(function (g, gi) {
+        var steps = g.steps || [], phones = steps.every(function (step) { return step.kind === 'phone'; });
+        var lanes = g.layout === 'lanes', parallel = g.layout === 'parallel', layout = lanes ? 'lanes' : parallel ? 'parallel' : phones ? 'phones' : steps.length === 2 && steps.every(function (step) { return step.kind !== 'phone'; }) ? 'pair' : 'wide';
+        return '<div class="wf-group">' + (L(g.title) || L(g.body) ? '<header class="wf-group-head"><span class="wf-phase">' + String(gi + 1).padStart(2, '0') + ' / ' + String(groups.length).padStart(2, '0') + '</span><div>' + copy('h3', g.title) + copy('p', g.body) + '</div></header>' : '') +
+          '<div class="wf-journey wf-' + layout + ' wf-count-' + steps.length + '"' + (lanes && g.reverse ? ' data-reverse="true"' : '') + '>' + steps.map(function (step, si) {
+            number++;
+            return '<figure class="wf-step wf-step-' + step.kind + '"><figcaption><span class="wf-number">' + esc(step.number === undefined ? String(number).padStart(2, '0') : step.number) + '</span><div>' + (lanes ? '<span class="wf-role">' + (si === 0 ? (lang === 'ua' ? 'Учасниця · MG-12' : 'Participant · MG-12') : (lang === 'ua' ? 'Організатор · MG-12' : 'Organiser · MG-12')) + '</span>' : '') + copy('h4', step.title) + copy('p', step.body) + '</div></figcaption>' + device(step.image, step.kind) + copy('p', step.result, 'wf-result') + '</figure>';
+          }).join('') + (!parallel && steps.length > 1 ? '<svg class="wf-connections" aria-hidden="true"></svg>' : '') + '</div>' +
+          (g.detail ? '<details class="wf-detail"><summary>' + esc(L(g.detail.title)) + '</summary><div class="wf-detail-body">' + copy('p', g.detail.body) + device(g.detail.image, g.detail.kind || 'board') + '</div></details>' : '') + '</div>';
+      }).join('') + (L(f.summary) || L(f.note) ? '<footer class="wf-summary">' + copy('p', f.summary) + copy('small', f.note) + '</footer>' : '') +
+      (f.attachments && f.attachments.length ? '<ul class="wf-attachments">' + f.attachments.map(function (a) { return '<li><a class="cs-btn cs-btn-ghost" href="' + esc(a.href) + '" download>' + esc(L(a.label)) + '</a></li>'; }).join('') + '</ul>' : '') +
+      '<p class="wf-hint">' + (lang === 'ua' ? 'Натисніть на екран або макет, щоб розгорнути його. Доступний масштаб 1:1.' : 'Select a screen or artwork to expand it. Actual-size (1:1) viewing is available.') + '</p>';
+  }
+  function drawWorkflowConnections() {
+    Array.prototype.forEach.call(main.querySelectorAll('.cs-sec-workflow .wf-journey'), function (area, gi) {
+      var svg = area.querySelector('.wf-connections');
+      if (!svg) return;
+      var r = area.getBoundingClientRect(), figures = area.querySelectorAll('.wf-step'), marker = 'wf-arrow-' + gi;
+      var reverse = area.getAttribute('data-reverse') === 'true';
+      var paths = '<defs><marker id="' + marker + '" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="' + (reverse ? 'auto-start-reverse' : 'auto') + '"><path d="M1 1 L6 3.5 L1 6" fill="none" stroke="#a99c68" stroke-width="1.2"/></marker></defs>';
+      for (var i = 0; i < figures.length - 1; i++) {
+        var a = figures[i].querySelector('.shot'), b = figures[i + 1].querySelector('.shot');
+        if (!a || !b) continue;
+        a = a.getBoundingClientRect(); b = b.getBoundingClientRect();
+        var d;
+        if (b.left >= a.right + 20) {
+          var x = a.right - r.left + 17, y = a.top - r.top + a.height * .42;
+          var z = b.left - r.left - 17, w = b.top - r.top + b.height * .42, c = (x + z) / 2;
+          d = 'M' + x + ' ' + y + 'C' + c + ' ' + y + ' ' + c + ' ' + w + ' ' + z + ' ' + w;
+        } else {
+          var first = figures[i].getBoundingClientRect(), next = figures[i + 1].getBoundingClientRect();
+          d = 'M' + r.width / 2 + ' ' + (first.bottom - r.top + 18) + 'V' + (next.top - r.top - 18);
+        }
+        paths += '<path class="wf-connector" d="' + d + '" stroke="#a99c68" stroke-width="1.2" fill="none" marker-' + (reverse ? 'start' : 'end') + '="url(#' + marker + ')"/>';
+      }
+      svg.innerHTML = paths;
+    });
+  }
+  function luxTopology(s) {
+    var t = s.topology;
+    return '<header class="lux-topology-intro">' + head(s) + '<div class="cs-prose">' + paras(L(s.body)) + '</div></header>' +
+      '<div class="lux-network"><p class="lux-network-label">' + esc(L(t.label)) + '</p><ol class="lux-topology-path">' + t.nodes.map(function (n, i) {
+        return '<li class="lux-topology-node">' + (n.icon ? luxIcon(n.icon) : '<div class="lux-server-mark" aria-hidden="true"><span></span><span></span><span></span></div>') +
+          '<span class="lux-number">0' + (i + 1) + '</span><h3>' + esc(L(n.title)) + '</h3><p>' + esc(L(n.body)) + '</p></li>';
+      }).join('') + '</ol><aside class="lux-public">' + luxIcon(t.public.icon) + '<div><h3>' + esc(L(t.public.title)) + '</h3><p>' + esc(L(t.public.body)) + '</p></div></aside></div>' +
+      '<div class="lux-boundaries"><div><h3>' + esc(L(t.auth.title)) + '</h3><p>' + esc(L(t.auth.body)) + '</p></div><div><h3>' + esc(L(t.creative.title)) + '</h3><p class="lux-creative-path">' + esc(L(t.creative.path)) + '</p><p>' + esc(L(t.creative.body)) + '</p></div></div>';
+  }
+  function drawLuxConnections() {
+    Array.prototype.forEach.call(main.querySelectorAll('.lux-journey'), function (area, gi) {
+      var r = area.getBoundingClientRect(), figures = area.querySelectorAll('.lux-step');
+      var svg = area.querySelector('.lux-connections'), marker = 'lux-arrow-' + gi;
+      var paths = '<defs><marker id="' + marker + '" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M1 1 L6 3.5 L1 6" fill="none" stroke="#a99c68" stroke-width="1.2"/></marker></defs>';
+      for (var i = 0; i < figures.length - 1; i++) {
+        var a = figures[i].querySelector('.shot').getBoundingClientRect(), b = figures[i + 1].querySelector('.shot').getBoundingClientRect(), d;
+        if (window.innerWidth <= 700) {
+          var first = figures[i].getBoundingClientRect(), next = figures[i + 1].getBoundingClientRect();
+          d = 'M' + r.width / 2 + ' ' + (first.bottom - r.top + 18) + 'V' + (next.top - r.top - 18);
+        } else {
+          var x = a.right - r.left + 17, y = a.top - r.top + a.height * .42;
+          var z = b.left - r.left - 17, w = b.top - r.top + b.height * .42, c = (x + z) / 2;
+          d = 'M' + x + ' ' + y + 'C' + c + ' ' + y + ' ' + c + ' ' + w + ' ' + z + ' ' + w;
+        }
+        paths += '<path class="lux-connector" d="' + d + '" stroke="#a99c68" stroke-width="1.2" fill="none" marker-end="url(#' + marker + ')"/>';
+      }
+      svg.innerHTML = paths;
+    });
+  }
   function renderSection(s, idx) {
     var imgs = s.imgs || [];
     var body = paras(L(s.body));
     var lab = s._title ? ' aria-labelledby="' + s._id + '-h"' : ' aria-label="' + esc(captions[imgs[0]] || name) + '"';
     var open = '<section class="cs-sec cs-sec-' + s.type + (s._title ? '' : ' cs-sec-cont') + '" id="' + s._id + '"' + lab + '><div class="cs-wrap">';
     var close = '</div></section>';
+    if (P.id === 'budmarket-lux') {
+      if (s.type === 'lux-flow') return open.replace('cs-sec-lux-flow', 'cs-sec-lux-flow lux-flow') + luxFlow(s) + close;
+      if (s.type === 'lux-topology') return open.replace('cs-sec-lux-topology', 'cs-sec-lux-topology lux-topology') + luxTopology(s) + close;
+      if (s.type === 'lux-example') return open + '<div class="lux-example-head">' + head(s) + '<div class="cs-prose">' + body + '</div></div><div class="lux-example-art"><div>' + shot(imgs[0]) + '</div><div class="lux-device">' + shot(imgs[1], { kind: 'phone' }) + '</div></div>' + close;
+    }
     switch (s.type) {
+      case 'workflow':
+        return open + workflow(s) + close;
       case 'narrative':
         return open + '<div class="cs-narr">' + '<div class="cs-narr-head">' + head(s) + '</div><div class="cs-prose">' + body + chips(s.items) + '</div></div>' + close;
       case 'metrics':
@@ -473,6 +576,8 @@
     doc.getElementById('cs-lb-next').hidden = single;
   }
   function setZoom(on) {
+    // Connected flows inspect the untouched raster, never an upscaled WebP preview.
+    if (on && (P.id === 'budmarket-lux' || main.querySelector('.cs-sec-workflow'))) lbImg.src = images[cur];
     lb.classList.toggle('is-zoom', on);
     zoomBtn.setAttribute('aria-pressed', on ? 'true' : 'false');
     zoomBtn.querySelector('.cs-vh').textContent = on ? T('zoomOut') : T('zoomIn');
@@ -513,6 +618,24 @@
 
   // ── boot ──
   render();
+  if (main.querySelector('.cs-sec-workflow')) {
+    drawWorkflowConnections();
+    window.addEventListener('resize', drawWorkflowConnections);
+    if (doc.fonts) doc.fonts.ready.then(drawWorkflowConnections);
+    if (window.ResizeObserver) {
+      var workflowObserver = new ResizeObserver(drawWorkflowConnections);
+      Array.prototype.forEach.call(main.querySelectorAll('.cs-sec-workflow .wf-journey'), function (area) { workflowObserver.observe(area); });
+    }
+  }
+  if (P.id === 'budmarket-lux') {
+    drawLuxConnections();
+    window.addEventListener('resize', drawLuxConnections);
+    if (doc.fonts) doc.fonts.ready.then(drawLuxConnections);
+    if (window.ResizeObserver) {
+      var luxObserver = new ResizeObserver(drawLuxConnections);
+      Array.prototype.forEach.call(main.querySelectorAll('.lux-journey'), function (area) { luxObserver.observe(area); });
+    }
+  }
   // Playback is always user-initiated, including when reduced motion is requested.
   var videos = Array.prototype.slice.call(main.querySelectorAll('video'));
   if (window.IntersectionObserver && videos.length) {

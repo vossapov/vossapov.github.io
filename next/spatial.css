@@ -113,6 +113,7 @@ a.sp-bh-name:hover { text-decoration: underline; text-underline-offset: 3px; }
   .sp-thumb { display: none; }
   .sp-head, .sp-when, .sp-genre { margin-right: 0 !important; }
   .sp-when { font-size: 11px; }
+  .sp-amb.sp-sm .sp-name { font-size: 12px; }
 }
 @container sp-header (max-width: 220px) {
   .sp-bh-period { display: none; }

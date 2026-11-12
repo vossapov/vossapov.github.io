@@ -3,7 +3,7 @@ window.VI_DATA = {
  "source": "timeline.js + next/content/additional-projects.json",
  "now": [
   2026,
-  11
+  12
  ],
  "companies": [
   {
@@ -21,11 +21,36 @@ window.VI_DATA = {
    ],
    "e": [
     2026,
-    11
+    12
    ],
    "ongoing": true,
    "ambient": false,
    "url": "https://tatem.games/",
+   "logo": null
+  },
+  {
+   "id": "aiauto",
+   "name": [
+    "AI Automation",
+    "AI-автоматизація"
+   ],
+   "role": [
+    "Process automation · AI tools",
+    "Автоматизація процесів · ШІ-інструменти"
+   ],
+   "color": "#f472b6",
+   "side": "right",
+   "s": [
+    2026,
+    6
+   ],
+   "e": [
+    2026,
+    12
+   ],
+   "ongoing": true,
+   "ambient": false,
+   "url": "https://sab-ai.com.ua",
    "logo": null
   },
   {
@@ -43,9 +68,9 @@ window.VI_DATA = {
    ],
    "e": [
     2026,
-    11
+    6
    ],
-   "ongoing": true,
+   "ongoing": false,
    "ambient": false,
    "url": "https://whimsygames.co",
    "logo": "/assets/companies/whimsy-games.svg"
@@ -181,7 +206,7 @@ window.VI_DATA = {
    ],
    "e": [
     2026,
-    11
+    12
    ],
    "ongoing": true,
    "ambient": true,
@@ -206,7 +231,7 @@ window.VI_DATA = {
    ],
    "e": [
     2026,
-    11
+    12
    ],
    "ongoing": true,
    "ambient": true,
@@ -1503,11 +1528,11 @@ window.VI_DATA = {
    "co": "whimsy",
    "s": [
     2026,
-    5
+    4
    ],
    "e": [
     2026,
-    7
+    5
    ],
    "ongoing": false,
    "name": [
@@ -3103,24 +3128,25 @@ window.VI_DATA = {
   },
   {
    "id": "budmarket-lux",
-   "co": "personal",
+   "co": "aiauto",
    "s": [
     2026,
     10
    ],
    "e": [
     2026,
-    10
+    11
    ],
    "endInclusive": true,
    "ongoing": false,
+   "original": false,
    "name": [
     "Budmarket Lux",
     "Будмаркет Люкс"
    ],
    "genre": [
-    "Retail assistant & campaign workspace",
-    "Помічник магазину та рекламний кабінет"
+    "Store assistant & campaign automation",
+    "Помічник магазину та автоматизація реклами"
    ],
    "platform": "Responsive Web · Desktop & Mobile",
    "engine": null,
@@ -3128,8 +3154,8 @@ window.VI_DATA = {
    "family": null,
    "style": null,
    "role": [
-    "Product Designer · UX/UI",
-    "Продуктовий дизайнер · UX/UI"
+    "AI automation · product design & build",
+    "AI-автоматизація · дизайн і розробка продукту"
    ],
    "links": [
     {
@@ -3149,28 +3175,45 @@ window.VI_DATA = {
     "/next/assets/projects/budmarket-lux/mockups/desktop-marketing.png",
     "/next/assets/projects/budmarket-lux/mockups/mobile-search.png",
     "/next/assets/projects/budmarket-lux/mockups/mobile-campaign.png",
-    "/next/assets/projects/budmarket-lux/mockups/landing.png"
+    "/next/assets/projects/budmarket-lux/mockups/landing.png",
+    "/next/assets/projects/budmarket-lux/case-2026-11/flow/a-context.png",
+    "/next/assets/projects/budmarket-lux/case-2026-11/flow/a1-search.png",
+    "/next/assets/projects/budmarket-lux/case-2026-11/flow/a2-answer.png",
+    "/next/assets/projects/budmarket-lux/case-2026-11/flow/a3-map.png",
+    "/next/assets/projects/budmarket-lux/case-2026-11/flow/b-context.png",
+    "/next/assets/projects/budmarket-lux/case-2026-11/flow/b1-description.png",
+    "/next/assets/projects/budmarket-lux/case-2026-11/flow/b2-details.png",
+    "/next/assets/projects/budmarket-lux/case-2026-11/flow/b3-confirm.png",
+    "/next/assets/projects/budmarket-lux/case-2026-11/flow/b4-ready.png",
+    "/next/assets/projects/budmarket-lux/case-2026-11/flow/b4-task.png",
+    "/next/assets/projects/budmarket-lux/case-2026-11/flow/b4-asset.png",
+    "/next/assets/projects/budmarket-lux/case-2026-11/flow/b5-versions.png",
+    "/next/assets/projects/budmarket-lux/case-2026-11/flow/b6-download.png",
+    "/next/assets/projects/budmarket-lux/case-2026-11/flow/b6-formats-context.png",
+    "/next/assets/projects/budmarket-lux/case-2026-11/flow/b6-formats-detail.png",
+    "/next/assets/projects/budmarket-lux/case-2026-11/flow/b7-select.png",
+    "/next/assets/projects/budmarket-lux/case-2026-11/flow/b7-schedule.png",
+    "/next/assets/projects/budmarket-lux/case-2026-11/flow/b8-queue.png"
    ],
    "desc": [
-    "A responsive retail assistant that connects product search, in-store location and campaign creation. Desk research, UX/UI, a working prototype and a presentation landing page.",
-    "Адаптивний помічник магазину, який поєднує пошук товарів, місце в залі та створення кампаній. Дослідження, UX/UI, робочий прототип і презентаційний лендінг."
+    "Two tools for Budmarket Lux: a consultant finds price, stock and shelf without asking the cashier; a marketing operator turns a promotion brief into layouts, revisions, downloads and a local posting plan.",
+    "Дві розробки для Будмаркет Люкс: консультант знаходить ціну, залишок і полицю без запиту до касира; оператор маркетингу проходить від опису акції до макетів, правок, файлів і локального плану публікацій."
    ],
    "bullets": [
     [
-     "Desk research and product scenario definition.",
-     "Кабінетне дослідження й визначення продуктових сценаріїв."
+     "A. Product lookup on the consultant’s phone: search, answer, shelf.",
+     "А. Довідник у телефоні консультанта: пошук, відповідь, полиця."
     ],
     [
-     "Responsive UX/UI for product search, location and campaign creation.",
-     "Адаптивний UX/UI пошуку товарів, навігації та створення кампаній."
+     "B. Campaign workspace: confirmed brief, tasks, saved layouts and versions.",
+     "Б. Робоче місце маркетингу: підтверджений бриф, завдання, макети та версії."
     ],
     [
-     "Working prototype, promotional design system and presentation landing.",
-     "Робочий прототип, рекламна дизайн-система та презентаційний лендінг."
+     "Real demo screens below; fictional catalogue data, existing generated files, local-only scheduling.",
+     "Нижче реальні екрани демо: вигаданий каталог, збережені згенеровані файли, планування лише в браузері."
     ]
    ],
-   "highlights": [],
-   "original": false
+   "highlights": []
   },
   {
    "id": "diaguide",
@@ -3322,6 +3365,139 @@ window.VI_DATA = {
     "/next/assets/projects/ust-drone-school/parents.png"
    ],
    "generatedMockup": "/next/assets/generated-mockups/ust-drone-school.png"
+  },
+  {
+   "id": "gora-dobra-posters",
+   "co": "aiauto",
+   "s": [
+    2026,
+    6
+   ],
+   "e": [
+    2026,
+    7
+   ],
+   "endInclusive": true,
+   "ongoing": false,
+   "original": false,
+   "name": [
+    "Gora Dobra",
+    "Гора добра"
+   ],
+   "genre": [
+    "Application data to print & social layouts",
+    "Від даних заявки до макетів для друку й соцмереж"
+   ],
+   "platform": "Web · PDF · PNG",
+   "engine": null,
+   "category": "apps",
+   "family": null,
+   "style": null,
+   "role": [
+    "AI automation · product design & build",
+    "AI-автоматизація · дизайн і розробка продукту"
+   ],
+   "links": [],
+   "cover": "/next/assets/projects/gora-dobra-posters/mockups/hero-mockup.png",
+   "mockup": "/next/assets/projects/gora-dobra-posters/mockups/hero-mockup.png",
+   "thumb": "/next/assets/projects/gora-dobra-posters/mockups/hero-mockup.png",
+   "screens": [
+    "/next/assets/projects/gora-dobra-posters/mockups/hero-mockup.png",
+    "/next/assets/projects/gora-dobra-posters/workflow-v2/cover.png",
+    "/next/assets/projects/gora-dobra-posters/workflow-v2/01-child-phone.png",
+    "/next/assets/projects/gora-dobra-posters/workflow-v2/02-story-phone.png",
+    "/next/assets/projects/gora-dobra-posters/workflow-v2/03-needs-phone.png",
+    "/next/assets/projects/gora-dobra-posters/workflow-v2/a4-render-verified.png",
+    "/next/assets/projects/gora-dobra-posters/workflow-v2/exports/DEMO-2048_story.png",
+    "/next/assets/projects/gora-dobra-posters/workflow-v2/exports/DEMO-2048_post1.png",
+    "/next/assets/projects/gora-dobra-posters/workflow-v2/exports/DEMO-2048_post2.png",
+    "/next/assets/projects/gora-dobra-posters/workflow-v2/05-zip-desktop.png"
+   ],
+   "desc": [
+    "I designed and built a poster generator for Gora Dobra. An operator enters a child's details once and gets a bilingual Ukrainian–German A4 poster, a Story and two posts for finding charity sponsors.",
+    "Я спроєктував і зібрав генератор постерів для ГО «Гора добра». Оператор вводить дані дитини один раз і отримує двомовний A4-постер українською й німецькою, сторіз і два пости для пошуку патронів."
+   ],
+   "bullets": [],
+   "highlights": []
+  },
+  {
+   "id": "microgrants-system",
+   "co": "aiauto",
+   "s": [
+    2026,
+    8
+   ],
+   "e": [
+    2026,
+    9
+   ],
+   "endInclusive": true,
+   "ongoing": false,
+   "original": false,
+   "name": [
+    "Microgrants",
+    "Мікрогранти"
+   ],
+   "genre": [
+    "One application, two connected workspaces",
+    "Одна заявка, два пов’язані кабінети"
+   ],
+   "platform": "Responsive Web · Desktop & Mobile",
+   "engine": null,
+   "category": "apps",
+   "family": null,
+   "style": null,
+   "role": [
+    "AI automation · product design & build",
+    "AI-автоматизація · дизайн і розробка продукту"
+   ],
+   "links": [
+    {
+     "label": "Live demo",
+     "url": "https://sab-ai.com.ua/ai/nonprofit/demo/microgrants/"
+    }
+   ],
+   "cover": "/next/assets/projects/microgrants-system/mockups/hero-mockup.png",
+   "mockup": "/next/assets/projects/microgrants-system/mockups/hero-mockup.png",
+   "thumb": "/next/assets/projects/microgrants-system/mockups/hero-mockup.png",
+   "screens": [
+    "/next/assets/projects/microgrants-system/mockups/hero-mockup.png",
+    "/next/assets/projects/microgrants-system/flow-v3/00a-application.png",
+    "/next/assets/projects/microgrants-system/flow-v3/00b-sent.png",
+    "/next/assets/projects/microgrants-system/flow-v3/01-submitted.png",
+    "/next/assets/projects/microgrants-system/flow-v3/02-queues.png",
+    "/next/assets/projects/microgrants-system/flow-v3/03-admitted.png",
+    "/next/assets/projects/microgrants-system/flow-v3/04-review.png",
+    "/next/assets/projects/microgrants-system/flow-v3/05-correction.png",
+    "/next/assets/projects/microgrants-system/flow-v3/06-file-comment.png",
+    "/next/assets/projects/microgrants-system/flow-v3/07-awarded.png",
+    "/next/assets/projects/microgrants-system/flow-v3/08-selection.png",
+    "/next/assets/projects/microgrants-system/flow-v3/09-terms.png",
+    "/next/assets/projects/microgrants-system/flow-v3/10-documents.png",
+    "/next/assets/projects/microgrants-system/flow-v3/11-purchases.png",
+    "/next/assets/projects/microgrants-system/flow-v3/12-report-review.png",
+    "/next/assets/projects/microgrants-system/flow-v3/13-accepted.png",
+    "/next/assets/projects/microgrants-system/flow-v3/14-sponsor.png"
+   ],
+   "desc": [
+    "I designed and built a prototype that connects the participant’s next action with the organiser’s review queue — from application to an accepted report. Browser demo with fictional data and switchable roles; no emails or payments.",
+    "Спроєктував і зібрав прототип, що пов’язує наступну дію учасника з чергою перевірки організатора — від заявки до прийнятого звіту. Браузерне демо на вигаданих даних із перемиканням ролей; без листів і платежів."
+   ],
+   "bullets": [
+    [
+     "One application across both roles: admission is separate from the funding decision.",
+     "Одна заявка в обох ролях: допуск відокремлений від рішення про фінансування."
+    ],
+    [
+     "A specific correction, file versions and the next action instead of a message thread.",
+     "Конкретне виправлення, версії файлів і наступна дія замість ланцюжка повідомлень."
+    ],
+    [
+     "Purchases are reviewed line by line; the donor summary derives from recorded decisions.",
+     "Покупки перевіряються по рядках; підсумок для донора складається із зафіксованих рішень."
+    ]
+   ],
+   "highlights": []
   }
  ]
 };

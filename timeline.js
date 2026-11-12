@@ -915,11 +915,19 @@ const COMPANIES = [
     url: 'https://tatem.games/',
   },
   {
+    id: 'aiauto',
+    name: ['AI Automation', 'AI-автоматизація'],
+    role: ['Process automation · AI tools', 'Автоматизація процесів · ШІ-інструменти'],
+    color: '#f472b6', bg: 'rgba(244,114,182,0.07)', border: 'rgba(244,114,182,0.22)',
+    side: 'right', s: [2026, 6], e: NOW,
+    url: 'https://sab-ai.com.ua',
+  },
+  {
     id: 'whimsy',
     name: 'Whimsy Games',
     role: ['Product Game UI/UX Designer', 'Продуктовий Game UI/UX дизайнер'],
     color: '#818cf8', bg: 'rgba(99,102,241,0.07)', border: 'rgba(129,140,248,0.22)',
-    side: 'right', s: [2024, 9], e: NOW,
+    side: 'right', s: [2024, 9], e: [2026, 6],
     url: 'https://whimsygames.co',
   },
   {
@@ -1177,7 +1185,7 @@ const PROJECTS = [
     links: [],
   },
   {
-    id: 'nugget', co: 'whimsy', s: [2026, 5], e: [2026, 7],
+    id: 'nugget', co: 'whimsy', s: [2026, 4], e: [2026, 5],
     name:    ['Nugget Nutter', 'Nugget Nutter'],
     genre:   ['Slot Game UI', 'UI слот-гри'],
     platform: 'Mobile', engine: 'Unity',

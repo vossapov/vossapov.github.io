@@ -7548,8 +7548,8 @@ window.VI_CASES = {
   "budmarket-lux": {
    "accent": "#ffcf24",
    "tagline": {
-    "en": "Less routine. More time for the customer.",
-    "ua": "Менше рутини. Більше часу для покупця."
+    "en": "Two workflows: answer the customer. Prepare the campaign.",
+    "ua": "Два сценарії: відповісти покупцеві. Підготувати кампанію."
    },
    "hero": {
     "scene": "board",
@@ -7562,95 +7562,512 @@ window.VI_CASES = {
     {
      "type": "narrative",
      "title": {
-      "en": "A store assistant, designed around the next useful answer",
-      "ua": "Помічник магазину, побудований навколо потрібної відповіді"
+      "en": "Before: the answer was at the checkout",
+      "ua": "До: відповідь була на касі"
      },
      "body": {
-      "en": "What is this product? Is it in stock? Where can I find it? Lux brings those questions into one responsive workspace, then extends the same product data into campaign creation. The project covers product discovery, UX/UI, a working desktop and mobile prototype, promotional materials and a presentation landing page.\n\nThe starting hypothesis was that a sales assistant should be able to answer a customer without an extra trip to the checkout. I used that as a design direction to explore, with a working demo to make the idea concrete.",
-      "ua": "Що це за товар? Чи є він у наявності? Де його знайти? Lux об’єднує ці запитання в одному адаптивному інтерфейсі, а потім використовує ті самі товарні дані для створення кампаній. Проєкт охоплює дослідження, UX/UI, робочий десктопний і мобільний прототип, рекламні матеріали та презентаційний лендінг.\n\nПочаткова гіпотеза: продавець має відповідати покупцеві без додаткового звернення до каси. Цей напрям я перевів у конкретні сценарії та робочу демонстрацію."
+      "en": "Only cashiers could access the product database. To give an exact price, quantity or availability, consultants had to ask them. That is the store problem described by the owner. I designed and built a product lookup for the consultant and, separately, a campaign workspace for marketing.\n\nFollow one demo product: cordless drill, SKU 00007. Screens are from the actual Ukrainian demo, with red outlines on the relevant controls. Prices and stock are fictional; these are workflow examples, not adoption or performance claims.",
+      "ua": "Базу товарів бачили лише касири. Щоб назвати точну ціну, кількість чи наявність, консультанти мусили запитувати їх. Так власник описав задачу магазину. Я спроєктував і зібрав довідник для консультанта та окремо — робоче місце маркетингу.\n\nНаскрізний демотовар — акумуляторний шурупокрут, артикул 00007. Далі реальні екрани українського демо; червона рамка виділяє потрібний елемент. Ціни й залишки вигадані: показую сценарії роботи, а не впровадження чи виміряний ефект."
      }
     },
     {
-     "type": "wide",
+     "type": "lux-flow",
+     "kicker": {
+      "en": "01 / The consultant’s lookup",
+      "ua": "01 / Довідник для консультанта"
+     },
      "title": {
-      "en": "One workspace for the shop floor and the desk",
-      "ua": "Один інструмент для торгового залу й робочого місця"
+      "en": "From a question to the right shelf",
+      "ua": "Від запитання до потрібної полиці"
      },
      "body": {
-      "en": "The desktop version gives the catalog and product details room to breathe. The mobile version keeps the same core questions close at hand: identity, price, stock and location. Both are parts of one responsive web product.",
-      "ua": "На десктопі каталог і деталі товару отримують більше простору. На телефоні поруч залишаються головні відповіді: який це товар, ціна, залишок і місце. Обидві версії — частини одного адаптивного вебпродукту."
+      "en": "Previously, price and stock had to be checked at the checkout. Here the consultant finds the answer on a phone, staying with the customer.",
+      "ua": "Раніше ціну й залишок уточнювали на касі. У цьому сценарії консультант знаходить відповідь у телефоні, залишаючись поруч із покупцем."
      },
      "imgs": [
-      "/next/assets/projects/budmarket-lux/mockups/desktop-catalog.png"
-     ]
-    },
-    {
-     "type": "narrative",
-     "title": {
-      "en": "Research: understand the store before drawing the interface",
-      "ua": "Дослідження: зрозуміти магазин до проєктування інтерфейсу"
-     },
-     "body": {
-      "en": "I reviewed the public presence of Budmarket Lux in Nova Odesa: product categories, contact information, brand imagery and the way offers are communicated. The research archive contains 21 visual materials, including repeated logo assets. Instagram was cross-checked against supplier and local sources, with conflicting contact details recorded rather than silently resolved.\n\nA closer visual audit identified full-frame product photography, bold headings, compact offer blocks and category-specific accents. These became a working design reference. No official brand book was available. This was desk research and scenario exploration; staff interviews and measured task timings were not part of the documented work.",
-      "ua": "Я дослідив публічну присутність Будмаркету Люкс у Новій Одесі: категорії товарів, контакти, візуальну мову та подачу пропозицій. Архів містить 21 візуальний матеріал, зокрема повтори логотипа. Дані Instagram зіставлено з джерелами постачальника й громади; розбіжності в контактах зафіксовано окремо.\n\nДетальний візуальний аудит виявив фотографії товарів на весь кадр, жирні заголовки, компактні блоки пропозицій та акценти відповідно до категорії. На цій основі сформовано робочий стилістичний довідник. Офіційного брендбука не було. Це кабінетне дослідження й опрацювання сценаріїв; інтерв’ю з працівниками та вимірювання часу завдань не входили в задокументовану роботу."
-     }
-    },
-    {
-     "type": "process",
-     "title": {
-      "en": "Turn everyday friction into design decisions",
-      "ua": "Перетворити щоденні труднощі на дизайнерські рішення"
-     },
-     "body": {
-      "en": "I treated these as problems to investigate and design for, rather than as quantified findings. Each one needed a visible response in the prototype.",
-      "ua": "Це проблеми для дослідження й проєктування, а не кількісно підтверджені висновки. Кожна мала отримати конкретне рішення в прототипі."
-     },
-     "items": [
-      {
-       "en": "An answer requires another lookup → put the photo, price, stock and unit together in the product card.",
-       "ua": "Відповідь потребує додаткової перевірки → зібрати фото, ціну, залишок і одиницю виміру в картці товару."
+      "/next/assets/projects/budmarket-lux/case-2026-11/flow/a1-search.png",
+      "/next/assets/projects/budmarket-lux/case-2026-11/flow/a2-answer.png",
+      "/next/assets/projects/budmarket-lux/case-2026-11/flow/a3-map.png",
+      "/next/assets/projects/budmarket-lux/case-2026-11/icons-clean/consultant.png"
+     ],
+     "flow": {
+      "icon": "/next/assets/projects/budmarket-lux/case-2026-11/icons-clean/consultant.png",
+      "prompt": {
+       "en": "“Do you have a cordless drill? How much is it?”",
+       "ua": "«Є акумуляторний шурупокрут? Скільки коштує?»"
       },
-      {
-       "en": "The exact product name is unknown → support text, SKU, photo and voice, with alternatives when the match is ambiguous.",
-       "ua": "Точна назва невідома → дати пошук текстом, артикулом, фото й голосом та показувати варіанти за неоднозначного запиту."
+      "context": {
+       "en": "One product throughout: SKU 00007.",
+       "ua": "Один товар проходить увесь шлях: артикул 00007."
       },
-      {
-       "en": "A catalog result does not explain where to go → show the row, section, shelf and route inside the product view.",
-       "ua": "Товар знайдено в каталозі, але не в залі → показати ряд, секцію, полицю й маршрут у картці."
+      "groups": [
+       {
+        "title": {
+         "en": "Search → answer → shelf",
+         "ua": "Пошук → відповідь → полиця"
+        },
+        "body": {
+         "en": "One product card throughout.",
+         "ua": "Увесь шлях — в одній картці товару."
+        },
+        "steps": [
+         {
+          "number": "01",
+          "image": "/next/assets/projects/budmarket-lux/case-2026-11/flow/a1-search.png",
+          "title": {
+           "en": "Find",
+           "ua": "Знайти"
+          },
+          "body": {
+           "en": "Type “шурупокрут” and open product 00007.",
+           "ua": "Ввести «шурупокрут» і відкрити товар 00007."
+          },
+          "result": {
+           "en": "Search by name or SKU",
+           "ua": "Пошук за назвою або артикулом"
+          }
+         },
+         {
+          "number": "02",
+          "image": "/next/assets/projects/budmarket-lux/case-2026-11/flow/a2-answer.png",
+          "title": {
+           "en": "Answer",
+           "ua": "Відповісти"
+          },
+          "body": {
+           "en": "Tell the customer the exact price and quantity.",
+           "ua": "Назвати покупцеві точну ціну й кількість."
+          },
+          "result": {
+           "en": "2,100 UAH / set · 12 in stock",
+           "ua": "2 100 грн / комплект · 12 у наявності"
+          }
+         },
+         {
+          "number": "03",
+          "image": "/next/assets/projects/budmarket-lux/case-2026-11/flow/a3-map.png",
+          "title": {
+           "en": "Lead to the shelf",
+           "ua": "Провести до полиці"
+          },
+          "body": {
+           "en": "See the location in the same product card.",
+           "ua": "Переглянути розташування в тій самій картці."
+          },
+          "result": {
+           "en": "Row 2 · section 2 · shelf 1",
+           "ua": "Ряд 2 · секція 2 · полиця 1"
+          }
+         }
+        ]
+       }
+      ],
+      "summary": {
+       "en": "Price, availability and location — one journey, without going back to the cashier.",
+       "ua": "Ціна, наявність і місце товару — в одному сценарії, без повернення до касира."
       },
-      {
-       "en": "A campaign brief is scattered across products, dates and formats → collect it once, confirm the summary, then create individual tasks.",
-       "ua": "Бриф розпадається на товари, дати й формати → зібрати його один раз, підтвердити підсумок і створити окремі завдання."
-      },
-      {
-       "en": "Generated work needs review and corrections → provide previews, editable instructions, retry states and version history.",
-       "ua": "Згенеровані матеріали потребують перевірки й правок → додати прев’ю, редаговані інструкції, повторні спроби та історію версій."
+      "note": {
+       "en": "Actual demo screens, fictional catalogue data. The floor plan is illustrative, not GPS navigation.",
+       "ua": "Реальні екрани демо, дані каталогу вигадані. Схема полиць ілюстративна, не GPS-навігація."
       }
-     ]
+     }
     },
     {
-     "type": "wide",
+     "type": "lux-topology",
+     "kicker": {
+      "en": "02 / Deployment design",
+      "ua": "02 / Дизайн розгортання"
+     },
      "title": {
-      "en": "Mobile: stay with the customer",
-      "ua": "Мобільна версія: залишатися поруч із покупцем"
+      "en": "A store catalogue does not have to be public",
+      "ua": "Довідник магазину не мусить бути публічним"
      },
      "body": {
-      "en": "The main flow is short: enter a name or SKU, select a match, read the product card and locate the item. The map appears in the product view without a separate setup step. Bottom navigation keeps the main areas within reach.\n\nDesign rationale: a direct lookup is easier to inspect than a single confident answer. Ambiguous matches remain a list; an unavailable product remains unavailable. Leading zeros in SKUs are preserved.",
-      "ua": "Основний шлях короткий: ввести назву чи артикул, обрати відповідник, переглянути картку й знайти товар. Мапа з’являється прямо в картці без окремого налаштування. Нижня навігація тримає головні розділи під рукою.\n\nЛогіка рішення: результат пошуку має бути зрозумілим і перевірним. Неоднозначні збіги залишаються списком, відсутній товар — відсутнім. Нулі на початку артикулу зберігаються."
+      "en": "Host the catalogue on an in-store computer or server and make it reachable over store Wi-Fi / LAN. Phones use the local store address; publishing the catalogue on the internet is not required. This is a deployment option, not a switch in the demo.",
+      "ua": "Каталог можна розмістити на комп’ютері чи сервері магазину й відкрити через Wi-Fi / LAN. Телефони використовують локальну адресу магазину; публікувати каталог в інтернеті не обов’язково. Це варіант розгортання, а не перемикач у демо."
      },
      "imgs": [
-      "/next/assets/projects/budmarket-lux/mockups/mobile-search.png"
+      "/next/assets/projects/budmarket-lux/case-2026-11/icons-clean/network.png",
+      "/next/assets/projects/budmarket-lux/case-2026-11/icons-clean/staff.png",
+      "/next/assets/projects/budmarket-lux/case-2026-11/icons-clean/public.png"
+     ],
+     "topology": {
+      "label": {
+       "en": "Local catalogue access",
+       "ua": "Локальний доступ до каталогу"
+      },
+      "nodes": [
+       {
+        "title": {
+         "en": "Store computer / server",
+         "ua": "Комп’ютер / сервер магазину"
+        },
+        "body": {
+         "en": "Catalogue, prices, stock, shelf locations",
+         "ua": "Каталог, ціни, залишки, місця на полицях"
+        }
+       },
+       {
+        "icon": "/next/assets/projects/budmarket-lux/case-2026-11/icons-clean/network.png",
+        "title": {
+         "en": "Store Wi-Fi / LAN",
+         "ua": "Wi-Fi / LAN магазину"
+        },
+        "body": {
+         "en": "Local address, configured network access",
+         "ua": "Локальна адреса, налаштований мережевий доступ"
+        }
+       },
+       {
+        "icon": "/next/assets/projects/budmarket-lux/case-2026-11/icons-clean/staff.png",
+        "title": {
+         "en": "Staff devices",
+         "ua": "Пристрої працівників"
+        },
+        "body": {
+         "en": "The catalogue opens in a browser",
+         "ua": "Каталог відкривається в браузері"
+        }
+       }
+      ],
+      "public": {
+       "icon": "/next/assets/projects/budmarket-lux/case-2026-11/icons-clean/public.png",
+       "title": {
+        "en": "Public internet · optional, off in the local option",
+        "ua": "Публічний інтернет · окремо, вимкнено в локальному варіанті"
+       },
+       "body": {
+        "en": "A separate deployment with agreed visible fields and enforced access rules. Do not expose the current demo server directly.",
+        "ua": "Окреме розгортання з узгодженими видимими полями та правилами доступу. Поточний демосервер не слід відкривати напряму."
+       }
+      },
+      "auth": {
+       "title": {
+        "en": "LAN reachability ≠ employee authorization",
+        "ua": "Доступ у LAN ≠ авторизація працівників"
+       },
+       "body": {
+        "en": "Anyone with network access may reach an unprotected catalogue. Employee-only access needs authentication and roles; these are not implemented in the demo. The server defaults to 127.0.0.1, so LAN hosting requires explicit network configuration.",
+        "ua": "Незахищений каталог може відкрити будь-хто з доступом до мережі. Для режиму «лише працівники» потрібні вхід і ролі; у демо їх немає. Сервер за замовчуванням слухає 127.0.0.1, тому LAN-доступ потребує окремого налаштування."
+       }
+      },
+      "creative": {
+       "title": {
+        "en": "Separate path: campaign generation",
+        "ua": "Окремий шлях: генерація кампаній"
+       },
+       "path": {
+        "en": "Operator’s computer → localhost creative API → Codex → external AI",
+        "ua": "Комп’ютер оператора → creative API на localhost → Codex → зовнішній AI"
+       },
+       "body": {
+        "en": "The creative API accepts loopback clients only; a phone on the LAN cannot use this bridge. Local catalogue hosting does not make AI processing local. Browser speech recognition and external resources may also use outside services.",
+        "ua": "Creative API приймає лише локальні запити; телефон у LAN не може використовувати цей міст. Локальний каталог не означає локальну AI-обробку. Браузерне розпізнавання голосу й зовнішні ресурси також можуть звертатися до сторонніх сервісів."
+       }
+      }
+     }
+    },
+    {
+     "type": "lux-flow",
+     "kicker": {
+      "en": "03 / Campaign workspace",
+      "ua": "03 / Робоче місце маркетингу"
+     },
+     "title": {
+      "en": "One brief. A complete path to the file.",
+      "ua": "Один бриф. Повний шлях до файла."
+     },
+     "body": {
+      "en": "Tool week follows the same drill, SKU 00007: a confirmed brief, generation, revision, downloads and a local publication plan. Each stage passes the same product and asset to the next.",
+      "ua": "«Тиждень інструментів» продовжує історію шурупокрута 00007: підтверджений бриф, генерація, правка, завантаження й локальний план публікацій. Кожен етап передає далі той самий товар і макет."
+     },
+     "imgs": [
+      "/next/assets/projects/budmarket-lux/case-2026-11/flow/b1-description.png",
+      "/next/assets/projects/budmarket-lux/case-2026-11/flow/b2-details.png",
+      "/next/assets/projects/budmarket-lux/case-2026-11/flow/b3-confirm.png",
+      "/next/assets/projects/budmarket-lux/case-2026-11/flow/b4-ready.png",
+      "/next/assets/projects/budmarket-lux/case-2026-11/flow/b4-asset.png",
+      "/next/assets/projects/budmarket-lux/case-2026-11/flow/b5-versions.png",
+      "/next/assets/projects/budmarket-lux/case-2026-11/flow/b6-download.png",
+      "/next/assets/projects/budmarket-lux/case-2026-11/flow/b7-select.png",
+      "/next/assets/projects/budmarket-lux/case-2026-11/flow/b7-schedule.png",
+      "/next/assets/projects/budmarket-lux/case-2026-11/flow/b8-queue.png",
+      "/next/assets/projects/budmarket-lux/case-2026-11/flow/b4-task.png",
+      "/next/assets/projects/budmarket-lux/case-2026-11/icons-clean/marketing.png"
+     ],
+     "flow": {
+      "icon": "/next/assets/projects/budmarket-lux/case-2026-11/icons-clean/marketing.png",
+      "prompt": {
+       "en": "“Promote this drill. One Instagram post for Tool week.”",
+       "ua": "«Рекламуємо цей шурупокрут. Один допис Instagram до Тижня інструментів». "
+      },
+      "context": {
+       "en": "SKU 00007 · 1–7 November 2026 · 2,100 UAH",
+       "ua": "Артикул 00007 · 1–7 листопада 2026 · 2 100 грн"
+      },
+      "groups": [
+       {
+        "title": {
+         "en": "Shape the brief",
+         "ua": "Сформувати бриф"
+        },
+        "body": {
+         "en": "Describe the promotion, check the fields, confirm the scope.",
+         "ua": "Описати акцію, перевірити поля, підтвердити обсяг."
+        },
+        "steps": [
+         {
+          "number": "01",
+          "image": "/next/assets/projects/budmarket-lux/case-2026-11/flow/b1-description.png",
+          "title": {
+           "en": "Describe",
+           "ua": "Описати"
+          },
+          "body": {
+           "en": "Tool week: drill 00007, 2,100 UAH, 1–7 November 2026, one Instagram post.",
+           "ua": "Тиждень інструментів: шурупокрут 00007, 2 100 грн, 1–7 листопада 2026, один допис Instagram."
+          },
+          "result": {
+           "en": "A paragraph becomes the request",
+           "ua": "Один абзац стає запитом"
+          }
+         },
+         {
+          "number": "02",
+          "image": "/next/assets/projects/budmarket-lux/case-2026-11/flow/b2-details.png",
+          "title": {
+           "en": "Check",
+           "ua": "Перевірити"
+          },
+          "body": {
+           "en": "Review the editable dates, product and format. Manual entry is available too.",
+           "ua": "Звірити редаговані дати, товар і формат. Є також ручне заповнення."
+          },
+          "result": {
+           "en": "Saved brief in the real details form",
+           "ua": "Збережений бриф у справжній формі"
+          }
+         },
+         {
+          "number": "03",
+          "image": "/next/assets/projects/budmarket-lux/case-2026-11/flow/b3-confirm.png",
+          "title": {
+           "en": "Confirm",
+           "ua": "Підтвердити"
+          },
+          "body": {
+           "en": "The summary fixes the scope before creating a generation task.",
+           "ua": "Підсумок фіксує обсяг перед створенням завдання на генерацію."
+          },
+          "result": {
+           "en": "One product × one format",
+           "ua": "Один товар × один формат"
+          }
+         }
+        ]
+       },
+       {
+        "title": {
+         "en": "Generate, review, refine",
+         "ua": "Згенерувати, перевірити, уточнити"
+        },
+        "body": {
+         "en": "The confirmed brief stays with the task and its saved versions.",
+         "ua": "Підтверджений бриф залишається із завданням і його версіями."
+        },
+        "steps": [
+         {
+          "number": "04",
+          "image": "/next/assets/projects/budmarket-lux/case-2026-11/flow/b4-ready.png",
+          "title": {
+           "en": "Prepare the task",
+           "ua": "Підготувати завдання"
+          },
+          "body": {
+           "en": "Review the product photo and instructions before starting generation.",
+           "ua": "Перевірити фото товару й інструкції перед запуском генерації."
+          },
+          "result": {
+           "en": "Ready to generate · local demo state",
+           "ua": "До генерації · локальний демостан"
+          }
+         },
+         {
+          "number": "05",
+          "image": "/next/assets/projects/budmarket-lux/case-2026-11/flow/b4-asset.png",
+          "title": {
+           "en": "Review the asset",
+           "ua": "Переглянути макет"
+          },
+          "body": {
+           "en": "The completed task opens the saved drill promotion for review.",
+           "ua": "Готове завдання відкриває збережену рекламу шурупокрута для перевірки."
+          },
+          "result": {
+           "en": "Existing generated Instagram layout",
+           "ua": "Наявний згенерований Instagram-макет"
+          }
+         },
+         {
+          "number": "06",
+          "image": "/next/assets/projects/budmarket-lux/case-2026-11/flow/b5-versions.png",
+          "title": {
+           "en": "Keep both versions",
+           "ua": "Зберегти обидві версії"
+          },
+          "body": {
+           "en": "“Larger heading, lighter background; keep price and dates.” Feedback and two files stay together.",
+           "ua": "«Більший заголовок, світліше тло; зберегти ціну й дати». Правка й два файли залишаються разом."
+          },
+          "result": {
+           "en": "Compare or return to the earlier result",
+           "ua": "Порівняти або повернути попередній результат"
+          }
+         }
+        ],
+        "detail": {
+         "image": "/next/assets/projects/budmarket-lux/case-2026-11/flow/b4-task.png",
+         "title": {
+          "en": "Inside the task: editable instructions",
+          "ua": "Усередині завдання: редаговані інструкції"
+         },
+         "body": {
+          "en": "Task and prompt carry the confirmed brief. Edit them before passing the request to the local Codex bridge; model processing is external.",
+          "ua": "Завдання й промпт містять підтверджений бриф. Їх можна змінити перед передаванням запиту локальному мосту Codex; обробка моделлю зовнішня."
+         }
+        }
+       },
+       {
+        "title": {
+         "en": "Take the file into the publication plan",
+         "ua": "Передати файл у план публікацій"
+        },
+        "body": {
+         "en": "Download the output, then choose the same asset for the local plan.",
+         "ua": "Завантажити результат, а потім обрати цей самий макет для локального плану."
+        },
+        "steps": [
+         {
+          "number": "07",
+          "image": "/next/assets/projects/budmarket-lux/case-2026-11/flow/b6-download.png",
+          "title": {
+           "en": "Download",
+           "ua": "Завантажити"
+          },
+          "body": {
+           "en": "The set contains a 1080 × 1350 Instagram PNG. Download it separately or package the set as ZIP.",
+           "ua": "Набір містить Instagram PNG 1080 × 1350. Завантажити окремо або зібрати набір у ZIP."
+          },
+          "result": {
+           "en": "One format, exactly as confirmed",
+           "ua": "Один формат, як і підтверджено"
+          }
+         },
+         {
+          "number": "08",
+          "image": "/next/assets/projects/budmarket-lux/case-2026-11/flow/b7-select.png",
+          "title": {
+           "en": "Select the destination",
+           "ua": "Обрати сторінку"
+          },
+          "body": {
+           "en": "Choose the saved drill asset and the matching Instagram page in Publication.",
+           "ua": "Обрати збережений макет шурупокрута й відповідну Instagram-сторінку в «Публікації»."
+          },
+          "result": {
+           "en": "Local simulation · accounts not connected",
+           "ua": "Локальна симуляція · акаунти не підключені"
+          }
+         }
+        ]
+       },
+       {
+        "title": {
+         "en": "Save the local plan",
+         "ua": "Зберегти локальний план"
+        },
+        "body": {
+         "en": "Copy, time and asset become a record in this browser — not a live social post.",
+         "ua": "Текст, час і макет стають записом у цьому браузері — не дописом у соцмережі."
+        },
+        "steps": [
+         {
+          "number": "09",
+          "image": "/next/assets/projects/budmarket-lux/case-2026-11/flow/b7-schedule.png",
+          "title": {
+           "en": "Set time and copy",
+           "ua": "Задати час і текст"
+          },
+          "body": {
+           "en": "The saved form uses 1 December 2026, 10:00 as a test date, outside the promotion dates.",
+           "ua": "У збереженій формі 1 грудня 2026, 10:00 — тестова дата поза датами акції."
+          },
+          "result": {
+           "en": "Demo planning date, not campaign timing",
+           "ua": "Демодата планування, не строк акції"
+          }
+         },
+         {
+          "number": "10",
+          "image": "/next/assets/projects/budmarket-lux/case-2026-11/flow/b8-queue.png",
+          "title": {
+           "en": "See the queue",
+           "ua": "Побачити чергу"
+          },
+          "body": {
+           "en": "Save the record with the same asset. It can be cancelled or moved to local history.",
+           "ua": "Зберегти запис із тим самим макетом. Його можна скасувати або перенести до локальної історії."
+          },
+          "result": {
+           "en": "No social delivery or background scheduler",
+           "ua": "Без надсилання в соцмережі й фонового розкладу"
+          }
+         }
+        ]
+       }
+      ],
+      "summary": {
+       "en": "A traceable chain: brief → task → asset → versions → file → local plan.",
+       "ua": "Простежуваний ланцюжок: бриф → завдання → макет → версії → файл → локальний план."
+      },
+      "note": {
+       "en": "Real demo UI with saved outputs. Filled forms and the pre-generation task are local demo states, not a fresh model run. No new generation was performed for this case.",
+       "ua": "Справжній інтерфейс демо зі збереженими результатами. Заповнені форми й завдання до генерації — локальні демостани, не новий запуск моделі. Для цього кейсу нічого не генерували."
+      }
+     }
+    },
+    {
+     "type": "lux-example",
+     "kicker": {
+      "en": "04 / A different saved example",
+      "ua": "04 / Інший збережений приклад"
+     },
+     "title": {
+      "en": "Separate campaign: Halloween, multiple formats",
+      "ua": "Окрема кампанія: Halloween, кілька форматів"
+     },
+     "body": {
+      "en": "The earlier Halloween campaign shows the same drill 00007 in several formats: Instagram, Stories, Facebook and Threads. This is a separate saved campaign, not extra outputs from the one-format brief above. Print materials in that campaign are separate PDF files.",
+      "ua": "Попередня кампанія Halloween показує той самий шурупокрут 00007 у кількох форматах: Instagram, Stories, Facebook і Threads. Це інша збережена кампанія, а не додаткові результати однокомпонентного брифу вище. Друковані матеріали тієї кампанії — окремі PDF-файли."
+     },
+     "imgs": [
+      "/next/assets/projects/budmarket-lux/case-2026-11/flow/b6-formats-context.png",
+      "/next/assets/projects/budmarket-lux/case-2026-11/flow/b6-formats-detail.png"
      ]
     },
     {
      "type": "video",
+     "kicker": {
+      "en": "Supplementary recording",
+      "ua": "Додатковий відеозапис"
+     },
      "title": {
-      "en": "Demo 01 — find the product and its location",
-      "ua": "Демо 01 — знайти товар і його місце"
+      "en": "A · Watch search and location together",
+      "ua": "А · Пошук і місце товару у відео"
      },
      "body": {
-      "en": "A name search leads to the product card, then to the row, section and shelf on the map. This 18-second edit uses real mobile interface captures; pauses are shortened.\n\nThe catalog contains 30 fictional demo products. The store layout and moving position illustrate the navigation concept; they are not live indoor positioning.",
-      "ua": "Пошук за назвою веде до картки, а потім — до ряду, секції та полиці на мапі. Цей 18-секундний монтаж складається з реальних мобільних екранів; паузи скорочено.\n\nУ каталозі 30 вигаданих демонстраційних товарів. Схема залу й рух позиції ілюструють навігацію, а не реальне визначення місця всередині магазину."
+      "en": "The original mobile recording complements the consultant journey: query, product and shelf map. Pauses are shortened.",
+      "ua": "Оригінальний мобільний запис доповнює сценарій консультанта: запит, товар і схема полиць. Паузи скорочено."
      },
      "videoKind": "phone",
      "video": {
@@ -7663,86 +8080,18 @@ window.VI_CASES = {
      }
     },
     {
-     "type": "narrative",
-     "title": {
-      "en": "Support different inputs without hiding uncertainty",
-      "ua": "Різні способи введення без приховування невизначеності"
-     },
-     "body": {
-      "en": "Text and SKU search form the dependable core. Photo search returns visually similar catalog candidates, while voice offers another way to enter a query and hear a Ukrainian response. The user still checks the exact variant and dimensions.\n\nThe trade-off is deliberate: several plausible matches are more useful than an unverified exact identification. Voice depends on browser support, and image similarity is not a probability of the correct SKU. These boundaries shaped the empty, ambiguous and error states.",
-      "ua": "Основа — текстовий пошук і артикул. Пошук за фото повертає візуально схожі позиції каталогу, а голос дає інший спосіб ввести запит і почути відповідь українською. Точну модифікацію та розміри користувач перевіряє сам.\n\nДизайнерський компроміс: кілька правдоподібних варіантів корисніші за неперевірену точну відповідь. Голос залежить від підтримки браузера, а візуальна схожість не є ймовірністю правильного артикулу. Ці обмеження визначили порожні, неоднозначні й помилкові стани."
-     }
-    },
-    {
-     "type": "wide",
-     "title": {
-      "en": "Desktop: give campaign work a clear structure",
-      "ua": "Десктоп: надати роботі з кампаніями чітку структуру"
-     },
-     "body": {
-      "en": "Marketing is organised as campaigns, sets and individual assets. A campaign keeps the brief and product facts together; each product–format combination gets its own task. Previews, original downloads and grouped ZIP exports serve different review and delivery needs.\n\nThis structure makes it possible to inspect one asset, revise it and retain its earlier versions without losing the context of the campaign.",
-      "ua": "Маркетинг організовано як кампанії, набори й окремі матеріали. Кампанія зберігає бриф і товарні дані; кожна комбінація товару та формату отримує власне завдання. Прев’ю, завантаження оригіналів і ZIP-архіви закривають різні потреби перевірки й передачі.\n\nТака структура дозволяє переглянути один макет, доопрацювати його та зберегти попередні версії в контексті кампанії."
-     },
-     "imgs": [
-      "/next/assets/projects/budmarket-lux/mockups/desktop-marketing.png"
-     ]
-    },
-    {
-     "type": "process",
-     "title": {
-      "en": "From a rough request to a reviewable result",
-      "ua": "Від короткого запиту до результату для перевірки"
-     },
-     "body": {
-      "en": "The creation flow asks for confirmation at the point where an interpretation becomes a production task. Unknown product codes are flagged rather than replaced with unrelated items.",
-      "ua": "У сценарії створення підтвердження з’являється там, де інтерпретація запиту перетворюється на завдання. Невідомі артикули позначаються для перевірки, а не замінюються випадковими товарами."
-     },
-     "items": [
-      {
-       "en": "Describe the campaign and add product photos, a list or a supported file.",
-       "ua": "Описати кампанію й додати фото товарів, список або підтримуваний файл."
-      },
-      {
-       "en": "Review the extracted products, dates and formats; fill in what is missing.",
-       "ua": "Перевірити розпізнані товари, дати й формати та доповнити відсутнє."
-      },
-      {
-       "en": "Confirm the brief and inspect the individual product–format tasks.",
-       "ua": "Підтвердити бриф і переглянути окремі завдання для товарів та форматів."
-      },
-      {
-       "en": "Generate, preview and request changes while keeping version history.",
-       "ua": "Згенерувати, переглянути й описати правки зі збереженням історії версій."
-      },
-      {
-       "en": "Download the originals or continue into the publication demo.",
-       "ua": "Завантажити оригінали або перейти до демонстраційної публікації."
-      }
-     ]
-    },
-    {
-     "type": "wide",
-     "title": {
-      "en": "Mobile creation with visible progress and control",
-      "ua": "Створення з телефона зі зрозумілим прогресом і контролем"
-     },
-     "body": {
-      "en": "The campaign workflow remains available on a phone: a short description becomes a reviewable brief, followed by task status and generated previews. Queue, retry and revision states explain what is happening without discarding the user’s input.\n\nActual generation and regeneration were verified through the local Codex connection. The public static demo presents the workflow and prepared materials; it does not run that local generator.",
-      "ua": "Сценарій кампанії доступний і на телефоні: короткий опис стає брифом для перевірки, далі — статусами завдань і прев’ю. Черга, повторні спроби та правки пояснюють перебіг роботи, зберігаючи введені дані.\n\nРеальну генерацію й повторну генерацію перевірено через локальне підключення Codex. Публічне статичне демо показує сценарій і підготовлені матеріали, але не запускає цей локальний генератор."
-     },
-     "imgs": [
-      "/next/assets/projects/budmarket-lux/mockups/mobile-campaign.png"
-     ]
-    },
-    {
      "type": "video",
+     "kicker": {
+      "en": "Supplementary recording",
+      "ua": "Додатковий відеозапис"
+     },
      "title": {
-      "en": "Demo 02 — brief, generate, refine",
-      "ua": "Демо 02 — описати, згенерувати, доопрацювати"
+      "en": "B · Original generation and revision recording",
+      "ua": "Б · Оригінальний запис генерації та правки"
      },
      "body": {
-      "en": "The 30-second walkthrough follows a campaign description through analysis, confirmation, a generated asset and a revised version. The outputs shown were actually generated. Waiting time is removed from this edit of real mobile captures.\n\nThe important design moment is the return loop: a user can explain what needs to change and review a new version instead of starting the campaign again.",
-      "ua": "30-секундна демонстрація проводить від опису кампанії через аналіз і підтвердження до згенерованого макета та нової версії. Показані матеріали справді згенеровано. У монтажі реальних мобільних екранів вирізано очікування.\n\nКлючовий дизайнерський момент — цикл правок: користувач описує потрібну зміну й переглядає нову версію, не створюючи кампанію заново."
+      "en": "The original recording shows analysis, confirmation, generation and revision. Those layouts were generated when the recording was made; waiting is edited out. The still screens above reuse its saved example.",
+      "ua": "Оригінальний запис показує розбір, підтвердження, генерацію та правку. Ці макети згенеровано під час підготовки відео; очікування вирізано. Статичні екрани вище використовують його збережений приклад."
      },
      "videoKind": "phone",
      "video": {
@@ -7755,25 +8104,18 @@ window.VI_CASES = {
      }
     },
     {
-     "type": "narrative",
-     "title": {
-      "en": "Build a visual system, then test it across formats",
-      "ua": "Побудувати візуальну систему й перевірити її у форматах"
-     },
-     "body": {
-      "en": "The promotional direction went through several control iterations. The reference audit led to photographic product scenes, a clear offer hierarchy and compact contact areas. Once the control direction was selected, it expanded into five product stories across four social formats: 20 PNG assets, plus a four-page A5 flyer and an A2 poster.\n\nReview caught concrete issues: Stories safe areas, a drill colliding with a discount figure, contact text that needed more room and inconsistent export proportions. Each format was adjusted rather than treated as a central crop. The campaign uses fictional prices and offers; print files remain approval mockups.",
-      "ua": "Рекламний напрям пройшов кілька контрольних ітерацій. Аудит референсів привів до фотографічних товарних сцен, чіткої ієрархії пропозиції й компактних контактних блоків. Обраний напрям масштабовано на п’ять товарних сюжетів у чотирьох соціальних форматах: 20 PNG, чотиристорінковий A5-флаєр та A2-постер.\n\nПеревірка виявила конкретні проблеми: безпечні поля Stories, зіткнення дриля з відсотком знижки, дрібні контакти й неточні пропорції експорту. Кожен формат адаптовано окремо. Ціни та акції вигадані; друковані файли залишаються макетами для погодження."
-     }
-    },
-    {
      "type": "video",
+     "kicker": {
+      "en": "Supplementary recording",
+      "ua": "Додатковий відеозапис"
+     },
      "title": {
-      "en": "Demo 03 — organise publication and the SMM queue",
-      "ua": "Демо 03 — організувати публікацію й чергу SMM"
+      "en": "B · Watch the local publishing plan",
+      "ua": "Б · Локальний план публікацій у відео"
      },
      "body": {
-      "en": "This 27-second sequence connects asset selection, channels, editable copy and timing with the planned and published views in SMM. The interaction is designed to work for a single asset or a whole set.\n\nIt is a publication simulation: no posts are sent to social networks, the queue stays in the current browser and no background schedule is executed. The video shows real interface states with shortened pauses.",
-      "ua": "27-секундний сценарій поєднує вибір матеріалів, каналів, тексту й часу з переглядом запланованих та опублікованих записів у SMM. Взаємодія розрахована і на окремий макет, і на цілий набір.\n\nЦе симуляція публікації: дописи не надсилаються в соцмережі, черга залишається в поточному браузері, фоновий розклад не виконується. Відео показує реальні стани інтерфейсу зі скороченими паузами."
+      "en": "The original third video connects asset selection, pages, copy and time with the SMM records. “Published” in this interface means a local record, not delivery to a social network. Original presentation mockups remain in All artwork below.",
+      "ua": "Третє оригінальне відео поєднує вибір макетів, сторінок, тексту й часу із записами SMM. «Опубліковано» в цьому інтерфейсі означає локальний запис, а не доставлення в соцмережу. Оригінальні презентаційні мокапи лишилися в «Усі зображення» нижче."
      },
      "videoKind": "phone",
      "video": {
@@ -7784,96 +8126,198 @@ window.VI_CASES = {
        "ua": "/next/assets/projects/budmarket-lux/videos/publish-ua.vtt"
       }
      }
-    },
-    {
-     "type": "wide",
-     "title": {
-      "en": "A landing page that explains the product through use",
-      "ua": "Лендінг, який пояснює продукт через дію"
-     },
-     "body": {
-      "en": "The presentation landing page turns the feature set into three recognisable tasks: find a product, create a campaign and prepare a post. Short videos lead the story, supported by concise steps, clear demo boundaries and a direct route into the application.\n\nThe final section explains what a real rollout needs: store data, product locations, access and publication connections. Responsive layouts make the presentation useful both at a desktop review and when opened from a phone.",
-      "ua": "Презентаційний лендінг перетворює набір функцій на три зрозумілі задачі: знайти товар, створити кампанію та підготувати допис. Основу розповіді складають короткі відео, доповнені кроками, чіткими межами демо й переходом у застосунок.\n\nФінальний блок пояснює потреби впровадження: дані магазину, розташування товарів, доступи та підключення публікації. Адаптивна верстка працює і під час десктопного рев’ю, і на телефоні."
-     },
-     "imgs": [
-      "/next/assets/projects/budmarket-lux/mockups/landing.png"
-     ]
-    },
-    {
-     "type": "narrative",
-     "title": {
-      "en": "Validation: check the details that can break trust",
-      "ua": "Перевірка: увага до деталей, від яких залежить довіра"
-     },
-     "body": {
-      "en": "The implementation includes checks for exact SKUs, ambiguous and empty search results, zero stock, discount arithmetic, file import and campaign validation. Map checks cover 30 product assignments and 150 routes from the two entrances. Interface reviews covered desktop and mobile widths, the campaign wizard and mobile map.\n\nThese are implementation and visual checks, not a staff usability study. The next useful validation is a store pilot: connect an agreed read-only data source, check representative products with employees, then measure lookup time and completion accuracy.",
-      "ua": "Реалізація має перевірки точних артикулів, неоднозначних і порожніх результатів, нульових залишків, арифметики знижок, імпорту файлів та брифів. Для мапи перевірено 30 прив’язок товарів і 150 маршрутів від двох входів. Перегляд інтерфейсу охопив десктопну й мобільну ширину, майстер кампанії та мобільну мапу.\n\nЦе технічні й візуальні перевірки, а не дослідження з працівниками. Наступний корисний крок — пілот у магазині: погоджене джерело даних лише на читання, контрольні товари разом із командою та вимірювання часу й точності пошуку."
-     }
-    },
-    {
-     "type": "narrative",
-     "title": {
-      "en": "Outcome: a concrete product direction, ready for a pilot",
-      "ua": "Результат: конкретний продуктовий напрям, готовий до пілоту"
-     },
-     "body": {
-      "en": "The result is a working responsive demo, a campaign creation workflow, a reviewed promotional set and a landing page with three product walkthroughs. Together they make the idea tangible enough to discuss with a store team and scope the next stage.\n\nThe demo is not connected to live inventory, and no improvement in sales or staff efficiency has been measured. Its value at this stage is a coherent experience that can be tried, reviewed and validated against the realities of the store.",
-      "ua": "Результат — робоче адаптивне демо, сценарій створення кампаній, перевірений рекламний комплект і лендінг із трьома демонстраціями. Разом вони роблять ідею конкретною для обговорення з командою магазину та визначення наступного етапу.\n\nДемо не підключене до реальних залишків; зміни продажів або ефективності працівників не вимірювалися. На цьому етапі цінність — цілісний досвід, який можна спробувати, переглянути й перевірити в умовах магазину."
-     }
     }
    ],
    "images": [
-    "/next/assets/projects/budmarket-lux/mockups/desktop-catalog.png",
-    "/next/assets/projects/budmarket-lux/mockups/mobile-search.png",
+    "/next/assets/projects/budmarket-lux/case-2026-11/flow/a1-search.png",
+    "/next/assets/projects/budmarket-lux/case-2026-11/flow/a2-answer.png",
+    "/next/assets/projects/budmarket-lux/case-2026-11/flow/a3-map.png",
+    "/next/assets/projects/budmarket-lux/case-2026-11/icons-clean/consultant.png",
+    "/next/assets/projects/budmarket-lux/case-2026-11/icons-clean/network.png",
+    "/next/assets/projects/budmarket-lux/case-2026-11/icons-clean/staff.png",
+    "/next/assets/projects/budmarket-lux/case-2026-11/icons-clean/public.png",
+    "/next/assets/projects/budmarket-lux/case-2026-11/flow/b1-description.png",
+    "/next/assets/projects/budmarket-lux/case-2026-11/flow/b2-details.png",
+    "/next/assets/projects/budmarket-lux/case-2026-11/flow/b3-confirm.png",
+    "/next/assets/projects/budmarket-lux/case-2026-11/flow/b4-ready.png",
+    "/next/assets/projects/budmarket-lux/case-2026-11/flow/b4-asset.png",
+    "/next/assets/projects/budmarket-lux/case-2026-11/flow/b5-versions.png",
+    "/next/assets/projects/budmarket-lux/case-2026-11/flow/b6-download.png",
+    "/next/assets/projects/budmarket-lux/case-2026-11/flow/b7-select.png",
+    "/next/assets/projects/budmarket-lux/case-2026-11/flow/b7-schedule.png",
+    "/next/assets/projects/budmarket-lux/case-2026-11/flow/b8-queue.png",
+    "/next/assets/projects/budmarket-lux/case-2026-11/flow/b4-task.png",
+    "/next/assets/projects/budmarket-lux/case-2026-11/icons-clean/marketing.png",
+    "/next/assets/projects/budmarket-lux/case-2026-11/flow/b6-formats-context.png",
+    "/next/assets/projects/budmarket-lux/case-2026-11/flow/b6-formats-detail.png",
     "/next/assets/projects/budmarket-lux/videos/search-poster.jpg",
-    "/next/assets/projects/budmarket-lux/mockups/desktop-marketing.png",
-    "/next/assets/projects/budmarket-lux/mockups/mobile-campaign.png",
     "/next/assets/projects/budmarket-lux/videos/campaign-poster.jpg",
     "/next/assets/projects/budmarket-lux/videos/publish-poster.jpg",
-    "/next/assets/projects/budmarket-lux/mockups/landing.png"
+    "/next/assets/projects/budmarket-lux/mockups/desktop-catalog.png",
+    "/next/assets/projects/budmarket-lux/mockups/desktop-marketing.png",
+    "/next/assets/projects/budmarket-lux/mockups/mobile-search.png",
+    "/next/assets/projects/budmarket-lux/mockups/mobile-campaign.png",
+    "/next/assets/projects/budmarket-lux/mockups/landing.png",
+    "/next/assets/projects/budmarket-lux/case-2026-11/flow/a-context.png",
+    "/next/assets/projects/budmarket-lux/case-2026-11/flow/b-context.png"
    ],
    "kinds": {
+    "/next/assets/projects/budmarket-lux/case-2026-11/flow/a1-search.png": "phone",
+    "/next/assets/projects/budmarket-lux/case-2026-11/flow/a2-answer.png": "phone",
+    "/next/assets/projects/budmarket-lux/case-2026-11/flow/a3-map.png": "phone",
+    "/next/assets/projects/budmarket-lux/case-2026-11/icons-clean/consultant.png": "board",
+    "/next/assets/projects/budmarket-lux/case-2026-11/icons-clean/network.png": "board",
+    "/next/assets/projects/budmarket-lux/case-2026-11/icons-clean/staff.png": "board",
+    "/next/assets/projects/budmarket-lux/case-2026-11/icons-clean/public.png": "board",
+    "/next/assets/projects/budmarket-lux/case-2026-11/flow/b1-description.png": "phone",
+    "/next/assets/projects/budmarket-lux/case-2026-11/flow/b2-details.png": "phone",
+    "/next/assets/projects/budmarket-lux/case-2026-11/flow/b3-confirm.png": "phone",
+    "/next/assets/projects/budmarket-lux/case-2026-11/flow/b4-ready.png": "phone",
+    "/next/assets/projects/budmarket-lux/case-2026-11/flow/b4-asset.png": "phone",
+    "/next/assets/projects/budmarket-lux/case-2026-11/flow/b5-versions.png": "phone",
+    "/next/assets/projects/budmarket-lux/case-2026-11/flow/b6-download.png": "phone",
+    "/next/assets/projects/budmarket-lux/case-2026-11/flow/b7-select.png": "phone",
+    "/next/assets/projects/budmarket-lux/case-2026-11/flow/b7-schedule.png": "phone",
+    "/next/assets/projects/budmarket-lux/case-2026-11/flow/b8-queue.png": "phone",
+    "/next/assets/projects/budmarket-lux/case-2026-11/flow/b4-task.png": "phone",
+    "/next/assets/projects/budmarket-lux/case-2026-11/icons-clean/marketing.png": "board",
+    "/next/assets/projects/budmarket-lux/case-2026-11/flow/b6-formats-context.png": "browser",
+    "/next/assets/projects/budmarket-lux/case-2026-11/flow/b6-formats-detail.png": "phone",
+    "/next/assets/projects/budmarket-lux/videos/search-poster.jpg": "phone",
+    "/next/assets/projects/budmarket-lux/videos/campaign-poster.jpg": "phone",
+    "/next/assets/projects/budmarket-lux/videos/publish-poster.jpg": "phone",
     "/next/assets/projects/budmarket-lux/mockups/desktop-catalog.png": "board",
-    "/next/assets/projects/budmarket-lux/mockups/mobile-search.png": "board",
-    "/next/assets/projects/budmarket-lux/videos/search-poster.jpg": "board",
     "/next/assets/projects/budmarket-lux/mockups/desktop-marketing.png": "board",
+    "/next/assets/projects/budmarket-lux/mockups/mobile-search.png": "board",
     "/next/assets/projects/budmarket-lux/mockups/mobile-campaign.png": "board",
-    "/next/assets/projects/budmarket-lux/videos/campaign-poster.jpg": "board",
-    "/next/assets/projects/budmarket-lux/videos/publish-poster.jpg": "board",
-    "/next/assets/projects/budmarket-lux/mockups/landing.png": "board"
+    "/next/assets/projects/budmarket-lux/mockups/landing.png": "board",
+    "/next/assets/projects/budmarket-lux/case-2026-11/flow/a-context.png": "browser",
+    "/next/assets/projects/budmarket-lux/case-2026-11/flow/b-context.png": "browser"
    },
    "captions": {
     "/next/assets/projects/budmarket-lux/mockups/desktop-catalog.png": {
-     "en": "One workspace for the shop floor and the desk",
-     "ua": "Один інструмент для торгового залу й робочого місця"
-    },
-    "/next/assets/projects/budmarket-lux/mockups/mobile-search.png": {
-     "en": "Mobile: stay with the customer",
-     "ua": "Мобільна версія: залишатися поруч із покупцем"
-    },
-    "/next/assets/projects/budmarket-lux/videos/search-poster.jpg": {
-     "en": "Demo 01 — find the product and its location",
-     "ua": "Демо 01 — знайти товар і його місце"
+     "en": "Original presentation · catalogue workspace",
+     "ua": "Оригінальна презентація · довідник"
     },
     "/next/assets/projects/budmarket-lux/mockups/desktop-marketing.png": {
-     "en": "Desktop: give campaign work a clear structure",
-     "ua": "Десктоп: надати роботі з кампаніями чітку структуру"
+     "en": "Supplementary original mockup · marketing desktop",
+     "ua": "Додатковий оригінальний мокап · маркетинг на десктопі"
+    },
+    "/next/assets/projects/budmarket-lux/mockups/mobile-search.png": {
+     "en": "Supplementary original mockup · phone search",
+     "ua": "Додатковий оригінальний мокап · пошук на телефоні"
     },
     "/next/assets/projects/budmarket-lux/mockups/mobile-campaign.png": {
-     "en": "Mobile creation with visible progress and control",
-     "ua": "Створення з телефона зі зрозумілим прогресом і контролем"
-    },
-    "/next/assets/projects/budmarket-lux/videos/campaign-poster.jpg": {
-     "en": "Demo 02 — brief, generate, refine",
-     "ua": "Демо 02 — описати, згенерувати, доопрацювати"
-    },
-    "/next/assets/projects/budmarket-lux/videos/publish-poster.jpg": {
-     "en": "Demo 03 — organise publication and the SMM queue",
-     "ua": "Демо 03 — організувати публікацію й чергу SMM"
+     "en": "Supplementary original mockup · phone campaign",
+     "ua": "Додатковий оригінальний мокап · кампанія на телефоні"
     },
     "/next/assets/projects/budmarket-lux/mockups/landing.png": {
-     "en": "A landing page that explains the product through use",
-     "ua": "Лендінг, який пояснює продукт через дію"
+     "en": "Supplementary original mockup · presentation landing",
+     "ua": "Додатковий оригінальний мокап · презентаційний лендінг"
+    },
+    "/next/assets/projects/budmarket-lux/case-2026-11/flow/a-context.png": {
+     "en": "A · Full product context, SKU 00007",
+     "ua": "А · Повна картка товару 00007"
+    },
+    "/next/assets/projects/budmarket-lux/case-2026-11/flow/a1-search.png": {
+     "en": "A1 · Type a query and select result 00007",
+     "ua": "А1 · Ввести запит і обрати результат 00007"
+    },
+    "/next/assets/projects/budmarket-lux/case-2026-11/flow/a2-answer.png": {
+     "en": "A2 · Read 2,100 UAH and 12 sets",
+     "ua": "А2 · Прочитати 2 100 грн і 12 комплектів"
+    },
+    "/next/assets/projects/budmarket-lux/case-2026-11/flow/a3-map.png": {
+     "en": "A3 · Follow the schematic route to row 2, section 2",
+     "ua": "А3 · Схема до ряду 2, секції 2"
+    },
+    "/next/assets/projects/budmarket-lux/case-2026-11/flow/b-context.png": {
+     "en": "B · Full saved campaign workspace",
+     "ua": "Б · Повне робоче місце збереженої кампанії"
+    },
+    "/next/assets/projects/budmarket-lux/case-2026-11/flow/b1-description.png": {
+     "en": "B1 · Enter the drill promotion description",
+     "ua": "Б1 · Ввести опис реклами шурупокрута"
+    },
+    "/next/assets/projects/budmarket-lux/case-2026-11/flow/b2-details.png": {
+     "en": "B2 · Review task and dates in the saved brief",
+     "ua": "Б2 · Перевірити завдання й дати збереженого брифу"
+    },
+    "/next/assets/projects/budmarket-lux/case-2026-11/flow/b3-confirm.png": {
+     "en": "B3 · Confirm SKU 00007 and one Instagram layout",
+     "ua": "Б3 · Підтвердити 00007 і один макет Instagram"
+    },
+    "/next/assets/projects/budmarket-lux/case-2026-11/flow/b4-ready.png": {
+     "en": "B4 · Local demo task ready for generation",
+     "ua": "Б4 · Локальне демозавдання до генерації"
+    },
+    "/next/assets/projects/budmarket-lux/case-2026-11/flow/b4-task.png": {
+     "en": "B4 · Expand the real task and prompt",
+     "ua": "Б4 · Розкрити завдання і промпт"
+    },
+    "/next/assets/projects/budmarket-lux/case-2026-11/flow/b4-asset.png": {
+     "en": "B5 · Review the existing generated drill layout",
+     "ua": "Б5 · Переглянути наявний макет шурупокрута"
+    },
+    "/next/assets/projects/budmarket-lux/case-2026-11/flow/b5-versions.png": {
+     "en": "B6 · Saved feedback and downloads for versions 1 and 2",
+     "ua": "Б6 · Збережена правка й файли версій 1 та 2"
+    },
+    "/next/assets/projects/budmarket-lux/case-2026-11/flow/b6-download.png": {
+     "en": "B7 · Download the Instagram PNG",
+     "ua": "Б7 · Завантажити PNG для Instagram"
+    },
+    "/next/assets/projects/budmarket-lux/case-2026-11/flow/b6-formats-context.png": {
+     "en": "B7 · Separate Halloween example, same SKU, multiple formats",
+     "ua": "Б7 · Окремий Halloween-приклад, той самий артикул, різні формати"
+    },
+    "/next/assets/projects/budmarket-lux/case-2026-11/flow/b6-formats-detail.png": {
+     "en": "B7 · Download the separate Stories file",
+     "ua": "Б7 · Завантажити окремий файл Stories"
+    },
+    "/next/assets/projects/budmarket-lux/case-2026-11/flow/b7-select.png": {
+     "en": "B8 · Select asset and page in local simulation",
+     "ua": "Б8 · Обрати макет і сторінку в локальній симуляції"
+    },
+    "/next/assets/projects/budmarket-lux/case-2026-11/flow/b7-schedule.png": {
+     "en": "B8 · Set demo date and copy; no external posting",
+     "ua": "Б8 · Задати демодату й текст, без зовнішньої публікації"
+    },
+    "/next/assets/projects/budmarket-lux/case-2026-11/flow/b8-queue.png": {
+     "en": "B9 · Saved local queue record",
+     "ua": "Б9 · Збережений запис локальної черги"
+    },
+    "/next/assets/projects/budmarket-lux/videos/search-poster.jpg": {
+     "en": "Original video · product search",
+     "ua": "Оригінальне відео · пошук товару"
+    },
+    "/next/assets/projects/budmarket-lux/videos/campaign-poster.jpg": {
+     "en": "Original video · campaign and revision",
+     "ua": "Оригінальне відео · кампанія і правка"
+    },
+    "/next/assets/projects/budmarket-lux/videos/publish-poster.jpg": {
+     "en": "Original video · local publication plan",
+     "ua": "Оригінальне відео · локальний план публікацій"
+    },
+    "/next/assets/projects/budmarket-lux/case-2026-11/icons-clean/consultant.png": {
+     "en": "Concept illustration: consultant",
+     "ua": "Концептуальна ілюстрація: консультант"
+    },
+    "/next/assets/projects/budmarket-lux/case-2026-11/icons-clean/marketing.png": {
+     "en": "Concept illustration: marketing",
+     "ua": "Концептуальна ілюстрація: маркетинг"
+    },
+    "/next/assets/projects/budmarket-lux/case-2026-11/icons-clean/network.png": {
+     "en": "Concept illustration: network",
+     "ua": "Концептуальна ілюстрація: локальна мережа"
+    },
+    "/next/assets/projects/budmarket-lux/case-2026-11/icons-clean/staff.png": {
+     "en": "Concept illustration: staff",
+     "ua": "Концептуальна ілюстрація: працівники"
+    },
+    "/next/assets/projects/budmarket-lux/case-2026-11/icons-clean/public.png": {
+     "en": "Concept illustration: public",
+     "ua": "Концептуальна ілюстрація: публічний доступ"
     }
    }
   },
@@ -8206,6 +8650,1004 @@ window.VI_CASES = {
     "/next/assets/generated-mockups/ust-drone-school.png": {
      "en": "Generated presentation mockup",
      "ua": "Згенерований презентаційний мокап"
+    }
+   }
+  },
+  "gora-dobra-posters": {
+   "accent": "#ffd84d",
+   "tagline": {
+    "ua": "Я спроєктував і зібрав генератор постерів для «Гори добра»: один запис дитини стає двомовним A4, сторіз і двома дописами.",
+    "en": "I designed and built a poster generator for Gora Dobra: one child record becomes a bilingual A4, a Story and two posts."
+   },
+   "hero": {
+    "scene": "board",
+    "imgs": [
+     "/next/assets/projects/gora-dobra-posters/mockups/hero-mockup.png"
+    ]
+   },
+   "generatedMockup": null,
+   "sections": [
+    {
+     "type": "workflow",
+     "title": {
+      "ua": "Від даних дитини до готового макета",
+      "en": "From child details to a finished layout"
+     },
+     "body": {
+      "ua": "Оператор готує комплект для пошуку патрона: заповнює дані, історію й потреби в одному майстрі. Увесь шлях доступний і з телефона.",
+      "en": "An operator prepares a sponsor outreach set: details, story and needs in one wizard. The same flow works on a phone."
+     },
+     "flow": {
+      "icon": "/next/assets/projects/gora-dobra-posters/supporting-icons/volunteer.png",
+      "prompt": {
+       "ua": "«Потрібен постер і графіка для соцмереж — з тих самих даних».",
+       "en": "“I need a poster and social graphics from the same details.”"
+      },
+      "context": {
+       "ua": "Один приклад на весь шлях: Марта (демо), 9 років, DEMO-2048.",
+       "en": "One example throughout: Marta (Demo), age 9, DEMO-2048."
+      },
+      "groups": [
+       {
+        "title": {
+         "ua": "01–03 / Заповнити на телефоні",
+         "en": "01–03 / Complete on a phone"
+        },
+        "body": {
+         "ua": "Дані → історія → потреби. Кожен крок доповнює той самий запис.",
+         "en": "Details → story → needs. Each step adds to the same record."
+        },
+        "steps": [
+         {
+          "number": "01",
+          "image": "/next/assets/projects/gora-dobra-posters/workflow-v2/01-child-phone.png",
+          "kind": "phone",
+          "title": {
+           "ua": "Ввести дані дитини",
+           "en": "Enter the child’s details"
+          },
+          "body": {
+           "ua": "Оператор вказує ім’я, вік, область і номер анкети; обирає дівчинку.",
+           "en": "The operator enters name, age, region and reference, then selects Girl."
+          },
+          "result": {
+           "ua": "Марта (демо) · 9 років · DEMO-2048",
+           "en": "Marta (Demo) · age 9 · DEMO-2048"
+          }
+         },
+         {
+          "number": "02",
+          "image": "/next/assets/projects/gora-dobra-posters/workflow-v2/02-story-phone.png",
+          "kind": "phone",
+          "title": {
+           "ua": "Додати історію двома мовами",
+           "en": "Add both story texts"
+          },
+          "body": {
+           "ua": "Оператор вводить український і німецький тексти та перечитує обидва.",
+           "en": "The operator enters the Ukrainian and German texts and reviews both."
+          },
+          "result": {
+           "ua": "Два поля → дві колонки на постері",
+           "en": "Two fields → two columns on the poster"
+          }
+         },
+         {
+          "number": "03",
+          "image": "/next/assets/projects/gora-dobra-posters/workflow-v2/03-needs-phone.png",
+          "kind": "phone",
+          "title": {
+           "ua": "Порахувати потреби",
+           "en": "Calculate the needs"
+          },
+          "body": {
+           "ua": "Сенсори — 90 €, інсулін — 30 €. Форма підставляє німецькі назви з довідника й рахує суму.",
+           "en": "Sensors €90, insulin €30. The form fills German names from its lookup list and adds the prices."
+          },
+          "result": {
+           "ua": "90 € + 30 € = 120 € на місяць",
+           "en": "€90 + €30 = €120 per month"
+          }
+         }
+        ]
+       }
+      ],
+      "summary": {
+       "ua": "Один запис замість повторного введення для кожного формату.",
+       "en": "One record instead of re-entering data for every format."
+      },
+      "note": {
+       "ua": "Реальні екрани локального демо; дані вигадані, німецьку історію введено вручну.",
+       "en": "Real local demo screens; fictional data, with the German story entered manually."
+      }
+     },
+     "imgs": [
+      "/next/assets/projects/gora-dobra-posters/workflow-v2/01-child-phone.png",
+      "/next/assets/projects/gora-dobra-posters/workflow-v2/02-story-phone.png",
+      "/next/assets/projects/gora-dobra-posters/workflow-v2/03-needs-phone.png"
+     ]
+    },
+    {
+     "type": "workflow",
+     "title": {
+      "ua": "Один запис → чотири файли",
+      "en": "One record → four files"
+     },
+     "body": {
+      "ua": "Готові макети показані як справжні матеріали, а не екрани телефона. Оператор перевіряє комплект і завантажує все одним архівом.",
+      "en": "The finished layouts are shown as actual artwork, not phone screens. The operator reviews the set and downloads one archive."
+     },
+     "flow": {
+      "icon": "/next/assets/projects/gora-dobra-posters/supporting-icons/outputs.png",
+      "attachments": [
+       {
+        "href": "/next/assets/projects/gora-dobra-posters/workflow-v2/DEMO-2048-set.zip",
+        "label": {
+         "ua": "Завантажити комплект ZIP",
+         "en": "Download the ZIP set"
+        }
+       },
+       {
+        "href": "/next/assets/projects/gora-dobra-posters/workflow-v2/exports/DEMO-2048.pdf",
+        "label": {
+         "ua": "Завантажити A4 PDF",
+         "en": "Download the A4 PDF"
+        }
+       }
+      ],
+      "prompt": {
+       "ua": "«Зберегти весь комплект із номером анкети».",
+       "en": "“Save the whole set with its reference number.”"
+      },
+      "context": {
+       "ua": "DEMO-2048 · A4 + Story + 2 дописи",
+       "en": "DEMO-2048 · A4 + Story + 2 posts"
+      },
+      "groups": [
+       {
+        "title": {
+         "ua": "04 / Переглянути готові формати",
+         "en": "04 / Review the finished formats"
+        },
+        "layout": "parallel",
+        "body": {
+         "ua": "A4 і сторіз містять повну історію; два дописи розділяють знайомство та потреби.",
+         "en": "A4 and Story contain the full story; the two posts separate the introduction from the needs."
+        },
+        "steps": [
+         {
+          "number": "04a",
+          "image": "/next/assets/projects/gora-dobra-posters/workflow-v2/a4-render-verified.png",
+          "kind": "board",
+          "title": {
+           "ua": "A4 для друку",
+           "en": "A4 for print"
+          },
+          "body": {
+           "ua": "Ім’я, дві колонки історії й потреби — на одному аркуші.",
+           "en": "Name, two story columns and needs on one page."
+          },
+          "result": {
+           "ua": "DEMO-2048.pdf · A4",
+           "en": "DEMO-2048.pdf · A4"
+          }
+         },
+         {
+          "number": "04b",
+          "image": "/next/assets/projects/gora-dobra-posters/workflow-v2/exports/DEMO-2048_story.png",
+          "kind": "board",
+          "title": {
+           "ua": "Сторіз",
+           "en": "Story"
+          },
+          "body": {
+           "ua": "Той самий запис у вертикальному форматі.",
+           "en": "The same record in a vertical format."
+          },
+          "result": {
+           "ua": "1080 × 1920 · PNG",
+           "en": "1080 × 1920 · PNG"
+          }
+         },
+         {
+          "number": "04c",
+          "image": "/next/assets/projects/gora-dobra-posters/workflow-v2/exports/DEMO-2048_post1.png",
+          "kind": "board",
+          "title": {
+           "ua": "Допис про дитину",
+           "en": "The child’s story"
+          },
+          "body": {
+           "ua": "Ім’я та історія українською й німецькою.",
+           "en": "Name and story in Ukrainian and German."
+          },
+          "result": {
+           "ua": "1080 × 1080 · PNG",
+           "en": "1080 × 1080 · PNG"
+          }
+         },
+         {
+          "number": "04d",
+          "image": "/next/assets/projects/gora-dobra-posters/workflow-v2/exports/DEMO-2048_post2.png",
+          "kind": "board",
+          "title": {
+           "ua": "Допис про потреби",
+           "en": "Needs and support"
+          },
+          "body": {
+           "ua": "Обидві потреби, сума й заклик стати патроном.",
+           "en": "Both needs, the total and a call to become a sponsor."
+          },
+          "result": {
+           "ua": "1080 × 1080 · PNG",
+           "en": "1080 × 1080 · PNG"
+          }
+         }
+        ]
+       },
+       {
+        "title": {
+         "ua": "05 / Забрати файли",
+         "en": "05 / Take the files"
+        },
+        "body": {
+         "ua": "Той самий крок на великому екрані. Архів містить реальні експортовані PDF і PNG.",
+         "en": "The same step on a larger screen. The archive contains the actual exported PDF and PNG files."
+        },
+        "steps": [
+         {
+          "number": "05",
+          "image": "/next/assets/projects/gora-dobra-posters/workflow-v2/05-zip-desktop.png",
+          "kind": "browser",
+          "title": {
+           "ua": "Завантажити комплект",
+           "en": "Download the set"
+          },
+          "body": {
+           "ua": "Оператор натискає «Завантажити все (ZIP)» і отримує PDF та три PNG.",
+           "en": "The operator clicks “Download all (ZIP)” and receives a PDF and three PNGs."
+          },
+          "result": {
+           "ua": "DEMO-2048.pdf · DEMO-2048_story.png · DEMO-2048_post1.png · DEMO-2048_post2.png",
+           "en": "DEMO-2048.pdf · DEMO-2048_story.png · DEMO-2048_post1.png · DEMO-2048_post2.png"
+          }
+         }
+        ]
+       }
+      ],
+      "summary": {
+       "ua": "Комплект для друку й соцмереж — з одним номером анкети в назвах файлів.",
+       "en": "A print and social set with one reference number in every filename."
+      },
+      "note": {
+       "ua": "Натисніть на будь-який екран або макет, щоб збільшити його.",
+       "en": "Select any screen or artwork to enlarge it."
+      }
+     },
+     "imgs": [
+      "/next/assets/projects/gora-dobra-posters/workflow-v2/a4-render-verified.png",
+      "/next/assets/projects/gora-dobra-posters/workflow-v2/exports/DEMO-2048_story.png",
+      "/next/assets/projects/gora-dobra-posters/workflow-v2/exports/DEMO-2048_post1.png",
+      "/next/assets/projects/gora-dobra-posters/workflow-v2/exports/DEMO-2048_post2.png",
+      "/next/assets/projects/gora-dobra-posters/workflow-v2/05-zip-desktop.png"
+     ]
+    }
+   ],
+   "images": [
+    "/next/assets/projects/gora-dobra-posters/workflow-v2/01-child-phone.png",
+    "/next/assets/projects/gora-dobra-posters/workflow-v2/02-story-phone.png",
+    "/next/assets/projects/gora-dobra-posters/workflow-v2/03-needs-phone.png",
+    "/next/assets/projects/gora-dobra-posters/workflow-v2/a4-render-verified.png",
+    "/next/assets/projects/gora-dobra-posters/workflow-v2/exports/DEMO-2048_story.png",
+    "/next/assets/projects/gora-dobra-posters/workflow-v2/exports/DEMO-2048_post1.png",
+    "/next/assets/projects/gora-dobra-posters/workflow-v2/exports/DEMO-2048_post2.png",
+    "/next/assets/projects/gora-dobra-posters/workflow-v2/05-zip-desktop.png",
+    "/next/assets/projects/gora-dobra-posters/mockups/hero-mockup.png",
+    "/next/assets/projects/gora-dobra-posters/workflow-v2/cover.png"
+   ],
+   "kinds": {
+    "/next/assets/projects/gora-dobra-posters/workflow-v2/01-child-phone.png": "phone",
+    "/next/assets/projects/gora-dobra-posters/workflow-v2/02-story-phone.png": "phone",
+    "/next/assets/projects/gora-dobra-posters/workflow-v2/03-needs-phone.png": "phone",
+    "/next/assets/projects/gora-dobra-posters/workflow-v2/a4-render-verified.png": "board",
+    "/next/assets/projects/gora-dobra-posters/workflow-v2/exports/DEMO-2048_story.png": "board",
+    "/next/assets/projects/gora-dobra-posters/workflow-v2/exports/DEMO-2048_post1.png": "board",
+    "/next/assets/projects/gora-dobra-posters/workflow-v2/exports/DEMO-2048_post2.png": "board",
+    "/next/assets/projects/gora-dobra-posters/workflow-v2/05-zip-desktop.png": "browser",
+    "/next/assets/projects/gora-dobra-posters/mockups/hero-mockup.png": "board",
+    "/next/assets/projects/gora-dobra-posters/workflow-v2/cover.png": "board"
+   },
+   "captions": {
+    "/next/assets/projects/gora-dobra-posters/supporting-icons/volunteer.png": {
+     "ua": "Допоміжна ілюстрація оператора; не екран продукту.",
+     "en": "Supporting operator illustration; not a product screen."
+    },
+    "/next/assets/projects/gora-dobra-posters/supporting-icons/outputs.png": {
+     "ua": "Допоміжна ілюстрація комплекту файлів; не екран продукту.",
+     "en": "Supporting file-set illustration; not a product screen."
+    },
+    "/next/assets/projects/gora-dobra-posters/workflow-v2/01-child-phone.png": {
+     "ua": "Ввести дані дитини — Марта (демо) · 9 років · DEMO-2048",
+     "en": "Enter the child’s details — Marta (Demo) · age 9 · DEMO-2048"
+    },
+    "/next/assets/projects/gora-dobra-posters/workflow-v2/02-story-phone.png": {
+     "ua": "Додати історію двома мовами — Два поля → дві колонки на постері",
+     "en": "Add both story texts — Two fields → two columns on the poster"
+    },
+    "/next/assets/projects/gora-dobra-posters/workflow-v2/03-needs-phone.png": {
+     "ua": "Порахувати потреби — 90 € + 30 € = 120 € на місяць",
+     "en": "Calculate the needs — €90 + €30 = €120 per month"
+    },
+    "/next/assets/projects/gora-dobra-posters/workflow-v2/a4-render-verified.png": {
+     "ua": "A4 для друку — DEMO-2048.pdf · A4",
+     "en": "A4 for print — DEMO-2048.pdf · A4"
+    },
+    "/next/assets/projects/gora-dobra-posters/workflow-v2/exports/DEMO-2048_story.png": {
+     "ua": "Сторіз — 1080 × 1920 · PNG",
+     "en": "Story — 1080 × 1920 · PNG"
+    },
+    "/next/assets/projects/gora-dobra-posters/workflow-v2/exports/DEMO-2048_post1.png": {
+     "ua": "Допис про дитину — 1080 × 1080 · PNG",
+     "en": "The child’s story — 1080 × 1080 · PNG"
+    },
+    "/next/assets/projects/gora-dobra-posters/workflow-v2/exports/DEMO-2048_post2.png": {
+     "ua": "Допис про потреби — 1080 × 1080 · PNG",
+     "en": "Needs and support — 1080 × 1080 · PNG"
+    },
+    "/next/assets/projects/gora-dobra-posters/workflow-v2/05-zip-desktop.png": {
+     "ua": "Завантажити комплект — DEMO-2048.pdf · DEMO-2048_story.png · DEMO-2048_post1.png · DEMO-2048_post2.png",
+     "en": "Download the set — DEMO-2048.pdf · DEMO-2048_story.png · DEMO-2048_post1.png · DEMO-2048_post2.png"
+    },
+    "/next/assets/projects/gora-dobra-posters/workflow-v2/cover.png": {
+     "ua": "Справжній A4 та три соцформати з архіву DEMO-2048",
+     "en": "Actual A4 and three social formats from the DEMO-2048 archive"
+    },
+    "/next/assets/projects/gora-dobra-posters/mockups/hero-mockup.png": {
+     "en": "Form on the phone next to the printed A4 poster from the same record",
+     "ua": "Форма на телефоні поруч із надрукованим A4-постером із того самого запису"
+    }
+   }
+  },
+  "microgrants-system": {
+   "accent": "#0fa39b",
+   "tagline": {
+    "ua": "Від заявки до звіту. По обидва боки.",
+    "en": "From application to report. Both sides connected."
+   },
+   "hero": {
+    "scene": "board",
+    "imgs": [
+     "/next/assets/projects/microgrants-system/mockups/hero-mockup.png"
+    ]
+   },
+   "generatedMockup": null,
+   "sections": [
+    {
+     "type": "workflow",
+     "title": {
+      "ua": "Одна заявка. Дві ролі.",
+      "en": "One application. Two roles."
+     },
+     "body": {
+      "ua": "Ірина розширює домашню пекарню. Я побудував шлях навколо однієї заявки MG-12: зліва — її наступна дія, справа — рішення організатора. Не два окремі демо, а два погляди на спільний запис.",
+      "en": "Iryna is expanding a home bakery. I built the journey around application MG-12: her next action on the left, the organiser’s decision on the right. Two views of a shared record, not two separate demos."
+     },
+     "flow": {
+      "icon": "/next/assets/projects/microgrants-system/supporting-icons/applicant.png",
+      "prompt": {
+       "ua": "«Що відбувається з моєю заявкою?»",
+       "en": "“What is happening with my application?”"
+      },
+      "context": {
+       "ua": "Ірина Зразкова · MG-12 · домашня випічка. Усі екрани нижче — реальні стани українського інтерфейсу.",
+       "en": "Iryna Zrazkova · MG-12 · home bakery. Every screen below is an actual state of the Ukrainian interface."
+      },
+      "groups": [
+       {
+        "title": {
+         "ua": "Заповнити → подати заявку",
+         "en": "Fill in → submit the application"
+        },
+        "body": {
+         "ua": "Учасниця: коротка анкета у три кроки → підтвердження й код MG-12.",
+         "en": "Participant: a short three-step form → confirmation and code MG-12."
+        },
+        "steps": [
+         {
+          "number": "A",
+          "kind": "phone",
+          "image": "/next/assets/projects/microgrants-system/flow-v3/00a-application.png",
+          "title": {
+           "ua": "Заповнити коротку анкету",
+           "en": "Fill in the short application"
+          },
+          "body": {
+           "ua": "Ірина вказує контакти й громаду; далі — бізнес-ідея та згоди.",
+           "en": "Iryna enters her contact details and community, then her business idea and consents."
+          },
+          "result": {
+           "ua": "Три кроки → подати заявку",
+           "en": "Three steps → submit the application"
+          }
+         },
+         {
+          "number": "B",
+          "kind": "phone",
+          "image": "/next/assets/projects/microgrants-system/flow-v3/00b-sent.png",
+          "title": {
+           "ua": "Зберегти код заявки",
+           "en": "Save the application code"
+          },
+          "body": {
+           "ua": "Після подання — MG-12 і ключ для повернення до заявки.",
+           "en": "Submission returns MG-12 and an access key to reopen the application."
+          },
+          "result": {
+           "ua": "Подано → відкрити сторінку заявки",
+           "en": "Submitted → open the application page"
+          }
+         }
+        ]
+       },
+       {
+        "layout": "lanes",
+        "title": {
+         "ua": "Подання → черга розгляду",
+         "en": "Submission → review queue"
+        },
+        "body": {
+         "ua": "Учасниця бачить статус; організатор — ту саму заявку серед справ, що потребують дії.",
+         "en": "The participant sees a status; the organiser sees the same application among items needing action."
+        },
+        "steps": [
+         {
+          "number": "01",
+          "kind": "phone",
+          "image": "/next/assets/projects/microgrants-system/flow-v3/01-submitted.png",
+          "title": {
+           "ua": "Заявку отримано",
+           "en": "Application received"
+          },
+          "body": {
+           "ua": "Після короткої анкети — статус і пояснення наступного етапу.",
+           "en": "After the short application: a status and an explanation of the next stage."
+          },
+          "result": {
+           "ua": "MG-12 → бачить організатор",
+           "en": "MG-12 → visible to the organiser"
+          }
+         },
+         {
+          "number": "02",
+          "kind": "browser",
+          "image": "/next/assets/projects/microgrants-system/flow-v3/02-queues.png",
+          "title": {
+           "ua": "Робота починається з черги",
+           "en": "Start with the action queue"
+          },
+          "body": {
+           "ua": "Нові заявки, пакети, документи й звіти розділені за потрібною дією.",
+           "en": "Applications, packages, documents and reports are grouped by the action they need."
+          },
+          "result": {
+           "ua": "Відкрити MG-12 і взяти в роботу.",
+           "en": "Open MG-12 and start the review."
+          }
+         }
+        ]
+       },
+       {
+        "layout": "lanes",
+        "reverse": true,
+        "title": {
+         "ua": "Перевірка → допуск до кабінету",
+         "en": "Eligibility review → cabinet access"
+        },
+        "body": {
+         "ua": "Допуск відкриває подання бізнес-плану. Це ще не грант: фінальне рішення буде після перевірки пакета.",
+         "en": "Admission opens business-plan submission. It is not a grant: the final decision follows package review."
+        },
+        "steps": [
+         {
+          "number": "04",
+          "kind": "phone",
+          "image": "/next/assets/projects/microgrants-system/flow-v3/03-admitted.png",
+          "title": {
+           "ua": "Активувати кабінет",
+           "en": "Activate the cabinet"
+          },
+          "body": {
+           "ua": "На сторінці заявки з’являється запрошення і зрозуміле пояснення допуску.",
+           "en": "An invitation appears on the application page, with a clear explanation of admission."
+          },
+          "result": {
+           "ua": "← рішення організатора бачить учасниця",
+           "en": "← the participant sees the organiser’s decision"
+          }
+         },
+         {
+          "number": "03",
+          "kind": "browser",
+          "image": "/next/assets/projects/microgrants-system/flow-v3/04-review.png",
+          "title": {
+           "ua": "Перевірити критерії",
+           "en": "Check eligibility"
+          },
+          "body": {
+           "ua": "Чекліст допуску, уточнення та відмова зібрані біля заявки, а не в окремому листуванні.",
+           "en": "Eligibility, clarification and rejection sit beside the application, not in a separate conversation."
+          },
+          "result": {
+           "ua": "Первинний розгляд перед запрошенням.",
+           "en": "Initial review before the invitation."
+          }
+         }
+        ]
+       }
+      ]
+     },
+     "imgs": [
+      "/next/assets/projects/microgrants-system/flow-v3/00a-application.png",
+      "/next/assets/projects/microgrants-system/flow-v3/00b-sent.png",
+      "/next/assets/projects/microgrants-system/flow-v3/01-submitted.png",
+      "/next/assets/projects/microgrants-system/flow-v3/02-queues.png",
+      "/next/assets/projects/microgrants-system/flow-v3/03-admitted.png",
+      "/next/assets/projects/microgrants-system/flow-v3/04-review.png"
+     ]
+    },
+    {
+     "type": "workflow",
+     "title": {
+      "ua": "Не «переробіть файл». А що саме.",
+      "en": "Not “redo the file”. Exactly what to fix."
+     },
+     "body": {
+      "ua": "Бізнес-план і кошторис збираються з одних відповідей. Коли організатор повертає файл, коментар прив’язаний до конкретної позиції — і стає наступною дією учасниці.",
+      "en": "The business plan and budget come from the same answers. When the organiser returns a file, the comment points to a specific line and becomes the participant’s next action."
+     },
+     "flow": {
+      "prompt": {
+       "ua": "«Оновіть модель печі, посилання й ціну»",
+       "en": "“Update the oven model, link and price”"
+      },
+      "context": {
+       "ua": "Той самий MG-12. Коментар до позиції 1 у кошторисі, а не загальне повідомлення.",
+       "en": "The same MG-12. A comment on budget line 1, not a generic message."
+      },
+      "groups": [
+       {
+        "layout": "lanes",
+        "reverse": true,
+        "steps": [
+         {
+          "number": "06",
+          "kind": "phone",
+          "image": "/next/assets/projects/microgrants-system/flow-v3/05-correction.png",
+          "title": {
+           "ua": "Одразу до виправлення",
+           "en": "Straight to the correction"
+          },
+          "body": {
+           "ua": "Позиція, причина, строк і одна кнопка «Виправити».",
+           "en": "The line, reason, deadline and one Fix button."
+          },
+          "result": {
+           "ua": "← коментар перетворився на наступну дію",
+           "en": "← the comment becomes the next action"
+          }
+         },
+         {
+          "number": "05",
+          "kind": "browser",
+          "image": "/next/assets/projects/microgrants-system/flow-v3/06-file-comment.png",
+          "title": {
+           "ua": "Повернути конкретний файл",
+           "en": "Return the specific file"
+          },
+          "body": {
+           "ua": "Статуси презентації, кошторису й підтвердження зберігаються окремо. Видно коментар і версію.",
+           "en": "Presentation, budget and verification have separate statuses. The comment and version remain visible."
+          },
+          "result": {
+           "ua": "Прийняті файли не губляться через одне виправлення.",
+           "en": "One correction does not obscure the accepted files."
+          }
+         }
+        ]
+       }
+      ],
+      "summary": {
+       "ua": "Повторне подання створює нову версію; попередня залишається в історії. Організатор бачить, що змінилося.",
+       "en": "Resubmission creates a new version and keeps the previous one in history. The organiser can see what changed."
+      }
+     },
+     "imgs": [
+      "/next/assets/projects/microgrants-system/flow-v3/05-correction.png",
+      "/next/assets/projects/microgrants-system/flow-v3/06-file-comment.png"
+     ]
+    },
+    {
+     "type": "workflow",
+     "title": {
+      "ua": "Тепер — рішення про гроші",
+      "en": "Now comes the funding decision"
+     },
+     "body": {
+      "ua": "Відбір відділений від допуску. Після прийняття пакета організатор задає рішення та суми в межах бюджету раунду. Учасниця бачить опублікований результат і затверджені рядки.",
+      "en": "Selection is separate from admission. After package acceptance, the organiser enters decisions and amounts within the round budget. The participant sees the published result and approved lines."
+     },
+     "flow": {
+      "prompt": {
+       "ua": "«Що саме мені профінансують?»",
+       "en": "“What exactly will be funded?”"
+      },
+      "context": {
+       "ua": "Первинне схвалення ≠ фінансування. Тут з’являється рішення комісії.",
+       "en": "Initial approval ≠ funding. This is where the committee decision appears."
+      },
+      "groups": [
+       {
+        "layout": "lanes",
+        "reverse": true,
+        "steps": [
+         {
+          "number": "08",
+          "kind": "phone",
+          "image": "/next/assets/projects/microgrants-system/flow-v3/07-awarded.png",
+          "title": {
+           "ua": "Сума і затверджені покупки",
+           "en": "The amount and approved purchases"
+          },
+          "body": {
+           "ua": "Не лише «ви перемогли»: видно, на що надано грант і які документи потрібні далі.",
+           "en": "More than “you won”: see what the grant covers and which documents come next."
+          },
+          "result": {
+           "ua": "← опубліковане рішення для MG-12",
+           "en": "← the published decision for MG-12"
+          }
+         },
+         {
+          "number": "07",
+          "kind": "browser",
+          "image": "/next/assets/projects/microgrants-system/flow-v3/08-selection.png",
+          "title": {
+           "ua": "Відбір у межах бюджету",
+           "en": "Selection within the budget"
+          },
+          "body": {
+           "ua": "На дошці — прийняті пакети, оцінки, рішення, суми й залишок. Це стан перед публікацією.",
+           "en": "The board shows accepted packages, scores, decisions, amounts and the balance. This is the state before publication."
+          },
+          "result": {
+           "ua": "Публікація рішення змінює стан у кабінеті учасниці.",
+           "en": "Publishing the decision updates the participant’s cabinet."
+          }
+         }
+        ]
+       }
+      ]
+     },
+     "imgs": [
+      "/next/assets/projects/microgrants-system/flow-v3/07-awarded.png",
+      "/next/assets/projects/microgrants-system/flow-v3/08-selection.png"
+     ]
+    },
+    {
+     "type": "workflow",
+     "title": {
+      "ua": "Документи без втрати контексту",
+      "en": "Documents without losing context"
+     },
+     "body": {
+      "ua": "Кожен документ має власний статус і версію. Нечитабельну довідку можна повернути окремо; після перевірки пакета учасниця отримує умови в тому самому кабінеті.",
+      "en": "Each document has its own status and version. An unreadable certificate can be returned separately; after review, the participant receives the terms in the same cabinet."
+     },
+     "flow": {
+      "prompt": {
+       "ua": "«Що прийняли, а що замінити?»",
+       "en": "“What was accepted, and what should I replace?”"
+      },
+      "context": {
+       "ua": "Для посвідчень і банківської довідки використовуються лише зразки.",
+       "en": "Identity documents and the bank certificate use samples only."
+      },
+      "groups": [
+       {
+        "layout": "lanes",
+        "reverse": true,
+        "steps": [
+         {
+          "number": "10",
+          "kind": "phone",
+          "image": "/next/assets/projects/microgrants-system/flow-v3/09-terms.png",
+          "title": {
+           "ua": "Наступний крок — умови",
+           "en": "Next: confirm the terms"
+          },
+          "body": {
+           "ua": "Після прийняття документів — ознайомлення з умовами та підтвердження в кабінеті.",
+           "en": "Once documents are accepted, review the terms and confirm them in the cabinet."
+          },
+          "result": {
+           "ua": "Підтвердження в кабінеті, не електронний підпис.",
+           "en": "Cabinet confirmation, not an electronic signature."
+          }
+         },
+         {
+          "number": "09",
+          "kind": "browser",
+          "image": "/next/assets/projects/microgrants-system/flow-v3/10-documents.png",
+          "title": {
+           "ua": "Перевірити кожен документ",
+           "en": "Review each document"
+          },
+          "body": {
+           "ua": "Організатор приймає файли або залишає причину виправлення. Тут — пакет із довідкою на заміну.",
+           "en": "The organiser accepts files or gives a correction reason. This package includes a certificate that needs replacement."
+          },
+          "result": {
+           "ua": "← після виправлення й прийняття пакета — умови",
+           "en": "← after correction and acceptance come the terms"
+          }
+         }
+        ]
+       }
+      ],
+      "summary": {
+       "ua": "Після підтвердження умов організатор вручну позначає перерахування. Демо не здійснює платіж — відкриває облік покупок і звіт.",
+       "en": "After terms confirmation, the organiser manually marks the transfer. The demo makes no payment: it opens purchases and reporting."
+      }
+     },
+     "imgs": [
+      "/next/assets/projects/microgrants-system/flow-v3/09-terms.png",
+      "/next/assets/projects/microgrants-system/flow-v3/10-documents.png"
+     ]
+    },
+    {
+     "type": "workflow",
+     "title": {
+      "ua": "Від чека до підсумку для донора",
+      "en": "From receipt to donor summary"
+     },
+     "body": {
+      "ua": "Звіт продовжує затверджений кошторис, а не починається з порожньої таблиці. Учасниця додає покупки й чеки, організатор приймає кожен рядок. Підсумок розрізняє прийняте, неперевірене та виключене.",
+      "en": "Reporting continues the approved budget instead of starting with an empty spreadsheet. The participant adds purchases and receipts; the organiser reviews each line. The summary separates accepted, unverified and excluded amounts."
+     },
+     "flow": {
+      "icon": "/next/assets/projects/microgrants-system/supporting-icons/organiser.png",
+      "prompt": {
+       "ua": "«Звідки взялася ця сума у звіті?»",
+       "en": "“Where did this report amount come from?”"
+      },
+      "context": {
+       "ua": "Заявка → затверджений рядок → покупка → рішення щодо витрати.",
+       "en": "Application → approved line → purchase → expense decision."
+      },
+      "groups": [
+       {
+        "layout": "lanes",
+        "title": {
+         "ua": "Покупки → перевірка звіту",
+         "en": "Purchases → report review"
+        },
+        "body": {
+         "ua": "Ті самі рядки по обидва боки: сума, постачальник, чек і рішення.",
+         "en": "The same lines on both sides: amount, supplier, receipt and decision."
+        },
+        "steps": [
+         {
+          "number": "11",
+          "kind": "phone",
+          "image": "/next/assets/projects/microgrants-system/flow-v3/11-purchases.png",
+          "title": {
+           "ua": "Додати підтвердження витрат",
+           "en": "Add expense evidence"
+          },
+          "body": {
+           "ua": "Покупки прив’язані до затверджених позицій. Звіт містить також опис і показники учасниці.",
+           "en": "Purchases link to approved lines. The report also includes the participant’s narrative and indicators."
+          },
+          "result": {
+           "ua": "Подати звіт → бачить організатор",
+           "en": "Submit the report → visible to the organiser"
+          }
+         },
+         {
+          "number": "12",
+          "kind": "browser",
+          "image": "/next/assets/projects/microgrants-system/flow-v3/12-report-review.png",
+          "title": {
+           "ua": "Прийняти, виправити, виключити",
+           "en": "Accept, correct or exclude"
+          },
+          "body": {
+           "ua": "Не одна галочка на весь звіт: кожна покупка має власне рішення та пояснення.",
+           "en": "Not one checkbox for the whole report: each purchase gets its own decision and explanation."
+          },
+          "result": {
+           "ua": "Прийняття звіту — після перевірки рядків.",
+           "en": "Report acceptance follows line-by-line review."
+          }
+         }
+        ]
+       },
+       {
+        "layout": "lanes",
+        "reverse": true,
+        "title": {
+         "ua": "Прийнятий звіт → зведені дані",
+         "en": "Accepted report → consolidated data"
+        },
+        "body": {
+         "ua": "Зведення показує фінансування, прийняті витрати, суми на перевірці та виключені суми окремо. Запитаний бюджет не видається за підтверджені витрати.",
+         "en": "The summary separates funding, accepted expenses, amounts awaiting review and excluded amounts. The requested budget is not presented as verified spending."
+        },
+        "steps": [
+         {
+          "number": "13",
+          "kind": "phone",
+          "image": "/next/assets/projects/microgrants-system/flow-v3/13-accepted.png",
+          "title": {
+           "ua": "Побачити завершення звіту",
+           "en": "See the report accepted"
+          },
+          "body": {
+           "ua": "У кабінеті — підсумковий статус. Історія дій і файлів залишається доступною.",
+           "en": "The cabinet shows the final report status. Action and file history remains available."
+          },
+          "result": {
+           "ua": "← прийняття бачить учасниця",
+           "en": "← the participant sees acceptance"
+          }
+         },
+         {
+          "number": "14",
+          "kind": "browser",
+          "image": "/next/assets/projects/microgrants-system/flow-v3/14-sponsor.png",
+          "title": {
+           "ua": "Пояснити кожну суму",
+           "en": "Explain every amount"
+          },
+          "body": {
+           "ua": "Донорський звіт відділяє фінансування від витрат, показує джерела та дає експорт XLSX і DOCX.",
+           "en": "The donor report separates funding from spending, shows source records and provides XLSX and DOCX exports."
+          },
+          "result": {
+           "ua": "Підсумок із записаних рішень, а не вручну намальовані метрики.",
+           "en": "A summary from recorded decisions, not hand-made metrics."
+          }
+         }
+        ]
+       }
+      ],
+      "summary": {
+       "ua": "Я спроєктував зв’язок між дією, перевіркою та звітом. Прототип показує цей шлях на одній заявці, не заявляючи про впровадження чи результати реальної програми.",
+       "en": "I designed the connection between action, review and reporting. The prototype demonstrates that path through one application, without claiming adoption or real programme outcomes."
+      }
+     },
+     "imgs": [
+      "/next/assets/projects/microgrants-system/flow-v3/11-purchases.png",
+      "/next/assets/projects/microgrants-system/flow-v3/12-report-review.png",
+      "/next/assets/projects/microgrants-system/flow-v3/13-accepted.png",
+      "/next/assets/projects/microgrants-system/flow-v3/14-sponsor.png"
+     ]
+    }
+   ],
+   "images": [
+    "/next/assets/projects/microgrants-system/flow-v3/00a-application.png",
+    "/next/assets/projects/microgrants-system/flow-v3/00b-sent.png",
+    "/next/assets/projects/microgrants-system/flow-v3/01-submitted.png",
+    "/next/assets/projects/microgrants-system/flow-v3/02-queues.png",
+    "/next/assets/projects/microgrants-system/flow-v3/03-admitted.png",
+    "/next/assets/projects/microgrants-system/flow-v3/04-review.png",
+    "/next/assets/projects/microgrants-system/flow-v3/05-correction.png",
+    "/next/assets/projects/microgrants-system/flow-v3/06-file-comment.png",
+    "/next/assets/projects/microgrants-system/flow-v3/07-awarded.png",
+    "/next/assets/projects/microgrants-system/flow-v3/08-selection.png",
+    "/next/assets/projects/microgrants-system/flow-v3/09-terms.png",
+    "/next/assets/projects/microgrants-system/flow-v3/10-documents.png",
+    "/next/assets/projects/microgrants-system/flow-v3/11-purchases.png",
+    "/next/assets/projects/microgrants-system/flow-v3/12-report-review.png",
+    "/next/assets/projects/microgrants-system/flow-v3/13-accepted.png",
+    "/next/assets/projects/microgrants-system/flow-v3/14-sponsor.png",
+    "/next/assets/projects/microgrants-system/mockups/hero-mockup.png"
+   ],
+   "kinds": {
+    "/next/assets/projects/microgrants-system/flow-v3/00a-application.png": "phone",
+    "/next/assets/projects/microgrants-system/flow-v3/00b-sent.png": "phone",
+    "/next/assets/projects/microgrants-system/flow-v3/01-submitted.png": "phone",
+    "/next/assets/projects/microgrants-system/flow-v3/02-queues.png": "browser",
+    "/next/assets/projects/microgrants-system/flow-v3/03-admitted.png": "phone",
+    "/next/assets/projects/microgrants-system/flow-v3/04-review.png": "browser",
+    "/next/assets/projects/microgrants-system/flow-v3/05-correction.png": "phone",
+    "/next/assets/projects/microgrants-system/flow-v3/06-file-comment.png": "browser",
+    "/next/assets/projects/microgrants-system/flow-v3/07-awarded.png": "phone",
+    "/next/assets/projects/microgrants-system/flow-v3/08-selection.png": "browser",
+    "/next/assets/projects/microgrants-system/flow-v3/09-terms.png": "phone",
+    "/next/assets/projects/microgrants-system/flow-v3/10-documents.png": "browser",
+    "/next/assets/projects/microgrants-system/flow-v3/11-purchases.png": "phone",
+    "/next/assets/projects/microgrants-system/flow-v3/12-report-review.png": "browser",
+    "/next/assets/projects/microgrants-system/flow-v3/13-accepted.png": "phone",
+    "/next/assets/projects/microgrants-system/flow-v3/14-sponsor.png": "browser",
+    "/next/assets/projects/microgrants-system/mockups/hero-mockup.png": "board"
+   },
+   "captions": {
+    "/next/assets/projects/microgrants-system/flow-v3/00a-application.png": {
+     "ua": "Ірина Зразкова: заповнена коротка заявка, крок «Про вас».",
+     "en": "Iryna Zrazkova: the filled short application, About you step."
+    },
+    "/next/assets/projects/microgrants-system/flow-v3/00b-sent.png": {
+     "ua": "Заявку подано: код MG-12 і ключ доступу в локальному демо.",
+     "en": "Application submitted: code MG-12 and an access key in the local demo."
+    },
+    "/next/assets/projects/microgrants-system/supporting-icons/applicant.png": {
+     "ua": "Ілюстрація учасниці, не екран продукту.",
+     "en": "Participant illustration, not a product screen."
+    },
+    "/next/assets/projects/microgrants-system/supporting-icons/organiser.png": {
+     "ua": "Ілюстрація організатора, не екран продукту.",
+     "en": "Organiser illustration, not a product screen."
+    },
+    "/next/assets/projects/microgrants-system/flow-v3/01-submitted.png": {
+     "ua": "MG-12 · учасниця: заявку отримано, очікування первинного розгляду.",
+     "en": "MG-12 · participant: application received, awaiting initial review."
+    },
+    "/next/assets/projects/microgrants-system/flow-v3/02-queues.png": {
+     "ua": "Організатор: черги дій із новою заявкою MG-12.",
+     "en": "Organiser: action queues with the new MG-12 application."
+    },
+    "/next/assets/projects/microgrants-system/flow-v3/03-admitted.png": {
+     "ua": "MG-12 · учасниця: допуск і запрошення активувати кабінет. Це ще не грант.",
+     "en": "MG-12 · participant: admission and a cabinet invitation. Not yet a grant."
+    },
+    "/next/assets/projects/microgrants-system/flow-v3/04-review.png": {
+     "ua": "MG-12 · організатор: чекліст первинного розгляду перед допуском.",
+     "en": "MG-12 · organiser: the eligibility checklist before admission."
+    },
+    "/next/assets/projects/microgrants-system/flow-v3/05-correction.png": {
+     "ua": "MG-12 · учасниця: виправлення позиції 1 у кошторисі.",
+     "en": "MG-12 · participant: correction of budget line 1."
+    },
+    "/next/assets/projects/microgrants-system/flow-v3/06-file-comment.png": {
+     "ua": "MG-12 · організатор: статуси файлів і коментар до позиції кошторису.",
+     "en": "MG-12 · organiser: file statuses and a comment on a budget line."
+    },
+    "/next/assets/projects/microgrants-system/flow-v3/07-awarded.png": {
+     "ua": "MG-12 · учасниця: опубліковане рішення про грант і затверджені рядки.",
+     "en": "MG-12 · participant: published award and approved lines."
+    },
+    "/next/assets/projects/microgrants-system/flow-v3/08-selection.png": {
+     "ua": "Організатор: дошка відбору до публікації рішень, MG-12 серед кандидатів.",
+     "en": "Organiser: selection board before publication, with MG-12 among the candidates."
+    },
+    "/next/assets/projects/microgrants-system/flow-v3/09-terms.png": {
+     "ua": "MG-12 · учасниця: умови після прийняття документів, підтвердження в кабінеті.",
+     "en": "MG-12 · participant: terms after document acceptance, confirmed in the cabinet."
+    },
+    "/next/assets/projects/microgrants-system/flow-v3/10-documents.png": {
+     "ua": "MG-12 · організатор: перевірка зразків документів; довідка потребує виправлення.",
+     "en": "MG-12 · organiser: sample document review; the certificate needs correction."
+    },
+    "/next/assets/projects/microgrants-system/flow-v3/11-purchases.png": {
+     "ua": "MG-12 · учасниця: покупки, чеки й підготовка звіту.",
+     "en": "MG-12 · participant: purchases, receipts and report preparation."
+    },
+    "/next/assets/projects/microgrants-system/flow-v3/12-report-review.png": {
+     "ua": "MG-12 · організатор: постатейна перевірка першої версії звіту.",
+     "en": "MG-12 · organiser: line-by-line review of report version 1."
+    },
+    "/next/assets/projects/microgrants-system/flow-v3/13-accepted.png": {
+     "ua": "MG-12 · учасниця: звіт прийнято, історія доступна.",
+     "en": "MG-12 · participant: report accepted, history available."
+    },
+    "/next/assets/projects/microgrants-system/flow-v3/14-sponsor.png": {
+     "ua": "Організатор: фінансування, прийняті витрати, суми на перевірці й виключені суми — окремо. Синтетичні дані.",
+     "en": "Organiser: funding, accepted expenses, amounts awaiting review and excluded amounts shown separately. Synthetic data."
+    },
+    "/next/assets/projects/microgrants-system/mockups/hero-mockup.png": {
+     "en": "Participant phones and the organiser report review for the same application MG-12",
+     "ua": "Телефони учасниці й перевірка звіту організатором для тієї самої заявки MG-12"
     }
    }
   }
@@ -9775,25 +11217,93 @@ window.VI_CASES = {
    1440,
    718
   ],
-  "/next/assets/projects/budmarket-lux/mockups/desktop-catalog.png": [
-   1536,
-   1024
+  "/next/assets/projects/budmarket-lux/case-2026-11/flow/a1-search.png": [
+   780,
+   1900
   ],
-  "/next/assets/projects/budmarket-lux/mockups/mobile-search.png": [
-   1536,
-   1024
+  "/next/assets/projects/budmarket-lux/case-2026-11/flow/a2-answer.png": [
+   780,
+   1900
+  ],
+  "/next/assets/projects/budmarket-lux/case-2026-11/flow/a3-map.png": [
+   780,
+   1900
+  ],
+  "/next/assets/projects/budmarket-lux/case-2026-11/icons-clean/consultant.png": [
+   320,
+   256
+  ],
+  "/next/assets/projects/budmarket-lux/case-2026-11/icons-clean/network.png": [
+   320,
+   256
+  ],
+  "/next/assets/projects/budmarket-lux/case-2026-11/icons-clean/staff.png": [
+   320,
+   256
+  ],
+  "/next/assets/projects/budmarket-lux/case-2026-11/icons-clean/public.png": [
+   320,
+   256
+  ],
+  "/next/assets/projects/budmarket-lux/case-2026-11/flow/b1-description.png": [
+   780,
+   1900
+  ],
+  "/next/assets/projects/budmarket-lux/case-2026-11/flow/b2-details.png": [
+   780,
+   1900
+  ],
+  "/next/assets/projects/budmarket-lux/case-2026-11/flow/b3-confirm.png": [
+   780,
+   1900
+  ],
+  "/next/assets/projects/budmarket-lux/case-2026-11/flow/b4-ready.png": [
+   780,
+   1900
+  ],
+  "/next/assets/projects/budmarket-lux/case-2026-11/flow/b4-asset.png": [
+   780,
+   1900
+  ],
+  "/next/assets/projects/budmarket-lux/case-2026-11/flow/b5-versions.png": [
+   780,
+   1900
+  ],
+  "/next/assets/projects/budmarket-lux/case-2026-11/flow/b6-download.png": [
+   780,
+   1900
+  ],
+  "/next/assets/projects/budmarket-lux/case-2026-11/flow/b7-select.png": [
+   780,
+   1900
+  ],
+  "/next/assets/projects/budmarket-lux/case-2026-11/flow/b7-schedule.png": [
+   780,
+   1900
+  ],
+  "/next/assets/projects/budmarket-lux/case-2026-11/flow/b8-queue.png": [
+   780,
+   1900
+  ],
+  "/next/assets/projects/budmarket-lux/case-2026-11/flow/b4-task.png": [
+   780,
+   1900
+  ],
+  "/next/assets/projects/budmarket-lux/case-2026-11/icons-clean/marketing.png": [
+   320,
+   256
+  ],
+  "/next/assets/projects/budmarket-lux/case-2026-11/flow/b6-formats-context.png": [
+   2880,
+   2000
+  ],
+  "/next/assets/projects/budmarket-lux/case-2026-11/flow/b6-formats-detail.png": [
+   780,
+   1900
   ],
   "/next/assets/projects/budmarket-lux/videos/search-poster.jpg": [
    362,
    812
-  ],
-  "/next/assets/projects/budmarket-lux/mockups/desktop-marketing.png": [
-   1536,
-   1024
-  ],
-  "/next/assets/projects/budmarket-lux/mockups/mobile-campaign.png": [
-   1536,
-   1024
   ],
   "/next/assets/projects/budmarket-lux/videos/campaign-poster.jpg": [
    362,
@@ -9803,9 +11313,33 @@ window.VI_CASES = {
    362,
    812
   ],
+  "/next/assets/projects/budmarket-lux/mockups/desktop-catalog.png": [
+   1536,
+   1024
+  ],
+  "/next/assets/projects/budmarket-lux/mockups/desktop-marketing.png": [
+   1536,
+   1024
+  ],
+  "/next/assets/projects/budmarket-lux/mockups/mobile-search.png": [
+   1536,
+   1024
+  ],
+  "/next/assets/projects/budmarket-lux/mockups/mobile-campaign.png": [
+   1536,
+   1024
+  ],
   "/next/assets/projects/budmarket-lux/mockups/landing.png": [
    1536,
    1024
+  ],
+  "/next/assets/projects/budmarket-lux/case-2026-11/flow/a-context.png": [
+   2880,
+   2000
+  ],
+  "/next/assets/projects/budmarket-lux/case-2026-11/flow/b-context.png": [
+   2880,
+   2000
   ],
   "/next/assets/projects/diaguide/page-insulin.png": [
    1284,
@@ -9880,6 +11414,114 @@ window.VI_CASES = {
    1688
   ],
   "/next/assets/generated-mockups/ust-drone-school.png": [
+   1536,
+   1024
+  ],
+  "/next/assets/projects/gora-dobra-posters/workflow-v2/01-child-phone.png": [
+   780,
+   2000
+  ],
+  "/next/assets/projects/gora-dobra-posters/workflow-v2/02-story-phone.png": [
+   780,
+   2000
+  ],
+  "/next/assets/projects/gora-dobra-posters/workflow-v2/03-needs-phone.png": [
+   780,
+   2000
+  ],
+  "/next/assets/projects/gora-dobra-posters/workflow-v2/a4-render-verified.png": [
+   1273,
+   1800
+  ],
+  "/next/assets/projects/gora-dobra-posters/workflow-v2/exports/DEMO-2048_story.png": [
+   1080,
+   1920
+  ],
+  "/next/assets/projects/gora-dobra-posters/workflow-v2/exports/DEMO-2048_post1.png": [
+   1080,
+   1080
+  ],
+  "/next/assets/projects/gora-dobra-posters/workflow-v2/exports/DEMO-2048_post2.png": [
+   1080,
+   1080
+  ],
+  "/next/assets/projects/gora-dobra-posters/workflow-v2/05-zip-desktop.png": [
+   2880,
+   2000
+  ],
+  "/next/assets/projects/gora-dobra-posters/mockups/hero-mockup.png": [
+   1536,
+   1024
+  ],
+  "/next/assets/projects/gora-dobra-posters/workflow-v2/cover.png": [
+   1800,
+   1120
+  ],
+  "/next/assets/projects/microgrants-system/flow-v3/00a-application.png": [
+   390,
+   900
+  ],
+  "/next/assets/projects/microgrants-system/flow-v3/00b-sent.png": [
+   390,
+   844
+  ],
+  "/next/assets/projects/microgrants-system/flow-v3/01-submitted.png": [
+   390,
+   844
+  ],
+  "/next/assets/projects/microgrants-system/flow-v3/02-queues.png": [
+   1440,
+   900
+  ],
+  "/next/assets/projects/microgrants-system/flow-v3/03-admitted.png": [
+   390,
+   844
+  ],
+  "/next/assets/projects/microgrants-system/flow-v3/04-review.png": [
+   1440,
+   900
+  ],
+  "/next/assets/projects/microgrants-system/flow-v3/05-correction.png": [
+   390,
+   844
+  ],
+  "/next/assets/projects/microgrants-system/flow-v3/06-file-comment.png": [
+   1440,
+   900
+  ],
+  "/next/assets/projects/microgrants-system/flow-v3/07-awarded.png": [
+   390,
+   844
+  ],
+  "/next/assets/projects/microgrants-system/flow-v3/08-selection.png": [
+   1440,
+   900
+  ],
+  "/next/assets/projects/microgrants-system/flow-v3/09-terms.png": [
+   390,
+   844
+  ],
+  "/next/assets/projects/microgrants-system/flow-v3/10-documents.png": [
+   1440,
+   900
+  ],
+  "/next/assets/projects/microgrants-system/flow-v3/11-purchases.png": [
+   390,
+   844
+  ],
+  "/next/assets/projects/microgrants-system/flow-v3/12-report-review.png": [
+   1440,
+   900
+  ],
+  "/next/assets/projects/microgrants-system/flow-v3/13-accepted.png": [
+   390,
+   844
+  ],
+  "/next/assets/projects/microgrants-system/flow-v3/14-sponsor.png": [
+   1440,
+   900
+  ],
+  "/next/assets/projects/microgrants-system/mockups/hero-mockup.png": [
    1536,
    1024
   ]

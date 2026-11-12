@@ -3462,6 +3462,7 @@ window.VI_DATA = {
    "thumb": "/next/assets/projects/microgrants-system/mockups/hero-mockup.png",
    "screens": [
     "/next/assets/projects/microgrants-system/mockups/hero-mockup.png",
+    "/next/assets/projects/microgrants-system/mockups/bakery-scene.png",
     "/next/assets/projects/microgrants-system/flow-v3/00a-application.png",
     "/next/assets/projects/microgrants-system/flow-v3/00b-sent.png",
     "/next/assets/projects/microgrants-system/flow-v3/01-submitted.png",

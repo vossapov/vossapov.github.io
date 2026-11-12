@@ -9003,8 +9003,8 @@ window.VI_CASES = {
      "en": "Actual A4 and three social formats from the DEMO-2048 archive"
     },
     "/next/assets/projects/gora-dobra-posters/mockups/hero-mockup.png": {
-     "en": "Form on the phone next to the printed A4 poster from the same record",
-     "ua": "Форма на телефоні поруч із надрукованим A4-постером із того самого запису"
+     "en": "The printed A4 poster on a community notice board, the Story on the phone — both from one child record",
+     "ua": "Надрукований A4-постер на дошці оголошень громади, сторіз на телефоні — обидва з одного запису дитини"
     }
    }
   },
@@ -9405,6 +9405,20 @@ window.VI_CASES = {
      ]
     },
     {
+     "type": "feature",
+     "title": {
+      "ua": "Грант іде в справу",
+      "en": "The grant goes to work"
+     },
+     "body": {
+      "ua": "Після підтвердження умов учасниця купує саме те, що затвердила комісія: піч, тістоміс, коробки, інгредієнти. У кабінеті вона бачить затверджені рядки й одразу додає до них покупки й чеки — з цього складається звіт.",
+      "en": "Once the terms are confirmed, the participant buys exactly what the committee approved: oven, dough mixer, boxes, ingredients. Her cabinet shows the approved lines, and she adds purchases and receipts to them right away — that becomes the report."
+     },
+     "imgs": [
+      "/next/assets/projects/microgrants-system/mockups/bakery-scene.png"
+     ]
+    },
+    {
      "type": "workflow",
      "title": {
       "ua": "Від чека до підсумку для донора",
@@ -9547,6 +9561,7 @@ window.VI_CASES = {
     "/next/assets/projects/microgrants-system/flow-v3/08-selection.png",
     "/next/assets/projects/microgrants-system/flow-v3/09-terms.png",
     "/next/assets/projects/microgrants-system/flow-v3/10-documents.png",
+    "/next/assets/projects/microgrants-system/mockups/bakery-scene.png",
     "/next/assets/projects/microgrants-system/flow-v3/11-purchases.png",
     "/next/assets/projects/microgrants-system/flow-v3/12-report-review.png",
     "/next/assets/projects/microgrants-system/flow-v3/13-accepted.png",
@@ -9566,6 +9581,7 @@ window.VI_CASES = {
     "/next/assets/projects/microgrants-system/flow-v3/08-selection.png": "browser",
     "/next/assets/projects/microgrants-system/flow-v3/09-terms.png": "phone",
     "/next/assets/projects/microgrants-system/flow-v3/10-documents.png": "browser",
+    "/next/assets/projects/microgrants-system/mockups/bakery-scene.png": "board",
     "/next/assets/projects/microgrants-system/flow-v3/11-purchases.png": "phone",
     "/next/assets/projects/microgrants-system/flow-v3/12-report-review.png": "browser",
     "/next/assets/projects/microgrants-system/flow-v3/13-accepted.png": "phone",
@@ -9646,8 +9662,12 @@ window.VI_CASES = {
      "en": "Organiser: funding, accepted expenses, amounts awaiting review and excluded amounts shown separately. Synthetic data."
     },
     "/next/assets/projects/microgrants-system/mockups/hero-mockup.png": {
-     "en": "Participant phones and the organiser report review for the same application MG-12",
-     "ua": "Телефони учасниці й перевірка звіту організатором для тієї самої заявки MG-12"
+     "en": "A consultation at a business-support centre: the organiser queue on the monitor, the participant cabinet on her phone (illustrative scene, real screens)",
+     "ua": "Консультація в центрі підтримки бізнесу: черга організатора на моніторі, кабінет учасниці на її телефоні (ілюстративна сцена, справжні екрани)"
+    },
+    "/next/assets/projects/microgrants-system/mockups/bakery-scene.png": {
+     "en": "The grant at work: the participant in her bakery with “Grant awarded” in the cabinet (illustrative scene, real screen)",
+     "ua": "Грант у справі: учасниця у своїй пекарні, у кабінеті «Грант надано» (ілюстративна сцена, справжній екран)"
     }
    }
   }
@@ -11504,6 +11524,10 @@ window.VI_CASES = {
   "/next/assets/projects/microgrants-system/flow-v3/10-documents.png": [
    1440,
    900
+  ],
+  "/next/assets/projects/microgrants-system/mockups/bakery-scene.png": [
+   1536,
+   1024
   ],
   "/next/assets/projects/microgrants-system/flow-v3/11-purchases.png": [
    390,
